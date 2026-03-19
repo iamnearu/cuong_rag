@@ -82,6 +82,9 @@ class Settings(BaseSettings):
     # Processing timeout (minutes)
     CUONGRAG_PROCESSING_TIMEOUT_MINUTES: int = 10
 
+    # Export indexed document payloads
+    CUONGRAG_INDEX_OUTPUT_DIR: str = "/app/output"
+
     # Pre-ingestion Deduplication
     CUONGRAG_DEDUP_ENABLED: bool = True
     CUONGRAG_DEDUP_MIN_CHUNK_LENGTH: int = 50

@@ -5,7 +5,9 @@ Main service that orchestrates document processing, indexing, and retrieval.
 from __future__ import annotations
 
 import logging
+import json
 import uuid
+import time
 from pathlib import Path
 from dataclasses import dataclass
 from typing import Optional
@@ -14,6 +16,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select
 
 from app.models.document import Document, DocumentStatus
+from app.core.config import settings
 from app.services.document_loader import load_document, LoadedDocument
 from app.services.chunker import DocumentChunker, TextChunk
 from app.services.embedder import EmbeddingService, get_embedding_service
@@ -65,6 +68,46 @@ class RAGService:
         self.chunker = DocumentChunker(chunk_size=chunk_size, chunk_overlap=chunk_overlap)
         self.embedder = get_embedding_service()
         self.vector_store = get_vector_store(workspace_id)
+
+    def _export_index_output_json(
+        self,
+        *,
+        document: Document,
+        chunks: list[TextChunk],
+        ids: list[str],
+        metadatas: list[dict],
+    ) -> None:
+        """Write indexing result to a JSON file under output directory."""
+        try:
+            output_dir = Path(settings.CUONGRAG_INDEX_OUTPUT_DIR)
+            output_dir.mkdir(parents=True, exist_ok=True)
+
+            payload = {
+                "workspace_id": self.workspace_id,
+                "document_id": document.id,
+                "original_filename": document.original_filename,
+                "file_type": document.file_type,
+                "status": DocumentStatus.INDEXED.value,
+                "chunk_count": len(chunks),
+                "indexed_at": int(time.time()),
+                "chunks": [
+                    {
+                        "id": ids[i],
+                        "content": chunks[i].content,
+                        "metadata": metadatas[i],
+                    }
+                    for i in range(len(chunks))
+                ],
+            }
+
+            out_path = output_dir / f"workspace_{self.workspace_id}_doc_{document.id}.json"
+            out_path.write_text(
+                json.dumps(payload, ensure_ascii=False, indent=2),
+                encoding="utf-8",
+            )
+            logger.info(f"Saved indexing JSON to {out_path}")
+        except Exception as exc:
+            logger.warning(f"Failed to save indexing JSON for doc {document.id}: {exc}")
 
     async def process_document(self, document_id: int, file_path: str) -> int:
         """
@@ -152,6 +195,12 @@ class RAGService:
                 document.status = DocumentStatus.INDEXED
                 document.chunk_count = 0
                 await self.db.commit()
+                self._export_index_output_json(
+                    document=document,
+                    chunks=[],
+                    ids=[],
+                    metadatas=[],
+                )
                 logger.warning(f"Document {document_id} produced no chunks (empty content)")
                 return 0
 
@@ -159,6 +208,26 @@ class RAGService:
             document.status = DocumentStatus.INDEXED
             document.chunk_count = len(chunks)
             await self.db.commit()
+
+            # Export indexed chunks to JSON in output folder
+            ids = [f"doc_{document_id}_chunk_{i}" for i in range(len(chunks))]
+            metadatas = [
+                {
+                    "document_id": document_id,
+                    "chunk_index": c.chunk_index,
+                    "char_start": c.char_start,
+                    "char_end": c.char_end,
+                    "source": c.metadata.get("source", ""),
+                    "file_type": c.metadata.get("file_type", ""),
+                }
+                for c in chunks
+            ]
+            self._export_index_output_json(
+                document=document,
+                chunks=chunks,
+                ids=ids,
+                metadatas=metadatas,
+            )
 
             logger.info(f"Successfully processed document {document_id}: {len(chunks)} chunks")
             return len(chunks)

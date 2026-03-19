@@ -12,6 +12,9 @@ from __future__ import annotations
 
 import logging
 import time
+import json
+from dataclasses import asdict
+from pathlib import Path
 from typing import Optional
 
 from sqlalchemy.ext.asyncio import AsyncSession
@@ -79,6 +82,45 @@ class CuongRAGService:
             db=db,
             reranker=get_reranker_service(),
         )
+
+    def _export_index_output_json(
+        self,
+        *,
+        document: Document,
+        parsed,
+        chunk_count: int,
+        elapsed_ms: int,
+    ) -> None:
+        """Write indexed document payload to JSON in output folder."""
+        try:
+            output_dir = Path(settings.CUONGRAG_INDEX_OUTPUT_DIR)
+            output_dir.mkdir(parents=True, exist_ok=True)
+
+            payload = {
+                "workspace_id": self.workspace_id,
+                "document_id": document.id,
+                "original_filename": document.original_filename,
+                "file_type": document.file_type,
+                "status": DocumentStatus.INDEXED.value,
+                "chunk_count": chunk_count,
+                "image_count": len(parsed.images),
+                "table_count": parsed.tables_count,
+                "processing_time_ms": elapsed_ms,
+                "indexed_at": int(time.time()),
+                "markdown": parsed.markdown,
+                "chunks": [asdict(c) for c in parsed.chunks],
+                "images": [asdict(i) for i in parsed.images],
+                "tables": [asdict(t) for t in parsed.tables],
+            }
+
+            out_path = output_dir / f"workspace_{self.workspace_id}_doc_{document.id}.json"
+            out_path.write_text(
+                json.dumps(payload, ensure_ascii=False, indent=2),
+                encoding="utf-8",
+            )
+            logger.info(f"Saved indexing JSON to {out_path}")
+        except Exception as exc:
+            logger.warning(f"Failed to save indexing JSON for doc {document.id}: {exc}")
 
     # ------------------------------------------------------------------
     # Document Processing
@@ -246,6 +288,14 @@ class CuongRAGService:
             document.chunk_count = chunk_count
             document.processing_time_ms = elapsed_ms
             await self.db.commit()
+
+            # Export parsed/indexed result to JSON in output folder
+            self._export_index_output_json(
+                document=document,
+                parsed=parsed,
+                chunk_count=chunk_count,
+                elapsed_ms=elapsed_ms,
+            )
 
             logger.info(
                 f"CuongRAG processed document {document_id}: "

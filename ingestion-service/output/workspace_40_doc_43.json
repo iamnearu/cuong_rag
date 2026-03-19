@@ -1,0 +1,16 @@
+{
+  "workspace_id": 40,
+  "document_id": 43,
+  "original_filename": "output_test2.txt",
+  "file_type": "txt",
+  "status": "indexed",
+  "chunk_count": 0,
+  "image_count": 0,
+  "table_count": 0,
+  "processing_time_ms": 65235,
+  "indexed_at": 1773913717,
+  "markdown": "this is a document for output json test",
+  "chunks": [],
+  "images": [],
+  "tables": []
+}
