@@ -1,0 +1,36 @@
+# CuongRAG root — Python & Node artefacts
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+.ruff_cache/
+.mypy_cache/
+
+# Envs
+.env
+*.env.local
+
+# Data volumes (local dev)
+rag-service/uploads/
+rag-service/data/
+ingestion-service/uploads/
+ingestion-service/data/
+kg-service/uploads/
+kg-service/data/
+
+# Node / Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.yarn/
+frontend/package-lock.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db

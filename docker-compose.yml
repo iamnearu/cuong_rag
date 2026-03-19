@@ -1,0 +1,146 @@
+# CuongRAG — Microservices (Local Development, no API gateway)
+# Usage: cp .env.example .env → docker compose up -d
+
+services:
+
+  # ─── Infrastructure ────────────────────────────────────────────────────────
+  postgres:
+    image: pgvector/pgvector:pg15
+    container_name: cuongrag-postgres
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
+      POSTGRES_DB: ${POSTGRES_DB:-cuong_rag}
+    ports:
+      - "5435:5432"
+    volumes:
+      - cuongrag_postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-postgres}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  # ─── Backend Services ──────────────────────────────────────────────────────
+  rag-service:
+    build:
+      context: ./rag-service
+      dockerfile: Dockerfile
+    container_name: cuongrag-rag-service
+    env_file: .env
+    depends_on:
+      postgres:
+        condition: service_healthy
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    gpus: all
+    environment:
+      APP_NAME: "CuongRAG - RAG Service"
+      DATABASE_URL: postgresql+asyncpg://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-postgres}@postgres:5432/${POSTGRES_DB:-cuong_rag}
+      AUTO_CREATE_TABLES: "true"
+      CORS_ORIGINS: '["http://localhost:3001","http://localhost"]'
+      NVIDIA_VISIBLE_DEVICES: all
+      NVIDIA_DRIVER_CAPABILITIES: compute,utility
+    volumes:
+      - ./rag-service:/app
+      - cuongrag_uploads:/app/uploads
+      - cuongrag_data:/app/data
+    ports:
+      - "8081:8081"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8081/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 8
+      start_period: 20s
+    restart: unless-stopped
+
+  ingestion-service:
+    build:
+      context: ./ingestion-service
+      dockerfile: Dockerfile
+    container_name: cuongrag-ingestion-service
+    env_file: .env
+    depends_on:
+      postgres:
+        condition: service_healthy
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    gpus: all
+    environment:
+      APP_NAME: "CuongRAG - Ingestion Service"
+      DATABASE_URL: postgresql+asyncpg://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-postgres}@postgres:5432/${POSTGRES_DB:-cuong_rag}
+      AUTO_CREATE_TABLES: "true"
+      CORS_ORIGINS: '["http://localhost:3001","http://localhost"]'
+      NVIDIA_VISIBLE_DEVICES: all
+      NVIDIA_DRIVER_CAPABILITIES: compute,utility
+    volumes:
+      - ./ingestion-service:/app
+      - cuongrag_uploads:/app/uploads
+      - cuongrag_data:/app/data
+    ports:
+      - "8082:8082"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8082/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 8
+      start_period: 20s
+    restart: unless-stopped
+
+  kg-service:
+    build:
+      context: ./kg-service
+      dockerfile: Dockerfile
+    container_name: cuongrag-kg-service
+    env_file: .env
+    depends_on:
+      postgres:
+        condition: service_healthy
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    gpus: all
+    environment:
+      APP_NAME: "CuongRAG - KG Service"
+      DATABASE_URL: postgresql+asyncpg://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-postgres}@postgres:5432/${POSTGRES_DB:-cuong_rag}
+      AUTO_CREATE_TABLES: "true"
+      CORS_ORIGINS: '["http://localhost:3001","http://localhost"]'
+      NVIDIA_VISIBLE_DEVICES: all
+      NVIDIA_DRIVER_CAPABILITIES: compute,utility
+    volumes:
+      - cuongrag_uploads:/app/uploads
+      - cuongrag_data:/app/data
+    ports:
+      - "8083:8083"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8083/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 8
+      start_period: 20s
+    restart: unless-stopped
+
+  # ─── Frontend ─────────────────────────────────────────────────────────────
+  frontend:
+    image: node:20-alpine
+    container_name: cuongrag-frontend
+    working_dir: /app
+    command: sh -c "yarn install --frozen-lockfile && yarn dev --host 0.0.0.0 --port 3001"
+    volumes:
+      - ./frontend:/app
+    ports:
+      - "3001:3001"
+    depends_on:
+      rag-service:
+        condition: service_healthy
+      ingestion-service:
+        condition: service_healthy
+      kg-service:
+        condition: service_healthy
+    restart: unless-stopped
+
+volumes:
+  cuongrag_postgres_data:
+  cuongrag_uploads:
+  cuongrag_data:
