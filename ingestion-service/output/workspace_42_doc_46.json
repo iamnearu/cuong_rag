@@ -1,0 +1,654 @@
+{
+  "workspace_id": 42,
+  "document_id": 46,
+  "original_filename": "Bảo trì dự trên rủi ro.pdf",
+  "file_type": "pdf",
+  "status": "indexed",
+  "chunk_count": 18,
+  "image_count": 27,
+  "table_count": 3,
+  "processing_time_ms": 198732,
+  "indexed_at": 1773977073,
+  "markdown": "\n![](/static/doc-images/kb_42/images/99fcd507-820d-4e20-bf73-0b9f2bc4abb4.png)\n\n\n\n![](/static/doc-images/kb_42/images/9db6dce9-fe4c-4ea3-b4e7-b8dcb73a8775.png)\n\n\n## Bảo trì dựa trên rủi ro Cách triển khai hiệu quả\n\n\n\n---\n\n\n\n\n![](/static/doc-images/kb_42/images/a5ab1fe9-6909-4fe9-9ae4-3cc1bf973cbc.png)\n\n\n\n![](/static/doc-images/kb_42/images/00b30db0-50ed-48a5-85fc-1da4a817b45b.png)\n\n\nThiết bị máy móc của nhà máy ngày càng nhiều, việc quản lý và bảo trì hiệu quả lại càng trở nên khó khăn. Dẫn đến nhiều doanh nghiệp đưa ra các câu hỏi:\n\n1. Tôi có lãng phí các nguồn lực không cần thiết cho việc bảo trì không?\n2. Tôi có thể giảm chi phí bảo trì ở đâu?\n3. Tôi có nên thuê dịch vụ bảo trì dựa trên điều kiện không?\n4. Tôi nên áp dụng các kỹ thuật bảo trì thiết bị như thế nào?\n5. Tôi có thể đảm nhận chính sách bảo trì sửa chữa không?\n6. Tôi có thể áp dụng bảo trì khắc phục cho thiết bị nào?\n\nĐể giải đáp các câu hỏi này hãy cùng chúng tôi đi tìm hiểu ngay trong tài liệu này.\n\n\n![](/static/doc-images/kb_42/images/1fd5ddfa-d631-4096-87b3-610b637c482d.png)\n\n\n\n\n---\n\n\n\n## Giới thiệu\n\nMục tiêu bao quát của quản lý bảo trì là giảm thiểu các lỗi thiết bị bất ngờ để tiết kiệm chi phí. Bảo trì dựa trên rủi ro là phương pháp bảo trì sử dụng các nguyên tắc đánh giá rủi ro để tối ưu hóa các nhiệm vụ bảo trì và phân bổ nguồn lực. Nó bao gồm việc xác định một cách có hệ thống mức độ quan trọng của tài sản, chế độ hỏng hóc và rủi ro hỏng hóc để tạo ra một kế hoạch bảo trì giúp giảm thiểu rủi ro hỏng hóc.\n\nSử dụng phương pháp bảo trì dựa trên rủi ro, các nỗ lực bảo trì được chuyển hướng từ các tài sản có rủi ro hỏng hóc thấp nhất sang các tài sản có rủi ro hỏng hóc lớn nhất. Các tài sản có rủi ro cao khác nhau tùy theo ngành và tổ chức.\n\n\n![](/static/doc-images/kb_42/images/b396875d-ac8b-4293-9eb8-fa45ac72f963.png)\n\n\n\n\n---\n\n\n\n\n![](/static/doc-images/kb_42/images/cc80819b-712b-46dc-ad0a-3a770f83fb9a.png)\n\n\n## Cách triển khai bảo trì dựa trên rủi ro\n\nBảo  trì  dựa  trên  rủi  ro  hoạt  động theo  nguyên tắc  là  các  nguồn  lực bảo trì phải dành cho các tài sản có rủi ro cao nhất nếu chúng hỏng.\n\nVí dụ, nếu công ty chỉ có một xe đầu kéo cỡ lớn phải  thực hiện các chuyến đi hàng tuần, thì xe tải đó sẽ chịu  rất  nhiều  rủi  ro  trong  trường hợp nó hỏng.\n\nLàm  thế  nào  một  công  ty  có  thể đánh giá điều này?\n\n\n![](/static/doc-images/kb_42/images/6f9a15a4-7981-4e7a-91f8-e9c784700b56.png)\n\n\n\n![](/static/doc-images/kb_42/images/85e8d9f4-356e-4fb2-af85-204a4dc7026e.png)\n\n\n\n\n---\n\n\n\n\n![](/static/doc-images/kb_42/images/8ab88141-816f-4f53-af43-0e2f31202a13.png)\n\n\n## Xác định sự cố tài sản xảy ra\n\nChỉ số sự cố xảy ra liên quan đến xác suất hỏng hóc của thiết bị, được tính toán dựa trên lịch sử thiết bị. Càng có nhiều lỗi, khả năng chúng tái diễn càng cao. Bảng dưới đây có thể được sử dụng để định tính, chỉ định giá trị chỉ số xảy ra cho mỗi lỗi.\n\n| Phân loại       | Phân loại   | Môtả                                                                                             |\n|-----------------|-------------|--------------------------------------------------------------------------------------------------|\n| Frequent        | 9 a 10      | Xác suất cao xảy ra trong khoảng thời gian hoạt động của thiết bị.                               |\n| Likely          | 7 a 8       | Xác suất xảyra ởmứctrungbìnhtrongkhoảngthời gian thiết bị hoạt động.                             |\n| Occasional      | 5 a 6       | Xác suất thỉnh thoảng xảy ra trong khoảng thời gian hoạt động của thiết bị                       |\n| Unlikely        | 3 a 4       | Xác suất không có khả năng xảy ra trong thời gian hoạt động của thiết bị.                        |\n| Highly unlikely | 1 a 2       | Một lỗi có xác suất xảy ra về cơ bản là bằng không trong khoảng thời gian hoạt động của thiết bị |\n\nMột phương pháp khác để gán một chỉ số xuất hiện là sử dụng các chỉ báo xác suất, chẳng hạn như thời gian giữa các lần lỗi. Phương pháp này loại bỏ tính chủ quan khỏi hình thức định tính khi nó chỉ phụ thuộc vào dữ liệu lịch sử. Phương pháp tính toán này có thể được tạo điều kiện thuận lợi bằng cách sử dụng phần mềm bảo trì, khi phần mềm có thể tự động hóa xác định sự cố xảy ra lỗi và tính toán xác suất theo thời gian chính xác.\n\n\n![](/static/doc-images/kb_42/images/502eeb95-f36f-4333-8b63-b73e11d3035b.png)\n\n\n\n\n---\n\n\n\n\n![](/static/doc-images/kb_42/images/126a32bc-8209-452a-a02c-aebbc0fd3584.png)\n\n\n## Xác định mức độ nghiêm trọng của tài sản\n\nChỉ số mức độ nghiêm trọng được xác định dựa trên mức độ ảnh hưởng của thiết bị đến mục tiêu của hệ thống nơi nó được lắp đặt. Để xác định chỉ số nghiêm trọng, câu hỏi cần đặt ra là: 'Nếu lỗi này xảy ra, tác động đến mục tiêu của nhà máy như thế nào?\"\n\n| Phân loại    | Phân loại   | Môtả                                                                                                                              |\n|--------------|-------------|-----------------------------------------------------------------------------------------------------------------------------------|\n| Catastrophic | 9 a 10      | Rất quan trọng đối với hoạt động của hệ thống. Thất bại sẽ khiến hệ thống dừng lại.                                               |\n| Critical     | 7 a 8       | Quan trọng đối với hoạt động tốt của hệ thống. Sự cốsẽlàmgiảmhiệusuấtvàcóthểdẫnđếnhậuquả bất lợi.                                 |\n| Marginal     | 5 a 6       | Cần thiết để hoạt động tốt. Lỗi có thể ảnh hưởng đến hiệu suất hệ thống và có thể dẫn đến lỗi hệ thống.                           |\n| Marginal     | 3 a 4       | Tùy chọn cho hiệu suất tốt. Lỗi không ảnh hưởng đến hiệu suất hệ thống ngay lập tức. Nhưng lỗi kéo dài có thể gây ra lỗi hệ thống |\n| Minor        | 1 a 2       | Tùy chọn cho hoạt động. Lỗi sẽ không ảnh hưởng đến hiệu suất hệ thống.                                                            |\n\nXác định chỉ số mức độ nghiêm trọng cho mỗi lỗi phải được thực hiện bằng phương pháp phỏng vấn với người quản lý, người dùng hoặc nhà thiết kế hệ thống.\n\n\n\n---\n\n\n\n\n![](/static/doc-images/kb_42/images/8482756e-ab4b-4edc-9555-d0cdc334a709.png)\n\n\n\n![](/static/doc-images/kb_42/images/f6463223-af10-4233-8c3b-ee77376df261.png)\n\n\n## Xác định khả năng rủi ro\n\nTích số giữa chỉ số mức độ xảy ra và chỉ số mức độ nghiêm trọng dẫn đến rủi ro hỏng hóc. Sau khi tính toán rủi ro, cần đánh giá giá trị rủi ro ở mức chấp nhận được, có thể chấp nhận được hoặc không chấp nhận được. Các mức này được gán tùy theo mức độ rủi ro của doanh nghiệp. Kinh nghiệm cho thấy các mức được mô tả dưới đây là một điểm tham chiếu cân bằng tốt.\n\n- Từ 1% đến 10% giá trị rủi ro tối đa: Rủi ro chấp nhận được;\n\n- Từ 10% đến 30% giá trị rủi ro tối đa: Rủi ro có thể chấp nhận được;\n\n- Trên 30% giá trị rủi ro tối đa: Rủi ro không thể chấp nhận được;\n\nBảng dưới đây cho thấy rủi ro tối đa là 100 mức giá trị rủi ro khác nhau.\n\n|                         |    |   Chỉ Số Xuất Hiện | Chỉ Số Xuất Hiện   | Chỉ Số Xuất Hiện   | Chỉ Số Xuất Hiện   |   Chỉ Số Xuất Hiện |   Chỉ Số Xuất Hiện |   Chỉ Số Xuất Hiện |   Chỉ Số Xuất Hiện |   Chỉ Số Xuất Hiện |\n|-------------------------|----|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|\n|                         |    |                  1 | 2                  | 3                  | 4 5                |                  6 |                  7 |                  8 |                  9 |                 10 |\n| MứcĐộNghiêmTrọng Rủi Ro |  1 |                  1 | 2                  | 3                  | 4 5                |                  6 |                  7 |                  8 |                  9 |                 10 |\n| MứcĐộNghiêmTrọng Rủi Ro |  2 |                  2 | 4                  | 6 8                | 10                 |                 12 |                 14 |                 16 |                 18 |                 20 |\n|                         |  3 |                  3 | 6 9                | 12                 | 15                 |                 18 |                 21 |                 24 |                 27 |                 30 |\n|                         |  4 |                  4 | 12 8               | 16                 | 20                 |                 24 |                 28 |                 32 |                 36 |                 40 |\n|                         |  5 |                  5 | 10 15              | 20                 | 25                 |                 30 |                 35 |                 40 |                 45 |                 50 |\n|                         |  6 |                  6 | 12 18              | 24                 | 30                 |                 36 |                 42 |                 48 |                 54 |                 60 |\n|                         |  7 |                  7 | 14 21              | 28                 | 35                 |                 42 |                 49 |                 56 |                 63 |                 70 |\n|                         |  8 |                  8 | 16 24              | 32                 | 40                 |                 48 |                 56 |                 64 |                 72 |                 80 |\n|                         |  9 |                  9 | 18 27              | 36                 | 45                 |                 54 |                 63 |                 72 |                 81 |                 90 |\n|                         | 10 |                 10 | 20 30              | 40                 | 50                 |                 60 |                 70 |                 80 |                 90 |                100 |\n\n\n\n---\n\n\n\n\n![](/static/doc-images/kb_42/images/caf9dbd9-4203-40b6-9f5f-4e6fc828318d.png)\n\n\n## Đưa ra quyết định dựa trên rủi ro\n\nBiết được nguy cơ hỏng hóc đối với từng thiết bị, có thể đưa ra các quyết định quản lý khác nhau. Các chiến lược quản lý rủi ro hỏng hóc khác nhau đối với từng người quản lý bảo trì, tuy nhiên, có một số khuyến nghị. Các điểm sau đây trình bày các quyết định bảo trì điển hình dựa trên nguy cơ hỏng hóc của thiết bị.\n\n- Thiết bị rủi ro thấp: Tối ưu hóa chi phí bảo trì và xem xét thực hiện bảo trì điều chỉnh.\n- Thiết bị rủi ro vừa phải: Duy trì các thói quen bảo trì hiện tại, nếu có thể, giảm bớt bộ máy quan liêu xung quanh họ và đơn giản hóa việc quản lý bảo trì.\n- Thiết bị rủi ro cao: Chúng ta có thể thực hiện qua hai bước để giảm rủi ro như sau:\n+ Giảm chỉ số mức độ nghiêm trọng: Lỗi mức độ nghiêm trọng thấp là  lỗi  không  ảnh  hưởng  đến  các  mục tiêu  của  nhà  máy.  Do  đó, phương pháp phổ biến nhất để giảm mức độ nghiêm trọng là nhân đôi thiết bị hoặc cung cấp một thiết bị dự phòng.\n+ Giảm chỉ số tần suất hỏng hóc: Cách để giảm chỉ số tần suất hỏng hóc là giảm tần suất xảy ra sự cố. Bảo trì dựa trên tình trạng là một trong những phương pháp hiệu quả nhất để áp dụng cho các thiết bị này. Một phương pháp khác (rất phổ biến) là tăng tần suất các quy trình bảo trì phòng ngừa. Cũng có thể sử dụng các quy trình kỹ thuật để giảm thiểu nguyên nhân gây ra hỏng hóc. Trong lĩnh vực này, tính hiệu quả về chi phí cần được xem xét.\n\nSau quyết định, trong quá trình vận hành thiết bị, khả năng xảy ra sự cố có thể thay đổi và do đó, rủi ro sẽ được tính toán lại. Bằng cách này, việc theo dõi sự thay đổi rủi ro là một chỉ số quản lý bảo trì tốt. Một lần nữa, phần mềm bảo trì đóng vai trò quan trọng trong việc trình bày các kết quả này một cách tự động và theo thời gian thực cho đội ngũ quản lý bảo trì.\n\n\n\n---\n\n\n\n\n![](/static/doc-images/kb_42/images/ec19b67e-7459-4e7c-9131-fc3cbcd8600a.png)\n\n\n## Kết luận\n\nViệc tính toán rủi ro hỏng hóc cho phép ban quản lý đưa ra các quyết định dựa trên dữ liệu. Nó chuyển đổi ngôn ngữ kỹ thuật về độ tin cậy của thiết bị sang ngôn ngữ mà ban lãnh đạo cấp cao có thể hiểu được. Nó cho phép điều hướng các nguồn lực để có được một hệ thống thiết bị phục vụ mục đích của doanh nghiệp một cách hiệu quả nhất. Và tất cả những điều này dẫn đến một quy trình bảo trì tinh gọn, tiết kiệm chi phí và các khoản không cần thiết, không có những hỏng hóc gây ảnh hưởng đến quá trình sản xuất.\n\nTài liệu đã chỉ ra rằng quản lý bảo trì dựa trên rủi ro đi đôi với việc sử dụng phần mềm quản lý bảo trì tốt ( Ví dụ như phần mềm SpeedMaint CMMS). Nó tạo điều kiện thuận lợi cho việc thu thập dữ liệu và tự động hóa việc tính toán rủi ro, cung cấp cho người dùng các chỉ số dễ hiểu.\n\nTrong tương lai, người ta kỳ vọng rằng các phát triển phần mềm bảo trì có thể cho phép hỗ trợ các quyết định bảo trì dựa trên rủi ro một cách tiên tiến hơn. Người dùng sẽ có thể hiểu được các quyết định của họ sẽ ảnh hưởng như thế nào đến rủi ro hiện tại của thiết bị. Bằng cách này, các nhà quản lý có thể chọn những quyết định hiệu quả nhất.\n\n\n![](/static/doc-images/kb_42/images/0e747cb1-bee7-4ab2-8f81-35891c84b802.png)\n\n\n\n\n---\n\n\n\n\n![](/static/doc-images/kb_42/images/5639e741-2cd5-4869-bd6b-31cc9c14142e.png)\n\n\n\n![](/static/doc-images/kb_42/images/82802065-f9aa-448c-ae4c-bd55c86fbc4e.png)\n\n\n## PHẦN MỀM SPEEDMAINT CMMS\n\nGiúp số hóa quy trình bảo trì, theo dõi sự cố và thời gian dừng máy, quản lý kiểm tra, phân tích báo cáo và quản lý vật tư cung cấp nền tảng thông tin và công cụ cần thiết để doanh nghiệp có thể triển khai các chiến lược bảo trì có tính đến yếu tố rủi ro một cách hiệu quả hơn. Bằng cách sử dụng phần mềm để thu thập, quản lý và phân tích dữ liệu liên quan đến tài sản và hoạt động bảo trì, doanh nghiệp có thể đưa ra các quyết định bảo trì sáng suốt hơn, tập trung nguồn lực vào các tài sản có mức độ quan trọng và rủi ro cao nhất.\n\n\n![](/static/doc-images/kb_42/images/8a61d0f9-4b2d-426f-91c6-ea6691ac7771.png)\n\n\nhttps://signup.speedmaint.com/dich-vu-bao-tri/?utm\\_source=NhungvtSEO&amp;utm\\_medium=LoT01&amp;utm\\_campaign=ebook-bao-tri-dua-tren-rui-ro https://signup.speedmaint.com/dich-vu-bao-tri/?utm\\_source=NhungvtSEO&amp;utm\\_medium=LoT01&amp;utm\\_campaign=ebook-bao-tri-dua-tren-rui-ro\n\nhttps://signup.speedmaint.com/dich-vu-bao-tri/?utm\\_source=NhungvtSEO&amp;utm\\_medium=LoT01&amp;utm\\_campaign=ebook-bao-tri-dua-tren-rui-ro\n\nTrải Nghiệm Miễn Phí https://signup.speedmaint.com/dich-vu-bao-tri/?utm\\_source=NhungvtSEO&amp;utm\\_medium=LoT01&amp;utm\\_campaign=ebook-bao-tri-dua-tren-rui-ro https://signup.speedmaint.com/dich-vu-bao-tri/?utm\\_source=NhungvtSEO&amp;utm\\_medium=LoT01&amp;utm\\_campaign=ebook-bao-tri-dua-tren-rui-ro https://signup.speedmaint.com/dich-vu-bao-tri/?utm\\_source=NhungvtSEO&amp;utm\\_medium=LoT01&amp;utm\\_campaign=ebook-bao-tri-dua-tren-rui-ro https://signup.speedmaint.com/dich-vu-bao-tri/?utm\\_source=NhungvtSEO&amp;utm\\_medium=LoT01&amp;utm\\_campaign=ebook-bao-tri-dua-tren-rui-ro https://signup.speedmaint.com/dich-vu-bao-tri/?utm\\_source=NhungvtSEO&amp;utm\\_medium=LoT01&amp;utm\\_campaign=ebook-bao-tri-dua-tren-rui-ro https://signup.speedmaint.com/dich-vu-bao-tri/?utm\\_source=NhungvtSEO&amp;utm\\_medium=LoT01&amp;utm\\_campaign=ebook-bao-tri-dua-tren-rui-ro https://signup.speedmaint.com/dich-vu-bao-tri/?utm\\_source=NhungvtSEO&amp;utm\\_medium=LoT01&amp;utm\\_campaign=ebook-bao-tri-dua-tren-rui-ro\n\nhttps://signup.speedmaint.com/dich-vu-bao-tri/?utm\\_source=NhungvtSEO&amp;utm\\_medium=LoT01&amp;utm\\_campaign=ebook-bao-tri-dua-tren-rui-ro https://signup.speedmaint.com/dich-vu-bao-tri/?utm\\_source=NhungvtSEO&amp;utm\\_medium=LoT01&amp;utm\\_campaign=ebook-bao-tri-dua-tren-rui-ro\n\nhttps://signup.speedmaint.com/dich-vu-bao-tri/?utm\\_source=NhungvtSEO&amp;utm\\_medium=LoT01&amp;utm\\_campaign=ebook-bao-tri-dua-tren-rui-ro\n\nNguồn: Tài liệu từ ManWinWin - Được biên dịch bởi đội ngũ SpeedMaint\n\n\n\n---\n\n\n\n## THÔNG TIN DOANH NGHIỆP\n\n\n![](/static/doc-images/kb_42/images/347ec4db-849a-40fb-b14a-4156a3ea008c.png)\n\n\n## Công ty TNHH MTV phần mềm SpeedMaint\n\n\n![](/static/doc-images/kb_42/images/34ab5b4f-2bc5-4774-8610-5a0d87f8523d.png)\n\n\n\n![](/static/doc-images/kb_42/images/a8128558-9275-4b51-bfa7-389ca537d5a0.png)\n\n\n\n![](/static/doc-images/kb_42/images/a15c0e6c-3d1b-432b-9a26-21c0d8c12fa9.png)\n\n\n\n![](/static/doc-images/kb_42/images/8e963390-bf5d-4e97-9da0-fa8952ee5489.png)\n\n\n\n![](/static/doc-images/kb_42/images/f9987b88-7b13-4caf-b518-d675acacafca.png)\n\n\n\n![](/static/doc-images/kb_42/images/ced3fec9-0715-404d-be18-3f8eab892a01.png)\n\n\n- Văn phòng miền Bắc: Tầng 07, tòa nhà Lotus, số 02 đường Duy Tân, P. Dịch Vọng Hậu, Q. Cầu Giấy, TP. Hà Nội\n\n- Văn phòng miền Nam: Số 927/1, đường Cách Mạng Tháng 08, P7, Q. Tân Bình, TP. Hồ Chí Minh\n\n- Hotline: 0912.76.5656\n\nEmail: marketing@speedmaint.com\n\nWebsite: https://speedmaint.com/\n\nFanpage: SpeedMaint Cloud CMMS",
+  "chunks": [
+    {
+      "content": "Thiết bị máy móc của nhà máy ngày càng nhiều, việc quản lý và bảo trì hiệu quả lại càng trở nên khó khăn. Dẫn đến nhiều doanh nghiệp đưa ra các câu hỏi:\n1. Tôi có lãng phí các nguồn lực không cần thiết cho việc bảo trì không?\n2. Tôi có thể giảm chi phí bảo trì ở đâu?\n3. Tôi có nên thuê dịch vụ bảo trì dựa trên điều kiện không?\n4. Tôi nên áp dụng các kỹ thuật bảo trì thiết bị như thế nào?\n5. Tôi có thể đảm nhận chính sách bảo trì sửa chữa không?\n6. Tôi có thể áp dụng bảo trì khắc phục cho thiết bị nào?\nĐể giải đáp các câu hỏi này hãy cùng chúng tôi đi tìm hiểu ngay trong tài liệu này.",
+      "chunk_index": 0,
+      "source_file": "Bảo trì dự trên rủi ro.pdf",
+      "document_id": 46,
+      "page_no": 2,
+      "heading_path": [
+        "Bảo trì dựa trên rủi ro Cách triển khai hiệu quả"
+      ],
+      "image_refs": [
+        "a5ab1fe9-6909-4fe9-9ae4-3cc1bf973cbc",
+        "00b30db0-50ed-48a5-85fc-1da4a817b45b",
+        "1fd5ddfa-d631-4096-87b3-610b637c482d"
+      ],
+      "table_refs": [],
+      "has_table": false,
+      "has_code": false,
+      "contextualized": "Bảo trì dựa trên rủi ro Cách triển khai hiệu quả: Thiết bị máy móc của nhà máy ngày càng nhiều, việc quản lý và bảo trì hiệu quả lại càng trở nên khó "
+    },
+    {
+      "content": "Mục tiêu bao quát của quản lý bảo trì là giảm thiểu các lỗi thiết bị bất ngờ để tiết kiệm chi phí. Bảo trì dựa trên rủi ro là phương pháp bảo trì sử dụng các nguyên tắc đánh giá rủi ro để tối ưu hóa các nhiệm vụ bảo trì và phân bổ nguồn lực. Nó bao gồm việc xác định một cách có hệ thống mức độ quan trọng của tài sản, chế độ hỏng hóc và rủi ro hỏng hóc để tạo ra một kế hoạch bảo trì giúp giảm thiểu rủi ro hỏng hóc.\nSử dụng phương pháp bảo trì dựa trên rủi ro, các nỗ lực bảo trì được chuyển hướng từ các tài sản có rủi ro hỏng hóc thấp nhất sang các tài sản có rủi ro hỏng hóc lớn nhất. Các tài sản có rủi ro cao khác nhau tùy theo ngành và tổ chức.",
+      "chunk_index": 1,
+      "source_file": "Bảo trì dự trên rủi ro.pdf",
+      "document_id": 46,
+      "page_no": 3,
+      "heading_path": [
+        "Giới thiệu"
+      ],
+      "image_refs": [
+        "b396875d-ac8b-4293-9eb8-fa45ac72f963"
+      ],
+      "table_refs": [],
+      "has_table": false,
+      "has_code": false,
+      "contextualized": "Giới thiệu: Mục tiêu bao quát của quản lý bảo trì là giảm thiểu các lỗi thiết bị bất ngờ để tiết kiệm chi phí. B"
+    },
+    {
+      "content": "Bảo  trì  dựa  trên  rủi  ro  hoạt  động theo  nguyên tắc  là  các  nguồn  lực bảo trì phải dành cho các tài sản có rủi ro cao nhất nếu chúng hỏng.\nVí dụ, nếu công ty chỉ có một xe đầu kéo cỡ lớn phải  thực hiện các chuyến đi hàng tuần, thì xe tải đó sẽ chịu  rất  nhiều  rủi  ro  trong  trường hợp nó hỏng.\nLàm  thế  nào  một  công  ty  có  thể đánh giá điều này?",
+      "chunk_index": 2,
+      "source_file": "Bảo trì dự trên rủi ro.pdf",
+      "document_id": 46,
+      "page_no": 4,
+      "heading_path": [
+        "Cách triển khai bảo trì dựa trên rủi ro"
+      ],
+      "image_refs": [
+        "cc80819b-712b-46dc-ad0a-3a770f83fb9a",
+        "6f9a15a4-7981-4e7a-91f8-e9c784700b56",
+        "85e8d9f4-356e-4fb2-af85-204a4dc7026e"
+      ],
+      "table_refs": [],
+      "has_table": false,
+      "has_code": false,
+      "contextualized": "Cách triển khai bảo trì dựa trên rủi ro: Bảo  trì  dựa  trên  rủi  ro  hoạt  động theo  nguyên tắc  là  các  nguồn  lực bảo trì phải dành cho"
+    },
+    {
+      "content": "Chỉ số sự cố xảy ra liên quan đến xác suất hỏng hóc của thiết bị, được tính toán dựa trên lịch sử thiết bị. Càng có nhiều lỗi, khả năng chúng tái diễn càng cao. Bảng dưới đây có thể được sử dụng để định tính, chỉ định giá trị chỉ số xảy ra cho mỗi lỗi.\nFrequent, Phân loại = 9 a 10. Frequent, Môtả = Xác suất cao xảy ra trong khoảng thời gian hoạt động của thiết bị.. Likely, Phân loại = 7 a 8. Likely, Môtả = Xác suất xảyra ởmứctrungbìnhtrongkhoảngthời gian thiết bị hoạt động.. Occasional, Phân loại = 5 a 6. Occasional, Môtả = Xác suất thỉnh thoảng xảy ra trong khoảng thời gian hoạt động của thiết bị. Unlikely, Phân loại = 3 a 4. Unlikely, Môtả = Xác suất không có khả năng xảy ra trong thời gian hoạt động của thiết bị.. Highly unlikely, Phân loại = 1 a 2. Highly unlikely, Môtả = Một lỗi có xác suất xảy ra về cơ bản là bằng không trong khoảng thời gian hoạt động của thiết bị",
+      "chunk_index": 3,
+      "source_file": "Bảo trì dự trên rủi ro.pdf",
+      "document_id": 46,
+      "page_no": 5,
+      "heading_path": [
+        "Xác định sự cố tài sản xảy ra"
+      ],
+      "image_refs": [
+        "8ab88141-816f-4f53-af43-0e2f31202a13",
+        "502eeb95-f36f-4333-8b63-b73e11d3035b"
+      ],
+      "table_refs": [
+        "7acca07f-f48f-4599-bb0c-c82464868c64"
+      ],
+      "has_table": true,
+      "has_code": false,
+      "contextualized": "Xác định sự cố tài sản xảy ra: Chỉ số sự cố xảy ra liên quan đến xác suất hỏng hóc của thiết bị, được tính toán dựa trên lịch sử th"
+    },
+    {
+      "content": "Một phương pháp khác để gán một chỉ số xuất hiện là sử dụng các chỉ báo xác suất, chẳng hạn như thời gian giữa các lần lỗi. Phương pháp này loại bỏ tính chủ quan khỏi hình thức định tính khi nó chỉ phụ thuộc vào dữ liệu lịch sử. Phương pháp tính toán này có thể được tạo điều kiện thuận lợi bằng cách sử dụng phần mềm bảo trì, khi phần mềm có thể tự động hóa xác định sự cố xảy ra lỗi và tính toán xác suất theo thời gian chính xác.",
+      "chunk_index": 4,
+      "source_file": "Bảo trì dự trên rủi ro.pdf",
+      "document_id": 46,
+      "page_no": 5,
+      "heading_path": [
+        "Xác định sự cố tài sản xảy ra"
+      ],
+      "image_refs": [],
+      "table_refs": [],
+      "has_table": false,
+      "has_code": false,
+      "contextualized": "Xác định sự cố tài sản xảy ra: Một phương pháp khác để gán một chỉ số xuất hiện là sử dụng các chỉ báo xác suất, chẳng hạn như thời"
+    },
+    {
+      "content": "Chỉ số mức độ nghiêm trọng được xác định dựa trên mức độ ảnh hưởng của thiết bị đến mục tiêu của hệ thống nơi nó được lắp đặt. Để xác định chỉ số nghiêm trọng, câu hỏi cần đặt ra là: 'Nếu lỗi này xảy ra, tác động đến mục tiêu của nhà máy như thế nào?\"\nCatastrophic, Phân loại = 9 a 10. Catastrophic, Môtả = Rất quan trọng đối với hoạt động của hệ thống. Thất bại sẽ khiến hệ thống dừng lại.. Critical, Phân loại = 7 a 8. Critical, Môtả = Quan trọng đối với hoạt động tốt của hệ thống. Sự cốsẽlàmgiảmhiệusuấtvàcóthểdẫnđếnhậuquả bất lợi.. Marginal, Phân loại = 5 a 6. Marginal, Môtả = Cần thiết để hoạt động tốt. Lỗi có thể ảnh hưởng đến hiệu suất hệ thống và có thể dẫn đến lỗi hệ thống.. Marginal, Phân loại = 3 a 4. Marginal, Môtả = Tùy chọn cho hiệu suất tốt. Lỗi không ảnh hưởng đến hiệu suất hệ thống ngay lập tức. Nhưng lỗi kéo dài có thể gây ra lỗi hệ thống. Minor, Phân loại = 1 a 2. Minor, Môtả = Tùy chọn cho hoạt động. Lỗi sẽ không ảnh hưởng đến hiệu suất hệ thống.\nXác định chỉ số mức độ nghiêm trọng cho mỗi lỗi phải được thực hiện bằng phương pháp phỏng vấn với người quản lý, người dùng hoặc nhà thiết kế hệ thống.",
+      "chunk_index": 5,
+      "source_file": "Bảo trì dự trên rủi ro.pdf",
+      "document_id": 46,
+      "page_no": 6,
+      "heading_path": [
+        "Xác định mức độ nghiêm trọng của tài sản"
+      ],
+      "image_refs": [
+        "126a32bc-8209-452a-a02c-aebbc0fd3584"
+      ],
+      "table_refs": [
+        "6c0ceb06-96ab-487c-8d0a-dd823b57cde1"
+      ],
+      "has_table": true,
+      "has_code": false,
+      "contextualized": "Xác định mức độ nghiêm trọng của tài sản: Chỉ số mức độ nghiêm trọng được xác định dựa trên mức độ ảnh hưởng của thiết bị đến mục tiêu của hệ "
+    },
+    {
+      "content": "Tích số giữa chỉ số mức độ xảy ra và chỉ số mức độ nghiêm trọng dẫn đến rủi ro hỏng hóc. Sau khi tính toán rủi ro, cần đánh giá giá trị rủi ro ở mức chấp nhận được, có thể chấp nhận được hoặc không chấp nhận được. Các mức này được gán tùy theo mức độ rủi ro của doanh nghiệp. Kinh nghiệm cho thấy các mức được mô tả dưới đây là một điểm tham chiếu cân bằng tốt.\n- Từ 1% đến 10% giá trị rủi ro tối đa: Rủi ro chấp nhận được;\n- Từ 10% đến 30% giá trị rủi ro tối đa: Rủi ro có thể chấp nhận được;\n- Trên 30% giá trị rủi ro tối đa: Rủi ro không thể chấp nhận được;\nBảng dưới đây cho thấy rủi ro tối đa là 100 mức giá trị rủi ro khác nhau.",
+      "chunk_index": 6,
+      "source_file": "Bảo trì dự trên rủi ro.pdf",
+      "document_id": 46,
+      "page_no": 7,
+      "heading_path": [
+        "Xác định khả năng rủi ro"
+      ],
+      "image_refs": [
+        "8482756e-ab4b-4edc-9555-d0cdc334a709",
+        "f6463223-af10-4233-8c3b-ee77376df261"
+      ],
+      "table_refs": [
+        "ccd08de8-3281-4a78-94e1-d88090906492"
+      ],
+      "has_table": false,
+      "has_code": false,
+      "contextualized": "Xác định khả năng rủi ro: Tích số giữa chỉ số mức độ xảy ra và chỉ số mức độ nghiêm trọng dẫn đến rủi ro hỏng hóc. Sau khi tín"
+    },
+    {
+      "content": "\nMứcĐộNghiêmTrọng Rủi Ro,  = 1. MứcĐộNghiêmTrọng Rủi Ro, Chỉ Số Xuất Hiện.1 = 1. MứcĐộNghiêmTrọng Rủi Ro, Chỉ Số Xuất Hiện.2 = 2. MứcĐộNghiêmTrọng Rủi Ro, Chỉ Số Xuất Hiện.3 = 3. MứcĐộNghiêmTrọng Rủi Ro, Chỉ Số Xuất Hiện.4 5 = 4 5. MứcĐộNghiêmTrọng Rủi Ro, Chỉ Số Xuất Hiện.6 = 6. MứcĐộNghiêmTrọng Rủi Ro, Chỉ Số Xuất Hiện.7 = 7. MứcĐộNghiêmTrọng Rủi Ro, Chỉ Số Xuất Hiện.8 = 8. MứcĐộNghiêmTrọng Rủi Ro, Chỉ Số Xuất Hiện.9 = 9. MứcĐộNghiêmTrọng Rủi Ro, Chỉ Số Xuất Hiện.10 = 10. MứcĐộNghiêmTrọng Rủi Ro,  = 2. MứcĐộNghiêmTrọng Rủi Ro, Chỉ Số Xuất Hiện.1 = 2. MứcĐộNghiêmTrọng Rủi Ro, Chỉ Số Xuất Hiện.2 = 4. MứcĐộNghiêmTrọng Rủi Ro, Chỉ Số Xuất Hiện.3 = 6 8. MứcĐộNghiêmTrọng Rủi Ro, Chỉ Số Xuất Hiện.4 5 = 10. MứcĐộNghiêmTrọng Rủi Ro, Chỉ Số Xuất Hiện.6 = 12. MứcĐộNghiêmTrọng Rủi Ro, Chỉ Số Xuất Hiện.7 = 14. MứcĐộNghiêmTrọng Rủi Ro, Chỉ Số Xuất Hiện.8 = 16. MứcĐộNghiêmTrọng Rủi Ro, Chỉ Số Xuất Hiện.9 = 18. MứcĐộNghiêmTrọng Rủi Ro, Chỉ Số Xuất Hiện.10 = 20. ,  = 3. , Chỉ Số Xuất Hiện.1 = 3. , Chỉ Số Xuất Hiện.2 = 6 9. , Chỉ Số Xuất Hiện.3 = 12. , Chỉ Số Xuất Hiện.4 5 = 15. , Chỉ Số Xuất Hiện.6 =",
+      "chunk_index": 7,
+      "source_file": "Bảo trì dự trên rủi ro.pdf",
+      "document_id": 46,
+      "page_no": 7,
+      "heading_path": [
+        "Xác định khả năng rủi ro"
+      ],
+      "image_refs": [],
+      "table_refs": [],
+      "has_table": true,
+      "has_code": false,
+      "contextualized": "Xác định khả năng rủi ro: \nMứcĐộNghiêmTrọng Rủi Ro,  = 1. MứcĐộNghiêmTrọng Rủi Ro, Chỉ Số Xuất Hiện.1 = 1. MứcĐộNghiêmTrọng Rủ"
+    },
+    {
+      "content": "\n 18. , Chỉ Số Xuất Hiện.7 = 21. , Chỉ Số Xuất Hiện.8 = 24. , Chỉ Số Xuất Hiện.9 = 27. , Chỉ Số Xuất Hiện.10 = 30. ,  = 4. , Chỉ Số Xuất Hiện.1 = 4. , Chỉ Số Xuất Hiện.2 = 12 8. , Chỉ Số Xuất Hiện.3 = 16. , Chỉ Số Xuất Hiện.4 5 = 20. , Chỉ Số Xuất Hiện.6 = 24. , Chỉ Số Xuất Hiện.7 = 28. , Chỉ Số Xuất Hiện.8 = 32. , Chỉ Số Xuất Hiện.9 = 36. , Chỉ Số Xuất Hiện.10 = 40. ,  = 5. , Chỉ Số Xuất Hiện.1 = 5. , Chỉ Số Xuất Hiện.2 = 10 15. , Chỉ Số Xuất Hiện.3 = 20. , Chỉ Số Xuất Hiện.4 5 = 25. , Chỉ Số Xuất Hiện.6 = 30. , Chỉ Số Xuất Hiện.7 = 35. , Chỉ Số Xuất Hiện.8 = 40. , Chỉ Số Xuất Hiện.9 = 45. , Chỉ Số Xuất Hiện.10 = 50. ,  = 6. , Chỉ Số Xuất Hiện.1 = 6. , Chỉ Số Xuất Hiện.2 = 12 18. , Chỉ Số Xuất Hiện.3 = 24. , Chỉ Số Xuất Hiện.4 5 = 30. , Chỉ Số Xuất Hiện.6 = 36. , Chỉ Số Xuất Hiện.7 = 42. , Chỉ Số Xuất Hiện.8 = 48. , Chỉ Số Xuất Hiện.9 = 54. , Chỉ Số Xuất Hiện.10 = 60. ,  = 7. , Chỉ Số Xuất Hiện.1 = 7. , Chỉ Số Xuất Hiện.2 = 14 21. , Chỉ Số Xuất Hiện.3 = 28. , Chỉ Số Xuất Hiện.4 5 = 35. , Chỉ Số Xuất Hiện.6 = 42. , Chỉ Số Xuất Hiện.7 = 49. , Chỉ Số Xuất Hiện.8 = 56. , Chỉ Số Xuất Hiện.9 = 63. , Chỉ Số Xuất Hiện.10 = 70. ,  = 8. , Chỉ",
+      "chunk_index": 8,
+      "source_file": "Bảo trì dự trên rủi ro.pdf",
+      "document_id": 46,
+      "page_no": 7,
+      "heading_path": [
+        "Xác định khả năng rủi ro"
+      ],
+      "image_refs": [],
+      "table_refs": [],
+      "has_table": true,
+      "has_code": false,
+      "contextualized": "Xác định khả năng rủi ro: \n 18. , Chỉ Số Xuất Hiện.7 = 21. , Chỉ Số Xuất Hiện.8 = 24. , Chỉ Số Xuất Hiện.9 = 27. , Chỉ Số Xuất"
+    },
+    {
+      "content": " Số Xuất Hiện.1 = 8. , Chỉ Số Xuất Hiện.2 = 16 24. , Chỉ Số Xuất Hiện.3 = 32. , Chỉ Số Xuất Hiện.4 5 = 40. , Chỉ Số Xuất Hiện.6 = 48. , Chỉ Số Xuất Hiện.7 = 56. , Chỉ Số Xuất Hiện.8 = 64. , Chỉ Số Xuất Hiện.9 = 72. , Chỉ Số Xuất Hiện.10 = 80. ,  = 9. , Chỉ Số Xuất Hiện.1 = 9. , Chỉ Số Xuất Hiện.2 = 18 27. , Chỉ Số Xuất Hiện.3 = 36. , Chỉ Số Xuất Hiện.4 5 = 45. , Chỉ Số Xuất Hiện.6 = 54. , Chỉ Số Xuất Hiện.7 = 63. , Chỉ Số Xuất Hiện.8 = 72. , Chỉ Số Xuất Hiện.9 = 81. , Chỉ Số Xuất Hiện.10 = 90. ,  = 10. , Chỉ Số Xuất Hiện.1 = 10. , Chỉ Số Xuất Hiện.2 = 20 30. , Chỉ Số Xuất Hiện.3 = 40. , Chỉ Số Xuất Hiện.4 5 = 50. , Chỉ Số Xuất Hiện.6 = 60. , Chỉ Số Xuất Hiện.7 = 70. , Chỉ Số Xuất Hiện.8 = 80. , Chỉ Số Xuất Hiện.9 = 90. , Chỉ Số Xuất Hiện.10 = 100",
+      "chunk_index": 9,
+      "source_file": "Bảo trì dự trên rủi ro.pdf",
+      "document_id": 46,
+      "page_no": 7,
+      "heading_path": [
+        "Xác định khả năng rủi ro"
+      ],
+      "image_refs": [],
+      "table_refs": [],
+      "has_table": true,
+      "has_code": false,
+      "contextualized": "Xác định khả năng rủi ro:  Số Xuất Hiện.1 = 8. , Chỉ Số Xuất Hiện.2 = 16 24. , Chỉ Số Xuất Hiện.3 = 32. , Chỉ Số Xuất Hiện.4 5"
+    },
+    {
+      "content": "Biết được nguy cơ hỏng hóc đối với từng thiết bị, có thể đưa ra các quyết định quản lý khác nhau. Các chiến lược quản lý rủi ro hỏng hóc khác nhau đối với từng người quản lý bảo trì, tuy nhiên, có một số khuyến nghị. Các điểm sau đây trình bày các quyết định bảo trì điển hình dựa trên nguy cơ hỏng hóc của thiết bị.",
+      "chunk_index": 10,
+      "source_file": "Bảo trì dự trên rủi ro.pdf",
+      "document_id": 46,
+      "page_no": 8,
+      "heading_path": [
+        "Đưa ra quyết định dựa trên rủi ro"
+      ],
+      "image_refs": [
+        "caf9dbd9-4203-40b6-9f5f-4e6fc828318d"
+      ],
+      "table_refs": [],
+      "has_table": false,
+      "has_code": false,
+      "contextualized": "Đưa ra quyết định dựa trên rủi ro: Biết được nguy cơ hỏng hóc đối với từng thiết bị, có thể đưa ra các quyết định quản lý khác nhau. Cá"
+    },
+    {
+      "content": "- Thiết bị rủi ro thấp: Tối ưu hóa chi phí bảo trì và xem xét thực hiện bảo trì điều chỉnh.\n- Thiết bị rủi ro vừa phải: Duy trì các thói quen bảo trì hiện tại, nếu có thể, giảm bớt bộ máy quan liêu xung quanh họ và đơn giản hóa việc quản lý bảo trì.\n- Thiết bị rủi ro cao: Chúng ta có thể thực hiện qua hai bước để giảm rủi ro như sau:\n+ Giảm chỉ số mức độ nghiêm trọng: Lỗi mức độ nghiêm trọng thấp là  lỗi  không  ảnh  hưởng  đến  các  mục tiêu  của  nhà  máy.  Do  đó, phương pháp phổ biến nhất để giảm mức độ nghiêm trọng là nhân đôi thiết bị hoặc cung cấp một thiết bị dự phòng.\n+ Giảm chỉ số tần suất hỏng hóc: Cách để giảm chỉ số tần suất hỏng hóc là giảm tần suất xảy ra sự cố. Bảo trì dựa trên tình trạng là một trong những phương pháp hiệu quả nhất để áp dụng cho các thiết bị này. Một phương pháp khác (rất phổ biến) là tăng tần suất các quy trình bảo trì phòng ngừa. Cũng có thể sử dụng các quy trình kỹ thuật để giảm thiểu nguyên nhân gây ra hỏng hóc. Trong lĩnh vực này, tính hiệu quả về chi phí cần được xem xét.",
+      "chunk_index": 11,
+      "source_file": "Bảo trì dự trên rủi ro.pdf",
+      "document_id": 46,
+      "page_no": 8,
+      "heading_path": [
+        "Đưa ra quyết định dựa trên rủi ro"
+      ],
+      "image_refs": [],
+      "table_refs": [],
+      "has_table": false,
+      "has_code": false,
+      "contextualized": "Đưa ra quyết định dựa trên rủi ro: - Thiết bị rủi ro thấp: Tối ưu hóa chi phí bảo trì và xem xét thực hiện bảo trì điều chỉnh.\n- Thiết "
+    },
+    {
+      "content": "Sau quyết định, trong quá trình vận hành thiết bị, khả năng xảy ra sự cố có thể thay đổi và do đó, rủi ro sẽ được tính toán lại. Bằng cách này, việc theo dõi sự thay đổi rủi ro là một chỉ số quản lý bảo trì tốt. Một lần nữa, phần mềm bảo trì đóng vai trò quan trọng trong việc trình bày các kết quả này một cách tự động và theo thời gian thực cho đội ngũ quản lý bảo trì.",
+      "chunk_index": 12,
+      "source_file": "Bảo trì dự trên rủi ro.pdf",
+      "document_id": 46,
+      "page_no": 8,
+      "heading_path": [
+        "Đưa ra quyết định dựa trên rủi ro"
+      ],
+      "image_refs": [],
+      "table_refs": [],
+      "has_table": false,
+      "has_code": false,
+      "contextualized": "Đưa ra quyết định dựa trên rủi ro: Sau quyết định, trong quá trình vận hành thiết bị, khả năng xảy ra sự cố có thể thay đổi và do đó, r"
+    },
+    {
+      "content": "Việc tính toán rủi ro hỏng hóc cho phép ban quản lý đưa ra các quyết định dựa trên dữ liệu. Nó chuyển đổi ngôn ngữ kỹ thuật về độ tin cậy của thiết bị sang ngôn ngữ mà ban lãnh đạo cấp cao có thể hiểu được. Nó cho phép điều hướng các nguồn lực để có được một hệ thống thiết bị phục vụ mục đích của doanh nghiệp một cách hiệu quả nhất. Và tất cả những điều này dẫn đến một quy trình bảo trì tinh gọn, tiết kiệm chi phí và các khoản không cần thiết, không có những hỏng hóc gây ảnh hưởng đến quá trình sản xuất.\nTài liệu đã chỉ ra rằng quản lý bảo trì dựa trên rủi ro đi đôi với việc sử dụng phần mềm quản lý bảo trì tốt ( Ví dụ như phần mềm SpeedMaint CMMS). Nó tạo điều kiện thuận lợi cho việc thu thập dữ liệu và tự động hóa việc tính toán rủi ro, cung cấp cho người dùng các chỉ số dễ hiểu.\nTrong tương lai, người ta kỳ vọng rằng các phát triển phần mềm bảo trì có thể cho phép hỗ trợ các quyết định bảo trì dựa trên rủi ro một cách tiên tiến hơn. Người dùng sẽ có thể hiểu được các quyết định của họ sẽ ảnh hưởng như thế nào đến rủi ro hiện tại của thiết bị. Bằng cách này, các nhà quản lý có thể chọn những quyết định hiệu quả nhất.",
+      "chunk_index": 13,
+      "source_file": "Bảo trì dự trên rủi ro.pdf",
+      "document_id": 46,
+      "page_no": 9,
+      "heading_path": [
+        "Kết luận"
+      ],
+      "image_refs": [
+        "ec19b67e-7459-4e7c-9131-fc3cbcd8600a",
+        "0e747cb1-bee7-4ab2-8f81-35891c84b802"
+      ],
+      "table_refs": [],
+      "has_table": false,
+      "has_code": false,
+      "contextualized": "Kết luận: Việc tính toán rủi ro hỏng hóc cho phép ban quản lý đưa ra các quyết định dựa trên dữ liệu. Nó chuyể"
+    },
+    {
+      "content": "Giúp số hóa quy trình bảo trì, theo dõi sự cố và thời gian dừng máy, quản lý kiểm tra, phân tích báo cáo và quản lý vật tư cung cấp nền tảng thông tin và công cụ cần thiết để doanh nghiệp có thể triển khai các chiến lược bảo trì có tính đến yếu tố rủi ro một cách hiệu quả hơn. Bằng cách sử dụng phần mềm để thu thập, quản lý và phân tích dữ liệu liên quan đến tài sản và hoạt động bảo trì, doanh nghiệp có thể đưa ra các quyết định bảo trì sáng suốt hơn, tập trung nguồn lực vào các tài sản có mức độ quan trọng và rủi ro cao nhất.\nhttps://signup.speedmaint.com/dich-vu-bao-tri/?utm_source=NhungvtSEO&utm_medium=LoT01&utm_campaign=ebook-bao-tri-dua-tren-rui-ro https://signup.speedmaint.com/dich-vu-bao-tri/?utm_source=NhungvtSEO&utm_medium=LoT01&utm_campaign=ebook-bao-tri-dua-tren-rui-ro\nhttps://signup.speedmaint.com/dich-vu-bao-tri/?utm_source=NhungvtSEO&utm_medium=LoT01&utm_campaign=ebook-bao-tri-dua-tren-rui-ro",
+      "chunk_index": 14,
+      "source_file": "Bảo trì dự trên rủi ro.pdf",
+      "document_id": 46,
+      "page_no": 10,
+      "heading_path": [
+        "PHẦN MỀM SPEEDMAINT CMMS"
+      ],
+      "image_refs": [
+        "5639e741-2cd5-4869-bd6b-31cc9c14142e",
+        "82802065-f9aa-448c-ae4c-bd55c86fbc4e",
+        "8a61d0f9-4b2d-426f-91c6-ea6691ac7771"
+      ],
+      "table_refs": [],
+      "has_table": false,
+      "has_code": false,
+      "contextualized": "PHẦN MỀM SPEEDMAINT CMMS: Giúp số hóa quy trình bảo trì, theo dõi sự cố và thời gian dừng máy, quản lý kiểm tra, phân tích báo"
+    },
+    {
+      "content": "Trải Nghiệm Miễn Phí https://signup.speedmaint.com/dich-vu-bao-tri/?utm_source=NhungvtSEO&utm_medium=LoT01&utm_campaign=ebook-bao-tri-dua-tren-rui-ro https://signup.speedmaint.com/dich-vu-bao-tri/?utm_source=NhungvtSEO&utm_medium=LoT01&utm_campaign=ebook-bao-tri-dua-tren-rui-ro https://signup.speedmaint.com/dich-vu-bao-tri/?utm_source=NhungvtSEO&utm_medium=LoT01&utm_campaign=ebook-bao-tri-dua-tren-rui-ro https://signup.speedmaint.com/dich-vu-bao-tri/?utm_source=NhungvtSEO&utm_medium=LoT01&utm_campaign=ebook-bao-tri-dua-tren-rui-ro https://signup.speedmaint.com/dich-vu-bao-tri/?utm_source=NhungvtSEO&utm_medium=LoT01&utm_campaign=ebook-bao-tri-dua-tren-rui-ro https://signup.speedmaint.com/dich-vu-bao-tri/?utm_source=NhungvtSEO&utm_medium=LoT01&utm_campaign=ebook-bao-tri-dua-tren-rui-ro https://signup.speedmaint.com/dich-vu-bao-tri/?utm_source=NhungvtSEO&utm_medium=LoT01&utm_campaign=ebook-bao-tri-dua-tren-rui-ro",
+      "chunk_index": 15,
+      "source_file": "Bảo trì dự trên rủi ro.pdf",
+      "document_id": 46,
+      "page_no": 10,
+      "heading_path": [
+        "PHẦN MỀM SPEEDMAINT CMMS"
+      ],
+      "image_refs": [],
+      "table_refs": [],
+      "has_table": false,
+      "has_code": false,
+      "contextualized": "PHẦN MỀM SPEEDMAINT CMMS: Trải Nghiệm Miễn Phí https://signup.speedmaint.com/dich-vu-bao-tri/?utm_source=NhungvtSEO&utm_medium"
+    },
+    {
+      "content": "https://signup.speedmaint.com/dich-vu-bao-tri/?utm_source=NhungvtSEO&utm_medium=LoT01&utm_campaign=ebook-bao-tri-dua-tren-rui-ro https://signup.speedmaint.com/dich-vu-bao-tri/?utm_source=NhungvtSEO&utm_medium=LoT01&utm_campaign=ebook-bao-tri-dua-tren-rui-ro\nhttps://signup.speedmaint.com/dich-vu-bao-tri/?utm_source=NhungvtSEO&utm_medium=LoT01&utm_campaign=ebook-bao-tri-dua-tren-rui-ro\nNguồn: Tài liệu từ ManWinWin - Được biên dịch bởi đội ngũ SpeedMaint",
+      "chunk_index": 16,
+      "source_file": "Bảo trì dự trên rủi ro.pdf",
+      "document_id": 46,
+      "page_no": 10,
+      "heading_path": [
+        "PHẦN MỀM SPEEDMAINT CMMS"
+      ],
+      "image_refs": [],
+      "table_refs": [],
+      "has_table": false,
+      "has_code": false,
+      "contextualized": "PHẦN MỀM SPEEDMAINT CMMS: https://signup.speedmaint.com/dich-vu-bao-tri/?utm_source=NhungvtSEO&utm_medium=LoT01&utm_campaign=e"
+    },
+    {
+      "content": "- Văn phòng miền Bắc: Tầng 07, tòa nhà Lotus, số 02 đường Duy Tân, P. Dịch Vọng Hậu, Q. Cầu Giấy, TP. Hà Nội\n- Văn phòng miền Nam: Số 927/1, đường Cách Mạng Tháng 08, P7, Q. Tân Bình, TP. Hồ Chí Minh\n- Hotline: 0912.76.5656\nEmail: marketing@speedmaint.com\nWebsite: https://speedmaint.com/\nFanpage: SpeedMaint Cloud CMMS",
+      "chunk_index": 17,
+      "source_file": "Bảo trì dự trên rủi ro.pdf",
+      "document_id": 46,
+      "page_no": 11,
+      "heading_path": [
+        "Công ty TNHH MTV phần mềm SpeedMaint"
+      ],
+      "image_refs": [
+        "347ec4db-849a-40fb-b14a-4156a3ea008c",
+        "34ab5b4f-2bc5-4774-8610-5a0d87f8523d",
+        "a8128558-9275-4b51-bfa7-389ca537d5a0",
+        "a15c0e6c-3d1b-432b-9a26-21c0d8c12fa9",
+        "8e963390-bf5d-4e97-9da0-fa8952ee5489",
+        "f9987b88-7b13-4caf-b518-d675acacafca",
+        "ced3fec9-0715-404d-be18-3f8eab892a01"
+      ],
+      "table_refs": [],
+      "has_table": false,
+      "has_code": false,
+      "contextualized": "Công ty TNHH MTV phần mềm SpeedMaint: - Văn phòng miền Bắc: Tầng 07, tòa nhà Lotus, số 02 đường Duy Tân, P. Dịch Vọng Hậu, Q. Cầu Giấy, TP"
+    }
+  ],
+  "images": [
+    {
+      "image_id": "99fcd507-820d-4e20-bf73-0b9f2bc4abb4",
+      "document_id": 46,
+      "page_no": 1,
+      "file_path": "/app/data/docling/kb_42/images/99fcd507-820d-4e20-bf73-0b9f2bc4abb4.png",
+      "caption": "",
+      "width": 1189,
+      "height": 922,
+      "bbox": null,
+      "mime_type": "image/png"
+    },
+    {
+      "image_id": "9db6dce9-fe4c-4ea3-b4e7-b8dcb73a8775",
+      "document_id": 46,
+      "page_no": 1,
+      "file_path": "/app/data/docling/kb_42/images/9db6dce9-fe4c-4ea3-b4e7-b8dcb73a8775.png",
+      "caption": "",
+      "width": 302,
+      "height": 91,
+      "bbox": null,
+      "mime_type": "image/png"
+    },
+    {
+      "image_id": "a5ab1fe9-6909-4fe9-9ae4-3cc1bf973cbc",
+      "document_id": 46,
+      "page_no": 2,
+      "file_path": "/app/data/docling/kb_42/images/a5ab1fe9-6909-4fe9-9ae4-3cc1bf973cbc.png",
+      "caption": "",
+      "width": 282,
+      "height": 57,
+      "bbox": null,
+      "mime_type": "image/png"
+    },
+    {
+      "image_id": "00b30db0-50ed-48a5-85fc-1da4a817b45b",
+      "document_id": 46,
+      "page_no": 2,
+      "file_path": "/app/data/docling/kb_42/images/00b30db0-50ed-48a5-85fc-1da4a817b45b.png",
+      "caption": "",
+      "width": 1190,
+      "height": 799,
+      "bbox": null,
+      "mime_type": "image/png"
+    },
+    {
+      "image_id": "1fd5ddfa-d631-4096-87b3-610b637c482d",
+      "document_id": 46,
+      "page_no": 2,
+      "file_path": "/app/data/docling/kb_42/images/1fd5ddfa-d631-4096-87b3-610b637c482d.png",
+      "caption": "",
+      "width": 253,
+      "height": 73,
+      "bbox": null,
+      "mime_type": "image/png"
+    },
+    {
+      "image_id": "b396875d-ac8b-4293-9eb8-fa45ac72f963",
+      "document_id": 46,
+      "page_no": 3,
+      "file_path": "/app/data/docling/kb_42/images/b396875d-ac8b-4293-9eb8-fa45ac72f963.png",
+      "caption": "",
+      "width": 254,
+      "height": 72,
+      "bbox": null,
+      "mime_type": "image/png"
+    },
+    {
+      "image_id": "cc80819b-712b-46dc-ad0a-3a770f83fb9a",
+      "document_id": 46,
+      "page_no": 4,
+      "file_path": "/app/data/docling/kb_42/images/cc80819b-712b-46dc-ad0a-3a770f83fb9a.png",
+      "caption": "",
+      "width": 94,
+      "height": 111,
+      "bbox": null,
+      "mime_type": "image/png"
+    },
+    {
+      "image_id": "6f9a15a4-7981-4e7a-91f8-e9c784700b56",
+      "document_id": 46,
+      "page_no": 4,
+      "file_path": "/app/data/docling/kb_42/images/6f9a15a4-7981-4e7a-91f8-e9c784700b56.png",
+      "caption": "",
+      "width": 253,
+      "height": 73,
+      "bbox": null,
+      "mime_type": "image/png"
+    },
+    {
+      "image_id": "85e8d9f4-356e-4fb2-af85-204a4dc7026e",
+      "document_id": 46,
+      "page_no": 4,
+      "file_path": "/app/data/docling/kb_42/images/85e8d9f4-356e-4fb2-af85-204a4dc7026e.png",
+      "caption": "",
+      "width": 697,
+      "height": 857,
+      "bbox": null,
+      "mime_type": "image/png"
+    },
+    {
+      "image_id": "8ab88141-816f-4f53-af43-0e2f31202a13",
+      "document_id": 46,
+      "page_no": 5,
+      "file_path": "/app/data/docling/kb_42/images/8ab88141-816f-4f53-af43-0e2f31202a13.png",
+      "caption": "",
+      "width": 253,
+      "height": 73,
+      "bbox": null,
+      "mime_type": "image/png"
+    },
+    {
+      "image_id": "502eeb95-f36f-4333-8b63-b73e11d3035b",
+      "document_id": 46,
+      "page_no": 5,
+      "file_path": "/app/data/docling/kb_42/images/502eeb95-f36f-4333-8b63-b73e11d3035b.png",
+      "caption": "",
+      "width": 837,
+      "height": 521,
+      "bbox": null,
+      "mime_type": "image/png"
+    },
+    {
+      "image_id": "126a32bc-8209-452a-a02c-aebbc0fd3584",
+      "document_id": 46,
+      "page_no": 6,
+      "file_path": "/app/data/docling/kb_42/images/126a32bc-8209-452a-a02c-aebbc0fd3584.png",
+      "caption": "",
+      "width": 253,
+      "height": 73,
+      "bbox": null,
+      "mime_type": "image/png"
+    },
+    {
+      "image_id": "8482756e-ab4b-4edc-9555-d0cdc334a709",
+      "document_id": 46,
+      "page_no": 7,
+      "file_path": "/app/data/docling/kb_42/images/8482756e-ab4b-4edc-9555-d0cdc334a709.png",
+      "caption": "",
+      "width": 92,
+      "height": 112,
+      "bbox": null,
+      "mime_type": "image/png"
+    },
+    {
+      "image_id": "f6463223-af10-4233-8c3b-ee77376df261",
+      "document_id": 46,
+      "page_no": 7,
+      "file_path": "/app/data/docling/kb_42/images/f6463223-af10-4233-8c3b-ee77376df261.png",
+      "caption": "",
+      "width": 253,
+      "height": 73,
+      "bbox": null,
+      "mime_type": "image/png"
+    },
+    {
+      "image_id": "caf9dbd9-4203-40b6-9f5f-4e6fc828318d",
+      "document_id": 46,
+      "page_no": 8,
+      "file_path": "/app/data/docling/kb_42/images/caf9dbd9-4203-40b6-9f5f-4e6fc828318d.png",
+      "caption": "",
+      "width": 253,
+      "height": 73,
+      "bbox": null,
+      "mime_type": "image/png"
+    },
+    {
+      "image_id": "ec19b67e-7459-4e7c-9131-fc3cbcd8600a",
+      "document_id": 46,
+      "page_no": 9,
+      "file_path": "/app/data/docling/kb_42/images/ec19b67e-7459-4e7c-9131-fc3cbcd8600a.png",
+      "caption": "",
+      "width": 389,
+      "height": 113,
+      "bbox": null,
+      "mime_type": "image/png"
+    },
+    {
+      "image_id": "0e747cb1-bee7-4ab2-8f81-35891c84b802",
+      "document_id": 46,
+      "page_no": 9,
+      "file_path": "/app/data/docling/kb_42/images/0e747cb1-bee7-4ab2-8f81-35891c84b802.png",
+      "caption": "",
+      "width": 254,
+      "height": 77,
+      "bbox": null,
+      "mime_type": "image/png"
+    },
+    {
+      "image_id": "5639e741-2cd5-4869-bd6b-31cc9c14142e",
+      "document_id": 46,
+      "page_no": 10,
+      "file_path": "/app/data/docling/kb_42/images/5639e741-2cd5-4869-bd6b-31cc9c14142e.png",
+      "caption": "",
+      "width": 253,
+      "height": 73,
+      "bbox": null,
+      "mime_type": "image/png"
+    },
+    {
+      "image_id": "82802065-f9aa-448c-ae4c-bd55c86fbc4e",
+      "document_id": 46,
+      "page_no": 10,
+      "file_path": "/app/data/docling/kb_42/images/82802065-f9aa-448c-ae4c-bd55c86fbc4e.png",
+      "caption": "",
+      "width": 456,
+      "height": 131,
+      "bbox": null,
+      "mime_type": "image/png"
+    },
+    {
+      "image_id": "8a61d0f9-4b2d-426f-91c6-ea6691ac7771",
+      "document_id": 46,
+      "page_no": 10,
+      "file_path": "/app/data/docling/kb_42/images/8a61d0f9-4b2d-426f-91c6-ea6691ac7771.png",
+      "caption": "",
+      "width": 1027,
+      "height": 534,
+      "bbox": null,
+      "mime_type": "image/png"
+    },
+    {
+      "image_id": "347ec4db-849a-40fb-b14a-4156a3ea008c",
+      "document_id": 46,
+      "page_no": 11,
+      "file_path": "/app/data/docling/kb_42/images/347ec4db-849a-40fb-b14a-4156a3ea008c.png",
+      "caption": "",
+      "width": 456,
+      "height": 132,
+      "bbox": null,
+      "mime_type": "image/png"
+    },
+    {
+      "image_id": "34ab5b4f-2bc5-4774-8610-5a0d87f8523d",
+      "document_id": 46,
+      "page_no": 11,
+      "file_path": "/app/data/docling/kb_42/images/34ab5b4f-2bc5-4774-8610-5a0d87f8523d.png",
+      "caption": "",
+      "width": 33,
+      "height": 45,
+      "bbox": null,
+      "mime_type": "image/png"
+    },
+    {
+      "image_id": "a8128558-9275-4b51-bfa7-389ca537d5a0",
+      "document_id": 46,
+      "page_no": 11,
+      "file_path": "/app/data/docling/kb_42/images/a8128558-9275-4b51-bfa7-389ca537d5a0.png",
+      "caption": "",
+      "width": 33,
+      "height": 46,
+      "bbox": null,
+      "mime_type": "image/png"
+    },
+    {
+      "image_id": "a15c0e6c-3d1b-432b-9a26-21c0d8c12fa9",
+      "document_id": 46,
+      "page_no": 11,
+      "file_path": "/app/data/docling/kb_42/images/a15c0e6c-3d1b-432b-9a26-21c0d8c12fa9.png",
+      "caption": "",
+      "width": 35,
+      "height": 34,
+      "bbox": null,
+      "mime_type": "image/png"
+    },
+    {
+      "image_id": "8e963390-bf5d-4e97-9da0-fa8952ee5489",
+      "document_id": 46,
+      "page_no": 11,
+      "file_path": "/app/data/docling/kb_42/images/8e963390-bf5d-4e97-9da0-fa8952ee5489.png",
+      "caption": "",
+      "width": 41,
+      "height": 30,
+      "bbox": null,
+      "mime_type": "image/png"
+    },
+    {
+      "image_id": "f9987b88-7b13-4caf-b518-d675acacafca",
+      "document_id": 46,
+      "page_no": 11,
+      "file_path": "/app/data/docling/kb_42/images/f9987b88-7b13-4caf-b518-d675acacafca.png",
+      "caption": "",
+      "width": 35,
+      "height": 35,
+      "bbox": null,
+      "mime_type": "image/png"
+    },
+    {
+      "image_id": "ced3fec9-0715-404d-be18-3f8eab892a01",
+      "document_id": 46,
+      "page_no": 11,
+      "file_path": "/app/data/docling/kb_42/images/ced3fec9-0715-404d-be18-3f8eab892a01.png",
+      "caption": "",
+      "width": 38,
+      "height": 37,
+      "bbox": null,
+      "mime_type": "image/png"
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "7acca07f-f48f-4599-bb0c-c82464868c64",
+      "document_id": 46,
+      "page_no": 5,
+      "content_markdown": "| Phân loại       | Phân loại   | Môtả                                                                                             |\n|-----------------|-------------|--------------------------------------------------------------------------------------------------|\n| Frequent        | 9 a 10      | Xác suất cao xảy ra trong khoảng thời gian hoạt động của thiết bị.                               |\n| Likely          | 7 a 8       | Xác suất xảyra ởmứctrungbìnhtrongkhoảngthời gian thiết bị hoạt động.                             |\n| Occasional      | 5 a 6       | Xác suất thỉnh thoảng xảy ra trong khoảng thời gian hoạt động của thiết bị                       |\n| Unlikely        | 3 a 4       | Xác suất không có khả năng xảy ra trong thời gian hoạt động của thiết bị.                        |\n| Highly unlikely | 1 a 2       | Một lỗi có xác suất xảy ra về cơ bản là bằng không trong khoảng thời gian hoạt động của thiết bị |",
+      "caption": "",
+      "num_rows": 6,
+      "num_cols": 3
+    },
+    {
+      "table_id": "6c0ceb06-96ab-487c-8d0a-dd823b57cde1",
+      "document_id": 46,
+      "page_no": 6,
+      "content_markdown": "| Phân loại    | Phân loại   | Môtả                                                                                                                              |\n|--------------|-------------|-----------------------------------------------------------------------------------------------------------------------------------|\n| Catastrophic | 9 a 10      | Rất quan trọng đối với hoạt động của hệ thống. Thất bại sẽ khiến hệ thống dừng lại.                                               |\n| Critical     | 7 a 8       | Quan trọng đối với hoạt động tốt của hệ thống. Sự cốsẽlàmgiảmhiệusuấtvàcóthểdẫnđếnhậuquả bất lợi.                                 |\n| Marginal     | 5 a 6       | Cần thiết để hoạt động tốt. Lỗi có thể ảnh hưởng đến hiệu suất hệ thống và có thể dẫn đến lỗi hệ thống.                           |\n| Marginal     | 3 a 4       | Tùy chọn cho hiệu suất tốt. Lỗi không ảnh hưởng đến hiệu suất hệ thống ngay lập tức. Nhưng lỗi kéo dài có thể gây ra lỗi hệ thống |\n| Minor        | 1 a 2       | Tùy chọn cho hoạt động. Lỗi sẽ không ảnh hưởng đến hiệu suất hệ thống.                                                            |",
+      "caption": "",
+      "num_rows": 6,
+      "num_cols": 3
+    },
+    {
+      "table_id": "ccd08de8-3281-4a78-94e1-d88090906492",
+      "document_id": 46,
+      "page_no": 7,
+      "content_markdown": "|                         |    |   Chỉ Số Xuất Hiện | Chỉ Số Xuất Hiện   | Chỉ Số Xuất Hiện   | Chỉ Số Xuất Hiện   |   Chỉ Số Xuất Hiện |   Chỉ Số Xuất Hiện |   Chỉ Số Xuất Hiện |   Chỉ Số Xuất Hiện |   Chỉ Số Xuất Hiện |\n|-------------------------|----|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|\n|                         |    |                  1 | 2                  | 3                  | 4 5                |                  6 |                  7 |                  8 |                  9 |                 10 |\n| MứcĐộNghiêmTrọng Rủi Ro |  1 |                  1 | 2                  | 3                  | 4 5                |                  6 |                  7 |                  8 |                  9 |                 10 |\n| MứcĐộNghiêmTrọng Rủi Ro |  2 |                  2 | 4                  | 6 8                | 10                 |                 12 |                 14 |                 16 |                 18 |                 20 |\n|                         |  3 |                  3 | 6 9                | 12                 | 15                 |                 18 |                 21 |                 24 |                 27 |                 30 |\n|                         |  4 |                  4 | 12 8               | 16                 | 20                 |                 24 |                 28 |                 32 |                 36 |                 40 |\n|                         |  5 |                  5 | 10 15              | 20                 | 25                 |                 30 |                 35 |                 40 |                 45 |                 50 |\n|                         |  6 |                  6 | 12 18              | 24                 | 30                 |                 36 |                 42 |                 48 |                 54 |                 60 |\n|                         |  7 |                  7 | 14 21              | 28                 | 35                 |                 42 |                 49 |                 56 |                 63 |                 70 |\n|                         |  8 |                  8 | 16 24              | 32                 | 40                 |                 48 |                 56 |                 64 |                 72 |                 80 |\n|                         |  9 |                  9 | 18 27              | 36                 | 45                 |                 54 |                 63 |                 72 |                 81 |                 90 |\n|                         | 10 |                 10 | 20 30              | 40                 | 50                 |                 60 |                 70 |                 80 |                 90 |                100 |",
+      "caption": "",
+      "num_rows": 12,
+      "num_cols": 11
+    }
+  ]
+}

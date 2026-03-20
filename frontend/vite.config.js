@@ -18,12 +18,12 @@ export default defineConfig({
     format: 'es'
   },
   server: {
-    port: 3001,
+    port: 3000,
     host: "0.0.0.0",
     hmr: false,
     proxy: {
       "/api": {
-        target: "http://localhost",
+        target: process.env.VITE_API_BASE_URL || "http://host.docker.internal:8080",
         changeOrigin: true,
         secure: false,
       },

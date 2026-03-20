@@ -285,6 +285,25 @@ const Workspace = {
     const data = await response.json();
     return { response, data };
   },
+  listDocuments: async function (slug) {
+    return await fetch(`${API_BASE}/workspace/${slug}/documents`, {
+      method: "GET",
+      headers: baseHeaders(),
+    })
+      .then((res) => {
+        if (!res.ok) throw new Error("Failed to fetch documents");
+        return res.json();
+      })
+      .catch(() => []);
+  },
+  deleteDocumentById: async function (slug, docId) {
+    return await fetch(`${API_BASE}/workspace/${slug}/documents/${docId}`, {
+      method: "DELETE",
+      headers: baseHeaders(),
+    })
+      .then((res) => res.ok)
+      .catch(() => false);
+  },
   parseFile: async function (slug, formData) {
     const response = await fetch(`${API_BASE}/workspace/${slug}/parse`, {
       method: "POST",

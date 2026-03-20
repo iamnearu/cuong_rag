@@ -15,6 +15,7 @@ import logging
 
 import numpy as np
 
+from app.core.config import settings
 from app.services.llm.base import EmbeddingProvider
 
 logger = logging.getLogger(__name__)
@@ -50,12 +51,16 @@ class SentenceTransformerEmbeddingProvider(EmbeddingProvider):
             from sentence_transformers import SentenceTransformer
 
             logger.info("Loading sentence-transformers KG embedding model: %s", self._model_name)
-            self._model = SentenceTransformer(self._model_name)
+            self._model = SentenceTransformer(
+                self._model_name,
+                device=settings.KG_EMBEDDING_DEVICE,
+            )
             self._dimension = self._model.get_sentence_embedding_dimension()
             logger.info(
-                "KG embedding model loaded: %s (dim=%d)",
+                "KG embedding model loaded: %s (dim=%d, device=%s)",
                 self._model_name,
                 self._dimension,
+                settings.KG_EMBEDDING_DEVICE,
             )
         return self._model
 

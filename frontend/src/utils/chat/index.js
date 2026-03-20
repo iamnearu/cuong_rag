@@ -2,6 +2,20 @@ import { THREAD_RENAME_EVENT } from "@/components/Sidebar/ActiveWorkspaces/Threa
 import { emitAssistantMessageCompleteEvent } from "@/components/contexts/TTSProvider";
 export const ABORT_STREAM_EVENT = "abort-chat-stream";
 
+function closeThoughtIfNeeded(content = "") {
+  if (content.includes("<thinking") && !content.includes("</thinking>")) {
+    return `${content}</thinking>\n\n`;
+  }
+  return content;
+}
+
+function extractThoughtPrefix(content = "") {
+  if (!content.includes("<thinking")) return "";
+  const closingIdx = content.lastIndexOf("</thinking>");
+  if (closingIdx !== -1) return content.slice(0, closingIdx + 11);
+  return closeThoughtIfNeeded(content);
+}
+
 // For handling of chat responses in the frontend by their various types.
 export default function handleChat(
   chatResult,
@@ -55,12 +69,18 @@ export default function handleChat(
       metrics,
     });
   } else if (type === "textResponse") {
+    const existingChat = _chatHistory.find((chat) => chat.uuid === uuid);
+    const thoughtPrefix = extractThoughtPrefix(existingChat?.content || "");
+    const combinedTextResponse = thoughtPrefix
+      ? `${thoughtPrefix}\n\n${textResponse}`
+      : textResponse;
+
     setLoadingResponse(false);
     setChatHistory([
       ...remHistory,
       {
         uuid,
-        content: textResponse,
+        content: combinedTextResponse,
         role: "assistant",
         sources,
         images,
@@ -74,7 +94,7 @@ export default function handleChat(
     ]);
     _chatHistory.push({
       uuid,
-      content: textResponse,
+      content: combinedTextResponse,
       role: "assistant",
       sources,
       images,
@@ -86,6 +106,40 @@ export default function handleChat(
       metrics,
     });
     emitAssistantMessageCompleteEvent(chatId);
+  } else if (type === "thinkingChunk") {
+    const chatIdx = _chatHistory.findIndex((chat) => chat.uuid === uuid);
+
+    if (chatIdx !== -1) {
+      const existingHistory = { ..._chatHistory[chatIdx] };
+      const existingContent = existingHistory.content || "";
+      const hasOpenThinking = existingContent.includes("<thinking");
+      const nextContent = hasOpenThinking
+        ? `${existingContent}${textResponse}`
+        : `${existingContent}<thinking>${textResponse}`;
+
+      _chatHistory[chatIdx] = {
+        ...existingHistory,
+        content: nextContent,
+        sources,
+        error,
+        closed: false,
+        animate: true,
+        pending: false,
+      };
+    } else {
+      _chatHistory.push({
+        uuid,
+        sources,
+        error,
+        content: `<thinking>${textResponse}`,
+        role: "assistant",
+        closed: false,
+        animate: true,
+        pending: false,
+      });
+    }
+
+    setChatHistory([..._chatHistory]);
   } else if (
     type === "textResponseChunk" ||
     type === "finalizeResponseStream"
@@ -100,6 +154,7 @@ export default function handleChat(
       if (type === "finalizeResponseStream") {
         updatedHistory = {
           ...existingHistory,
+          content: closeThoughtIfNeeded(existingHistory.content || ""),
           closed: close,
           animate: !close,
           pending: false,
@@ -114,7 +169,8 @@ export default function handleChat(
       } else {
         updatedHistory = {
           ...existingHistory,
-          content: existingHistory.content + textResponse,
+          content:
+            closeThoughtIfNeeded(existingHistory.content || "") + textResponse,
           sources,
           error,
           closed: close,
@@ -130,7 +186,7 @@ export default function handleChat(
         uuid,
         sources,
         error,
-        content: textResponse,
+        content: closeThoughtIfNeeded("") + textResponse,
         role: "assistant",
         closed: close,
         animate: !close,

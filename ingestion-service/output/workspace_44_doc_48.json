@@ -1,0 +1,30 @@
+{
+  "workspace_id": 44,
+  "document_id": 48,
+  "original_filename": "demo-index-test.md",
+  "file_type": "md",
+  "status": "indexed",
+  "chunk_count": 1,
+  "image_count": 0,
+  "table_count": 0,
+  "processing_time_ms": 273327,
+  "indexed_at": 1773995484,
+  "markdown": "# Demo Indexing\n\nThis is a backend indexing smoke test document.\n",
+  "chunks": [
+    {
+      "content": "# Demo Indexing\n\nThis is a backend indexing smoke test document.",
+      "chunk_index": 0,
+      "source_file": "demo-index-test.md",
+      "document_id": 48,
+      "page_no": 0,
+      "heading_path": [],
+      "image_refs": [],
+      "table_refs": [],
+      "has_table": false,
+      "has_code": false,
+      "contextualized": ""
+    }
+  ],
+  "images": [],
+  "tables": []
+}

@@ -5,14 +5,22 @@ WORKDIR /app
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1
 
-# System deps: curl (healthcheck) + build-essential + poppler (PDF) + libmagic
+# System deps:
+# - Base build/runtime: curl, build-essential, poppler, libmagic
+# - OpenCV runtime (fix libGL.so.1): libgl1 + X11 libs
+# - Docling OCR fallback: tesseract-ocr (+ Vietnamese language pack)
 RUN apt-get update && apt-get install -y --no-install-recommends \
         curl \
         build-essential \
         poppler-utils \
         libmagic1 \
-    libgl1 \
-    libglib2.0-0 \
+        libglib2.0-0 \
+        libgl1 \
+        libsm6 \
+        libxext6 \
+        libxrender1 \
+        tesseract-ocr \
+        tesseract-ocr-vie \
     && rm -rf /var/lib/apt/lists/*
 
 # Install Python deps first (layer cache)

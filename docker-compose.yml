@@ -23,6 +23,31 @@ services:
     restart: unless-stopped
 
   # ─── Backend Services ──────────────────────────────────────────────────────
+  api-gateway:
+    build:
+      context: ../api_gateway
+      dockerfile: Dockerfile
+    container_name: cuongrag-api-gateway
+    depends_on:
+      rag-service:
+        condition: service_healthy
+      postgres:
+        condition: service_healthy
+    environment:
+      HOST: 0.0.0.0
+      PORT: 8080
+      DEBUG: "true"
+      DATABASE_URL: sqlite+aiosqlite:///./data/gateway.db
+      RAG_SERVICE_URL: http://rag-service:8081
+      INGESTION_SERVICE_URL: http://ingestion-service:8082
+      CORS_ORIGINS: '["http://localhost:3001","http://localhost"]'
+    volumes:
+      - ../api_gateway:/app
+      - cuongrag_gateway_data:/app/data
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+
   rag-service:
     build:
       context: ./rag-service
@@ -127,20 +152,27 @@ services:
     container_name: cuongrag-frontend
     working_dir: /app
     command: sh -c "yarn install --frozen-lockfile && yarn dev --host 0.0.0.0 --port 3001"
+    environment:
+      VITE_API_BASE_URL: http://api-gateway:8080
     volumes:
       - ./frontend:/app
     ports:
       - "3001:3001"
     depends_on:
+      api-gateway:
+        condition: service_started
       rag-service:
         condition: service_healthy
       ingestion-service:
         condition: service_healthy
       kg-service:
         condition: service_healthy
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     restart: unless-stopped
 
 volumes:
   cuongrag_postgres_data:
   cuongrag_uploads:
   cuongrag_data:
+  cuongrag_gateway_data:

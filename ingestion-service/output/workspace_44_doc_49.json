@@ -1,0 +1,16 @@
+{
+  "workspace_id": 44,
+  "document_id": 49,
+  "original_filename": "demo-index-test-2.md",
+  "file_type": "md",
+  "status": "indexed",
+  "chunk_count": 0,
+  "image_count": 0,
+  "table_count": 0,
+  "processing_time_ms": 6246,
+  "indexed_at": 1773995896,
+  "markdown": "# Demo 2\n\nSecond indexing smoke test.\n",
+  "chunks": [],
+  "images": [],
+  "tables": []
+}

@@ -877,7 +877,7 @@ const TRANSLATIONS = {
       watch_explained_block1:
         "Když <b>sledujete</b> dokument v AnythingLLM, <i>automaticky</i> synchronizujeme obsah dokumentu z jeho původního zdroje v pravidelných intervalech. Tím se automaticky aktualizuje obsah v každém pracovním prostoru, kde je tento soubor spravován.",
       watch_explained_block2:
-        "Tato funkce v současné době podporuje onlineový obsah a nebude k dispozici pro ručně nahrané dokumenty.",
+        "Tato funkce v současné době podporuje onlincmms_ragý obsah a nebude k dispozici pro ručně nahrané dokumenty.",
       watch_explained_block3_start:
         "Můžete spravovat, které dokumenty jsou sledovány z ",
       watch_explained_block3_link: "Správce souborů",

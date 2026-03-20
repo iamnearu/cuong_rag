@@ -2,10 +2,10 @@
 Deep Document Parser
 ====================
 
-Parses documents with MinerU OCR (for PDFs) and Docling (for office files)
-to extract rich markdown, tables, and images with structural metadata.
+Parses documents with MinerU OCR (PDF-first) to extract markdown,
+tables, and images with structural metadata.
 
-Supported formats: PDF (MinerU), DOCX/PPTX/HTML (Docling)
+Supported formats: PDF (MinerU)
 Fallback: TXT, MD (via legacy loader)
 """
 from __future__ import annotations
@@ -30,18 +30,16 @@ from app.services.models.parsed_document import (
 
 logger = logging.getLogger(__name__)
 
-# File extensions handled by MinerU / Docling / legacy
+# File extensions handled by MinerU / legacy
 _MINERU_EXTENSIONS = {".pdf"}
-_DOCLING_EXTENSIONS = {".pdf", ".docx", ".pptx", ".html"}
 _LEGACY_EXTENSIONS = {".txt", ".md"}
 
 
 class DeepDocumentParser:
     """
-    Parses documents using MinerU + Docling for rich structural extraction.
+    Parses documents using MinerU for rich structural extraction.
 
     - Converts PDF via MinerU CLI (OCR-first pipeline)
-    - Converts DOCX/PPTX/HTML via Docling DocumentConverter
     - Chunks using HybridChunker (semantic + structural)
     - Extracts images and optionally captions them via Gemini Vision
     - Optionally applies ProtonX Vietnamese correction on OCR markdown
@@ -54,31 +52,6 @@ class DeepDocumentParser:
             settings.BASE_DIR / "data" / "docling" / f"kb_{workspace_id}"
         )
         self._converter = None
-
-    def _get_converter(self):
-        """Lazy-init Docling DocumentConverter with image extraction."""
-        if self._converter is not None:
-            return self._converter
-
-        from docling.document_converter import DocumentConverter, PdfFormatOption
-        from docling.datamodel.pipeline_options import PdfPipelineOptions
-
-        pipeline_options = PdfPipelineOptions()
-        pipeline_options.generate_picture_images = settings.CUONGRAG_ENABLE_IMAGE_EXTRACTION
-        pipeline_options.images_scale = settings.CUONGRAG_DOCLING_IMAGES_SCALE
-        pipeline_options.do_formula_enrichment = settings.CUONGRAG_ENABLE_FORMULA_ENRICHMENT
-
-        self._converter = DocumentConverter(
-            format_options={
-                "pdf": PdfFormatOption(pipeline_options=pipeline_options),
-            }
-        )
-        return self._converter
-
-    @staticmethod
-    def is_docling_supported(file_path: str | Path) -> bool:
-        """Check if the file format is supported by Docling."""
-        return Path(file_path).suffix.lower() in _DOCLING_EXTENSIONS
 
     @staticmethod
     def is_mineru_supported(file_path: str | Path) -> bool:
@@ -106,16 +79,14 @@ class DeepDocumentParser:
         suffix = path.suffix.lower()
         start_time = time.time()
 
-        if suffix in _MINERU_EXTENSIONS and settings.CUONGRAG_OCR_ENGINE == "mineru":
+        if suffix in _MINERU_EXTENSIONS:
             result = self._parse_with_mineru(path, document_id, original_filename)
-        elif suffix in _DOCLING_EXTENSIONS:
-            result = self._parse_with_docling(path, document_id, original_filename)
         elif suffix in _LEGACY_EXTENSIONS:
             result = self._parse_legacy(path, document_id, original_filename)
         else:
             raise ValueError(
                 f"Unsupported file type: {suffix}. "
-                f"Supported: {_MINERU_EXTENSIONS | _DOCLING_EXTENSIONS | _LEGACY_EXTENSIONS}"
+                f"Supported: {_MINERU_EXTENSIONS | _LEGACY_EXTENSIONS}"
             )
 
         elapsed_ms = int((time.time() - start_time) * 1000)
@@ -132,7 +103,7 @@ class DeepDocumentParser:
         document_id: int,
         original_filename: str,
     ) -> ParsedDocument:
-        """Parse PDF with MinerU CLI, using Docling as fallback on failure."""
+        """Parse PDF with MinerU CLI (MinerU-only mode)."""
         temp_output = self.output_dir / "_mineru_temp" / str(document_id)
         if temp_output.exists():
             shutil.rmtree(temp_output, ignore_errors=True)
@@ -157,31 +128,42 @@ class DeepDocumentParser:
                 capture_output=True,
                 text=True,
                 timeout=settings.CUONGRAG_MINERU_TIMEOUT_SECONDS,
-                env={**os.environ, "DISABLE_MODEL_SOURCE_CHECK": "True"},
+                env={
+                    **os.environ,
+                    "DISABLE_MODEL_SOURCE_CHECK": "True",
+                    # Torch >=2.6 defaults to weights_only=True and can break
+                    # MinerU/Ultralytics weight loading unless explicitly disabled.
+                    "TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD": "1",
+                },
             )
             if proc.returncode != 0:
-                logger.warning(
-                    "MinerU returned non-zero (%s) for doc %s: %s",
-                    proc.returncode,
-                    document_id,
-                    (proc.stderr or "")[:500],
+                raise RuntimeError(
+                    f"MinerU returned non-zero ({proc.returncode}) for doc {document_id}: "
+                    f"{(proc.stderr or proc.stdout or '')[:1200]}"
+                )
+
+            # Some MinerU failure paths emit traceback but still return code 0.
+            stderr_text = proc.stderr or ""
+            if "Traceback" in stderr_text or "No module named" in stderr_text:
+                raise RuntimeError(
+                    f"MinerU reported runtime error for doc {document_id}: "
+                    f"{stderr_text[-1600:]}"
                 )
         except FileNotFoundError:
-            logger.warning("MinerU CLI not found. Falling back to Docling for %s", file_path)
-            return self._parse_with_docling(file_path, document_id, original_filename)
+            raise RuntimeError(
+                "MinerU CLI not found in container PATH. "
+                "Please install mineru and set CUONGRAG_MINERU_CLI correctly."
+            )
         except Exception as e:
-            logger.warning("MinerU failed (%s). Falling back to Docling", e)
-            return self._parse_with_docling(file_path, document_id, original_filename)
+            raise RuntimeError(f"MinerU execution failed: {e}")
 
         mineru_output = self._find_mineru_output_dir(temp_output)
         if mineru_output is None:
-            logger.warning("MinerU output not found. Falling back to Docling")
-            return self._parse_with_docling(file_path, document_id, original_filename)
+            raise RuntimeError(f"MinerU output not found under {temp_output}")
 
         markdown = self._read_mineru_markdown(mineru_output)
         if not markdown.strip():
-            logger.warning("MinerU markdown empty. Falling back to Docling")
-            return self._parse_with_docling(file_path, document_id, original_filename)
+            raise RuntimeError("MinerU markdown is empty")
 
         images, image_by_old_name = self._extract_mineru_images(mineru_output, document_id)
         markdown = self._rewrite_mineru_image_links(markdown, image_by_old_name)
@@ -449,6 +431,20 @@ class DeepDocumentParser:
         """Best-effort Vietnamese diacritics correction with ProtonX model."""
         if not markdown.strip():
             return markdown
+
+        # Preferred path: shared ProtonX utilities (ported from OCR service)
+        try:
+            from app.utils.vn_spell_corrector import correct_vietnamese_diacritics
+            from app.utils.vn_model_corrector import correct_with_model
+
+            corrected = correct_vietnamese_diacritics(markdown)
+            corrected = correct_with_model(
+                corrected,
+                model_name=settings.CUONGRAG_PROTONX_MODEL_NAME,
+            )
+            return corrected
+        except Exception as e:
+            logger.warning("ProtonX utility correction fallback to legacy path: %s", e)
 
         try:
             import torch

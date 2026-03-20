@@ -3,7 +3,7 @@ import Workspace from "@/models/workspace";
 import showToast from "@/utils/toast";
 import { useParams } from "react-router-dom";
 
-export default function EovPredictOptions({ workspace }) {
+export default function Cmms_ragPredictOptions({ workspace }) {
   const { slug } = useParams();
   const activeSlug = slug || (workspace ? workspace.slug : null);
 
@@ -54,7 +54,7 @@ export default function EovPredictOptions({ workspace }) {
         return;
       }
 
-      showToast("EOV Predict API configuration saved successfully.", "success", { clear: true });
+      showToast("CMMS_RAG Predict API configuration saved successfully.", "success", { clear: true });
       setLoading(false);
     } catch (e) {
       console.error(e);

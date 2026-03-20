@@ -162,7 +162,7 @@ class CuongRAGService:
             document.parser_version = (
                 "mineru"
                 if DeepDocumentParser.is_mineru_supported(file_path)
-                else ("docling" if DeepDocumentParser.is_docling_supported(file_path) else "legacy")
+                else "legacy"
             )
             await self.db.commit()
 

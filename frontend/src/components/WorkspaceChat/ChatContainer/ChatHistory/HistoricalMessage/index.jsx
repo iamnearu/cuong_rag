@@ -95,7 +95,7 @@ const HistoricalMessage = ({
         key={uuid}
         className={`flex justify-center items-end w-full bg-theme-bg-chat`}
       >
-        <div className="py-8 px-4 w-full flex gap-x-5 md:max-w-[80%] flex-col">
+        <div className="py-8 px-4 w-full flex gap-x-5 md:max-w-[94%] flex-col">
           <div className={`flex gap-x-5 ${alignmentCls}`}>
             <ProfileImage role={role} workspace={workspace} />
             <div className="p-2 rounded-lg bg-red-50 text-red-500">
@@ -122,7 +122,7 @@ const HistoricalMessage = ({
       className={`${isDeleted ? "animate-remove" : ""
         } flex justify-center items-end w-full group bg-theme-bg-chat`}
     >
-      <div className="py-8 px-4 w-full flex gap-x-5 md:max-w-[80%] flex-col">
+      <div className="py-8 px-4 w-full flex gap-x-5 md:max-w-[94%] flex-col">
         <div className={`flex gap-x-5 ${alignmentCls}`}>
           <div className="flex flex-col items-center">
             <ProfileImage role={role} workspace={workspace} />
@@ -298,6 +298,9 @@ const RenderChatContent = memo(
       const splitMessage = message.split(closingTag);
       thoughtChain = splitMessage[0] + closingTag;
       msgToRender = splitMessage[1];
+    } else if (message.match(THOUGHT_REGEX_OPEN)) {
+      thoughtChain = message;
+      msgToRender = "";
     }
 
     return (

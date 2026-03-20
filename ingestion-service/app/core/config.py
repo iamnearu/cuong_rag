@@ -44,6 +44,7 @@ class Settings(BaseSettings):
     KG_EMBEDDING_PROVIDER: str = Field(default="gemini")
     KG_EMBEDDING_MODEL: str = Field(default="gemini-embedding-001")
     KG_EMBEDDING_DIMENSION: int = Field(default=3072)
+    KG_EMBEDDING_DEVICE: str = Field(default="cpu")
 
     # ---- CuongRAG Pipeline ---------------------------------------------------
     CUONGRAG_ENABLED: bool = True
@@ -55,6 +56,10 @@ class Settings(BaseSettings):
     CUONGRAG_CHUNK_MAX_TOKENS: int = 512
     CUONGRAG_KG_QUERY_TIMEOUT: float = 30.0
     CUONGRAG_KG_CHUNK_TOKEN_SIZE: int = 1200
+    CUONGRAG_KG_EMBEDDING_BATCH_NUM: int = 4
+    CUONGRAG_KG_EMBEDDING_MAX_ASYNC: int = 1
+    CUONGRAG_KG_EMBEDDING_TIMEOUT_SECONDS: int = 180
+    CUONGRAG_KG_LLM_TIMEOUT_SECONDS: int = 240
     CUONGRAG_KG_LANGUAGE: str = "English"
     CUONGRAG_KG_ENTITY_TYPES: list[str] = [
         "Organization", "Person", "Product", "Location", "Event",
@@ -66,7 +71,7 @@ class Settings(BaseSettings):
     CUONGRAG_ENABLE_FORMULA_ENRICHMENT: bool = True
 
     # OCR (MinerU + ProtonX correction)
-    CUONGRAG_OCR_ENGINE: str = "mineru"  # mineru | docling
+    CUONGRAG_OCR_ENGINE: str = "mineru"  # mineru only
     CUONGRAG_MINERU_CLI: str = "mineru"
     CUONGRAG_MINERU_BACKEND: str = "pipeline"
     CUONGRAG_MINERU_MODE: str = "auto"
