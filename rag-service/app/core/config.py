@@ -85,9 +85,11 @@ class Settings(BaseSettings):
 
     # CORS
     CORS_ORIGINS: list[str] = [
+        "http://localhost:3000",
         "http://localhost:3001",
         "http://localhost:80",
         "http://localhost",
+        "http://10.0.0.156:3000",
     ]
 
     model_config = {

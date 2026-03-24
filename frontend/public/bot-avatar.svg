@@ -1,0 +1,48 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="88" y1="72" x2="418" y2="440" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2FC6FF"/>
+      <stop offset="1" stop-color="#0E5DFF"/>
+    </linearGradient>
+    <linearGradient id="head" x1="157" y1="156" x2="357" y2="359" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FAFCFF"/>
+      <stop offset="1" stop-color="#DCE7FF"/>
+    </linearGradient>
+    <linearGradient id="visor" x1="192" y1="200" x2="320" y2="296" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0A1B4F"/>
+      <stop offset="1" stop-color="#06102E"/>
+    </linearGradient>
+    <radialGradient id="eye" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(0 0) scale(1)">
+      <stop offset="0" stop-color="#7CF6FF"/>
+      <stop offset="1" stop-color="#00A9FF"/>
+    </radialGradient>
+    <filter id="glow" x="0" y="0" width="200%" height="200%" filterUnits="objectBoundingBox">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <circle cx="256" cy="256" r="238" fill="url(#bg)"/>
+  <path d="M74 384C86 423 118 453 158 469C198 485 242 487 280 479C318 471 352 451 378 423C404 396 420 363 424 329" stroke="#58DCFF" stroke-opacity="0.55" stroke-width="16" stroke-linecap="round"/>
+
+  <rect x="136" y="138" width="240" height="236" rx="116" fill="url(#head)"/>
+  <rect x="168" y="188" width="176" height="118" rx="58" fill="url(#visor)"/>
+
+  <circle cx="218" cy="245" r="24" fill="#0A74FF" filter="url(#glow)"/>
+  <circle cx="218" cy="245" r="16" fill="url(#eye)"/>
+  <circle cx="214" cy="240" r="5" fill="#D5FFFF"/>
+
+  <circle cx="294" cy="245" r="24" fill="#0A74FF" filter="url(#glow)"/>
+  <circle cx="294" cy="245" r="16" fill="url(#eye)"/>
+  <circle cx="290" cy="240" r="5" fill="#D5FFFF"/>
+
+  <rect x="239" y="271" width="34" height="4" rx="2" fill="#D5E2FF" opacity="0.8"/>
+
+  <rect x="120" y="220" width="26" height="70" rx="13" fill="#DDE7FF"/>
+  <rect x="366" y="220" width="26" height="70" rx="13" fill="#DDE7FF"/>
+
+  <ellipse cx="256" cy="170" rx="90" ry="24" fill="#FFFFFF" opacity="0.12"/>
+</svg>

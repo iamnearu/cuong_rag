@@ -9,6 +9,8 @@ dns.setDefaultResultOrder("verbatim")
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  cacheDir: "./.vite-cache",
+
   assetsInclude: [
     './public/piper/ort-wasm-simd-threaded.wasm',
     './public/piper/piper_phonemize.wasm',
@@ -23,7 +25,7 @@ export default defineConfig({
     hmr: false,
     proxy: {
       "/api": {
-        target: process.env.VITE_API_BASE_URL || "http://host.docker.internal:8080",
+        target: process.env.VITE_API_BASE_URL || "http://localhost:8081",
         changeOrigin: true,
         secure: false,
       },

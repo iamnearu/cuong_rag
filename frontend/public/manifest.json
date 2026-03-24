@@ -6,7 +6,7 @@
   "start_url": "/",
   "icons": [
     {
-      "src": "/favicon.png",
+      "src": "/bot-avatar.svg",
       "sizes": "any"
     }
   ]
