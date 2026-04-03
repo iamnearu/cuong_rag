@@ -110,37 +110,24 @@ def _get_gemini_tool():
 OLLAMA_TOOL_SYSTEM = """\
 ## TOOL: search_documents
 
-You have ONE tool: search_documents.  You call it by outputting EXACTLY:
+Bạn chỉ có MỘT tool: search_documents. Bắt buộc gọi đúng định dạng:
 
-<tool_call>{"name": "search_documents", "arguments": {"query": "<rewritten query>"}}</tool_call>
+<tool_call>{"name": "search_documents", "arguments": {"query": "<câu truy vấn đã viết lại>"}}</tool_call>
 
-### ABSOLUTE RULES (violations are FATAL errors)
+### QUY TẮC BẮT BUỘC
 
-1. **Except for simple conversational messages, ALWAYS CALL search_documents FIRST.**
-   Simple conversational messages that do NOT require a tool call:
-   - Greetings: "hello", "xin chào", "hi", "hey", "good morning", etc.
-   - Acknowledgements: "cảm ơn", "thank you", "thanks", "ok", "got it", etc.
-   - Farewells: "bye", "goodbye", "tạm biệt", etc.
-   For ALL other messages — questions, requests, factual queries, analysis — you MUST
-   call search_documents before answering. Your knowledge is UNRELIABLE; only document
-   sources are trustworthy. If you are unsure whether a message needs a search, SEARCH.
-
-2. **Your ENTIRE first response to a searchable query must be ONLY the <tool_call> block.**
-   No text before it. No text after it. No explanation. Just the tool call.
-
-3. **Rewrite the query** to be specific and detailed.
-   "doanh thu" → "doanh thu thuần, tổng doanh thu theo năm, tăng trưởng doanh thu"
-   "AI model" → "AI model architecture, performance benchmarks, training details"
-
-4. After receiving search results, answer using ONLY those sources with citations.
-   Format: claim text[source_id]. Example: Doanh thu đạt 4.850 tỷ VNĐ[a3x9].
+1. Trừ các tin nhắn xã giao đơn giản, LUÔN gọi search_documents trước khi trả lời.
+2. Với truy vấn cần tìm kiếm, phản hồi đầu tiên phải CHỈ chứa khối <tool_call>.
+3. Viết lại query cụ thể và đầy đủ.
+4. Trả lời chỉ dựa trên nguồn đã tìm được, có citation.
+5. Mặc định trả lời tiếng Việt, chỉ dùng ngôn ngữ khác nếu người dùng yêu cầu rõ.
 """
 
 OLLAMA_TOOL_REMINDER = (
-    "\n\n[SYSTEM REMINDER] If this is a question or request, you MUST call search_documents FIRST. "
-    "Output ONLY: <tool_call>{\"name\": \"search_documents\", \"arguments\": {\"query\": \"...\"}}</tool_call> "
-    "Exception: simple greetings, thanks, or farewells do NOT require a tool call — respond directly. "
-    "For everything else, searching is MANDATORY."
+    "\n\n[NHẮC HỆ THỐNG] Nếu là câu hỏi/yêu cầu thì phải gọi search_documents trước. "
+    "Chỉ xuất: <tool_call>{\"name\": \"search_documents\", \"arguments\": {\"query\": \"...\"}}</tool_call>. "
+    "Ngoại lệ: chào hỏi/cảm ơn/tạm biệt thì trả lời trực tiếp. "
+    "Mặc định dùng tiếng Việt."
 )
 
 # ---------------------------------------------------------------------------
@@ -149,24 +136,21 @@ OLLAMA_TOOL_REMINDER = (
 
 GEMINI_TOOL_SYSTEM = """\
 
-## Tool Usage (MANDATORY)
+## Tool Usage (BẮT BUỘC)
 
-You have a tool called `search_documents` that searches the knowledge base.
-
-### ABSOLUTE RULES:
-1. For ALL user questions, requests, factual queries, or analysis — you MUST call \
-`search_documents` FIRST before answering. Even if the conversation history \
-contains relevant information, you MUST search again to get fresh, accurate sources.
-2. Only skip the tool call for simple conversational messages:
-   - Greetings: "hello", "xin chào", "hi", "hey", etc.
-   - Acknowledgements: "cảm ơn", "thank you", "thanks", "ok", etc.
-   - Farewells: "bye", "goodbye", "tạm biệt", etc.
-3. NEVER answer a question using information from previous turns without searching. \
-Your previous answers may contain outdated or incomplete information.
-4. NEVER reuse citation IDs from previous answers. Each answer must have its own \
-fresh sources from a new search.
-5. Rewrite the user's query to be specific and detailed for better retrieval.
+1. Với mọi câu hỏi/yêu cầu cần thông tin, phải gọi `search_documents` trước.
+2. Chỉ bỏ qua tool cho chào hỏi/cảm ơn/tạm biệt.
+3. Không tái dùng citation cũ.
+4. Viết lại query cụ thể.
+5. Mặc định trả lời tiếng Việt, chỉ đổi khi user yêu cầu rõ.
 """
+
+# Hard language override to prevent English default outputs
+VIETNAMESE_FORCE_SYSTEM = (
+    "QUY TẮC BẮT BUỘC: Trả lời bằng tiếng Việt trong mọi trường hợp, "
+    "trừ khi người dùng yêu cầu rõ ràng phải dùng ngôn ngữ khác. "
+    "Không được tự ý trả lời bằng tiếng Anh."
+)
 
 
 # ---------------------------------------------------------------------------
@@ -469,7 +453,10 @@ async def agent_chat_stream(
                         mime_type=img_data["inline_data"]["mime_type"],
                     ))
 
-            tool_result_content += f"\n\nNow answer the question: {message}"
+            tool_result_content += (
+                f"\n\nBây giờ hãy trả lời câu hỏi sau bằng tiếng Việt "
+                f"(chỉ dùng ngôn ngữ khác nếu người dùng yêu cầu rõ): {message}"
+            )
             messages.append(LLMMessage(
                 role="user",
                 content=tool_result_content,
@@ -582,7 +569,10 @@ async def agent_chat_stream(
                             mime_type=img_data["inline_data"]["mime_type"],
                         ))
 
-                tool_result_content += f"\n\nNow answer the question: {message}"
+                tool_result_content += (
+                    f"\n\nBây giờ hãy trả lời câu hỏi sau bằng tiếng Việt "
+                    f"(chỉ dùng ngôn ngữ khác nếu người dùng yêu cầu rõ): {message}"
+                )
 
                 if is_gemini:
                     # Gemini: use native Content with thought_signature
@@ -709,7 +699,10 @@ async def agent_chat_stream(
                 "\"Tài liệu không chứa thông tin này.\"\n",
             ]
             fallback_content = "\n".join(fallback_parts)
-            fallback_content += f"\n\nNow answer the question: {message}"
+            fallback_content += (
+                f"\n\nBây giờ hãy trả lời câu hỏi sau bằng tiếng Việt "
+                f"(chỉ dùng ngôn ngữ khác nếu người dùng yêu cầu rõ): {message}"
+            )
 
             # Remove old tool system prompt, add sources as context
             fallback_msgs = messages.copy()
@@ -787,7 +780,12 @@ async def chat_stream_endpoint(
 
     # Build system prompt
     from app.api.chat_prompt import DEFAULT_SYSTEM_PROMPT, HARD_SYSTEM_PROMPT
-    system_prompt = (kb.system_prompt or DEFAULT_SYSTEM_PROMPT) + HARD_SYSTEM_PROMPT
+    system_prompt = (
+        VIETNAMESE_FORCE_SYSTEM
+        + "\n\n"
+        + (kb.system_prompt or DEFAULT_SYSTEM_PROMPT)
+        + HARD_SYSTEM_PROMPT
+    )
 
     # Build history
     history = [{"role": m.role, "content": m.content} for m in request.history]

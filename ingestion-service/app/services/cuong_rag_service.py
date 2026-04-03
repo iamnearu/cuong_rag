@@ -160,8 +160,8 @@ class CuongRAGService:
             document.page_count = parsed.page_count
             document.table_count = parsed.tables_count
             document.parser_version = (
-                "mineru"
-                if DeepDocumentParser.is_mineru_supported(file_path)
+                "deepseek_ocr"
+                if DeepDocumentParser.is_deepseek_supported(file_path)
                 else "legacy"
             )
             await self.db.commit()

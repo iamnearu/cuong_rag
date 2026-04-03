@@ -2,19 +2,17 @@
 Deep Document Parser
 ====================
 
-Parses documents with MinerU OCR (PDF-first) to extract markdown,
+Parses documents with DeepSeek OCR (PDF/image-first) to extract markdown,
 tables, and images with structural metadata.
 
-Supported formats: PDF (MinerU)
+Supported formats: PDF + images (DeepSeek OCR)
 Fallback: TXT, MD (via legacy loader)
 """
 from __future__ import annotations
 
 import logging
-import os
 import re
 import shutil
-import subprocess
 import time
 import uuid
 from pathlib import Path
@@ -30,18 +28,18 @@ from app.services.models.parsed_document import (
 
 logger = logging.getLogger(__name__)
 
-# File extensions handled by MinerU / legacy
-_MINERU_EXTENSIONS = {".pdf"}
+# File extensions handled by OCR / legacy
+_OCR_EXTENSIONS = {".pdf", ".png", ".jpg", ".jpeg", ".webp", ".bmp", ".tif", ".tiff"}
 _LEGACY_EXTENSIONS = {".txt", ".md"}
 
 
 class DeepDocumentParser:
     """
-    Parses documents using MinerU for rich structural extraction.
+    Parses documents using DeepSeek OCR for rich structural extraction.
 
-    - Converts PDF via MinerU CLI (OCR-first pipeline)
-    - Chunks using HybridChunker (semantic + structural)
-    - Extracts images and optionally captions them via Gemini Vision
+    - Converts PDF/images via DeepSeek OCR (OCR-first pipeline)
+    - Chunks OCR markdown for retrieval
+    - Extracts tables and enriches markdown with optional captions
     - Optionally applies ProtonX Vietnamese correction on OCR markdown
     - Falls back to legacy text extraction for TXT/MD
     """
@@ -51,12 +49,11 @@ class DeepDocumentParser:
         self.output_dir = output_dir or (
             settings.BASE_DIR / "data" / "docling" / f"kb_{workspace_id}"
         )
-        self._converter = None
 
     @staticmethod
-    def is_mineru_supported(file_path: str | Path) -> bool:
-        """Check if the file format is supported by MinerU OCR."""
-        return Path(file_path).suffix.lower() in _MINERU_EXTENSIONS
+    def is_deepseek_supported(file_path: str | Path) -> bool:
+        """Check if the file format is supported by DeepSeek OCR."""
+        return Path(file_path).suffix.lower() in _OCR_EXTENSIONS
 
     def parse(
         self,
@@ -79,14 +76,14 @@ class DeepDocumentParser:
         suffix = path.suffix.lower()
         start_time = time.time()
 
-        if suffix in _MINERU_EXTENSIONS:
-            result = self._parse_with_mineru(path, document_id, original_filename)
+        if suffix in _OCR_EXTENSIONS:
+            result = self._parse_with_deepseek(path, document_id, original_filename)
         elif suffix in _LEGACY_EXTENSIONS:
             result = self._parse_legacy(path, document_id, original_filename)
         else:
             raise ValueError(
                 f"Unsupported file type: {suffix}. "
-                f"Supported: {_MINERU_EXTENSIONS | _LEGACY_EXTENSIONS}"
+                f"Supported: {_OCR_EXTENSIONS | _LEGACY_EXTENSIONS}"
             )
 
         elapsed_ms = int((time.time() - start_time) * 1000)
@@ -97,76 +94,87 @@ class DeepDocumentParser:
         )
         return result
 
-    def _parse_with_mineru(
+    def _parse_with_deepseek(
         self,
         file_path: Path,
         document_id: int,
         original_filename: str,
     ) -> ParsedDocument:
-        """Parse PDF with MinerU CLI (MinerU-only mode)."""
-        temp_output = self.output_dir / "_mineru_temp" / str(document_id)
+        """Parse PDF/image with DeepSeek OCR and convert to internal ParsedDocument."""
+        from app.services.ocr import get_deepseek_ocr_service
+
+        temp_output = self.output_dir / "_deepseek_temp" / str(document_id)
         if temp_output.exists():
             shutil.rmtree(temp_output, ignore_errors=True)
         temp_output.mkdir(parents=True, exist_ok=True)
 
-        cmd = [
-            settings.CUONGRAG_MINERU_CLI,
-            "-p", str(file_path),
-            "-o", str(temp_output),
-            "-b", settings.CUONGRAG_MINERU_BACKEND,
-            "-m", settings.CUONGRAG_MINERU_MODE,
-            "-d", settings.CUONGRAG_MINERU_DEVICE,
-            "--vram", str(settings.CUONGRAG_MINERU_VRAM_GB),
-        ]
+        logger.info("DeepSeek OCR converting: %s", file_path)
 
-        logger.info("MinerU converting: %s", file_path)
-        logger.debug("MinerU command: %s", " ".join(cmd))
+        ocr = get_deepseek_ocr_service()
+        suffix = file_path.suffix.lower()
+        if suffix == ".pdf":
+            pages = ocr.ocr_pdf(file_path, temp_output)
+        else:
+            pages = ocr.ocr_image(file_path, temp_output)
+
+        if not pages:
+            raise RuntimeError("DeepSeek OCR returned empty pages")
+
+        # Persist page images into static image store
+        images_dir = self.output_dir / "images"
+        images_dir.mkdir(parents=True, exist_ok=True)
+
+        images: list[ExtractedImage] = []
+        markdown_pages: list[str] = []
 
         try:
-            proc = subprocess.run(
-                cmd,
-                capture_output=True,
-                text=True,
-                timeout=settings.CUONGRAG_MINERU_TIMEOUT_SECONDS,
-                env={
-                    **os.environ,
-                    "DISABLE_MODEL_SOURCE_CHECK": "True",
-                    # Torch >=2.6 defaults to weights_only=True and can break
-                    # MinerU/Ultralytics weight loading unless explicitly disabled.
-                    "TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD": "1",
-                },
-            )
-            if proc.returncode != 0:
-                raise RuntimeError(
-                    f"MinerU returned non-zero ({proc.returncode}) for doc {document_id}: "
-                    f"{(proc.stderr or proc.stdout or '')[:1200]}"
+            from PIL import Image
+        except Exception:
+            Image = None
+
+        for page in pages:
+            image_id = str(uuid.uuid4())
+            dst = images_dir / f"{image_id}.png"
+            src = Path(page.image_path)
+            width = 0
+            height = 0
+
+            try:
+                if Image is not None:
+                    with Image.open(src) as im:
+                        if im.mode in {"RGBA", "LA", "P"}:
+                            im = im.convert("RGB")
+                        width, height = im.size
+                        im.save(dst, format="PNG")
+                else:
+                    shutil.copy2(src, dst)
+            except Exception as e:
+                logger.warning("Failed to copy DeepSeek page image %s: %s", src, e)
+                continue
+
+            images.append(
+                ExtractedImage(
+                    image_id=image_id,
+                    document_id=document_id,
+                    page_no=page.page_no,
+                    file_path=str(dst),
+                    caption=f"OCR page {page.page_no}",
+                    width=width,
+                    height=height,
+                    mime_type="image/png",
                 )
-
-            # Some MinerU failure paths emit traceback but still return code 0.
-            stderr_text = proc.stderr or ""
-            if "Traceback" in stderr_text or "No module named" in stderr_text:
-                raise RuntimeError(
-                    f"MinerU reported runtime error for doc {document_id}: "
-                    f"{stderr_text[-1600:]}"
-                )
-        except FileNotFoundError:
-            raise RuntimeError(
-                "MinerU CLI not found in container PATH. "
-                "Please install mineru and set CUONGRAG_MINERU_CLI correctly."
             )
-        except Exception as e:
-            raise RuntimeError(f"MinerU execution failed: {e}")
 
-        mineru_output = self._find_mineru_output_dir(temp_output)
-        if mineru_output is None:
-            raise RuntimeError(f"MinerU output not found under {temp_output}")
+            img_url = f"/static/doc-images/kb_{self.workspace_id}/images/{image_id}.png"
+            page_md = (page.markdown or "").strip()
+            if page_md:
+                markdown_pages.append(f"{page_md}\n\n![OCR Page {page.page_no}]({img_url})")
+            else:
+                markdown_pages.append(f"![OCR Page {page.page_no}]({img_url})")
 
-        markdown = self._read_mineru_markdown(mineru_output)
-        if not markdown.strip():
-            raise RuntimeError("MinerU markdown is empty")
-
-        images, image_by_old_name = self._extract_mineru_images(mineru_output, document_id)
-        markdown = self._rewrite_mineru_image_links(markdown, image_by_old_name)
+        markdown = "\n\n---\n\n".join(markdown_pages).strip()
+        if not markdown:
+            raise RuntimeError("DeepSeek OCR markdown is empty")
 
         if settings.CUONGRAG_ENABLE_PROTONX_CORRECTION:
             markdown = self._apply_protonx_correction(markdown)
@@ -176,7 +184,7 @@ class DeepDocumentParser:
             self._caption_tables(tables)
         markdown = self._inject_table_captions(markdown, tables)
 
-        page_count = self._estimate_pdf_page_count(file_path, markdown)
+        page_count = len(pages)
         chunks = self._chunk_mineru_markdown(
             markdown=markdown,
             document_id=document_id,
@@ -197,124 +205,6 @@ class DeepDocumentParser:
             tables=tables,
             tables_count=len(tables),
         )
-
-    @staticmethod
-    def _find_mineru_output_dir(temp_output: Path) -> Path | None:
-        auto_dirs = list(temp_output.glob("*/auto"))
-        if auto_dirs:
-            return auto_dirs[0]
-        md_files = list(temp_output.glob("**/*.md"))
-        if md_files:
-            return md_files[0].parent
-        return None
-
-    @staticmethod
-    def _read_mineru_markdown(mineru_output: Path) -> str:
-        md_files = sorted(mineru_output.glob("*.md"))
-        if not md_files:
-            return ""
-        return md_files[0].read_text(encoding="utf-8", errors="ignore")
-
-    def _extract_mineru_images(
-        self,
-        mineru_output: Path,
-        document_id: int,
-    ) -> tuple[list[ExtractedImage], dict[str, ExtractedImage]]:
-        images_dir = self.output_dir / "images"
-        images_dir.mkdir(parents=True, exist_ok=True)
-
-        source_dir = mineru_output / "images"
-        if not source_dir.exists():
-            return [], {}
-
-        images: list[ExtractedImage] = []
-        by_old_name: dict[str, ExtractedImage] = {}
-
-        try:
-            from PIL import Image
-        except Exception:
-            Image = None
-
-        candidates = sorted(
-            f for f in source_dir.iterdir()
-            if f.is_file() and f.suffix.lower() in {".png", ".jpg", ".jpeg", ".webp", ".bmp"}
-        )
-
-        for src in candidates[: settings.CUONGRAG_MAX_IMAGES_PER_DOC]:
-            image_id = str(uuid.uuid4())
-            dst = images_dir / f"{image_id}.png"
-            width = 0
-            height = 0
-
-            try:
-                if Image is not None:
-                    with Image.open(src) as im:
-                        if im.mode in {"RGBA", "LA", "P"}:
-                            im = im.convert("RGB")
-                        width, height = im.size
-                        im.save(dst, format="PNG")
-                else:
-                    shutil.copy2(src, dst)
-            except Exception as e:
-                logger.debug("Failed to copy MinerU image %s: %s", src, e)
-                continue
-
-            page_no = 0
-            page_match = re.search(r"(?:^|[_-])(\d+)(?:[_-]\d+)?$", src.stem)
-            if page_match:
-                page_no = int(page_match.group(1)) + 1
-
-            img = ExtractedImage(
-                image_id=image_id,
-                document_id=document_id,
-                page_no=page_no,
-                file_path=str(dst),
-                caption="",
-                width=width,
-                height=height,
-                mime_type="image/png",
-            )
-            images.append(img)
-            by_old_name[src.name] = img
-
-        if settings.CUONGRAG_ENABLE_IMAGE_CAPTIONING and images:
-            self._caption_images(images)
-
-        return images, by_old_name
-
-    def _rewrite_mineru_image_links(
-        self,
-        markdown: str,
-        image_by_old_name: dict[str, ExtractedImage],
-    ) -> str:
-        if not image_by_old_name:
-            return markdown
-
-        def _repl(match: re.Match) -> str:
-            alt = match.group(1) or ""
-            raw_path = (match.group(2) or "").strip()
-            old_name = Path(raw_path).name
-            img = image_by_old_name.get(old_name)
-            if not img:
-                return match.group(0)
-            safe_alt = " ".join((alt or img.caption or "").split()).replace("[", "").replace("]", "")
-            url = f"/static/doc-images/kb_{self.workspace_id}/images/{img.image_id}.png"
-            return f"![{safe_alt}]({url})"
-
-        return re.sub(r"!\[([^\]]*)\]\(([^)]+)\)", _repl, markdown)
-
-    @staticmethod
-    def _estimate_pdf_page_count(file_path: Path, markdown: str) -> int:
-        try:
-            import fitz  # PyMuPDF
-            doc = fitz.open(str(file_path))
-            try:
-                return len(doc)
-            finally:
-                doc.close()
-        except Exception:
-            parts = [p for p in re.split(r"\n\s*---\s*\n", markdown) if p.strip()]
-            return max(len(parts), 1)
 
     def _chunk_mineru_markdown(
         self,
@@ -531,410 +421,6 @@ class DeepDocumentParser:
         if text.startswith("```"):
             return True
         return False
-
-    def _parse_with_docling(
-        self,
-        file_path: Path,
-        document_id: int,
-        original_filename: str,
-    ) -> ParsedDocument:
-        """Parse with Docling for rich structural extraction."""
-        converter = self._get_converter()
-
-        # Convert document
-        logger.info(f"Docling converting: {file_path}")
-        conv_result = converter.convert(str(file_path))
-        doc = conv_result.document
-
-        # Extract images and build URL mapping for markdown references
-        images, pic_url_list = self._extract_images_with_urls(doc, document_id)
-
-        # Extract tables
-        tables = self._extract_tables(doc, document_id)
-        if settings.CUONGRAG_ENABLE_TABLE_CAPTIONING and tables:
-            self._caption_tables(tables)
-
-        # Export to markdown (with page break markers if supported)
-        markdown = self._export_markdown(doc)
-
-        # Post-process: replace image placeholders with real markdown images
-        markdown = self._inject_image_references(markdown, pic_url_list)
-
-        # Post-process: inject table captions into markdown
-        markdown = self._inject_table_captions(markdown, tables)
-
-        # Get page count
-        page_count = 0
-        if hasattr(doc, "pages") and doc.pages:
-            page_count = len(doc.pages)
-
-        # Chunk with HybridChunker — pass images + tables for enrichment
-        chunks = self._chunk_document(doc, document_id, original_filename, images, tables)
-
-        # Count tables
-        tables_count = len(tables)
-
-        return ParsedDocument(
-            document_id=document_id,
-            original_filename=original_filename,
-            markdown=markdown,
-            page_count=page_count,
-            chunks=chunks,
-            images=images,
-            tables=tables,
-            tables_count=tables_count,
-        )
-
-    def _chunk_document(
-        self,
-        doc,
-        document_id: int,
-        original_filename: str,
-        images: list[ExtractedImage] | None = None,
-        tables: list[ExtractedTable] | None = None,
-    ) -> list[EnrichedChunk]:
-        """Chunk document using Docling's HybridChunker.
-
-        When *images* / *tables* are provided, each chunk is enriched with
-        references to images/tables that appear on the same page.  The
-        descriptions are appended to the chunk text so they become part of
-        the embedding, making image/table content semantically searchable.
-        """
-        from docling_core.transforms.chunker import HybridChunker
-
-        chunker = HybridChunker(
-            max_tokens=settings.CUONGRAG_CHUNK_MAX_TOKENS,
-            merge_peers=True,
-        )
-
-        # Build page→images lookup for O(1) matching
-        page_images: dict[int, list[ExtractedImage]] = {}
-        if images:
-            for img in images:
-                page_images.setdefault(img.page_no, []).append(img)
-
-        # Build page→tables lookup for O(1) matching
-        page_tables: dict[int, list[ExtractedTable]] = {}
-        if tables:
-            for tbl in tables:
-                page_tables.setdefault(tbl.page_no, []).append(tbl)
-
-        chunks = []
-        # Track which images/tables have already been assigned to a chunk
-        # on the same page so we avoid duplicating descriptions across many
-        # chunks.  Each image/table is assigned to the FIRST chunk on its page.
-        assigned_images: set[str] = set()
-        assigned_tables: set[str] = set()
-
-        for i, chunk in enumerate(chunker.chunk(doc)):
-            # Extract page number from chunk metadata
-            page_no = 0
-            if hasattr(chunk, "meta") and chunk.meta:
-                if hasattr(chunk.meta, "page"):
-                    page_no = chunk.meta.page or 0
-                elif hasattr(chunk.meta, "doc_items") and chunk.meta.doc_items:
-                    for item in chunk.meta.doc_items:
-                        if hasattr(item, "prov") and item.prov:
-                            for prov in item.prov:
-                                if hasattr(prov, "page_no"):
-                                    page_no = prov.page_no or 0
-                                    break
-                            if page_no > 0:
-                                break
-
-            # Extract heading path from chunk metadata
-            heading_path = []
-            if hasattr(chunk, "meta") and chunk.meta:
-                if hasattr(chunk.meta, "headings") and chunk.meta.headings:
-                    heading_path = list(chunk.meta.headings)
-
-            # Detect content types
-            chunk_text = chunk.text if hasattr(chunk, "text") else str(chunk)
-            has_table = False
-            has_code = False
-            if hasattr(chunk, "meta") and chunk.meta:
-                if hasattr(chunk.meta, "doc_items") and chunk.meta.doc_items:
-                    for item in chunk.meta.doc_items:
-                        label = getattr(item, "label", "") or ""
-                        if "table" in label.lower():
-                            has_table = True
-                        if "code" in label.lower():
-                            has_code = True
-
-            contextualized = ""
-            if heading_path:
-                contextualized = " > ".join(heading_path) + ": " + chunk_text[:100]
-
-            # ── Image-aware enrichment ──────────────────────────────
-            chunk_image_refs: list[str] = []  # image_ids
-            if page_no > 0 and page_no in page_images:
-                for img in page_images[page_no]:
-                    if img.image_id not in assigned_images:
-                        chunk_image_refs.append(img.image_id)
-                        assigned_images.add(img.image_id)
-
-            # Append image descriptions to chunk text so they become
-            # part of the embedding vector (semantically searchable).
-            enriched_text = chunk_text
-            if chunk_image_refs and images:
-                img_by_id = {im.image_id: im for im in images}
-                desc_parts = []
-                for img_id in chunk_image_refs:
-                    img = img_by_id.get(img_id)
-                    if img and img.caption:
-                        desc_parts.append(
-                            f"[Image on page {img.page_no}]: {img.caption}"
-                        )
-                if desc_parts:
-                    enriched_text = (
-                        chunk_text + "\n\n" + "\n".join(desc_parts)
-                    )
-
-            # ── Table-aware enrichment ────────────────────────────────
-            chunk_table_refs: list[str] = []
-            if page_no > 0 and page_no in page_tables:
-                for tbl in page_tables[page_no]:
-                    if tbl.table_id not in assigned_tables:
-                        chunk_table_refs.append(tbl.table_id)
-                        assigned_tables.add(tbl.table_id)
-
-            if chunk_table_refs and tables:
-                tbl_by_id = {t.table_id: t for t in tables}
-                tbl_parts = []
-                for tbl_id in chunk_table_refs:
-                    tbl = tbl_by_id.get(tbl_id)
-                    if tbl and tbl.caption:
-                        tbl_parts.append(
-                            f"[Table on page {tbl.page_no} ({tbl.num_rows}x{tbl.num_cols})]: {tbl.caption}"
-                        )
-                if tbl_parts:
-                    enriched_text = enriched_text + "\n\n" + "\n".join(tbl_parts)
-
-            chunks.append(EnrichedChunk(
-                content=enriched_text,
-                chunk_index=i,
-                source_file=original_filename,
-                document_id=document_id,
-                page_no=page_no,
-                heading_path=heading_path,
-                image_refs=chunk_image_refs,
-                table_refs=chunk_table_refs,
-                has_table=has_table,
-                has_code=has_code,
-                contextualized=contextualized,
-            ))
-
-        if images:
-            assigned_count = len(assigned_images)
-            logger.info(
-                f"Image-aware chunking: {assigned_count}/{len(images)} images "
-                f"assigned to {len(chunks)} chunks"
-            )
-
-        if tables:
-            assigned_tbl_count = len(assigned_tables)
-            logger.info(
-                f"Table-aware chunking: {assigned_tbl_count}/{len(tables)} tables "
-                f"assigned to {len(chunks)} chunks"
-            )
-
-        return chunks
-
-    def _export_markdown(self, doc) -> str:
-        """Export document to markdown with page break markers if supported."""
-        try:
-            return doc.export_to_markdown(
-                page_break_placeholder="\n\n---\n\n",
-            )
-        except TypeError:
-            # Fallback for Docling versions without page_break_placeholder
-            return doc.export_to_markdown()
-
-    def _extract_images_with_urls(
-        self,
-        doc,
-        document_id: int,
-    ) -> tuple[list[ExtractedImage], list[tuple[str, str]]]:
-        """
-        Extract images and build URL mapping for markdown placeholders.
-
-        Returns:
-            (images, pic_url_list) where pic_url_list has one (caption, url)
-            tuple per doc.pictures element, in order.
-        """
-        if not settings.CUONGRAG_ENABLE_IMAGE_EXTRACTION:
-            return [], []
-
-        images_dir = self.output_dir / "images"
-        images_dir.mkdir(parents=True, exist_ok=True)
-
-        images: list[ExtractedImage] = []
-        pic_to_image_idx: list[int] = []  # maps picture index → images list index
-        picture_count = 0
-
-        if not hasattr(doc, "pictures") or not doc.pictures:
-            return [], []
-
-        for pic in doc.pictures:
-            if picture_count >= settings.CUONGRAG_MAX_IMAGES_PER_DOC:
-                pic_to_image_idx.append(-1)
-                continue
-
-            image_id = str(uuid.uuid4())
-
-            # Get page number
-            page_no = 0
-            if hasattr(pic, "prov") and pic.prov:
-                for prov in pic.prov:
-                    if hasattr(prov, "page_no"):
-                        page_no = prov.page_no or 0
-                        break
-
-            try:
-                image_path = images_dir / f"{image_id}.png"
-
-                if hasattr(pic, "image") and pic.image:
-                    pil_image = pic.image.pil_image
-                    if pil_image:
-                        pil_image.save(str(image_path), format="PNG")
-                        width, height = pil_image.size
-                    else:
-                        pic_to_image_idx.append(-1)
-                        continue
-                else:
-                    pic_to_image_idx.append(-1)
-                    continue
-
-                # Get caption
-                caption = ""
-                if hasattr(pic, "caption_text"):
-                    caption = pic.caption_text(doc) if callable(pic.caption_text) else str(pic.caption_text or "")
-                elif hasattr(pic, "text"):
-                    caption = str(pic.text or "")
-
-                images.append(ExtractedImage(
-                    image_id=image_id,
-                    document_id=document_id,
-                    page_no=page_no,
-                    file_path=str(image_path),
-                    caption=caption,
-                    width=width,
-                    height=height,
-                ))
-                pic_to_image_idx.append(len(images) - 1)
-                picture_count += 1
-
-            except Exception as e:
-                logger.warning(f"Failed to extract image from document {document_id}: {e}")
-                pic_to_image_idx.append(-1)
-                continue
-
-        logger.info(f"Extracted {len(images)} images from document {document_id}")
-
-        # Caption images with Gemini Vision (updates img.caption in-place)
-        if settings.CUONGRAG_ENABLE_IMAGE_CAPTIONING and images:
-            self._caption_images(images)
-
-        # Build pic_url_list AFTER captioning so captions are up-to-date
-        pic_url_list: list[tuple[str, str]] = []
-        for idx in pic_to_image_idx:
-            if idx >= 0:
-                img = images[idx]
-                url = f"/static/doc-images/kb_{self.workspace_id}/images/{img.image_id}.png"
-                pic_url_list.append((img.caption, url))
-            else:
-                pic_url_list.append(("", ""))
-
-        return images, pic_url_list
-
-    def _inject_image_references(
-        self, markdown: str, pic_url_list: list[tuple[str, str]]
-    ) -> str:
-        """Replace <!-- image --> placeholders with ![caption](url) markdown."""
-        placeholder_count = len(re.findall(r"<!--\s*image\s*-->", markdown))
-
-        if not pic_url_list:
-            if placeholder_count > 0:
-                logger.warning(
-                    f"Markdown has {placeholder_count} image placeholders but "
-                    f"pic_url_list is empty — images will NOT be injected"
-                )
-            return markdown
-
-        logger.info(
-            f"Injecting {len(pic_url_list)} image URLs into "
-            f"{placeholder_count} placeholders"
-        )
-
-        injected = 0
-        pic_iter = iter(pic_url_list)
-
-        def replacer(match):
-            nonlocal injected
-            try:
-                caption, url = next(pic_iter)
-                if url:
-                    safe_caption = caption.replace("[", "").replace("]", "")
-                    # Markdown ![alt](url) must be single-line — collapse newlines
-                    safe_caption = " ".join(safe_caption.split())
-                    injected += 1
-                    return f"\n![{safe_caption}]({url})\n"
-                return ""
-            except StopIteration:
-                return ""
-
-        result = re.sub(r'<!--\s*image\s*-->', replacer, markdown)
-        logger.info(f"Injected {injected}/{placeholder_count} image references")
-        return result
-
-    # ------------------------------------------------------------------
-    # Table extraction & captioning
-    # ------------------------------------------------------------------
-
-    def _extract_tables(self, doc, document_id: int) -> list[ExtractedTable]:
-        """Extract tables from Docling document."""
-        if not hasattr(doc, "tables") or not doc.tables:
-            return []
-
-        tables: list[ExtractedTable] = []
-        for table in doc.tables:
-            table_id = str(uuid.uuid4())
-
-            # Get page number
-            page_no = 0
-            if hasattr(table, "prov") and table.prov:
-                for prov in table.prov:
-                    if hasattr(prov, "page_no"):
-                        page_no = prov.page_no or 0
-                        break
-
-            # Export to markdown
-            try:
-                content_md = table.export_to_markdown(doc)
-            except Exception:
-                content_md = ""
-
-            if not content_md.strip():
-                continue
-
-            # Get dimensions
-            num_rows = 0
-            num_cols = 0
-            if hasattr(table, "data") and table.data:
-                num_rows = getattr(table.data, "num_rows", 0) or 0
-                num_cols = getattr(table.data, "num_cols", 0) or 0
-
-            tables.append(ExtractedTable(
-                table_id=table_id,
-                document_id=document_id,
-                page_no=page_no,
-                content_markdown=content_md,
-                num_rows=num_rows,
-                num_cols=num_cols,
-            ))
-
-        logger.info(f"Extracted {len(tables)} tables from document {document_id}")
-        return tables
 
     _TABLE_CAPTION_PROMPT = (
         "You are a document analysis assistant. Given a markdown table, "

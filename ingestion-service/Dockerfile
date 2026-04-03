@@ -8,7 +8,7 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
 # System deps:
 # - Base build/runtime: curl, build-essential, poppler, libmagic
 # - OpenCV runtime (fix libGL.so.1): libgl1 + X11 libs
-# - Docling OCR fallback: tesseract-ocr (+ Vietnamese language pack)
+# - DeepSeek OCR PDF rendering: poppler-utils (pdftoppm)
 RUN apt-get update && apt-get install -y --no-install-recommends \
         curl \
         build-essential \
@@ -18,9 +18,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         libgl1 \
         libsm6 \
         libxext6 \
-        libxrender1 \
-        tesseract-ocr \
-        tesseract-ocr-vie \
+    libxrender1 \
     && rm -rf /var/lib/apt/lists/*
 
 # Install Python deps first (layer cache)

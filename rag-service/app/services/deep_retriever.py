@@ -15,6 +15,8 @@ from __future__ import annotations
 
 import asyncio
 import logging
+import re
+from collections import defaultdict
 from typing import Optional
 
 from sqlalchemy import select
@@ -85,6 +87,94 @@ class DeepRetriever:
         Returns:
             DeepRetrievalResult with chunks, citations, context, and optional images
         """
+        # Multi-hop detection: split complex question into sub-queries and merge.
+        if (
+            settings.CUONGRAG_MULTI_HOP_ENABLED
+            and mode in {"hybrid", "consensus"}
+            and self._is_multi_hop_question(question)
+        ):
+            sub_queries = self._split_sub_queries(question)
+            logger.info(f"Multi-hop detected: {len(sub_queries)} sub-queries")
+            per_query = await asyncio.gather(
+                *[
+                    self._query_single(
+                        question=sq,
+                        mode="hybrid",
+                        top_k=max(top_k, settings.CUONGRAG_RERANKER_TOP_K),
+                        document_ids=document_ids,
+                    )
+                    for sq in sub_queries
+                ]
+            )
+
+            all_chunks: list[EnrichedChunk] = []
+            all_citations: list[Citation] = []
+            kg_parts: list[str] = []
+            seen_keys: set[str] = set()
+
+            for chunks_i, citations_i, kg_i in per_query:
+                if kg_i:
+                    kg_parts.append(kg_i)
+                for c, ct in zip(chunks_i, citations_i):
+                    key = self._chunk_key(c)
+                    if key in seen_keys:
+                        continue
+                    seen_keys.add(key)
+                    all_chunks.append(c)
+                    all_citations.append(ct)
+
+            chunks, citations = await asyncio.to_thread(
+                self._rerank_chunks,
+                question,
+                all_chunks,
+                all_citations,
+                top_k,
+            )
+            kg_summary = "\n\n".join([p for p in kg_parts if p.strip()])
+        else:
+            chunks, citations, kg_summary = await self._query_single(
+                question=question,
+                mode=mode,
+                top_k=top_k,
+                document_ids=document_ids,
+            )
+
+        # Find related images and tables
+        image_refs = []
+        table_refs = []
+        if include_images and self.db and chunks:
+            page_nos = {(c.document_id, c.page_no) for c in chunks if c.page_no > 0}
+            if page_nos:
+                image_refs, table_refs = await asyncio.gather(
+                    self._find_related_images(page_nos),
+                    self._find_related_tables(page_nos),
+                )
+
+        # Assemble context
+        context = self._assemble_context(chunks, citations, kg_summary, image_refs, table_refs)
+
+        return DeepRetrievalResult(
+            chunks=chunks,
+            citations=citations,
+            context=context,
+            query=question,
+            mode=mode,
+            knowledge_graph_summary=kg_summary,
+            image_refs=image_refs,
+            table_refs=table_refs,
+        )
+
+    async def _query_single(
+        self,
+        question: str,
+        mode: str,
+        top_k: int,
+        document_ids: Optional[list[int]],
+    ) -> tuple[list[EnrichedChunk], list[Citation], str]:
+        """Retrieve for a single query with either standard hybrid or consensus mode."""
+        if mode in {"hybrid", "consensus"}:
+            return await self._consensus_query(question, top_k, document_ids)
+
         # Run KG and vector search in parallel
         kg_task = None
         if self.kg_service and mode != "vector_only":
@@ -115,30 +205,185 @@ class DeepRetriever:
             self._rerank_chunks, question, raw_chunks, raw_citations, top_k
         )
 
-        # Find related images and tables
-        image_refs = []
-        table_refs = []
-        if include_images and self.db and chunks:
-            page_nos = {(c.document_id, c.page_no) for c in chunks if c.page_no > 0}
-            if page_nos:
-                image_refs, table_refs = await asyncio.gather(
-                    self._find_related_images(page_nos),
-                    self._find_related_tables(page_nos),
-                )
+        return chunks, citations, kg_summary
 
-        # Assemble context
-        context = self._assemble_context(chunks, citations, kg_summary, image_refs, table_refs)
+    async def _consensus_query(
+        self,
+        question: str,
+        top_k: int,
+        document_ids: Optional[list[int]],
+    ) -> tuple[list[EnrichedChunk], list[Citation], str]:
+        """Consensus retriever: Graph local + Graph global + Vector hybrid.
 
-        return DeepRetrievalResult(
-            chunks=chunks,
-            citations=citations,
-            context=context,
-            query=question,
-            mode=mode,
-            knowledge_graph_summary=kg_summary,
-            image_refs=image_refs,
-            table_refs=table_refs,
+        Strategy:
+        1) Build local/global KG context snippets.
+        2) Run 3 vector retrieval streams in parallel:
+           - vector_hybrid: question
+           - graph_local: question + local KG snippet
+           - graph_global: question + global KG snippet
+        3) Prioritize chunk intersection across methods.
+        4) Rerank merged candidates with cross-encoder.
+        """
+        top_k_each = max(settings.CUONGRAG_CONSENSUS_TOP_K_EACH, top_k)
+
+        local_ctx_task = asyncio.create_task(self._kg_query_variant(question, "local"))
+        global_ctx_task = asyncio.create_task(self._kg_query_variant(question, "global"))
+
+        vector_task = asyncio.create_task(
+            asyncio.to_thread(self._vector_query, question, top_k_each, document_ids)
         )
+
+        local_ctx, global_ctx = await asyncio.gather(local_ctx_task, global_ctx_task)
+
+        local_query = f"{question}\n{local_ctx}" if local_ctx else question
+        global_query = f"{question}\n{global_ctx}" if global_ctx else question
+
+        local_task = asyncio.create_task(
+            asyncio.to_thread(self._vector_query, local_query, top_k_each, document_ids)
+        )
+        global_task = asyncio.create_task(
+            asyncio.to_thread(self._vector_query, global_query, top_k_each, document_ids)
+        )
+
+        (vec_chunks, vec_citations), (loc_chunks, loc_citations), (glo_chunks, glo_citations) = await asyncio.gather(
+            vector_task, local_task, global_task
+        )
+
+        merged_chunks, merged_citations = self._merge_consensus_results(
+            vector_result=(vec_chunks, vec_citations),
+            local_result=(loc_chunks, loc_citations),
+            global_result=(glo_chunks, glo_citations),
+            top_k=top_k_each,
+        )
+
+        final_chunks, final_citations = await asyncio.to_thread(
+            self._rerank_chunks,
+            question,
+            merged_chunks,
+            merged_citations,
+            top_k,
+        )
+
+        kg_parts = []
+        if local_ctx:
+            kg_parts.append(f"[KG Local]\n{local_ctx}")
+        if global_ctx:
+            kg_parts.append(f"[KG Global]\n{global_ctx}")
+        kg_summary = "\n\n".join(kg_parts)
+
+        return final_chunks, final_citations, kg_summary
+
+    async def _kg_query_variant(self, question: str, variant: str) -> str:
+        """Build KG context for local/global query styles."""
+        if not self.kg_service:
+            return ""
+        try:
+            if variant == "local":
+                return await asyncio.wait_for(
+                    self.kg_service.get_relevant_context(
+                        question,
+                        max_entities=12,
+                        max_relationships=16,
+                    ),
+                    timeout=settings.CUONGRAG_KG_QUERY_TIMEOUT,
+                )
+            return await asyncio.wait_for(
+                self.kg_service.get_relevant_context(
+                    question,
+                    max_entities=30,
+                    max_relationships=45,
+                ),
+                timeout=settings.CUONGRAG_KG_QUERY_TIMEOUT,
+            )
+        except Exception:
+            return ""
+
+    def _merge_consensus_results(
+        self,
+        vector_result: tuple[list[EnrichedChunk], list[Citation]],
+        local_result: tuple[list[EnrichedChunk], list[Citation]],
+        global_result: tuple[list[EnrichedChunk], list[Citation]],
+        top_k: int,
+    ) -> tuple[list[EnrichedChunk], list[Citation]]:
+        """Merge 3 retrieval streams, prioritizing intersections."""
+        methods = [vector_result, local_result, global_result]
+
+        vote_count: dict[str, int] = defaultdict(int)
+        chunk_map: dict[str, EnrichedChunk] = {}
+        citation_map: dict[str, Citation] = {}
+        vector_order: list[str] = []
+
+        for m_idx, (chunks, citations) in enumerate(methods):
+            seen_this_method: set[str] = set()
+            for i, (chunk, citation) in enumerate(zip(chunks, citations)):
+                key = self._chunk_key(chunk)
+                if key in seen_this_method:
+                    continue
+                seen_this_method.add(key)
+                vote_count[key] += 1
+                chunk_map[key] = chunk
+                citation_map[key] = citation
+                if m_idx == 0:
+                    vector_order.append(key)
+
+        # Priority 1: intersection (>=2 methods)
+        intersection_keys = [k for k, v in vote_count.items() if v >= 2]
+        intersection_keys.sort(key=lambda k: (-vote_count[k], vector_order.index(k) if k in vector_order else 10**9))
+
+        selected_keys: list[str] = []
+        min_intersection = max(1, int(settings.CUONGRAG_CONSENSUS_MIN_INTERSECTION))
+        for k in intersection_keys:
+            selected_keys.append(k)
+            if len(selected_keys) >= min_intersection:
+                break
+
+        # Priority 2: fill from full intersection list then vector results
+        for k in intersection_keys:
+            if k not in selected_keys:
+                selected_keys.append(k)
+            if len(selected_keys) >= top_k:
+                break
+
+        if len(selected_keys) < top_k:
+            for k in vector_order:
+                if k not in selected_keys:
+                    selected_keys.append(k)
+                if len(selected_keys) >= top_k:
+                    break
+
+        merged_chunks = [chunk_map[k] for k in selected_keys if k in chunk_map]
+        merged_citations = [citation_map[k] for k in selected_keys if k in citation_map]
+        return merged_chunks, merged_citations
+
+    @staticmethod
+    def _chunk_key(chunk: EnrichedChunk) -> str:
+        return f"{chunk.document_id}:{chunk.page_no}:{chunk.chunk_index}"
+
+    @staticmethod
+    def _is_multi_hop_question(question: str) -> bool:
+        text = question.lower().strip()
+        if len(text.split()) < 6:
+            return False
+        patterns = [
+            r"\bso sánh\b",
+            r"\bvà\b",
+            r"\bđồng thời\b",
+            r"\bkhác nhau\b",
+            r"\bvs\b",
+            r"\bbetween\b",
+            r"\band\b",
+        ]
+        hits = sum(1 for p in patterns if re.search(p, text))
+        return hits >= 2
+
+    @staticmethod
+    def _split_sub_queries(question: str) -> list[str]:
+        normalized = re.sub(r"\s+", " ", question.strip())
+        parts = re.split(r"\b(?:và|đồng thời|;|\.|,\s+và|and|vs)\b", normalized, flags=re.IGNORECASE)
+        cleaned = [p.strip(" .,;:\n\t") for p in parts if p and p.strip(" .,;:\n\t")]
+        if len(cleaned) <= 1:
+            return [normalized]
+        return cleaned[:4]
 
     async def _kg_query(self, question: str, mode: str) -> str:
         """Get raw KG context (entities + relationships) relevant to the question.
@@ -248,7 +493,13 @@ class DeepRetriever:
         )
 
         if not reranked:
-            # Fallback: if reranker filtered everything, keep top 3 by original order
+            if settings.CUONGRAG_STRICT_EMPTY_ON_RERANK:
+                logger.warning(
+                    f"Reranker filtered all {len(chunks)} chunks below threshold "
+                    f"{settings.CUONGRAG_MIN_RELEVANCE_SCORE}; returning empty result"
+                )
+                return [], []
+            # Optional fallback mode
             logger.warning(
                 f"Reranker filtered all {len(chunks)} chunks below threshold "
                 f"{settings.CUONGRAG_MIN_RELEVANCE_SCORE}, falling back to top 3"

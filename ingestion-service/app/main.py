@@ -1,6 +1,6 @@
 """
 CuongRAG — Ingestion Service
-Handles: document upload, parsing (MinerU/Docling), chunking, embedding, dedup, indexing
+Handles: document upload, parsing (DeepSeek OCR), chunking, embedding, dedup, indexing
 """
 from contextlib import asynccontextmanager
 import logging

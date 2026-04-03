@@ -144,7 +144,7 @@ async def upload_document(
 async def easy_index_document(
     file: UploadFile = File(...),
     workspace_id: int | None = Form(default=None),
-    workspace_name: str | None = Form(default="test-mineru"),
+    workspace_name: str | None = Form(default="test-deepseek"),
     auto_create_workspace: bool = Form(default=True),
     wait_for_index: bool = Form(default=True),
     timeout_seconds: int = Form(default=180),

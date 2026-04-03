@@ -39,7 +39,7 @@ class Document(Base):
     page_count: Mapped[int] = mapped_column(Integer, default=0)
     image_count: Mapped[int] = mapped_column(Integer, default=0)
     table_count: Mapped[int] = mapped_column(Integer, default=0)
-    parser_version: Mapped[str | None] = mapped_column(String(50), nullable=True)  # "mineru" | "docling" | "legacy"
+    parser_version: Mapped[str | None] = mapped_column(String(50), nullable=True)  # "deepseek_ocr" | "legacy"
     processing_time_ms: Mapped[int] = mapped_column(Integer, default=0)
 
     # Relationships

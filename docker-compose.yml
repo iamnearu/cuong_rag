@@ -35,14 +35,11 @@ services:
         condition: service_healthy
     extra_hosts:
       - "host.docker.internal:host-gateway"
-    gpus: all
     environment:
       APP_NAME: "CuongRAG - RAG Service"
       DATABASE_URL: postgresql+asyncpg://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-postgres}@postgres:5432/${POSTGRES_DB:-cuong_rag}
       AUTO_CREATE_TABLES: "true"
       CORS_ORIGINS: '["http://localhost:3001","http://localhost"]'
-      NVIDIA_VISIBLE_DEVICES: all
-      NVIDIA_DRIVER_CAPABILITIES: compute,utility
     volumes:
       - ./rag-service:/app
       - cuongrag_uploads:/app/uploads
@@ -68,14 +65,11 @@ services:
         condition: service_healthy
     extra_hosts:
       - "host.docker.internal:host-gateway"
-    gpus: all
     environment:
       APP_NAME: "CuongRAG - Ingestion Service"
       DATABASE_URL: postgresql+asyncpg://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-postgres}@postgres:5432/${POSTGRES_DB:-cuong_rag}
       AUTO_CREATE_TABLES: "true"
       CORS_ORIGINS: '["http://localhost:3001","http://localhost"]'
-      NVIDIA_VISIBLE_DEVICES: all
-      NVIDIA_DRIVER_CAPABILITIES: compute,utility
     volumes:
       - ./ingestion-service:/app
       - cuongrag_uploads:/app/uploads
@@ -101,14 +95,11 @@ services:
         condition: service_healthy
     extra_hosts:
       - "host.docker.internal:host-gateway"
-    gpus: all
     environment:
       APP_NAME: "CuongRAG - KG Service"
       DATABASE_URL: postgresql+asyncpg://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-postgres}@postgres:5432/${POSTGRES_DB:-cuong_rag}
       AUTO_CREATE_TABLES: "true"
       CORS_ORIGINS: '["http://localhost:3001","http://localhost"]'
-      NVIDIA_VISIBLE_DEVICES: all
-      NVIDIA_DRIVER_CAPABILITIES: compute,utility
     volumes:
       - cuongrag_uploads:/app/uploads
       - cuongrag_data:/app/data

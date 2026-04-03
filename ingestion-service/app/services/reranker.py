@@ -16,6 +16,8 @@ import logging
 from dataclasses import dataclass
 from typing import Optional, Sequence
 
+import requests
+
 from app.core.config import settings
 
 logger = logging.getLogger(__name__)
@@ -39,6 +41,78 @@ class RerankerService:
     def __init__(self, model_name: Optional[str] = None):
         self.model_name = model_name or settings.CUONGRAG_RERANKER_MODEL
         self._model = None
+        self._api_url = (getattr(settings, "CUONGRAG_RERANKER_API_URL", "") or "").strip()
+        self._api_key = (getattr(settings, "CUONGRAG_RERANKER_API_KEY", "") or "").strip()
+        self._api_model = (
+            getattr(settings, "CUONGRAG_RERANKER_API_MODEL", "") or "bge-reranker-v2-m3"
+        ).strip()
+
+    def _api_headers(self) -> dict[str, str]:
+        headers = {"Content-Type": "application/json"}
+        if self._api_key:
+            headers["Authorization"] = f"Bearer {self._api_key}"
+        return headers
+
+    def _rerank_via_api(
+        self,
+        query: str,
+        documents: Sequence[str],
+        top_k: Optional[int],
+        min_score: Optional[float],
+    ) -> list[RerankResult] | None:
+        if not self._api_url:
+            return None
+
+        url = self._api_url.rstrip("/")
+        if not url.endswith("/rerank"):
+            url = f"{url}/rerank"
+
+        payload = {
+            "model": self._api_model,
+            "query": query,
+            "documents": list(documents),
+            "top_n": top_k,
+        }
+        if min_score is not None:
+            payload["min_score"] = min_score
+
+        payload_legacy = dict(payload)
+        payload_legacy["top_k"] = top_k
+
+        try:
+            for body in (payload, payload_legacy):
+                resp = requests.post(
+                    url,
+                    json=body,
+                    headers=self._api_headers(),
+                    timeout=float(getattr(settings, "CUONGRAG_RERANKER_API_TIMEOUT", 10.0)),
+                )
+                resp.raise_for_status()
+                data = resp.json()
+                items = data.get("results", data) if isinstance(data, dict) else data
+                if not isinstance(items, list):
+                    continue
+
+                results: list[RerankResult] = []
+                for it in items:
+                    if not isinstance(it, dict):
+                        continue
+                    idx = int(it.get("index", -1))
+                    score = float(it.get("relevance_score", it.get("score", 0.0)))
+                    if idx < 0 or idx >= len(documents):
+                        continue
+                    results.append(RerankResult(index=idx, score=score, text=documents[idx]))
+
+                results.sort(key=lambda r: r.score, reverse=True)
+                if min_score is not None:
+                    results = [r for r in results if r.score >= min_score]
+                if top_k is not None:
+                    results = results[:top_k]
+                return results
+        except Exception as e:
+            logger.warning(f"External reranker API failed, fallback to local model: {e}")
+
+        return None
 
     @property
     def model(self):
@@ -75,6 +149,10 @@ class RerankerService:
         """
         if not documents:
             return []
+
+        api_results = self._rerank_via_api(query, documents, top_k, min_score)
+        if api_results is not None:
+            return api_results
 
         # Build (query, document) pairs for the cross-encoder
         pairs = [(query, doc) for doc in documents]

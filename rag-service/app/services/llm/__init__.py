@@ -41,6 +41,9 @@ def get_llm_provider() -> LLMProvider:
         return OllamaLLMProvider(
             host=settings.OLLAMA_HOST,
             model=settings.OLLAMA_MODEL,
+            vision_model=settings.OLLAMA_VISION_MODEL,
+            api_key=settings.OLLAMA_API_KEY,
+            api_timeout=settings.OLLAMA_API_TIMEOUT,
         )
 
     raise ValueError(f"Unknown LLM_PROVIDER: {provider!r}. Supported: gemini, ollama")

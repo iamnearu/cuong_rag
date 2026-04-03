@@ -494,11 +494,11 @@ async def get_workspace_rag_stats(
     )
     indexed_documents = indexed_result.scalar() or 0
 
-    # Count CuongRAG documents (parser_version = 'mineru' or 'docling')
+    # Count CuongRAG documents (parser_version = 'deepseek_ocr' / legacy OCR parsers)
     cuongrag_result = await db.execute(
         select(func.count(Document.id)).where(
             Document.workspace_id == workspace_id,
-            Document.parser_version.in_(["mineru", "docling"])
+            Document.parser_version.in_(["deepseek_ocr"])
         )
     )
     cuongrag_documents = cuongrag_result.scalar() or 0
@@ -675,7 +675,7 @@ async def get_workspace_analytics(
     cuongrag_result = await db.execute(
         select(func.count(Document.id)).where(
             Document.workspace_id == workspace_id,
-            Document.parser_version.in_(["mineru", "docling"]),
+            Document.parser_version.in_(["deepseek_ocr"]),
         )
     )
     cuongrag_documents = cuongrag_result.scalar() or 0

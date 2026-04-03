@@ -5,11 +5,13 @@ Concrete implementations using the ``ollama`` Python library for local models.
 """
 from __future__ import annotations
 
+import base64
 import json
 import logging
 import re
-from typing import AsyncGenerator, Optional
+from typing import Any, AsyncGenerator, Optional
 
+import httpx
 import numpy as np
 
 from app.services.llm.base import EmbeddingProvider, LLMProvider
@@ -24,10 +26,86 @@ _THINK_RE = re.compile(r"<think>.*?</think>\s*", re.DOTALL)
 class OllamaLLMProvider(LLMProvider):
     """Local Ollama text/multimodal generation."""
 
-    def __init__(self, host: str = "http://localhost:11434", model: str = "gemma3:12b"):
+    def __init__(
+        self,
+        host: str = "http://localhost:11434",
+        model: str = "gemma3:12b",
+        vision_model: str = "",
+        api_key: str = "",
+        api_timeout: float = 60.0,
+    ):
         self._host = host
         self._model = model
+        self._vision_model = (vision_model or "").strip()
+        self._api_key = (api_key or "").strip()
+        self._api_timeout = float(api_timeout or 60.0)
+        self._openai_mode = bool(self._api_key) or "mkp-api.fptcloud.com" in (host or "")
         self._thinking_supported: bool | None = None  # lazy probe
+
+    def _model_for_messages(self, messages: list[LLMMessage]) -> str:
+        if self._vision_model and any(m.images for m in messages):
+            return self._vision_model
+        return self._model
+
+    def _openai_endpoint(self) -> str:
+        base = (self._host or "").rstrip("/")
+        if base.endswith("/chat/completions"):
+            return base
+        if base.endswith("/v1"):
+            return f"{base}/chat/completions"
+        return f"{base}/v1/chat/completions"
+
+    def _openai_headers(self) -> dict[str, str]:
+        headers = {"Content-Type": "application/json"}
+        if self._api_key:
+            headers["Authorization"] = f"Bearer {self._api_key}"
+        return headers
+
+    @staticmethod
+    def _to_openai_messages(
+        messages: list[LLMMessage],
+        system_prompt: Optional[str] = None,
+    ) -> list[dict[str, Any]]:
+        out: list[dict[str, Any]] = []
+        if system_prompt:
+            out.append({"role": "system", "content": system_prompt})
+
+        for msg in messages:
+            if msg.images:
+                parts: list[dict[str, Any]] = []
+                if msg.content:
+                    parts.append({"type": "text", "text": msg.content})
+                for img in msg.images:
+                    b64 = base64.b64encode(img.data).decode("utf-8")
+                    parts.append(
+                        {
+                            "type": "image_url",
+                            "image_url": {"url": f"data:{img.mime_type};base64,{b64}"},
+                        }
+                    )
+                out.append({"role": msg.role, "content": parts})
+            else:
+                out.append({"role": msg.role, "content": msg.content or ""})
+
+        return out
+
+    @staticmethod
+    def _extract_openai_content(payload: dict[str, Any]) -> str:
+        choices = payload.get("choices") or []
+        if not choices:
+            return ""
+        message = choices[0].get("message") or {}
+        content = message.get("content")
+        if isinstance(content, str):
+            return content
+        if isinstance(content, list):
+            texts = [
+                p.get("text", "")
+                for p in content
+                if isinstance(p, dict) and p.get("type") == "text"
+            ]
+            return "".join(texts)
+        return ""
 
     # ------------------------------------------------------------------
     # Internal helpers
@@ -97,6 +175,32 @@ class OllamaLLMProvider(LLMProvider):
         system_prompt: Optional[str] = None,
         think: bool = False,
     ) -> str | LLMResult:
+        selected_model = self._model_for_messages(messages)
+        if self._openai_mode:
+            try:
+                payload = {
+                    "model": selected_model,
+                    "messages": self._to_openai_messages(messages, system_prompt),
+                    "temperature": temperature,
+                    "max_tokens": max_tokens,
+                    "stream": False,
+                    "top_p": 1,
+                    "presence_penalty": 0,
+                    "frequency_penalty": 0,
+                }
+                resp = httpx.post(
+                    self._openai_endpoint(),
+                    json=payload,
+                    headers=self._openai_headers(),
+                    timeout=self._api_timeout,
+                )
+                resp.raise_for_status()
+                content = self._extract_openai_content(resp.json())
+                return LLMResult(content=content, thinking="") if think else content
+            except Exception as e:
+                logger.error(f"OpenAI-compatible LLM call failed: {e}", exc_info=True)
+                return LLMResult(content="") if think else ""
+
         import ollama
 
         ollama_msgs = self._to_ollama_messages(messages, system_prompt)
@@ -104,7 +208,7 @@ class OllamaLLMProvider(LLMProvider):
 
         try:
             response = ollama.chat(
-                model=self._model,
+                model=selected_model,
                 messages=ollama_msgs,
                 options={"temperature": temperature, "num_predict": max_tokens},
                 think=use_think,
@@ -134,6 +238,32 @@ class OllamaLLMProvider(LLMProvider):
         think: bool = False,
     ) -> str | LLMResult:
         """Native async via ollama.AsyncClient (better than to_thread)."""
+        selected_model = self._model_for_messages(messages)
+        if self._openai_mode:
+            try:
+                payload = {
+                    "model": selected_model,
+                    "messages": self._to_openai_messages(messages, system_prompt),
+                    "temperature": temperature,
+                    "max_tokens": max_tokens,
+                    "stream": False,
+                    "top_p": 1,
+                    "presence_penalty": 0,
+                    "frequency_penalty": 0,
+                }
+                async with httpx.AsyncClient(timeout=self._api_timeout) as client:
+                    resp = await client.post(
+                        self._openai_endpoint(),
+                        json=payload,
+                        headers=self._openai_headers(),
+                    )
+                    resp.raise_for_status()
+                content = self._extract_openai_content(resp.json())
+                return LLMResult(content=content, thinking="") if think else content
+            except Exception as e:
+                logger.error(f"OpenAI-compatible async LLM call failed: {e}", exc_info=True)
+                return LLMResult(content="") if think else ""
+
         import ollama
 
         ollama_msgs = self._to_ollama_messages(messages, system_prompt)
@@ -142,7 +272,7 @@ class OllamaLLMProvider(LLMProvider):
         try:
             client = ollama.AsyncClient(host=self._host)
             response = await client.chat(
-                model=self._model,
+                model=selected_model,
                 messages=ollama_msgs,
                 options={"temperature": temperature, "num_predict": max_tokens},
                 think=use_think,
@@ -177,6 +307,58 @@ class OllamaLLMProvider(LLMProvider):
         Tool calls are detected via <tool_call>...</tool_call> tags in output.
         Uses a state machine to buffer tool call JSON before yielding.
         """
+        selected_model = self._model_for_messages(messages)
+        if self._openai_mode:
+            payload = {
+            "model": selected_model,
+                "messages": self._to_openai_messages(messages, system_prompt),
+                "temperature": temperature,
+                "max_tokens": max_tokens,
+                "stream": True,
+                "top_p": 1,
+                "presence_penalty": 0,
+                "frequency_penalty": 0,
+            }
+            try:
+                async with httpx.AsyncClient(timeout=self._api_timeout) as client:
+                    async with client.stream(
+                        "POST",
+                        self._openai_endpoint(),
+                        json=payload,
+                        headers=self._openai_headers(),
+                    ) as resp:
+                        resp.raise_for_status()
+                        async for line in resp.aiter_lines():
+                            if not line:
+                                continue
+                            if line.startswith("data: "):
+                                data = line[len("data: "):].strip()
+                            elif line.startswith("data:"):
+                                data = line[len("data:"):].strip()
+                            else:
+                                continue
+
+                            if data == "[DONE]":
+                                break
+
+                            try:
+                                chunk = json.loads(data)
+                            except Exception:
+                                continue
+
+                            choices = chunk.get("choices") or []
+                            if not choices:
+                                continue
+                            delta = choices[0].get("delta") or {}
+                            txt = delta.get("content") or ""
+                            if txt:
+                                yield StreamChunk(type="text", text=txt)
+                return
+            except Exception as e:
+                logger.error(f"OpenAI-compatible streaming failed: {e}", exc_info=True)
+                yield StreamChunk(type="text", text="")
+                return
+
         import ollama
 
         ollama_msgs = self._to_ollama_messages(messages, system_prompt)
@@ -185,7 +367,7 @@ class OllamaLLMProvider(LLMProvider):
         try:
             client = ollama.AsyncClient(host=self._host)
             stream = await client.chat(
-                model=self._model,
+                model=selected_model,
                 messages=ollama_msgs,
                 options={"temperature": temperature, "num_predict": max_tokens},
                 stream=True,
@@ -290,6 +472,9 @@ class OllamaLLMProvider(LLMProvider):
 
     def supports_thinking(self) -> bool:
         """Detect if the model supports thinking mode via a probe call."""
+        if self._openai_mode:
+            return False
+
         if self._thinking_supported is not None:
             return self._thinking_supported
 

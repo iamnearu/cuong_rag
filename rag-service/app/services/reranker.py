@@ -16,6 +16,8 @@ import logging
 from dataclasses import dataclass
 from typing import Optional, Sequence
 
+import requests
+
 from app.core.config import settings
 
 logger = logging.getLogger(__name__)
@@ -39,6 +41,93 @@ class RerankerService:
     def __init__(self, model_name: Optional[str] = None):
         self.model_name = model_name or settings.CUONGRAG_RERANKER_MODEL
         self._model = None
+        self._api_url = (settings.CUONGRAG_RERANKER_API_URL or "").strip()
+        self._api_key = (getattr(settings, "CUONGRAG_RERANKER_API_KEY", "") or "").strip()
+        self._api_model = (
+            getattr(settings, "CUONGRAG_RERANKER_API_MODEL", "") or "bge-reranker-v2-m3"
+        ).strip()
+
+    def _api_headers(self) -> dict[str, str]:
+        headers = {"Content-Type": "application/json"}
+        if self._api_key:
+            headers["Authorization"] = f"Bearer {self._api_key}"
+        return headers
+
+    def _rerank_via_api(
+        self,
+        query: str,
+        documents: Sequence[str],
+        top_k: Optional[int],
+        min_score: Optional[float],
+    ) -> list[RerankResult] | None:
+        """Try reranking via external HTTP API.
+
+        Expected endpoint behavior (flexible parsing):
+        - POST {api_url}/rerank with JSON {query, documents, top_k, min_score}
+        - Response can be either:
+          1) {"results": [{"index": int, "score": float}, ...]}
+          2) [{"index": int, "score": float}, ...]
+
+        Returns None on any failure so caller can fallback to local model.
+        """
+        if not self._api_url:
+            return None
+
+        url = self._api_url.rstrip("/")
+        if not url.endswith("/rerank"):
+            url = f"{url}/rerank"
+
+        payload = {
+            "model": self._api_model,
+            "query": query,
+            "documents": list(documents),
+            "top_n": top_k,
+        }
+        if min_score is not None:
+            payload["min_score"] = min_score
+
+        # Backward-compatible payload fields for custom rerank APIs
+        payload_legacy = dict(payload)
+        payload_legacy["top_k"] = top_k
+
+        payload_candidates = [payload, payload_legacy]
+
+        try:
+            for body in payload_candidates:
+                resp = requests.post(
+                    url,
+                    json=body,
+                    headers=self._api_headers(),
+                    timeout=float(settings.CUONGRAG_RERANKER_API_TIMEOUT),
+                )
+                resp.raise_for_status()
+                data = resp.json()
+                items = data.get("results", data) if isinstance(data, dict) else data
+                if not isinstance(items, list):
+                    continue
+
+                results: list[RerankResult] = []
+                for it in items:
+                    if not isinstance(it, dict):
+                        continue
+                    idx = int(it.get("index", -1))
+                    score_raw = it.get("relevance_score", it.get("score", 0.0))
+                    score = float(score_raw)
+                    if idx < 0 or idx >= len(documents):
+                        continue
+                    results.append(RerankResult(index=idx, score=score, text=documents[idx]))
+
+                results.sort(key=lambda r: r.score, reverse=True)
+                if min_score is not None:
+                    results = [r for r in results if r.score >= min_score]
+                if top_k is not None:
+                    results = results[:top_k]
+                return results
+
+            return None
+        except Exception as e:
+            logger.warning(f"External reranker API failed, fallback to local model: {e}")
+            return None
 
     @property
     def model(self):
@@ -75,6 +164,11 @@ class RerankerService:
         """
         if not documents:
             return []
+
+        # Try external reranker first (if configured)
+        api_results = self._rerank_via_api(query, documents, top_k, min_score)
+        if api_results is not None:
+            return api_results
 
         # Build (query, document) pairs for the cross-encoder
         pairs = [(query, doc) for doc in documents]

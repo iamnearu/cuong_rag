@@ -23,27 +23,30 @@ class Settings(BaseSettings):
     )
 
     # LLM Provider: "gemini" | "ollama"
-    LLM_PROVIDER: str = Field(default="gemini")
+    LLM_PROVIDER: str = Field(default="ollama")
 
     # Google AI
     GOOGLE_AI_API_KEY: str = Field(default="")
 
     # Ollama (dùng khi LLM_PROVIDER=ollama)
     OLLAMA_HOST: str = Field(default="http://localhost:11434")
-    OLLAMA_MODEL: str = Field(default="gemma3:12b")
+    OLLAMA_MODEL: str = Field(default="Qwen3-32B")
+    OLLAMA_VISION_MODEL: str = Field(default="Qwen3-VL-8B-Instruct")
+    OLLAMA_API_KEY: str = Field(default="")
+    OLLAMA_API_TIMEOUT: float = Field(default=60.0)
     OLLAMA_ENABLE_THINKING: bool = Field(default=False)
 
-    # LLM fast model (Gemini)
-    LLM_MODEL_FAST: str = Field(default="gemini-2.5-flash")
+    # LLM fast model (API)
+    LLM_MODEL_FAST: str = Field(default="Qwen3-32B")
     # Thinking level: "minimal" | "low" | "medium" | "high"
     LLM_THINKING_LEVEL: str = Field(default="medium")
     # Max output tokens (includes thinking tokens)
     LLM_MAX_OUTPUT_TOKENS: int = Field(default=8192)
 
     # KG Embedding (có thể khác LLM provider)
-    KG_EMBEDDING_PROVIDER: str = Field(default="gemini")
-    KG_EMBEDDING_MODEL: str = Field(default="gemini-embedding-001")
-    KG_EMBEDDING_DIMENSION: int = Field(default=3072)
+    KG_EMBEDDING_PROVIDER: str = Field(default="ollama")
+    KG_EMBEDDING_MODEL: str = Field(default="Vietnamese_Embedding")
+    KG_EMBEDDING_DIMENSION: int = Field(default=1024)
     KG_EMBEDDING_DEVICE: str = Field(default="cpu")
 
     # ---- CuongRAG Pipeline ---------------------------------------------------
@@ -60,24 +63,29 @@ class Settings(BaseSettings):
     CUONGRAG_KG_EMBEDDING_MAX_ASYNC: int = 1
     CUONGRAG_KG_EMBEDDING_TIMEOUT_SECONDS: int = 180
     CUONGRAG_KG_LLM_TIMEOUT_SECONDS: int = 240
-    CUONGRAG_KG_LANGUAGE: str = "English"
+    CUONGRAG_KG_LANGUAGE: str = "Vietnamese"
     CUONGRAG_KG_ENTITY_TYPES: list[str] = [
         "Organization", "Person", "Product", "Location", "Event",
         "Financial_Metric", "Technology", "Date", "Regulation",
     ]
     CUONGRAG_DEFAULT_QUERY_MODE: str = "hybrid"
-    CUONGRAG_DOCLING_IMAGES_SCALE: float = 2.0
     CUONGRAG_MAX_IMAGES_PER_DOC: int = 50
     CUONGRAG_ENABLE_FORMULA_ENRICHMENT: bool = True
 
-    # OCR (MinerU + ProtonX correction)
-    CUONGRAG_OCR_ENGINE: str = "mineru"  # mineru only
-    CUONGRAG_MINERU_CLI: str = "mineru"
-    CUONGRAG_MINERU_BACKEND: str = "pipeline"
-    CUONGRAG_MINERU_MODE: str = "auto"
-    CUONGRAG_MINERU_DEVICE: str = "cuda"
-    CUONGRAG_MINERU_VRAM_GB: int = 10
-    CUONGRAG_MINERU_TIMEOUT_SECONDS: int = 1800
+    # OCR (DeepSeek OCR + optional ProtonX correction)
+    # Supported: deepseek_ocr, deepseek_ocr2 (alias, same runtime path)
+    CUONGRAG_OCR_ENGINE: str = "deepseek_ocr"
+    CUONGRAG_DEEPSEEK_OCR_MODEL: str = Field(default="deepseek-ai/DeepSeek-OCR")
+    CUONGRAG_DEEPSEEK_OCR_API_MODEL: str = Field(default="DeepSeek-OCR")
+    CUONGRAG_DEEPSEEK_OCR_API_KEY: str = Field(default="")
+    CUONGRAG_DEEPSEEK_OCR_PROMPT: str = Field(
+        default="<image>\n<|grounding|>Convert the document to markdown."
+    )
+    CUONGRAG_DEEPSEEK_OCR_DPI: int = 160
+    CUONGRAG_DEEPSEEK_OCR_BASE_SIZE: int = 1024
+    CUONGRAG_DEEPSEEK_OCR_IMAGE_SIZE: int = 640
+    CUONGRAG_DEEPSEEK_OCR_CROP_MODE: bool = True
+    CUONGRAG_DEEPSEEK_OCR_TEST_COMPRESS: bool = True
 
     CUONGRAG_ENABLE_PROTONX_CORRECTION: bool = True
     CUONGRAG_PROTONX_MODEL_NAME: str = "protonx-models/protonx-legal-tc"
@@ -96,9 +104,21 @@ class Settings(BaseSettings):
     CUONGRAG_DEDUP_NEAR_THRESHOLD: float = 0.85
 
     # Retrieval Quality
-    CUONGRAG_EMBEDDING_MODEL: str = "BAAI/bge-m3"
+    CUONGRAG_EMBEDDING_MODEL: str = "Vietnamese_Embedding"
     CUONGRAG_EMBEDDING_DEVICE: str = "cpu"
+    CUONGRAG_EMBEDDING_API_MODEL: str = "Vietnamese_Embedding"
+    CUONGRAG_EMBEDDING_API_KEY: str = ""
+    CUONGRAG_EMBEDDING_API_DIMENSIONS: int = 1024
+    CUONGRAG_EMBEDDING_API_ENCODING_FORMAT: str = "float"
     CUONGRAG_RERANKER_MODEL: str = "BAAI/bge-reranker-v2-m3"
+    CUONGRAG_RERANKER_API_MODEL: str = "bge-reranker-v2-m3"
+    CUONGRAG_RERANKER_API_KEY: str = ""
+    CUONGRAG_RERANKER_API_URL: str = ""
+    CUONGRAG_RERANKER_API_TIMEOUT: float = 10.0
+    CUONGRAG_EMBEDDING_API_URL: str = ""
+    CUONGRAG_EMBEDDING_API_TIMEOUT: float = 30.0
+    CUONGRAG_DEEPSEEK_OCR_API_URL: str = ""
+    CUONGRAG_DEEPSEEK_OCR_API_TIMEOUT: float = 180.0
     CUONGRAG_RERANKER_DEVICE: str = "cpu"
     CUONGRAG_VECTOR_PREFETCH: int = 20
     CUONGRAG_RERANKER_TOP_K: int = 8

@@ -132,13 +132,13 @@ HARD_SYSTEM_PROMPT = (
     # LANGUAGE RULE — the most critical behavioral constraint
     # ══════════════════════════════════════════════════════════════════════
     "## LANGUAGE RULE (MANDATORY)\n"
-    "You MUST answer in the SAME language as the user's question.\n"
-    "- If the user asks in Vietnamese → answer entirely in Vietnamese.\n"
-    "- If the user asks in English → answer entirely in English.\n"
-    "- If the user asks in a mix of languages → answer in the dominant language.\n"
-    "- Do NOT switch languages mid-answer. Do NOT use a different language "
-    "than the user used.\n"
-    "- This rule overrides all other instructions. It is MANDATORY.\n"
+    "Mặc định luôn trả lời bằng tiếng Việt.\n"
+    "- Nếu người dùng yêu cầu rõ ràng ngôn ngữ khác (ví dụ: English), "
+    "thì trả lời đúng ngôn ngữ đó.\n"
+    "- Nếu câu hỏi bằng tiếng Việt hoặc không chỉ định ngôn ngữ, "
+    "trả lời hoàn toàn bằng tiếng Việt.\n"
+    "- Không trộn ngôn ngữ trong cùng một câu trả lời.\n"
+    "- Quy tắc này là BẮT BUỘC và ưu tiên cao nhất.\n"
     "\n"
     # ══════════════════════════════════════════════════════════════════════
     # CITATION FORMAT — how to reference sources
