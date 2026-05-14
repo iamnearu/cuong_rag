@@ -55,12 +55,32 @@ class DeepDocumentParser:
             return self._converter
 
         from docling.document_converter import DocumentConverter, PdfFormatOption
-        from docling.datamodel.pipeline_options import PdfPipelineOptions
+        from docling.datamodel.pipeline_options import (
+            PdfPipelineOptions,
+            AcceleratorOptions,
+            AcceleratorDevice,
+        )
 
         pipeline_options = PdfPipelineOptions()
         pipeline_options.generate_picture_images = settings.CUONGRAG_ENABLE_IMAGE_EXTRACTION
         pipeline_options.images_scale = settings.CUONGRAG_DOCLING_IMAGES_SCALE
         pipeline_options.do_formula_enrichment = settings.CUONGRAG_ENABLE_FORMULA_ENRICHMENT
+
+        # GPU acceleration (CUDA) when available
+        device = AcceleratorDevice.CPU
+        try:
+            import torch
+
+            if torch.cuda.is_available():
+                device = AcceleratorDevice.CUDA
+                logger.info("Docling GPU: %s", torch.cuda.get_device_name(0))
+        except ImportError:
+            pass
+
+        num_threads = getattr(settings, "CUONGRAG_DOCLING_NUM_THREADS", 4)
+        pipeline_options.accelerator_options = AcceleratorOptions(
+            num_threads=num_threads, device=device
+        )
 
         self._converter = DocumentConverter(
             format_options={
@@ -307,6 +327,10 @@ class DeepDocumentParser:
 
         if images:
             assigned_count = len(assigned_images)
+
+            _THINK_BLOCK_RE = re.compile(r"<think>.*?</think>\s*", re.DOTALL | re.IGNORECASE)
+            _THINK_TAIL_RE = re.compile(r"<think>.*", re.DOTALL | re.IGNORECASE)
+            _TOOL_CALL_RE = re.compile(r"<tool_call>.*?</tool_call>\s*", re.DOTALL | re.IGNORECASE)
             logger.info(
                 f"Image-aware chunking: {assigned_count}/{len(images)} images "
                 f"assigned to {len(chunks)} chunks"
@@ -465,7 +489,6 @@ class DeepDocumentParser:
                 return ""
 
         result = re.sub(r'<!--\s*image\s*-->', replacer, markdown)
-        logger.info(f"Injected {injected}/{placeholder_count} image references")
         return result
 
     # ------------------------------------------------------------------
@@ -473,7 +496,6 @@ class DeepDocumentParser:
     # ------------------------------------------------------------------
 
     def _extract_tables(self, doc, document_id: int) -> list[ExtractedTable]:
-        """Extract tables from Docling document."""
         if not hasattr(doc, "tables") or not doc.tables:
             return []
 
@@ -517,6 +539,16 @@ class DeepDocumentParser:
         logger.info(f"Extracted {len(tables)} tables from document {document_id}")
         return tables
 
+    @staticmethod
+    def _sanitize_caption(text: str) -> str:
+        if not text:
+            return ""
+        cleaned = _THINK_BLOCK_RE.sub("", text)
+        cleaned = _THINK_TAIL_RE.sub("", cleaned)
+        cleaned = _TOOL_CALL_RE.sub("", cleaned)
+        cleaned = " ".join(cleaned.split())
+        return cleaned
+
     _TABLE_CAPTION_PROMPT = (
         "You are a document analysis assistant. Given a markdown table, "
         "write a concise description that covers:\n"
@@ -555,7 +587,9 @@ class DeepDocumentParser:
                 )
                 result = provider.complete([message])
                 if result:
-                    tbl.caption = " ".join(result.strip().split())[:500]
+                    caption = self._sanitize_caption(result)
+                    if caption:
+                        tbl.caption = caption[:500]
             except Exception as e:
                 logger.debug(f"Failed to caption table {tbl.table_id}: {e}")
 
@@ -677,7 +711,9 @@ class DeepDocumentParser:
                 result = provider.complete([message])
                 if result:
                     # Collapse to single line — prevents breaking ![alt](url) markdown
-                    img.caption = " ".join(result.strip().split())[:500]
+                    caption = self._sanitize_caption(result)
+                    if caption:
+                        img.caption = caption[:500]
 
             except Exception as e:
                 logger.debug(f"Failed to caption image {img.image_id}: {e}")

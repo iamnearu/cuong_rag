@@ -33,7 +33,7 @@ export const api = {
     updateWorkspace: (id, data) => api.put(`/workspaces/${id}`, data),
     deleteWorkspace: (id) => api.del(`/workspaces/${id}`),
 
-    // Documents
+    // Documents (via ingestion-service)
     listDocuments: (wsId) => api.get(`/documents/workspace/${wsId}`),
     uploadDocument: (wsId, file) => {
         const fd = new FormData();
@@ -44,9 +44,9 @@ export const api = {
     getDocumentMarkdown: (docId) =>
         fetch(`${BASE}/documents/${docId}/markdown`).then((r) => r.text()),
 
-    // RAG / Processing
-    processDocument: (docId) => api.post(`/rag/process/${docId}`),
-    processBatch: (ids) => api.post("/rag/process-batch", { document_ids: ids }),
+    // RAG / Processing (via ingestion-service)
+    processDocument: (docId) => api.post(`/ingest/process/${docId}`),
+    processBatch: (ids) => api.post("/ingest/process-batch", { document_ids: ids }),
     getStats: (wsId) => api.get(`/rag/stats/${wsId}`),
     getAnalytics: (wsId) => api.get(`/rag/analytics/${wsId}`),
 

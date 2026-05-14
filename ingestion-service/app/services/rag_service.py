@@ -79,7 +79,7 @@ class RAGService:
     ) -> None:
         """Write indexing result to a JSON file under output directory."""
         try:
-            output_dir = Path(settings.CUONGRAG_INDEX_OUTPUT_DIR)
+            output_dir = self._get_output_dir(document.id)
             output_dir.mkdir(parents=True, exist_ok=True)
 
             payload = {
@@ -100,14 +100,22 @@ class RAGService:
                 ],
             }
 
-            out_path = output_dir / f"workspace_{self.workspace_id}_doc_{document.id}.json"
-            out_path.write_text(
-                json.dumps(payload, ensure_ascii=False, indent=2),
-                encoding="utf-8",
-            )
-            logger.info(f"Saved indexing JSON to {out_path}")
+            if settings.CUONGRAG_EXPORT_INDEX_JSON:
+                out_path = output_dir / "index.json"
+                out_path.write_text(
+                    json.dumps(payload, ensure_ascii=False, indent=2),
+                    encoding="utf-8",
+                )
+                logger.info(f"Saved indexing JSON to {out_path}")
         except Exception as exc:
             logger.warning(f"Failed to save indexing JSON for doc {document.id}: {exc}")
+
+    def _get_output_dir(self, document_id: int) -> Path:
+        base_dir = Path(settings.CUONGRAG_INDEX_OUTPUT_DIR)
+        layout = (settings.CUONGRAG_OUTPUT_LAYOUT or "document").strip().lower()
+        if layout in {"workspace", "workspace_id"}:
+            return base_dir / f"workspace_{self.workspace_id}" / f"doc_{document_id}"
+        return base_dir / f"doc_{document_id}"
 
     async def process_document(self, document_id: int, file_path: str) -> int:
         """

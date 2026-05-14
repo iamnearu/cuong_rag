@@ -55,12 +55,32 @@ class DeepDocumentParser:
             return self._converter
 
         from docling.document_converter import DocumentConverter, PdfFormatOption
-        from docling.datamodel.pipeline_options import PdfPipelineOptions
+        from docling.datamodel.pipeline_options import (
+            PdfPipelineOptions,
+            AcceleratorOptions,
+            AcceleratorDevice,
+        )
 
         pipeline_options = PdfPipelineOptions()
         pipeline_options.generate_picture_images = settings.CUONGRAG_ENABLE_IMAGE_EXTRACTION
         pipeline_options.images_scale = settings.CUONGRAG_DOCLING_IMAGES_SCALE
         pipeline_options.do_formula_enrichment = settings.CUONGRAG_ENABLE_FORMULA_ENRICHMENT
+
+        # GPU acceleration (CUDA) when available
+        device = AcceleratorDevice.CPU
+        try:
+            import torch
+
+            if torch.cuda.is_available():
+                device = AcceleratorDevice.CUDA
+                logger.info("Docling GPU: %s", torch.cuda.get_device_name(0))
+        except ImportError:
+            pass
+
+        num_threads = getattr(settings, "CUONGRAG_DOCLING_NUM_THREADS", 4)
+        pipeline_options.accelerator_options = AcceleratorOptions(
+            num_threads=num_threads, device=device
+        )
 
         self._converter = DocumentConverter(
             format_options={

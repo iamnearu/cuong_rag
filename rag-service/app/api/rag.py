@@ -494,11 +494,11 @@ async def get_workspace_rag_stats(
     )
     indexed_documents = indexed_result.scalar() or 0
 
-    # Count CuongRAG documents (parser_version = 'deepseek_ocr' / legacy OCR parsers)
+    # Count CuongRAG documents (parser_version = 'docling' / 'deepseek_ocr' / 'mineru' / etc.)
     cuongrag_result = await db.execute(
         select(func.count(Document.id)).where(
             Document.workspace_id == workspace_id,
-            Document.parser_version.in_(["deepseek_ocr"])
+            Document.parser_version.in_(["docling", "deepseek_ocr", "mineru"])
         )
     )
     cuongrag_documents = cuongrag_result.scalar() or 0
@@ -675,7 +675,7 @@ async def get_workspace_analytics(
     cuongrag_result = await db.execute(
         select(func.count(Document.id)).where(
             Document.workspace_id == workspace_id,
-            Document.parser_version.in_(["deepseek_ocr"]),
+            Document.parser_version.in_(["docling", "deepseek_ocr", "mineru"]),
         )
     )
     cuongrag_documents = cuongrag_result.scalar() or 0
@@ -927,12 +927,14 @@ async def chat_with_documents(
             score=0.0,
             source_type="vector",
         ))
-        # Build metadata line (filename, page, heading) — OUTSIDE brackets
+        # Build metadata line (filename, chunk, page, heading) — OUTSIDE brackets
         meta_parts = []
         if citation:
             meta_parts.append(citation.source_file)
-            if citation.page_no:
-                meta_parts.append(f"page {citation.page_no}")
+        chunk_id_str = f"doc_{chunk.document_id}_chunk_{chunk.chunk_index}"
+        meta_parts.append(f"chunk: {chunk_id_str}")
+        if chunk.page_no:
+            meta_parts.append(f"trang {chunk.page_no}")
         heading = " > ".join(chunk.heading_path) if chunk.heading_path else ""
         if heading:
             meta_parts.append(heading)
@@ -1055,10 +1057,10 @@ async def chat_with_documents(
     user_parts: list[str] = []
 
     # 1. Document sources (the model reads this first)
-    user_parts.append("I have retrieved the following document sources for you.\n")
-    user_parts.append("=== DOCUMENT SOURCES ===")
+    user_parts.append("Đã truy xuất các nguồn tài liệu liên quan dưới đây.\n")
+    user_parts.append("=== NGUON TAI LIEU ===")
     user_parts.append(context)
-    user_parts.append("=== END SOURCES ===\n")
+    user_parts.append("=== KET THUC NGUON ===\n")
 
     # 2. Image references (if any)
     if image_context_parts:
@@ -1068,13 +1070,12 @@ async def chat_with_documents(
 
     # 3. Contextual rules (only things not covered by system prompt)
     user_parts.append(
-        "IMPORTANT:\n"
-        "- Read EVERY source above carefully. Answers often require "
-        "combining data from MULTIPLE sources.\n"
-        "- TABLE DATA: Sources may contain table data as 'Key, Year = Value' pairs. "
-        "Example: 'ROE, 2023 = 12,8%' means ROE was 12.8% in 2023. "
-        "Extract and report these values.\n"
-        "- If no source contains relevant information, say: "
+        "QUAN TRONG:\n"
+        "- Đọc kỹ TẤT CẢ nguồn ở trên. Nhiều câu hỏi cần tổng hợp từ NHIỀU nguồn.\n"
+        "- DỮ LIỆU BẢNG: Nguồn có thể chứa dữ liệu dạng 'Chỉ số, Năm = Giá trị'. "
+        "Ví dụ: 'ROE, 2023 = 12,8%' nghĩa là ROE năm 2023 là 12,8%. "
+        "Hãy trích xuất và báo cáo các giá trị này.\n"
+        "- Nếu không nguồn nào chứa thông tin liên quan, hãy trả lời: "
         "\"Tài liệu không chứa thông tin này.\"\n"
     )
 
@@ -1086,12 +1087,12 @@ async def chat_with_documents(
             prefix = "User" if msg.role == "user" else "Assistant"
             recap_parts.append(f"{prefix}: {msg.content[:300]}")
         user_parts.append(
-            "CONVERSATION CONTEXT (previous exchange):\n"
+            "NGU CANH HOI THOAI (trao doi gan nhat):\n"
             + "\n".join(recap_parts) + "\n"
         )
 
     # 5. The actual question (last = highest attention position)
-    user_parts.append(f"My question: {request.message}")
+    user_parts.append(f"Cau hoi: {request.message}")
 
     user_content = "\n".join(user_parts)
 
@@ -1127,13 +1128,13 @@ async def chat_with_documents(
         else:
             answer = result
         if not answer:
-            answer = "Unable to generate a response."
+            answer = "Không thể tạo câu trả lời."
         # Strip Gemini token artifacts (e.g. <unused778>:)
         import re
         answer = re.sub(r'<unused\d+>:?\s*', '', answer).strip()
     except Exception as e:
         logger.error(f"LLM chat error: {e}")
-        answer = f"Sorry, I encountered an error generating the response: {str(e)}"
+        answer = f"Đã xảy ra lỗi khi tạo câu trả lời: {str(e)}"
 
     # -- 4. Extract related entities from KG --
     related_entities: list[str] = []
@@ -1293,30 +1294,29 @@ async def debug_chat(
 
     # Build user message: CONTEXT → RULES → QUESTION
     user_parts: list[str] = []
-    user_parts.append("I have retrieved the following document sources for you.\n")
-    user_parts.append("=== DOCUMENT SOURCES ===")
+    user_parts.append("Đã truy xuất các nguồn tài liệu liên quan dưới đây.\n")
+    user_parts.append("=== NGUON TAI LIEU ===")
     user_parts.append(context)
-    user_parts.append("=== END SOURCES ===\n")
+    user_parts.append("=== KET THUC NGUON ===\n")
 
     user_parts.append(
-        "IMPORTANT INSTRUCTIONS:\n"
-        "- CRITICAL: Read EVERY source carefully before answering. The answer often "
-        "requires combining data from MULTIPLE sources. Do NOT skip any source.\n"
-        "- TABLE DATA: Sources contain table data as 'Key, Year = Value' pairs. "
-        "You MUST extract the actual values. "
-        "Example: 'ROE, 2023 = 12,8%. ROE, 2024 = 15,6%' means ROE was 12.8% in 2023 "
-        "and 15.6% in 2024. Report these numbers in your answer.\n"
-        "- Use the DOCUMENT SOURCES above to answer. Do NOT add outside knowledge.\n"
-        "- You MAY compare, synthesize, and reason across multiple sources.\n"
-        "- Cite every fact using the source IDs shown in brackets, e.g. [a3x9][b2m7] — one ID per bracket.\n"
-        "- For images: [IMG-p4f2][IMG-q7r3] — use the IDs shown in the image list.\n"
-        "- NEVER say 'không có thông tin' or 'no information' for data that IS present "
-        "in any source. If a source contains 'Key = Value', report that value.\n"
-        "- Only say information is unavailable when you have checked ALL sources "
-        "and none contains the answer.\n"
-        "- If no source is relevant at all, say: "
-        "\"Tài liệu không chứa thông tin này.\" without any citations.\n"
-        "- Answer in the same language as my question.\n"
+        "HUONG DAN QUAN TRONG:\n"
+        "- NGHIEM NGAT: Đọc kỹ TẤT CẢ nguồn trước khi trả lời. Nhiều câu hỏi cần "
+        "tổng hợp từ NHIỀU nguồn. KHONG bo qua bat ky nguon nao.\n"
+        "- DỮ LIỆU BẢNG: Nguồn có thể chứa dữ liệu dạng 'Chỉ số, Năm = Giá trị'. "
+        "Bạn PHẢI trích xuất giá trị thực tế. "
+        "Ví dụ: 'ROE, 2023 = 12,8%. ROE, 2024 = 15,6%' nghĩa là ROE năm 2023 là 12,8% "
+        "và năm 2024 là 15,6%. Hãy báo cáo các số này trong câu trả lời.\n"
+        "- Chỉ dùng NGUỒN TÀI LIỆU ở trên để trả lời. KHÔNG thêm kiến thức ngoài.\n"
+        "- Có thể so sánh, tổng hợp, và suy luận dựa trên nhiều nguồn.\n"
+        "- Trích dẫn mọi dữ kiện bằng ID nguồn trong ngoặc vuông, ví dụ: [a3x9][b2m7] — mỗi ID một ngoặc.\n"
+        "- Với ảnh: [IMG-p4f2][IMG-q7r3] — dùng đúng ID trong danh sách ảnh.\n"
+        "- KHÔNG bao giờ nói 'không có thông tin' khi dữ liệu có trong BẤT KỲ nguồn nào. "
+        "Nếu nguồn có 'Key = Value', hãy báo cáo giá trị đó.\n"
+        "- Chỉ nói không có thông tin khi đã kiểm tra TẤT CẢ nguồn và không có câu trả lời.\n"
+        "- Nếu không nguồn nào liên quan, hãy trả lời: "
+        "\"Tài liệu không chứa thông tin này.\" và KHÔNG kèm trích dẫn.\n"
+        "- Trả lời cùng ngôn ngữ với câu hỏi của tôi.\n"
     )
 
     # Conversation context recap (if history exists)
@@ -1327,11 +1327,11 @@ async def debug_chat(
             prefix = "User" if msg.role == "user" else "Assistant"
             recap_parts.append(f"{prefix}: {msg.content[:300]}")
         user_parts.append(
-            "CONVERSATION CONTEXT (previous exchange):\n"
+            "NGU CANH HOI THOAI (trao doi gan nhat):\n"
             + "\n".join(recap_parts) + "\n"
         )
 
-    user_parts.append(f"My question: {request.message}")
+    user_parts.append(f"Cau hoi: {request.message}")
     user_content = "\n".join(user_parts)
 
     # -- 4. Call LLM --

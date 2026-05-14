@@ -72,9 +72,15 @@ class Settings(BaseSettings):
     CUONGRAG_MAX_IMAGES_PER_DOC: int = 50
     CUONGRAG_ENABLE_FORMULA_ENRICHMENT: bool = True
 
-    # OCR (DeepSeek OCR + optional ProtonX correction)
-    # Supported: deepseek_ocr, deepseek_ocr2 (alias, same runtime path)
-    CUONGRAG_OCR_ENGINE: str = "deepseek_ocr"
+    # OCR engine: "docling" (local CPU) | "deepseek_ocr" (API/local) | "mineru" (GPU via CLI)
+    # + optional ProtonX Vietnamese correction
+    CUONGRAG_OCR_ENGINE: str = "mineru"
+    CUONGRAG_MINERU_CMD: str = ""  # CLI template, e.g. "mineru --input {input} --output {output}"
+    CUONGRAG_MINERU_CMD_TIMEOUT_SECONDS: int = 1800
+    CUONGRAG_MINERU_MARKDOWN_PATH: str = ""  # Relative to output dir or absolute
+    CUONGRAG_MINERU_PDF_DPI: int = 200
+    CUONGRAG_MINERU_PDF_TIMEOUT_SECONDS: int = 180
+    CUONGRAG_MINERU_FALLBACK_ENGINE: str = "docling"  # "docling" | "deepseek_ocr" | "none"
     CUONGRAG_DEEPSEEK_OCR_MODEL: str = Field(default="deepseek-ai/DeepSeek-OCR")
     CUONGRAG_DEEPSEEK_OCR_API_MODEL: str = Field(default="DeepSeek-OCR")
     CUONGRAG_DEEPSEEK_OCR_API_KEY: str = Field(default="")
@@ -97,6 +103,23 @@ class Settings(BaseSettings):
 
     # Export indexed document payloads
     CUONGRAG_INDEX_OUTPUT_DIR: str = "/app/output"
+    CUONGRAG_OUTPUT_LAYOUT: str = "document"  # "document" | "workspace"
+    CUONGRAG_EXPORT_INDEX_JSON: bool = True
+    CUONGRAG_EXPORT_MARKDOWN: bool = True
+    CUONGRAG_EXPORT_EMBEDDINGS: bool = True
+    CUONGRAG_EXPORT_KG_GRAPH: bool = True
+    CUONGRAG_KG_EXPORT_MAX_NODES: int = 500
+
+    # Docling PDF render tuning
+    CUONGRAG_DOCLING_PDF_DPI: int = 150
+    CUONGRAG_DOCLING_PDF_TIMEOUT_SECONDS: int = 120
+
+    # Docling pipeline optimization (from OCR-SERVICE best practices)
+    CUONGRAG_DOCLING_OCR_ENABLED: bool = True       # Enable OCR for scanned PDFs
+    CUONGRAG_DOCLING_TABLE_STRUCTURE: bool = True    # Enable table structure recognition
+    CUONGRAG_DOCLING_IMAGES_SCALE: float = 2.0      # Image quality scale factor
+    CUONGRAG_DOCLING_NUM_THREADS: int = 4           # Accelerator thread count
+    CUONGRAG_DOCLING_USE_RAPIDOCR: bool = True      # Use RapidOCR (faster+more accurate)
 
     # Pre-ingestion Deduplication
     CUONGRAG_DEDUP_ENABLED: bool = True

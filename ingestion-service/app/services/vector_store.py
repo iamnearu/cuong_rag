@@ -64,6 +64,18 @@ def _to_vector_literal(values: list[float]) -> str:
     return "[" + ",".join(str(float(v)) for v in values) + "]"
 
 
+def _parse_vector_text(value: str | None) -> list[float]:
+    if not value:
+        return []
+    text = value.strip()
+    if text.startswith("[") and text.endswith("]"):
+        text = text[1:-1].strip()
+    if not text:
+        return []
+    parts = [p.strip() for p in text.split(",") if p.strip()]
+    return [float(p) for p in parts]
+
+
 class VectorStore:
     """Vector store service with workspace-level isolation."""
 
@@ -231,6 +243,30 @@ class VectorStore:
             "documents": [r[1] for r in rows],
             "metadatas": [r[2] if isinstance(r[2], dict) else (json.loads(r[2]) if r[2] else {}) for r in rows],
         }
+
+    def get_embeddings_by_document_id(self, document_id: int) -> list[dict]:
+        engine = _get_engine()
+        stmt = text(
+            "SELECT chunk_id, document, metadata_json, embedding::text "
+            "FROM vector_chunks WHERE workspace_id = :workspace_id AND document_id = :document_id "
+            "ORDER BY chunk_id"
+        )
+        with engine.begin() as conn:
+            rows = conn.execute(
+                stmt,
+                {"workspace_id": self.workspace_id, "document_id": int(document_id)},
+            ).fetchall()
+
+        results: list[dict] = []
+        for chunk_id, document, metadata, embedding_text in rows:
+            meta = metadata if isinstance(metadata, dict) else (json.loads(metadata) if metadata else {})
+            results.append({
+                "chunk_id": chunk_id,
+                "document": document,
+                "metadata": meta,
+                "embedding": _parse_vector_text(embedding_text),
+            })
+        return results
 
 
 def get_vector_store(workspace_id: int) -> VectorStore:

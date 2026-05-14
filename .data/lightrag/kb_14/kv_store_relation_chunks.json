@@ -1,0 +1,425 @@
+{
+  "Bảo trì dựa trên rủi ro<SEP>Tài sản": {
+    "chunk_ids": [
+      "chunk-eef634fbb5143b6bff6a32162c6b6659"
+    ],
+    "count": 1,
+    "create_time": 1778752923,
+    "update_time": 1778752923,
+    "_id": "Bảo trì dựa trên rủi ro<SEP>Tài sản"
+  },
+  "Chỉ số sự cố xảy ra<SEP>Frequent": {
+    "chunk_ids": [
+      "chunk-eef634fbb5143b6bff6a32162c6b6659"
+    ],
+    "count": 1,
+    "create_time": 1778752923,
+    "update_time": 1778752923,
+    "_id": "Chỉ số sự cố xảy ra<SEP>Frequent"
+  },
+  "Tài sản<SEP>Xe đầu kéo cỡ lớn": {
+    "chunk_ids": [
+      "chunk-eef634fbb5143b6bff6a32162c6b6659"
+    ],
+    "count": 1,
+    "create_time": 1778752924,
+    "update_time": 1778752924,
+    "_id": "Tài sản<SEP>Xe đầu kéo cỡ lớn"
+  },
+  "Bảo trì dựa trên rủi ro<SEP>Phần mềm bảo trì": {
+    "chunk_ids": [
+      "chunk-eef634fbb5143b6bff6a32162c6b6659"
+    ],
+    "count": 1,
+    "create_time": 1778752924,
+    "update_time": 1778752924,
+    "_id": "Bảo trì dựa trên rủi ro<SEP>Phần mềm bảo trì"
+  },
+  "Chỉ số sự cố xảy ra<SEP>Likely": {
+    "chunk_ids": [
+      "chunk-eef634fbb5143b6bff6a32162c6b6659"
+    ],
+    "count": 1,
+    "create_time": 1778752924,
+    "update_time": 1778752924,
+    "_id": "Chỉ số sự cố xảy ra<SEP>Likely"
+  },
+  "Catastrophic<SEP>Tài sản": {
+    "chunk_ids": [
+      "chunk-eef634fbb5143b6bff6a32162c6b6659"
+    ],
+    "count": 1,
+    "create_time": 1778752924,
+    "update_time": 1778752924,
+    "_id": "Catastrophic<SEP>Tài sản"
+  },
+  "Chỉ số sự cố xảy ra<SEP>Occasional": {
+    "chunk_ids": [
+      "chunk-eef634fbb5143b6bff6a32162c6b6659"
+    ],
+    "count": 1,
+    "create_time": 1778752925,
+    "update_time": 1778752925,
+    "_id": "Chỉ số sự cố xảy ra<SEP>Occasional"
+  },
+  "Bảng Quan Hệ Rủi Ro<SEP>Mức Độ Nghiêm Trọng Rủi Ro": {
+    "chunk_ids": [
+      "chunk-727694d563c801baa37848f9f002ae31"
+    ],
+    "count": 1,
+    "create_time": 1778752925,
+    "update_time": 1778752925,
+    "_id": "Bảng Quan Hệ Rủi Ro<SEP>Mức Độ Nghiêm Trọng Rủi Ro"
+  },
+  "Critical<SEP>Tài sản": {
+    "chunk_ids": [
+      "chunk-eef634fbb5143b6bff6a32162c6b6659"
+    ],
+    "count": 1,
+    "create_time": 1778752925,
+    "update_time": 1778752925,
+    "_id": "Critical<SEP>Tài sản"
+  },
+  "Chỉ số sự cố xảy ra<SEP>Unlikely": {
+    "chunk_ids": [
+      "chunk-eef634fbb5143b6bff6a32162c6b6659"
+    ],
+    "count": 1,
+    "create_time": 1778752925,
+    "update_time": 1778752925,
+    "_id": "Chỉ số sự cố xảy ra<SEP>Unlikely"
+  },
+  "Bảng Quan Hệ Rủi Ro<SEP>Chỉ Số Xuất Hiện": {
+    "chunk_ids": [
+      "chunk-727694d563c801baa37848f9f002ae31"
+    ],
+    "count": 1,
+    "create_time": 1778752926,
+    "update_time": 1778752926,
+    "_id": "Bảng Quan Hệ Rủi Ro<SEP>Chỉ Số Xuất Hiện"
+  },
+  "Thiết Bị Rủi Ro Thấp<SEP>Tối Ưu Hóa Chi Phí Bảo Trì": {
+    "chunk_ids": [
+      "chunk-727694d563c801baa37848f9f002ae31"
+    ],
+    "count": 1,
+    "create_time": 1778752926,
+    "update_time": 1778752926,
+    "_id": "Thiết Bị Rủi Ro Thấp<SEP>Tối Ưu Hóa Chi Phí Bảo Trì"
+  },
+  "Marginal<SEP>Tài sản": {
+    "chunk_ids": [
+      "chunk-eef634fbb5143b6bff6a32162c6b6659"
+    ],
+    "count": 1,
+    "create_time": 1778752926,
+    "update_time": 1778752926,
+    "_id": "Marginal<SEP>Tài sản"
+  },
+  "Bảo Trì Dựa Trên Tình Trạng<SEP>Thiết Bị Rủi Ro Cao": {
+    "chunk_ids": [
+      "chunk-727694d563c801baa37848f9f002ae31"
+    ],
+    "count": 1,
+    "create_time": 1778752926,
+    "update_time": 1778752926,
+    "_id": "Bảo Trì Dựa Trên Tình Trạng<SEP>Thiết Bị Rủi Ro Cao"
+  },
+  "Chỉ số sự cố xảy ra<SEP>Highly unlikely": {
+    "chunk_ids": [
+      "chunk-eef634fbb5143b6bff6a32162c6b6659"
+    ],
+    "count": 1,
+    "create_time": 1778752927,
+    "update_time": 1778752927,
+    "_id": "Chỉ số sự cố xảy ra<SEP>Highly unlikely"
+  },
+  "Bảng Quan Hệ Rủi Ro<SEP>Ma Trận Rủi Ro": {
+    "chunk_ids": [
+      "chunk-727694d563c801baa37848f9f002ae31"
+    ],
+    "count": 1,
+    "create_time": 1778752927,
+    "update_time": 1778752927,
+    "_id": "Bảng Quan Hệ Rủi Ro<SEP>Ma Trận Rủi Ro"
+  },
+  "Bảo Trì Điều Chỉnh<SEP>Thiết Bị Rủi Ro Thấp": {
+    "chunk_ids": [
+      "chunk-727694d563c801baa37848f9f002ae31"
+    ],
+    "count": 1,
+    "create_time": 1778752927,
+    "update_time": 1778752927,
+    "_id": "Bảo Trì Điều Chỉnh<SEP>Thiết Bị Rủi Ro Thấp"
+  },
+  "Minor<SEP>Tài sản": {
+    "chunk_ids": [
+      "chunk-eef634fbb5143b6bff6a32162c6b6659"
+    ],
+    "count": 1,
+    "create_time": 1778752927,
+    "update_time": 1778752927,
+    "_id": "Minor<SEP>Tài sản"
+  },
+  "Bộ Máy Quan Liêu<SEP>Thiết Bị Rủi Ro Vừa Phải": {
+    "chunk_ids": [
+      "chunk-727694d563c801baa37848f9f002ae31"
+    ],
+    "count": 1,
+    "create_time": 1778752927,
+    "update_time": 1778752927,
+    "_id": "Bộ Máy Quan Liêu<SEP>Thiết Bị Rủi Ro Vừa Phải"
+  },
+  "Bảo Trì Phòng Ngừa<SEP>Thiết Bị Rủi Ro Cao": {
+    "chunk_ids": [
+      "chunk-727694d563c801baa37848f9f002ae31"
+    ],
+    "count": 1,
+    "create_time": 1778752928,
+    "update_time": 1778752928,
+    "_id": "Bảo Trì Phòng Ngừa<SEP>Thiết Bị Rủi Ro Cao"
+  },
+  "Financial_Metric<SEP>Mức Độ Nghiêm Trọng Rủi Ro": {
+    "chunk_ids": [
+      "chunk-727694d563c801baa37848f9f002ae31"
+    ],
+    "count": 1,
+    "create_time": 1778752928,
+    "update_time": 1778752928,
+    "_id": "Financial_Metric<SEP>Mức Độ Nghiêm Trọng Rủi Ro"
+  },
+  "Ma Trận Rủi Ro<SEP>Phần Mềm Bảo Trì": {
+    "chunk_ids": [
+      "chunk-727694d563c801baa37848f9f002ae31"
+    ],
+    "count": 1,
+    "create_time": 1778752928,
+    "update_time": 1778752928,
+    "_id": "Ma Trận Rủi Ro<SEP>Phần Mềm Bảo Trì"
+  },
+  "Ban Quản Lý<SEP>SpeedMaint CMMS": {
+    "chunk_ids": [
+      "chunk-742968c1348875f455f41b248eaea0dd"
+    ],
+    "count": 1,
+    "create_time": 1778752928,
+    "update_time": 1778752928,
+    "_id": "Ban Quản Lý<SEP>SpeedMaint CMMS"
+  },
+  "Chỉ số mức độ xảy ra<SEP>Phần mềm bảo trì": {
+    "chunk_ids": [
+      "chunk-c7e7d2ad50715920a43ff58624fa49e3"
+    ],
+    "count": 1,
+    "create_time": 1778752929,
+    "update_time": 1778752929,
+    "_id": "Chỉ số mức độ xảy ra<SEP>Phần mềm bảo trì"
+  },
+  "Doanh Nghiệp<SEP>SpeedMaint CMMS": {
+    "chunk_ids": [
+      "chunk-742968c1348875f455f41b248eaea0dd"
+    ],
+    "count": 1,
+    "create_time": 1778752930,
+    "update_time": 1778752930,
+    "_id": "Doanh Nghiệp<SEP>SpeedMaint CMMS"
+  },
+  "Ban Lãnh Đạo Cấp Cao<SEP>Ban Quản Lý": {
+    "chunk_ids": [
+      "chunk-742968c1348875f455f41b248eaea0dd"
+    ],
+    "count": 1,
+    "create_time": 1778752930,
+    "update_time": 1778752930,
+    "_id": "Ban Lãnh Đạo Cấp Cao<SEP>Ban Quản Lý"
+  },
+  "Chỉ Số Xuất Hiện<SEP>Financial_Metric": {
+    "chunk_ids": [
+      "chunk-727694d563c801baa37848f9f002ae31"
+    ],
+    "count": 1,
+    "create_time": 1778752930,
+    "update_time": 1778752930,
+    "_id": "Chỉ Số Xuất Hiện<SEP>Financial_Metric"
+  },
+  "Chỉ số mức độ nghiêm trọng<SEP>Chỉ số mức độ xảy ra": {
+    "chunk_ids": [
+      "chunk-c7e7d2ad50715920a43ff58624fa49e3"
+    ],
+    "count": 1,
+    "create_time": 1778752930,
+    "update_time": 1778752930,
+    "_id": "Chỉ số mức độ nghiêm trọng<SEP>Chỉ số mức độ xảy ra"
+  },
+  "Các Nhà Quản Lý<SEP>SpeedMaint CMMS": {
+    "chunk_ids": [
+      "chunk-742968c1348875f455f41b248eaea0dd"
+    ],
+    "count": 1,
+    "create_time": 1778752931,
+    "update_time": 1778752931,
+    "_id": "Các Nhà Quản Lý<SEP>SpeedMaint CMMS"
+  },
+  "1% đến 10% giá trị rủi ro tối đa<SEP>Rủi ro hỏng hóc": {
+    "chunk_ids": [
+      "chunk-c7e7d2ad50715920a43ff58624fa49e3"
+    ],
+    "count": 1,
+    "create_time": 1778752931,
+    "update_time": 1778752931,
+    "_id": "1% đến 10% giá trị rủi ro tối đa<SEP>Rủi ro hỏng hóc"
+  },
+  "Catastrophic<SEP>Chỉ số mức độ nghiêm trọng": {
+    "chunk_ids": [
+      "chunk-c7e7d2ad50715920a43ff58624fa49e3"
+    ],
+    "count": 1,
+    "create_time": 1778752931,
+    "update_time": 1778752931,
+    "_id": "Catastrophic<SEP>Chỉ số mức độ nghiêm trọng"
+  },
+  "10% đến 30% giá trị rủi ro tối đa<SEP>Rủi ro hỏng hóc": {
+    "chunk_ids": [
+      "chunk-c7e7d2ad50715920a43ff58624fa49e3"
+    ],
+    "count": 1,
+    "create_time": 1778752932,
+    "update_time": 1778752932,
+    "_id": "10% đến 30% giá trị rủi ro tối đa<SEP>Rủi ro hỏng hóc"
+  },
+  "Công ty TNHH MTV phần mềm SpeedMaint<SEP>Văn phòng miền Bắc": {
+    "chunk_ids": [
+      "chunk-b71bc1f9b1b2a67f43c99e8aae5cd6ce"
+    ],
+    "count": 1,
+    "create_time": 1778752932,
+    "update_time": 1778752932,
+    "_id": "Công ty TNHH MTV phần mềm SpeedMaint<SEP>Văn phòng miền Bắc"
+  },
+  "Chỉ số mức độ nghiêm trọng<SEP>Critical": {
+    "chunk_ids": [
+      "chunk-c7e7d2ad50715920a43ff58624fa49e3"
+    ],
+    "count": 1,
+    "create_time": 1778752932,
+    "update_time": 1778752932,
+    "_id": "Chỉ số mức độ nghiêm trọng<SEP>Critical"
+  },
+  "Rủi ro hỏng hóc<SEP>Trên 30% giá trị rủi ro tối đa": {
+    "chunk_ids": [
+      "chunk-c7e7d2ad50715920a43ff58624fa49e3"
+    ],
+    "count": 1,
+    "create_time": 1778752933,
+    "update_time": 1778752933,
+    "_id": "Rủi ro hỏng hóc<SEP>Trên 30% giá trị rủi ro tối đa"
+  },
+  "Công ty TNHH MTV phần mềm SpeedMaint<SEP>Văn phòng miền Nam": {
+    "chunk_ids": [
+      "chunk-b71bc1f9b1b2a67f43c99e8aae5cd6ce"
+    ],
+    "count": 1,
+    "create_time": 1778752933,
+    "update_time": 1778752933,
+    "_id": "Công ty TNHH MTV phần mềm SpeedMaint<SEP>Văn phòng miền Nam"
+  },
+  "Chỉ số mức độ nghiêm trọng<SEP>Marginal": {
+    "chunk_ids": [
+      "chunk-c7e7d2ad50715920a43ff58624fa49e3"
+    ],
+    "count": 1,
+    "create_time": 1778752933,
+    "update_time": 1778752933,
+    "_id": "Chỉ số mức độ nghiêm trọng<SEP>Marginal"
+  },
+  "Công ty TNHH MTV phần mềm SpeedMaint<SEP>Dịch vụ bảo trì": {
+    "chunk_ids": [
+      "chunk-b71bc1f9b1b2a67f43c99e8aae5cd6ce"
+    ],
+    "count": 1,
+    "create_time": 1778752933,
+    "update_time": 1778752933,
+    "_id": "Công ty TNHH MTV phần mềm SpeedMaint<SEP>Dịch vụ bảo trì"
+  },
+  "NhungvtSEO<SEP>https://signup.speedmaint.com/dich-vu-bao-tri/?utm_source=NhungvtSEO&utm_medium=LoT01&utm_campaign=ebook-bao-tri-dua-tren-rui-ro": {
+    "chunk_ids": [
+      "chunk-b71bc1f9b1b2a67f43c99e8aae5cd6ce"
+    ],
+    "count": 1,
+    "create_time": 1778752933,
+    "update_time": 1778752933,
+    "_id": "NhungvtSEO<SEP>https://signup.speedmaint.com/dich-vu-bao-tri/?utm_source=NhungvtSEO&utm_medium=LoT01&utm_campaign=ebook-bao-tri-dua-tren-rui-ro"
+  },
+  "Chỉ số mức độ nghiêm trọng<SEP>Minor": {
+    "chunk_ids": [
+      "chunk-c7e7d2ad50715920a43ff58624fa49e3"
+    ],
+    "count": 1,
+    "create_time": 1778752934,
+    "update_time": 1778752934,
+    "_id": "Chỉ số mức độ nghiêm trọng<SEP>Minor"
+  },
+  "Công ty TNHH MTV phần mềm SpeedMaint<SEP>https://speedmaint.com/": {
+    "chunk_ids": [
+      "chunk-b71bc1f9b1b2a67f43c99e8aae5cd6ce"
+    ],
+    "count": 1,
+    "create_time": 1778752934,
+    "update_time": 1778752934,
+    "_id": "Công ty TNHH MTV phần mềm SpeedMaint<SEP>https://speedmaint.com/"
+  },
+  "LoT01<SEP>https://signup.speedmaint.com/dich-vu-bao-tri/?utm_source=NhungvtSEO&utm_medium=LoT01&utm_campaign=ebook-bao-tri-dua-tren-rui-ro": {
+    "chunk_ids": [
+      "chunk-b71bc1f9b1b2a67f43c99e8aae5cd6ce"
+    ],
+    "count": 1,
+    "create_time": 1778752934,
+    "update_time": 1778752934,
+    "_id": "LoT01<SEP>https://signup.speedmaint.com/dich-vu-bao-tri/?utm_source=NhungvtSEO&utm_medium=LoT01&utm_campaign=ebook-bao-tri-dua-tren-rui-ro"
+  },
+  "Chỉ số mức độ nghiêm trọng<SEP>MứcĐộNghiêmTrọng Rủi Ro": {
+    "chunk_ids": [
+      "chunk-c7e7d2ad50715920a43ff58624fa49e3"
+    ],
+    "count": 1,
+    "create_time": 1778752934,
+    "update_time": 1778752934,
+    "_id": "Chỉ số mức độ nghiêm trọng<SEP>MứcĐộNghiêmTrọng Rủi Ro"
+  },
+  "Công ty TNHH MTV phần mềm SpeedMaint<SEP>ManWinWin": {
+    "chunk_ids": [
+      "chunk-b71bc1f9b1b2a67f43c99e8aae5cd6ce"
+    ],
+    "count": 1,
+    "create_time": 1778752934,
+    "update_time": 1778752934,
+    "_id": "Công ty TNHH MTV phần mềm SpeedMaint<SEP>ManWinWin"
+  },
+  "ebook-bao-tri-dua-tren-rui-ro<SEP>https://signup.speedmaint.com/dich-vu-bao-tri/?utm_source=NhungvtSEO&utm_medium=LoT01&utm_campaign=ebook-bao-tri-dua-tren-rui-ro": {
+    "chunk_ids": [
+      "chunk-b71bc1f9b1b2a67f43c99e8aae5cd6ce"
+    ],
+    "count": 1,
+    "create_time": 1778752935,
+    "update_time": 1778752935,
+    "_id": "ebook-bao-tri-dua-tren-rui-ro<SEP>https://signup.speedmaint.com/dich-vu-bao-tri/?utm_source=NhungvtSEO&utm_medium=LoT01&utm_campaign=ebook-bao-tri-dua-tren-rui-ro"
+  },
+  "Công ty TNHH MTV phần mềm SpeedMaint<SEP>https://signup.speedmaint.com/dich-vu-bao-tri/?utm_source=NhungvtSEO&utm_medium=LoT01&utm_campaign=ebook-bao-tri-dua-tren-rui-ro": {
+    "chunk_ids": [
+      "chunk-b71bc1f9b1b2a67f43c99e8aae5cd6ce"
+    ],
+    "count": 1,
+    "create_time": 1778752935,
+    "update_time": 1778752935,
+    "_id": "Công ty TNHH MTV phần mềm SpeedMaint<SEP>https://signup.speedmaint.com/dich-vu-bao-tri/?utm_source=NhungvtSEO&utm_medium=LoT01&utm_campaign=ebook-bao-tri-dua-tren-rui-ro"
+  },
+  "Công ty TNHH MTV phần mềm SpeedMaint<SEP>SpeedMaint Cloud CMMS": {
+    "chunk_ids": [
+      "chunk-b71bc1f9b1b2a67f43c99e8aae5cd6ce"
+    ],
+    "count": 1,
+    "create_time": 1778752936,
+    "update_time": 1778752936,
+    "_id": "Công ty TNHH MTV phần mềm SpeedMaint<SEP>SpeedMaint Cloud CMMS"
+  }
+}

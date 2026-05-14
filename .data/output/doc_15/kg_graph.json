@@ -1,0 +1,6115 @@
+{
+  "nodes": [
+    {
+      "id": "Bảng thể hiện mối quan hệ giữa mức độ nghiêm trọng rủi ro và chỉ số xuất hiện",
+      "label": "Bảng thể hiện mối quan hệ giữa mức độ nghiêm trọng rủi ro và chỉ số xuất hiện",
+      "entity_type": "other",
+      "degree": 2
+    },
+    {
+      "id": "Mức độ nghiêm trọng rủi ro",
+      "label": "Mức độ nghiêm trọng rủi ro",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "Chỉ số xuất hiện",
+      "label": "Chỉ số xuất hiện",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "Thiết bị rủi ro thấp",
+      "label": "Thiết bị rủi ro thấp",
+      "entity_type": "other",
+      "degree": 1
+    },
+    {
+      "id": "Thiết bị rủi ro cao",
+      "label": "Thiết bị rủi ro cao",
+      "entity_type": "other",
+      "degree": 4
+    },
+    {
+      "id": "Bảo trì điều chỉnh",
+      "label": "Bảo trì điều chỉnh",
+      "entity_type": "other",
+      "degree": 1
+    },
+    {
+      "id": "Bảo trì dựa trên tình trạng",
+      "label": "Bảo trì dựa trên tình trạng",
+      "entity_type": "technology",
+      "degree": 1
+    },
+    {
+      "id": "Bảo trì phòng ngừa",
+      "label": "Bảo trì phòng ngừa",
+      "entity_type": "other",
+      "degree": 1
+    },
+    {
+      "id": "Phần mềm bảo trì",
+      "label": "Phần mềm bảo trì",
+      "entity_type": "product",
+      "degree": 2
+    },
+    {
+      "id": "Quy trình bảo trì tinh gọn",
+      "label": "Quy trình bảo trì tinh gọn",
+      "entity_type": "other",
+      "degree": 3
+    },
+    {
+      "id": "Nguyên nhân gây ra hỏng hóc",
+      "label": "Nguyên nhân gây ra hỏng hóc",
+      "entity_type": "other",
+      "degree": 1
+    },
+    {
+      "id": "Tiết kiệm chi phí",
+      "label": "Tiết kiệm chi phí",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Giảm chi phí không cần thiết",
+      "label": "Giảm chi phí không cần thiết",
+      "entity_type": "other",
+      "degree": 1
+    },
+    {
+      "id": "Công ty TNHH MTV phần mềm SpeedMaint",
+      "label": "Công ty TNHH MTV phần mềm SpeedMaint",
+      "entity_type": "organization",
+      "degree": 7
+    },
+    {
+      "id": "ManWinWin",
+      "label": "ManWinWin",
+      "entity_type": "organization",
+      "degree": 1
+    },
+    {
+      "id": "SpeedMaint Cloud CMMS",
+      "label": "SpeedMaint Cloud CMMS",
+      "entity_type": "product",
+      "degree": 1
+    },
+    {
+      "id": "Văn phòng miền Bắc",
+      "label": "Văn phòng miền Bắc",
+      "entity_type": "location",
+      "degree": 1
+    },
+    {
+      "id": "Văn phòng miền Nam",
+      "label": "Văn phòng miền Nam",
+      "entity_type": "location",
+      "degree": 1
+    },
+    {
+      "id": "speedmaint.com",
+      "label": "speedmaint.com",
+      "entity_type": "other",
+      "degree": 1
+    },
+    {
+      "id": "marketing@speedmaint.com",
+      "label": "marketing@speedmaint.com",
+      "entity_type": "other",
+      "degree": 1
+    },
+    {
+      "id": "0912.76.5656",
+      "label": "0912.76.5656",
+      "entity_type": "other",
+      "degree": 1
+    },
+    {
+      "id": "Bảo Trì Dựa Trên Rủi Ro",
+      "label": "Bảo Trì Dựa Trên Rủi Ro",
+      "entity_type": "other",
+      "degree": 15
+    },
+    {
+      "id": "Phần Mềm Bảo Trì",
+      "label": "Phần Mềm Bảo Trì",
+      "entity_type": "product",
+      "degree": 2
+    },
+    {
+      "id": "Chỉ Số Sự Cố Xảy Ra",
+      "label": "Chỉ Số Sự Cố Xảy Ra",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "Xe Đầu Kéo Cỡ Lớn",
+      "label": "Xe Đầu Kéo Cỡ Lớn",
+      "entity_type": "product",
+      "degree": 2
+    },
+    {
+      "id": "Thiết Bị Máy Móc",
+      "label": "Thiết Bị Máy Móc",
+      "entity_type": "product",
+      "degree": 1
+    },
+    {
+      "id": "Bảo Trì Khắc Phục",
+      "label": "Bảo Trì Khắc Phục",
+      "entity_type": "technology",
+      "degree": 1
+    },
+    {
+      "id": "Bảo Trì Dựa Trên Điều Kiện",
+      "label": "Bảo Trì Dựa Trên Điều Kiện",
+      "entity_type": "technology",
+      "degree": 1
+    },
+    {
+      "id": "Catastrophic",
+      "label": "Catastrophic",
+      "entity_type": "concept",
+      "degree": 1
+    },
+    {
+      "id": "Critical",
+      "label": "Critical",
+      "entity_type": "concept",
+      "degree": 1
+    },
+    {
+      "id": "Marginal",
+      "label": "Marginal",
+      "entity_type": "concept",
+      "degree": 1
+    },
+    {
+      "id": "Minor",
+      "label": "Minor",
+      "entity_type": "concept",
+      "degree": 1
+    },
+    {
+      "id": "Frequent",
+      "label": "Frequent",
+      "entity_type": "concept",
+      "degree": 1
+    },
+    {
+      "id": "Likely",
+      "label": "Likely",
+      "entity_type": "concept",
+      "degree": 1
+    },
+    {
+      "id": "Occasional",
+      "label": "Occasional",
+      "entity_type": "concept",
+      "degree": 1
+    },
+    {
+      "id": "Unlikely",
+      "label": "Unlikely",
+      "entity_type": "concept",
+      "degree": 1
+    },
+    {
+      "id": "Highly unlikely",
+      "label": "Highly unlikely",
+      "entity_type": "concept",
+      "degree": 1
+    },
+    {
+      "id": "SpeedMaint CMMS",
+      "label": "SpeedMaint CMMS",
+      "entity_type": "product",
+      "degree": 3
+    },
+    {
+      "id": "Quản lý bảo trì dựa trên rủi ro",
+      "label": "Quản lý bảo trì dựa trên rủi ro",
+      "entity_type": "technology",
+      "degree": 3
+    },
+    {
+      "id": "SpeedMaint",
+      "label": "SpeedMaint",
+      "entity_type": "organization",
+      "degree": 3
+    },
+    {
+      "id": "Trải Nghiệm Miễn Phí",
+      "label": "Trải Nghiệm Miễn Phí",
+      "entity_type": "product",
+      "degree": 2
+    },
+    {
+      "id": "ebook-bao-tri-dua-tren-rui-ro",
+      "label": "ebook-bao-tri-dua-tren-rui-ro",
+      "entity_type": "event",
+      "degree": 2
+    },
+    {
+      "id": "Phương Pháp Xác Suất",
+      "label": "Phương Pháp Xác Suất",
+      "entity_type": "technology",
+      "degree": 2
+    },
+    {
+      "id": "Người Quản Lý",
+      "label": "Người Quản Lý",
+      "entity_type": "person",
+      "degree": 1
+    },
+    {
+      "id": "Người Dùng",
+      "label": "Người Dùng",
+      "entity_type": "person",
+      "degree": 1
+    },
+    {
+      "id": "Nhà Thiết Kế Hệ Thống",
+      "label": "Nhà Thiết Kế Hệ Thống",
+      "entity_type": "person",
+      "degree": 1
+    },
+    {
+      "id": "Chỉ Số Mức Độ Nghiêm Trọng",
+      "label": "Chỉ Số Mức Độ Nghiêm Trọng",
+      "entity_type": "financial_metric",
+      "degree": 4
+    },
+    {
+      "id": "Chỉ Số Xuất Hiện",
+      "label": "Chỉ Số Xuất Hiện",
+      "entity_type": "financial_metric",
+      "degree": 2
+    },
+    {
+      "id": "Rủi Ro Hỏng Hóc",
+      "label": "Rủi Ro Hỏng Hóc",
+      "entity_type": "financial_metric",
+      "degree": 5
+    },
+    {
+      "id": "Rủi Ro Chấp Nhận Được",
+      "label": "Rủi Ro Chấp Nhận Được",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "Rủi Ro Có Thể Chấp Nhận Được",
+      "label": "Rủi Ro Có Thể Chấp Nhận Được",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "Rủi Ro Không Thể Chấp Nhận Được",
+      "label": "Rủi Ro Không Thể Chấp Nhận Được",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "Giảm chỉ số mức độ nghiêm trọng",
+      "label": "Giảm chỉ số mức độ nghiêm trọng",
+      "entity_type": "UNKNOWN",
+      "degree": 1
+    },
+    {
+      "id": "Quy trình kỹ thuật",
+      "label": "Quy trình kỹ thuật",
+      "entity_type": "UNKNOWN",
+      "degree": 1
+    },
+    {
+      "id": "Giảm chỉ số tần suất hỏng hóc",
+      "label": "Giảm chỉ số tần suất hỏng hóc",
+      "entity_type": "UNKNOWN",
+      "degree": 1
+    },
+    {
+      "id": "Công Ty",
+      "label": "Công Ty",
+      "entity_type": "UNKNOWN",
+      "degree": 1
+    },
+    {
+      "id": "Doanh nghiệp",
+      "label": "Doanh nghiệp",
+      "entity_type": "organization",
+      "degree": 24
+    },
+    {
+      "id": "01/07/2024–30/09/2025",
+      "label": "01/07/2024–30/09/2025",
+      "entity_type": "date",
+      "degree": 11
+    },
+    {
+      "id": "01/07/2025–30/09/2025",
+      "label": "01/07/2025–30/09/2025",
+      "entity_type": "date",
+      "degree": 11
+    },
+    {
+      "id": "Chi phí nguyên vật liệu",
+      "label": "Chi phí nguyên vật liệu",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Khấu hao TSCD",
+      "label": "Khấu hao TSCD",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Chi phí quản lý doanh nghiệp",
+      "label": "Chi phí quản lý doanh nghiệp",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Lợi nhuận sau thuế",
+      "label": "Lợi nhuận sau thuế",
+      "entity_type": "financial_metric",
+      "degree": 5
+    },
+    {
+      "id": "Thù lao HDQT, BKS không trực tiếp điều hành",
+      "label": "Thù lao HDQT, BKS không trực tiếp điều hành",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Chi phí thu hồi nợ",
+      "label": "Chi phí thu hồi nợ",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Chi phí khiếu lạ",
+      "label": "Chi phí khiếu lạ",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Tổng chi phí kỳ này",
+      "label": "Tổng chi phí kỳ này",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Các khoản điều chỉnh tăng - Điều chỉnh giá sổ sách: phiếu phong bì",
+      "label": "Các khoản điều chỉnh tăng - Điều chỉnh giá sổ sách: phiếu phong bì",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Chi phí dịch vụ liên quan đến bên ngoài",
+      "label": "Chi phí dịch vụ liên quan đến bên ngoài",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Các khoản khác",
+      "label": "Các khoản khác",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "2.000.000.000",
+      "label": "2.000.000.000",
+      "entity_type": "financial_metric",
+      "degree": 4
+    },
+    {
+      "id": "2.493.580.419",
+      "label": "2.493.580.419",
+      "entity_type": "financial_metric",
+      "degree": 2
+    },
+    {
+      "id": "Cong",
+      "label": "Cong",
+      "entity_type": "organization",
+      "degree": 3
+    },
+    {
+      "id": "3.140.000.000",
+      "label": "3.140.000.000",
+      "entity_type": "financial_metric",
+      "degree": 2
+    },
+    {
+      "id": "1.912.867.660",
+      "label": "1.912.867.660",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "253.825.991.714",
+      "label": "253.825.991.714",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "669.450.135",
+      "label": "669.450.135",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "Máy nông nghiệp/thiết bị",
+      "label": "Máy nông nghiệp/thiết bị",
+      "entity_type": "product",
+      "degree": 5
+    },
+    {
+      "id": "Phương tiện vận tải",
+      "label": "Phương tiện vận tải",
+      "entity_type": "product",
+      "degree": 5
+    },
+    {
+      "id": "Thiết bị quản lý",
+      "label": "Thiết bị quản lý",
+      "entity_type": "product",
+      "degree": 5
+    },
+    {
+      "id": "Tổng thời gian khấu hao (625 năm)",
+      "label": "Tổng thời gian khấu hao (625 năm)",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Nguyên giá TSCD HH",
+      "label": "Nguyên giá TSCD HH",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Chi phí sản xuất kinh doanh",
+      "label": "Chi phí sản xuất kinh doanh",
+      "entity_type": "financial_metric",
+      "degree": 2
+    },
+    {
+      "id": "Khấu hao đều",
+      "label": "Khấu hao đều",
+      "entity_type": "technology",
+      "degree": 6
+    },
+    {
+      "id": "Tài Sản Cố Định Hữu Hình (TSCD HH)",
+      "label": "Tài Sản Cố Định Hữu Hình (TSCD HH)",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Ke toan truong",
+      "label": "Ke toan truong",
+      "entity_type": "organization",
+      "degree": 21
+    },
+    {
+      "id": "NGUYEN THINGA",
+      "label": "NGUYEN THINGA",
+      "entity_type": "person",
+      "degree": 1
+    },
+    {
+      "id": "Quy 12025.2016",
+      "label": "Quy 12025.2016",
+      "entity_type": "date",
+      "degree": 1
+    },
+    {
+      "id": "01/0rl2025",
+      "label": "01/0rl2025",
+      "entity_type": "date",
+      "degree": 1
+    },
+    {
+      "id": "37 809 968 640",
+      "label": "37 809 968 640",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "111 415 423,224)",
+      "label": "111 415 423,224)",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "3846420.7351",
+      "label": "3846420.7351",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "13 145 492.234",
+      "label": "13 145 492.234",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "13,759,240,450",
+      "label": "13,759,240,450",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "4,129,093.414",
+      "label": "4,129,093.414",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "383,675,822",
+      "label": "383,675,822",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "3,449,906,880",
+      "label": "3,449,906,880",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "9,965 231",
+      "label": "9,965 231",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "1 556 711",
+      "label": "1 556 711",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "373,710,591",
+      "label": "373,710,591",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "3,448,350.169",
+      "label": "3,448,350.169",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "3 932 093 002",
+      "label": "3 932 093 002",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "3 445 tO3,17l",
+      "label": "3 445 tO3,17l",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "DN",
+      "label": "DN",
+      "entity_type": "organization",
+      "degree": 1
+    },
+    {
+      "id": "Baocao taichinh",
+      "label": "Baocao taichinh",
+      "entity_type": "event",
+      "degree": 2
+    },
+    {
+      "id": "PPTT",
+      "label": "PPTT",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "ovol/zozl ain",
+      "label": "ovol/zozl ain",
+      "entity_type": "date",
+      "degree": 1
+    },
+    {
+      "id": "Vốn Chủ Sở Hữu",
+      "label": "Vốn Chủ Sở Hữu",
+      "entity_type": "financial_metric",
+      "degree": 5
+    },
+    {
+      "id": "Số Dư Đầu Kỳ",
+      "label": "Số Dư Đầu Kỳ",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "Quy Định Lưu Trữ",
+      "label": "Quy Định Lưu Trữ",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "Lợi Nhuận Giữ Lại",
+      "label": "Lợi Nhuận Giữ Lại",
+      "entity_type": "financial_metric",
+      "degree": 2
+    },
+    {
+      "id": "Lợi Nhuận",
+      "label": "Lợi Nhuận",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "Công Ty Kirn Lla Viir",
+      "label": "Công Ty Kirn Lla Viir",
+      "entity_type": "organization",
+      "degree": 3
+    },
+    {
+      "id": "Công Ty Nsuldn Trr D?",
+      "label": "Công Ty Nsuldn Trr D?",
+      "entity_type": "organization",
+      "degree": 4
+    },
+    {
+      "id": "50.700.000.000",
+      "label": "50.700.000.000",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "2.609.812.412",
+      "label": "2.609.812.412",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "18.674.216.161",
+      "label": "18.674.216.161",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "8.903.162.917",
+      "label": "8.903.162.917",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "30/09/2025",
+      "label": "30/09/2025",
+      "entity_type": "date",
+      "degree": 13
+    },
+    {
+      "id": "39.507.000.000",
+      "label": "39.507.000.000",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "5.07A.A00",
+      "label": "5.07A.A00",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "Báo cáo tài chính",
+      "label": "Báo cáo tài chính",
+      "entity_type": "event",
+      "degree": 39
+    },
+    {
+      "id": "Đà Nẵng",
+      "label": "Đà Nẵng",
+      "entity_type": "location",
+      "degree": 1
+    },
+    {
+      "id": "Tài sản cố định vô hình",
+      "label": "Tài sản cố định vô hình",
+      "entity_type": "product",
+      "degree": 2
+    },
+    {
+      "id": "0/09/2025",
+      "label": "0/09/2025",
+      "entity_type": "date",
+      "degree": 1
+    },
+    {
+      "id": "635.080.000",
+      "label": "635.080.000",
+      "entity_type": "financial_metric",
+      "degree": 2
+    },
+    {
+      "id": "1.958.194.286",
+      "label": "1.958.194.286",
+      "entity_type": "financial_metric",
+      "degree": 2
+    },
+    {
+      "id": "-1.180.000.000",
+      "label": "-1.180.000.000",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Khu dân cư Itoa Thượng",
+      "label": "Khu dân cư Itoa Thượng",
+      "entity_type": "location",
+      "degree": 1
+    },
+    {
+      "id": "1.2612i2.000",
+      "label": "1.2612i2.000",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "295.673.tr1,125",
+      "label": "295.673.tr1,125",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "60,151.8r t.401",
+      "label": "60,151.8r t.401",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "162.031.030.36s",
+      "label": "162.031.030.36s",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "529.86?.0s?",
+      "label": "529.86?.0s?",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "21+,{i10.576,7J'",
+      "label": "21+,{i10.576,7J'",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "165.5.t5.034,615",
+      "label": "165.5.t5.034,615",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "1.763.818,31.t",
+      "label": "1.763.818,31.t",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "s38.374.ss3",
+      "label": "s38.374.ss3",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "224,114,603,66,t",
+      "label": "224,114,603,66,t",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "50.238.9r4,09E",
+      "label": "50.238.9r4,09E",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "1J2,178,90E.?60",
+      "label": "1J2,178,90E.?60",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "5rr,rE3.65t",
+      "label": "5rr,rE3.65t",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "139.583,0r8",
+      "label": "139.583,0r8",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "771.466.121",
+      "label": "771.466.121",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "1.51,1.001.2i0",
+      "label": "1.51,1.001.2i0",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "Cong ty Co phan Duong Kon Tum",
+      "label": "Cong ty Co phan Duong Kon Tum",
+      "entity_type": "organization",
+      "degree": 11
+    },
+    {
+      "id": "Kon Tum",
+      "label": "Kon Tum",
+      "entity_type": "location",
+      "degree": 1
+    },
+    {
+      "id": "Quang Ngai",
+      "label": "Quang Ngai",
+      "entity_type": "location",
+      "degree": 1
+    },
+    {
+      "id": "Quyet dinh so 1459/QD-BNN-DMDN ngay 12/05/2008 cua Bo Nong Nhan va Phat trien Nong thon",
+      "label": "Quyet dinh so 1459/QD-BNN-DMDN ngay 12/05/2008 cua Bo Nong Nhan va Phat trien Nong thon",
+      "entity_type": "regulation",
+      "degree": 1
+    },
+    {
+      "id": "01/01/2025-30/09/2025",
+      "label": "01/01/2025-30/09/2025",
+      "entity_type": "date",
+      "degree": 1
+    },
+    {
+      "id": "ovo1/zozl",
+      "label": "ovo1/zozl",
+      "entity_type": "date",
+      "degree": 1
+    },
+    {
+      "id": "37.809 tỷ",
+      "label": "37.809 tỷ",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "-111.415 tỷ",
+      "label": "-111.415 tỷ",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "-5.949 tỷ",
+      "label": "-5.949 tỷ",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "-3.828 tỷ",
+      "label": "-3.828 tỷ",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "Giay chung dang ki doanh nghiep so 380300011i SiL) 27110/2006",
+      "label": "Giay chung dang ki doanh nghiep so 380300011i SiL) 27110/2006",
+      "entity_type": "regulation",
+      "degree": 1
+    },
+    {
+      "id": "So deni ki moi 6100228101",
+      "label": "So deni ki moi 6100228101",
+      "entity_type": "regulation",
+      "degree": 1
+    },
+    {
+      "id": "Công ty",
+      "label": "Công ty",
+      "entity_type": "organization",
+      "degree": 44
+    },
+    {
+      "id": "2.19 tỷ VND",
+      "label": "2.19 tỷ VND",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "4.47 tỷ VND",
+      "label": "4.47 tỷ VND",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "0 VND",
+      "label": "0 VND",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "9.15 tỷ VND",
+      "label": "9.15 tỷ VND",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "4.3 tỷ VND",
+      "label": "4.3 tỷ VND",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "01/01/2021 - 30/09/2025",
+      "label": "01/01/2021 - 30/09/2025",
+      "entity_type": "date",
+      "degree": 1
+    },
+    {
+      "id": "01/07/2024 - 30/09/2025",
+      "label": "01/07/2024 - 30/09/2025",
+      "entity_type": "date",
+      "degree": 1
+    },
+    {
+      "id": "Rủi ro tài chính",
+      "label": "Rủi ro tài chính",
+      "entity_type": "regulation",
+      "degree": 6
+    },
+    {
+      "id": "Rủi ro thị trường",
+      "label": "Rủi ro thị trường",
+      "entity_type": "regulation",
+      "degree": 2
+    },
+    {
+      "id": "Rủi ro lãi suất",
+      "label": "Rủi ro lãi suất",
+      "entity_type": "regulation",
+      "degree": 2
+    },
+    {
+      "id": "Rủi ro giá hàng hóa, nguyên liệu",
+      "label": "Rủi ro giá hàng hóa, nguyên liệu",
+      "entity_type": "regulation",
+      "degree": 2
+    },
+    {
+      "id": "Rủi ro thanh khoản",
+      "label": "Rủi ro thanh khoản",
+      "entity_type": "regulation",
+      "degree": 2
+    },
+    {
+      "id": "Ban Giám đốc",
+      "label": "Ban Giám đốc",
+      "entity_type": "organization",
+      "degree": 1
+    },
+    {
+      "id": "Hội đồng/Ban quản lý",
+      "label": "Hội đồng/Ban quản lý",
+      "entity_type": "organization",
+      "degree": 1
+    },
+    {
+      "id": "Nguyên vật liệu",
+      "label": "Nguyên vật liệu",
+      "entity_type": "product",
+      "degree": 1
+    },
+    {
+      "id": "Công ty CP Edu tư & Phát triển nghề nghiệp Tín Nghĩa",
+      "label": "Công ty CP Edu tư & Phát triển nghề nghiệp Tín Nghĩa",
+      "entity_type": "organization",
+      "degree": 2
+    },
+    {
+      "id": "Công ty TNHH Kim Hiền Việt",
+      "label": "Công ty TNHH Kim Hiền Việt",
+      "entity_type": "organization",
+      "degree": 2
+    },
+    {
+      "id": "Công ty NHH MTV Kha Hòa Minh",
+      "label": "Công ty NHH MTV Kha Hòa Minh",
+      "entity_type": "organization",
+      "degree": 1
+    },
+    {
+      "id": "Công ty TNHH TM DV Ngô Gia",
+      "label": "Công ty TNHH TM DV Ngô Gia",
+      "entity_type": "organization",
+      "degree": 2
+    },
+    {
+      "id": "Công ty NHH MTV Phúc An Sĩ Gia",
+      "label": "Công ty NHH MTV Phúc An Sĩ Gia",
+      "entity_type": "organization",
+      "degree": 1
+    },
+    {
+      "id": "Công ty CP Tổng công ty Sông Đà",
+      "label": "Công ty CP Tổng công ty Sông Đà",
+      "entity_type": "organization",
+      "degree": 2
+    },
+    {
+      "id": "Shrijec Process Enquirerings works LTD",
+      "label": "Shrijec Process Enquirerings works LTD",
+      "entity_type": "organization",
+      "degree": 2
+    },
+    {
+      "id": "Các doanh lượng khác",
+      "label": "Các doanh lượng khác",
+      "entity_type": "organization",
+      "degree": 2
+    },
+    {
+      "id": "7.021.100.000",
+      "label": "7.021.100.000",
+      "entity_type": "financial_metric",
+      "degree": 2
+    },
+    {
+      "id": "12.024.000.000",
+      "label": "12.024.000.000",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "4?.441.585",
+      "label": "4?.441.585",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": ":0.146.6EE",
+      "label": ":0.146.6EE",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "535.910.000",
+      "label": "535.910.000",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "316.727.441",
+      "label": "316.727.441",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "871.155.007",
+      "label": "871.155.007",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "1.916.816.190",
+      "label": "1.916.816.190",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "12.017.900.000",
+      "label": "12.017.900.000",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "13.0t7.900.000",
+      "label": "13.0t7.900.000",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "889.318.110",
+      "label": "889.318.110",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "862.177.419",
+      "label": "862.177.419",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "1.129.254.686",
+      "label": "1.129.254.686",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "1.791.117.501",
+      "label": "1.791.117.501",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "21.181.111.015",
+      "label": "21.181.111.015",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "Thuế thu nhập doanh nghiệp",
+      "label": "Thuế thu nhập doanh nghiệp",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "1.155.580.100",
+      "label": "1.155.580.100",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "15.291.800",
+      "label": "15.291.800",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "497.150.100",
+      "label": "497.150.100",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "5.103.151.783",
+      "label": "5.103.151.783",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "5.601.669",
+      "label": "5.601.669",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "C0NC",
+      "label": "C0NC",
+      "entity_type": "organization",
+      "degree": 5
+    },
+    {
+      "id": "15.410",
+      "label": "15.410",
+      "entity_type": "date",
+      "degree": 1
+    },
+    {
+      "id": "Thuế thu nhập cá nhân",
+      "label": "Thuế thu nhập cá nhân",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "Thuế nhập khẩu",
+      "label": "Thuế nhập khẩu",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "Công ty Cổ phần Du lịch Kon Tum",
+      "label": "Công ty Cổ phần Du lịch Kon Tum",
+      "entity_type": "organization",
+      "degree": 6
+    },
+    {
+      "id": "Sở Giao dịch Chứng khoán Hà Nội (HNX)",
+      "label": "Sở Giao dịch Chứng khoán Hà Nội (HNX)",
+      "entity_type": "organization",
+      "degree": 1
+    },
+    {
+      "id": "Uỷ ban Chứng khoán Nhà nước (SSC)",
+      "label": "Uỷ ban Chứng khoán Nhà nước (SSC)",
+      "entity_type": "organization",
+      "degree": 1
+    },
+    {
+      "id": "Quý I niên độ 2024-2025",
+      "label": "Quý I niên độ 2024-2025",
+      "entity_type": "event",
+      "degree": 3
+    },
+    {
+      "id": "Quý I niên độ 2025-2026",
+      "label": "Quý I niên độ 2025-2026",
+      "entity_type": "event",
+      "degree": 4
+    },
+    {
+      "id": "1.166.599.148",
+      "label": "1.166.599.148",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "2.492.452.702",
+      "label": "2.492.452.702",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "1.974.516.716",
+      "label": "1.974.516.716",
+      "entity_type": "financial_metric",
+      "degree": 2
+    },
+    {
+      "id": "Thông tư số 96/2020/TT-BTC ngày 16 tháng 11 năm 2020",
+      "label": "Thông tư số 96/2020/TT-BTC ngày 16 tháng 11 năm 2020",
+      "entity_type": "regulation",
+      "degree": 2
+    },
+    {
+      "id": "01/07/2024 đến 30/09/2024",
+      "label": "01/07/2024 đến 30/09/2024",
+      "entity_type": "date",
+      "degree": 1
+    },
+    {
+      "id": "01/07/2025 đến 30/09/2025",
+      "label": "01/07/2025 đến 30/09/2025",
+      "entity_type": "date",
+      "degree": 1
+    },
+    {
+      "id": "Báo cáo tài chính (BCTC) được kiểm toán năm 2024",
+      "label": "Báo cáo tài chính (BCTC) được kiểm toán năm 2024",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "50.700.000.000 đồng",
+      "label": "50.700.000.000 đồng",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "Ngày 18/11/2015",
+      "label": "Ngày 18/11/2015",
+      "entity_type": "date",
+      "degree": 1
+    },
+    {
+      "id": "Hà Nội",
+      "label": "Hà Nội",
+      "entity_type": "location",
+      "degree": 1
+    },
+    {
+      "id": "Quy định số 200/2014/TT-BTC",
+      "label": "Quy định số 200/2014/TT-BTC",
+      "entity_type": "regulation",
+      "degree": 2
+    },
+    {
+      "id": "Bao bì",
+      "label": "Bao bì",
+      "entity_type": "product",
+      "degree": 1
+    },
+    {
+      "id": "Máy móc",
+      "label": "Máy móc",
+      "entity_type": "product",
+      "degree": 1
+    },
+    {
+      "id": "Thiết bị gia công",
+      "label": "Thiết bị gia công",
+      "entity_type": "product",
+      "degree": 1
+    },
+    {
+      "id": "Liên phẩm cốt",
+      "label": "Liên phẩm cốt",
+      "entity_type": "product",
+      "degree": 1
+    },
+    {
+      "id": "Đồng Việt Nam (VND)",
+      "label": "Đồng Việt Nam (VND)",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "30/06/2025",
+      "label": "30/06/2025",
+      "entity_type": "date",
+      "degree": 32
+    },
+    {
+      "id": "Ngày 22/12/2014",
+      "label": "Ngày 22/12/2014",
+      "entity_type": "date",
+      "degree": 1
+    },
+    {
+      "id": "Giai đoạn 25-2A26",
+      "label": "Giai đoạn 25-2A26",
+      "entity_type": "event",
+      "degree": 1
+    },
+    {
+      "id": "Thông tư 45/2013/TT-BTC ngày 25/4/2013 của Bộ Tài chính",
+      "label": "Thông tư 45/2013/TT-BTC ngày 25/4/2013 của Bộ Tài chính",
+      "entity_type": "regulation",
+      "degree": 4
+    },
+    {
+      "id": "Thông tư 117/2016/TT-BTC ngày 13/10/2016",
+      "label": "Thông tư 117/2016/TT-BTC ngày 13/10/2016",
+      "entity_type": "regulation",
+      "degree": 2
+    },
+    {
+      "id": "Thông tư 28/2017/TT-BTC ngày 12/4/2017",
+      "label": "Thông tư 28/2017/TT-BTC ngày 12/4/2017",
+      "entity_type": "regulation",
+      "degree": 2
+    },
+    {
+      "id": "Tài sản cố định",
+      "label": "Tài sản cố định",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Phương pháp đường thẳng",
+      "label": "Phương pháp đường thẳng",
+      "entity_type": "technology",
+      "degree": 2
+    },
+    {
+      "id": "625 năm",
+      "label": "625 năm",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "15 năm",
+      "label": "15 năm",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "10 năm",
+      "label": "10 năm",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "58 năm",
+      "label": "58 năm",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "25/4/2013",
+      "label": "25/4/2013",
+      "entity_type": "date",
+      "degree": 1
+    },
+    {
+      "id": "13/10/2016",
+      "label": "13/10/2016",
+      "entity_type": "date",
+      "degree": 1
+    },
+    {
+      "id": "12/4/2017",
+      "label": "12/4/2017",
+      "entity_type": "date",
+      "degree": 1
+    },
+    {
+      "id": "TSCE YH",
+      "label": "TSCE YH",
+      "entity_type": "event",
+      "degree": 1
+    },
+    {
+      "id": "TSCE VH",
+      "label": "TSCE VH",
+      "entity_type": "event",
+      "degree": 1
+    },
+    {
+      "id": "Nguyên giá TSCD",
+      "label": "Nguyên giá TSCD",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "Nguyên giá quyền sử dụng đất",
+      "label": "Nguyên giá quyền sử dụng đất",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "Tài sản cố định vô hình và hình khai",
+      "label": "Tài sản cố định vô hình và hình khai",
+      "entity_type": "financial_metric",
+      "degree": 2
+    },
+    {
+      "id": "385.354.368",
+      "label": "385.354.368",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "363.33E.312",
+      "label": "363.33E.312",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "4.160.000",
+      "label": "4.160.000",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "17.120.000",
+      "label": "17.120.000",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "NHTMCPD fu&PhdI tiin - CN Ka, T hl)",
+      "label": "NHTMCPD fu&PhdI tiin - CN Ka, T hl)",
+      "entity_type": "organization",
+      "degree": 7
+    },
+    {
+      "id": "Ngil hdng TMCP Diu lll vaPhatni6f viel Nan-ChLnhanh Konrum",
+      "label": "Ngil hdng TMCP Diu lll vaPhatni6f viel Nan-ChLnhanh Konrum",
+      "entity_type": "organization",
+      "degree": 8
+    },
+    {
+      "id": "Hop ddng lin dung h+n rnirc \\o 0 t.l1 :024'b661l4HDTD ngay l0 tl'20:4",
+      "label": "Hop ddng lin dung h+n rnirc \\o 0 t.l1 :024'b661l4HDTD ngay l0 tl'20:4",
+      "entity_type": "regulation",
+      "degree": 1
+    },
+    {
+      "id": "Hop ddng rh6 chip rdi san s6 0 l/2019/666424rIlDBD n8iy 29i l0/20 t9",
+      "label": "Hop ddng rh6 chip rdi san s6 0 l/2019/666424rIlDBD n8iy 29i l0/20 t9",
+      "entity_type": "regulation",
+      "degree": 1
+    },
+    {
+      "id": "Hon d6ng the chip cdc khoin phai drll sd 02/2019/666424/HDBD ngiry 29/10/2019",
+      "label": "Hon d6ng the chip cdc khoin phai drll sd 02/2019/666424/HDBD ngiry 29/10/2019",
+      "entity_type": "regulation",
+      "degree": 1
+    },
+    {
+      "id": "llg! d6ng fie chap bat dof,g sao s0 031019r666124,+lDBo ngay 3 r/r2/?019",
+      "label": "llg! d6ng fie chap bat dof,g sao s0 031019r666124,+lDBo ngay 3 r/r2/?019",
+      "entity_type": "regulation",
+      "degree": 1
+    },
+    {
+      "id": "liq, ddng thd ch6p tai san s6 04/2019/666424,HDBD nSay 3l1l2r/2019",
+      "label": "liq, ddng thd ch6p tai san s6 04/2019/666424,HDBD nSay 3l1l2r/2019",
+      "entity_type": "regulation",
+      "degree": 1
+    },
+    {
+      "id": "Ho! ddrg thi: ohIp b6r dong sAn s6 O l/2021/666421",
+      "label": "Ho! ddrg thi: ohIp b6r dong sAn s6 O l/2021/666421",
+      "entity_type": "regulation",
+      "degree": 1
+    },
+    {
+      "id": "Vay ngin lqn",
+      "label": "Vay ngin lqn",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "Vry dii 19n.l6n hin trn",
+      "label": "Vry dii 19n.l6n hin trn",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "218,t938328.r6",
+      "label": "218,t938328.r6",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "22.387 3?6.12:",
+      "label": "22.387 3?6.12:",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "21.328 69i 052",
+      "label": "21.328 69i 052",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "219.55J.016.2 tt",
+      "label": "219.55J.016.2 tt",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "13.400 000 000",
+      "label": "13.400 000 000",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "-11.49J.UJ2.li4(",
+      "label": "-11.49J.UJ2.li4(",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "30/09/2015",
+      "label": "30/09/2015",
+      "entity_type": "date",
+      "degree": 1
+    },
+    {
+      "id": "ConC",
+      "label": "ConC",
+      "entity_type": "other",
+      "degree": 2
+    },
+    {
+      "id": "ehan rndm VT'D",
+      "label": "ehan rndm VT'D",
+      "entity_type": "other",
+      "degree": 1
+    },
+    {
+      "id": "QurC si.",
+      "label": "QurC si.",
+      "entity_type": "other",
+      "degree": 1
+    },
+    {
+      "id": "Tlisin",
+      "label": "Tlisin",
+      "entity_type": "other",
+      "degree": 1
+    },
+    {
+      "id": "Công ty CP Edu tư và Phát triển nông nghiệp Tiên Nông",
+      "label": "Công ty CP Edu tư và Phát triển nông nghiệp Tiên Nông",
+      "entity_type": "organization",
+      "degree": 3
+    },
+    {
+      "id": "Công ty TNHH Kim Huy Việt",
+      "label": "Công ty TNHH Kim Huy Việt",
+      "entity_type": "organization",
+      "degree": 3
+    },
+    {
+      "id": "Xây dựng cơ bản định dạng",
+      "label": "Xây dựng cơ bản định dạng",
+      "entity_type": "product",
+      "degree": 2
+    },
+    {
+      "id": "715.041.060 → 716.837.490",
+      "label": "715.041.060 → 716.837.490",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "4_812.120.967",
+      "label": "4_812.120.967",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "9,231.699_9.{i}",
+      "label": "9,231.699_9.{i}",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "12.024 r 00 000",
+      "label": "12.024 r 00 000",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "4?.441585",
+      "label": "4?.441585",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": ":0.146 6EE",
+      "label": ":0.146 6EE",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "Bảng tổng hợp dữ liệu tài chính",
+      "label": "Bảng tổng hợp dữ liệu tài chính",
+      "entity_type": "financial_metric",
+      "degree": 9
+    },
+    {
+      "id": "30/9/2025",
+      "label": "30/9/2025",
+      "entity_type": "date",
+      "degree": 2
+    },
+    {
+      "id": "Phải trả người bán",
+      "label": "Phải trả người bán",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "Thuế và các khoản phải nộp",
+      "label": "Thuế và các khoản phải nộp",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "Các khoản phải trả ngắn hạn khác",
+      "label": "Các khoản phải trả ngắn hạn khác",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "Vay và cho vay",
+      "label": "Vay và cho vay",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "Cộng",
+      "label": "Cộng",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "Khoản phải thu",
+      "label": "Khoản phải thu",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "Trái phiếu 1 tỷ",
+      "label": "Trái phiếu 1 tỷ",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "Tổng",
+      "label": "Tổng",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "5 070.000",
+      "label": "5 070.000",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "01/07/2024",
+      "label": "01/07/2024",
+      "entity_type": "date",
+      "degree": 1
+    },
+    {
+      "id": "30/09/2024",
+      "label": "30/09/2024",
+      "entity_type": "date",
+      "degree": 13
+    },
+    {
+      "id": "Doanh thu bán hàng",
+      "label": "Doanh thu bán hàng",
+      "entity_type": "financial_metric",
+      "degree": 4
+    },
+    {
+      "id": "Doanh thu phân bò",
+      "label": "Doanh thu phân bò",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "Doanh thu bán hàng trực tiếp",
+      "label": "Doanh thu bán hàng trực tiếp",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "Giá vốn bán",
+      "label": "Giá vốn bán",
+      "entity_type": "financial_metric",
+      "degree": 2
+    },
+    {
+      "id": "Giai đoạn từ 01/07/2024 đến 30/09/2024",
+      "label": "Giai đoạn từ 01/07/2024 đến 30/09/2024",
+      "entity_type": "event",
+      "degree": 3
+    },
+    {
+      "id": "59.198.078.567",
+      "label": "59.198.078.567",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "Công ty Cổ phần Đường Kon Tum",
+      "label": "Công ty Cổ phần Đường Kon Tum",
+      "entity_type": "organization",
+      "degree": 8
+    },
+    {
+      "id": "Kon Ro Bing 1",
+      "label": "Kon Ro Bing 1",
+      "entity_type": "location",
+      "degree": 1
+    },
+    {
+      "id": "Ngok Bay",
+      "label": "Ngok Bay",
+      "entity_type": "location",
+      "degree": 1
+    },
+    {
+      "id": "Quảng Ngãi",
+      "label": "Quảng Ngãi",
+      "entity_type": "location",
+      "degree": 1
+    },
+    {
+      "id": "Quý I năm tài chính 2025-2026",
+      "label": "Quý I năm tài chính 2025-2026",
+      "entity_type": "event",
+      "degree": 1
+    },
+    {
+      "id": "Thông tư số 96/2020/TT-BTC",
+      "label": "Thông tư số 96/2020/TT-BTC",
+      "entity_type": "regulation",
+      "degree": 1
+    },
+    {
+      "id": "Chênh lệch từ 5% trở lên",
+      "label": "Chênh lệch từ 5% trở lên",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "Sở Giao dịch Chứng khoán Hà Nội",
+      "label": "Sở Giao dịch Chứng khoán Hà Nội",
+      "entity_type": "organization",
+      "degree": 1
+    },
+    {
+      "id": "Doanh thu ban hang",
+      "label": "Doanh thu ban hang",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "Doanh thu hoat dong kinh doanh",
+      "label": "Doanh thu hoat dong kinh doanh",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "Gia thanh san pham",
+      "label": "Gia thanh san pham",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "Cong ty",
+      "label": "Cong ty",
+      "entity_type": "organization",
+      "degree": 2
+    },
+    {
+      "id": "Dai hoi dong co dong",
+      "label": "Dai hoi dong co dong",
+      "entity_type": "organization",
+      "degree": 1
+    },
+    {
+      "id": "San pham",
+      "label": "San pham",
+      "entity_type": "product",
+      "degree": 1
+    },
+    {
+      "id": "Bao cao tai chinh",
+      "label": "Bao cao tai chinh",
+      "entity_type": "event",
+      "degree": 3
+    },
+    {
+      "id": "Kiem toan",
+      "label": "Kiem toan",
+      "entity_type": "event",
+      "degree": 1
+    },
+    {
+      "id": "Quy dinh ve phan bo loi nhuan",
+      "label": "Quy dinh ve phan bo loi nhuan",
+      "entity_type": "regulation",
+      "degree": 1
+    },
+    {
+      "id": "Khoan ghi sach",
+      "label": "Khoan ghi sach",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "Nguyen tac thuc hien",
+      "label": "Nguyen tac thuc hien",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "Công ty Cổ phần Kon Tum",
+      "label": "Công ty Cổ phần Kon Tum",
+      "entity_type": "organization",
+      "degree": 5
+    },
+    {
+      "id": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam - CN Kon Tum",
+      "label": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam - CN Kon Tum",
+      "entity_type": "organization",
+      "degree": 4
+    },
+    {
+      "id": "Hợp đồng thế chấp bất động sản số 03/2019/666424",
+      "label": "Hợp đồng thế chấp bất động sản số 03/2019/666424",
+      "entity_type": "event",
+      "degree": 2
+    },
+    {
+      "id": "Hợp đồng thế chấp bất động sản số 02/2021/666424",
+      "label": "Hợp đồng thế chấp bất động sản số 02/2021/666424",
+      "entity_type": "event",
+      "degree": 2
+    },
+    {
+      "id": "14.828.000.000 VND",
+      "label": "14.828.000.000 VND",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "2.500.000.404 VND",
+      "label": "2.500.000.404 VND",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "30/09/2021",
+      "label": "30/09/2021",
+      "entity_type": "date",
+      "degree": 2
+    },
+    {
+      "id": "8.000.000.000 VND",
+      "label": "8.000.000.000 VND",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "10.559.000.000 VND",
+      "label": "10.559.000.000 VND",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "Hợp đồng thế chấp bất động sản số 03/2019/666124",
+      "label": "Hợp đồng thế chấp bất động sản số 03/2019/666124",
+      "entity_type": "event",
+      "degree": 2
+    },
+    {
+      "id": "Hợp đồng thế chấp bất động sản số 01/2021/666421",
+      "label": "Hợp đồng thế chấp bất động sản số 01/2021/666421",
+      "entity_type": "event",
+      "degree": 1
+    },
+    {
+      "id": "Chủ tịch Hội đồng quản trị",
+      "label": "Chủ tịch Hội đồng quản trị",
+      "entity_type": "person",
+      "degree": 1
+    },
+    {
+      "id": "Bộ Tài chính Việt Nam",
+      "label": "Bộ Tài chính Việt Nam",
+      "entity_type": "organization",
+      "degree": 1
+    },
+    {
+      "id": "Luật số 24/860",
+      "label": "Luật số 24/860",
+      "entity_type": "regulation",
+      "degree": 2
+    },
+    {
+      "id": "Tài sản",
+      "label": "Tài sản",
+      "entity_type": "financial_metric",
+      "degree": 2
+    },
+    {
+      "id": "Phải thu khách hàng",
+      "label": "Phải thu khách hàng",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "Phải thu vay",
+      "label": "Phải thu vay",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "Phải thu khác",
+      "label": "Phải thu khác",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "Phải thu dài hạn",
+      "label": "Phải thu dài hạn",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "Phân loại các khoản phải thu",
+      "label": "Phân loại các khoản phải thu",
+      "entity_type": "other",
+      "degree": 4
+    },
+    {
+      "id": "Kỳ hạn gốc",
+      "label": "Kỳ hạn gốc",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "Giá trị giải ngân",
+      "label": "Giá trị giải ngân",
+      "entity_type": "financial_metric",
+      "degree": 2
+    },
+    {
+      "id": "Lợi nhuận gộp",
+      "label": "Lợi nhuận gộp",
+      "entity_type": "financial_metric",
+      "degree": 2
+    },
+    {
+      "id": "Chi phí lao động",
+      "label": "Chi phí lao động",
+      "entity_type": "financial_metric",
+      "degree": 2
+    },
+    {
+      "id": "Chi phí khấu hao TSCĐ",
+      "label": "Chi phí khấu hao TSCĐ",
+      "entity_type": "financial_metric",
+      "degree": 2
+    },
+    {
+      "id": "Chi phí dịch vụ mua ngoài",
+      "label": "Chi phí dịch vụ mua ngoài",
+      "entity_type": "financial_metric",
+      "degree": 2
+    },
+    {
+      "id": "Thu nhập khác",
+      "label": "Thu nhập khác",
+      "entity_type": "financial_metric",
+      "degree": 2
+    },
+    {
+      "id": "Mệnh giá cổ phiếu",
+      "label": "Mệnh giá cổ phiếu",
+      "entity_type": "financial_metric",
+      "degree": 2
+    },
+    {
+      "id": "Chi phí bảo trì, sửa chữa, bao bì",
+      "label": "Chi phí bảo trì, sửa chữa, bao bì",
+      "entity_type": "financial_metric",
+      "degree": 2
+    },
+    {
+      "id": "Chi phí dụng cụ, đi lại",
+      "label": "Chi phí dụng cụ, đi lại",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "Chi phí đào tạo, văn phòng phẩm, phương pháp",
+      "label": "Chi phí đào tạo, văn phòng phẩm, phương pháp",
+      "entity_type": "financial_metric",
+      "degree": 2
+    },
+    {
+      "id": "Chi phí khác",
+      "label": "Chi phí khác",
+      "entity_type": "financial_metric",
+      "degree": 2
+    },
+    {
+      "id": "Chi phí khấu hao TSCĐ (quản lý doanh nghiệp)",
+      "label": "Chi phí khấu hao TSCĐ (quản lý doanh nghiệp)",
+      "entity_type": "financial_metric",
+      "degree": 2
+    },
+    {
+      "id": "Chi phí dịch vụ mua ngoài (quản lý doanh nghiệp)",
+      "label": "Chi phí dịch vụ mua ngoài (quản lý doanh nghiệp)",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "Vay vi nq thue&ichinh",
+      "label": "Vay vi nq thue&ichinh",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "Bảng tổng hợp các khoản tài chính đến 30/9/2025",
+      "label": "Bảng tổng hợp các khoản tài chính đến 30/9/2025",
+      "entity_type": "event",
+      "degree": 4
+    },
+    {
+      "id": "Công ty CP Lữ Đương Tự Lực",
+      "label": "Công ty CP Lữ Đương Tự Lực",
+      "entity_type": "organization",
+      "degree": 1
+    },
+    {
+      "id": "Công ty CP Mía Đường Sơn La",
+      "label": "Công ty CP Mía Đường Sơn La",
+      "entity_type": "organization",
+      "degree": 1
+    },
+    {
+      "id": "Công ty TNHH Kim Hoa",
+      "label": "Công ty TNHH Kim Hoa",
+      "entity_type": "organization",
+      "degree": 1
+    },
+    {
+      "id": "Hội đồng quản trị",
+      "label": "Hội đồng quản trị",
+      "entity_type": "organization",
+      "degree": 3
+    },
+    {
+      "id": "Kh6nsqu6l",
+      "label": "Kh6nsqu6l",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "TrGtr 1 trim",
+      "label": "TrGtr 1 trim",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "Công ty Cổ phần Du lịch Kontum",
+      "label": "Công ty Cổ phần Du lịch Kontum",
+      "entity_type": "organization",
+      "degree": 6
+    },
+    {
+      "id": "Kì tài chính 2025-2026",
+      "label": "Kì tài chính 2025-2026",
+      "entity_type": "event",
+      "degree": 3
+    },
+    {
+      "id": "Kì tài chính 2024-2025",
+      "label": "Kì tài chính 2024-2025",
+      "entity_type": "event",
+      "degree": 2
+    },
+    {
+      "id": "1.974.516.746",
+      "label": "1.974.516.746",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "14,21%",
+      "label": "14,21%",
+      "entity_type": "financial_metric",
+      "degree": 2
+    },
+    {
+      "id": "Kontum",
+      "label": "Kontum",
+      "entity_type": "location",
+      "degree": 1
+    },
+    {
+      "id": "Giá điện tăng",
+      "label": "Giá điện tăng",
+      "entity_type": "regulation",
+      "degree": 2
+    },
+    {
+      "id": "Bảng cân đối kế toán",
+      "label": "Bảng cân đối kế toán",
+      "entity_type": "product",
+      "degree": 3
+    },
+    {
+      "id": "Tài sản ngắn hạn",
+      "label": "Tài sản ngắn hạn",
+      "entity_type": "financial_metric",
+      "degree": 5
+    },
+    {
+      "id": "Các khoản phải thu",
+      "label": "Các khoản phải thu",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "Cnng ir CP Bic-rrufs B0",
+      "label": "Cnng ir CP Bic-rrufs B0",
+      "entity_type": "organization",
+      "degree": 2
+    },
+    {
+      "id": "Cnng tyCP NhlE Trua,ng Th anh",
+      "label": "Cnng tyCP NhlE Trua,ng Th anh",
+      "entity_type": "organization",
+      "degree": 1
+    },
+    {
+      "id": "150.000.000",
+      "label": "150.000.000",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "450.000.000",
+      "label": "450.000.000",
+      "entity_type": "financial_metric",
+      "degree": 2
+    },
+    {
+      "id": "30109D025",
+      "label": "30109D025",
+      "entity_type": "financial_metric",
+      "degree": 7
+    },
+    {
+      "id": "228.832. ,a t9",
+      "label": "228.832. ,a t9",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "1.518.676.07E",
+      "label": "1.518.676.07E",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "-235 A69.436",
+      "label": "-235 A69.436",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "2.108,809.935",
+      "label": "2.108,809.935",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "-129.119.113",
+      "label": "-129.119.113",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "450.000 000",
+      "label": "450.000 000",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "2 000 000 000",
+      "label": "2 000 000 000",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "30/09/202s",
+      "label": "30/09/202s",
+      "entity_type": "date",
+      "degree": 2
+    },
+    {
+      "id": "Công ty CP XD GT Thrly lgiKCn Giang",
+      "label": "Công ty CP XD GT Thrly lgiKCn Giang",
+      "entity_type": "organization",
+      "degree": 4
+    },
+    {
+      "id": "Cdc khonn phni n t khdc",
+      "label": "Cdc khonn phni n t khdc",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "Cic khoin phdjrhu. cho vay qud h?nrhanh toAr,IoAc chra quahan n}ulrs kh6 co kla nangftu hdj",
+      "label": "Cic khoin phdjrhu. cho vay qud h?nrhanh toAr,IoAc chra quahan n}ulrs kh6 co kla nangftu hdj",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "Preferred Shares",
+      "label": "Preferred Shares",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Debt Capital",
+      "label": "Debt Capital",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Other Equity",
+      "label": "Other Equity",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Total Capital Sources",
+      "label": "Total Capital Sources",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Nguyễn Thị Nga",
+      "label": "Nguyễn Thị Nga",
+      "entity_type": "person",
+      "degree": 6
+    },
+    {
+      "id": "Quang N.",
+      "label": "Quang N.",
+      "entity_type": "person",
+      "degree": 4
+    },
+    {
+      "id": "Công ty TNHH Kim Hoa Việt",
+      "label": "Công ty TNHH Kim Hoa Việt",
+      "entity_type": "organization",
+      "degree": 11
+    },
+    {
+      "id": "Trần Ngọc Hiện",
+      "label": "Trần Ngọc Hiện",
+      "entity_type": "person",
+      "degree": 2
+    },
+    {
+      "id": "Thành phố Hồ Chí Minh",
+      "label": "Thành phố Hồ Chí Minh",
+      "entity_type": "location",
+      "degree": 2
+    },
+    {
+      "id": "Việt Anh",
+      "label": "Việt Anh",
+      "entity_type": "organization",
+      "degree": 1
+    },
+    {
+      "id": "11.244.192.000",
+      "label": "11.244.192.000",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "11.070.000",
+      "label": "11.070.000",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "39.300.000.000",
+      "label": "39.300.000.000",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "29.076.454",
+      "label": "29.076.454",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "15.000.000",
+      "label": "15.000.000",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "24.000.000",
+      "label": "24.000.000",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "5.158.400.000",
+      "label": "5.158.400.000",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "4.223.700.197",
+      "label": "4.223.700.197",
+      "entity_type": "financial_metric",
+      "degree": 2
+    },
+    {
+      "id": "18.156.000.000",
+      "label": "18.156.000.000",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "Công ty TNHH Kinr Hd Viel",
+      "label": "Công ty TNHH Kinr Hd Viel",
+      "entity_type": "organization",
+      "degree": 1
+    },
+    {
+      "id": "Công ty Cổ phần Mia.luilrgTri Vinh",
+      "label": "Công ty Cổ phần Mia.luilrgTri Vinh",
+      "entity_type": "organization",
+      "degree": 1
+    },
+    {
+      "id": "Công ty CP MiaDuong Tuy HoA",
+      "label": "Công ty CP MiaDuong Tuy HoA",
+      "entity_type": "organization",
+      "degree": 1
+    },
+    {
+      "id": "Công ty TNHH An Ha",
+      "label": "Công ty TNHH An Ha",
+      "entity_type": "organization",
+      "degree": 1
+    },
+    {
+      "id": "Công ty CP Xuất Nhập Khẩu Nông Cấp",
+      "label": "Công ty CP Xuất Nhập Khẩu Nông Cấp",
+      "entity_type": "organization",
+      "degree": 1
+    },
+    {
+      "id": "Khách hàng khác",
+      "label": "Khách hàng khác",
+      "entity_type": "organization",
+      "degree": 1
+    },
+    {
+      "id": "Công ty TNHH Ky Sua1 Ru Dong CATEC",
+      "label": "Công ty TNHH Ky Sua1 Ru Dong CATEC",
+      "entity_type": "organization",
+      "degree": 1
+    },
+    {
+      "id": "Công ty TNHH Một Thành Viên Li Thanh",
+      "label": "Công ty TNHH Một Thành Viên Li Thanh",
+      "entity_type": "organization",
+      "degree": 1
+    },
+    {
+      "id": "Công ty CP Chế Biến Thực Phẩm Xuất Khẩu Khoai Kien Gian",
+      "label": "Công ty CP Chế Biến Thực Phẩm Xuất Khẩu Khoai Kien Gian",
+      "entity_type": "organization",
+      "degree": 1
+    },
+    {
+      "id": "Công ty CP XD GT Thừa Thiên Huế",
+      "label": "Công ty CP XD GT Thừa Thiên Huế",
+      "entity_type": "organization",
+      "degree": 2
+    },
+    {
+      "id": "Công ty CP Bic-rrufs B0",
+      "label": "Công ty CP Bic-rrufs B0",
+      "entity_type": "organization",
+      "degree": 2
+    },
+    {
+      "id": "Công ty CP NhlE Trung Thanh",
+      "label": "Công ty CP NhlE Trung Thanh",
+      "entity_type": "organization",
+      "degree": 1
+    },
+    {
+      "id": "11.005.3r8.500",
+      "label": "11.005.3r8.500",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "51.000.000.000",
+      "label": "51.000.000.000",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "714.415.900",
+      "label": "714.415.900",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "6.182.021.100",
+      "label": "6.182.021.100",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "33.834.617",
+      "label": "33.834.617",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "840.000.000",
+      "label": "840.000.000",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "500.000.000",
+      "label": "500.000.000",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "110.000.000",
+      "label": "110.000.000",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "190.000.000",
+      "label": "190.000.000",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "Cac khoin phaiftu ngln h?n",
+      "label": "Cac khoin phaiftu ngln h?n",
+      "entity_type": "financial_metric",
+      "degree": 6
+    },
+    {
+      "id": "Phi thu nsin han cia khbch hing",
+      "label": "Phi thu nsin han cia khbch hing",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "Pha thu!; cho usynsin han",
+      "label": "Pha thu!; cho usynsin han",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "Pha lhu ng:n han khrc",
+      "label": "Pha lhu ng:n han khrc",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "TA sen Th-lu cFc xlr ti",
+      "label": "TA sen Th-lu cFc xlr ti",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "ThuC vaL cic khoan khecphd ihu Nha iudc",
+      "label": "ThuC vaL cic khoan khecphd ihu Nha iudc",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "Giaodich mua b;n laitle phl6u Chlnh phi",
+      "label": "Giaodich mua b;n laitle phl6u Chlnh phi",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "laisin ng,n hai kh,c",
+      "label": "laisin ng,n hai kh,c",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "Iai sAN oi, HAN",
+      "label": "Iai sAN oi, HAN",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "TAr.tn c6 dinh hFu hinh",
+      "label": "TAr.tn c6 dinh hFu hinh",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "TiLisrin c6 dinhvO hlnh",
+      "label": "TiLisrin c6 dinhvO hlnh",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "Đường và các sản phẩm từ mía",
+      "label": "Đường và các sản phẩm từ mía",
+      "entity_type": "product",
+      "degree": 1
+    },
+    {
+      "id": "8%",
+      "label": "8%",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "5%",
+      "label": "5%",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "1.081.028.912",
+      "label": "1.081.028.912",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "66.488.000",
+      "label": "66.488.000",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "12.127,213",
+      "label": "12.127,213",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "72.727.273",
+      "label": "72.727.273",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "Phiri t.d honc CNV",
+      "label": "Phiri t.d honc CNV",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "Phri 1,i Lhn lao HDQ'I, Ban ki6n rodr",
+      "label": "Phri 1,i Lhn lao HDQ'I, Ban ki6n rodr",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "Doanh thu chưa thực hiện",
+      "label": "Doanh thu chưa thực hiện",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "Chi phí",
+      "label": "Chi phí",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "Ba DanE ThiThu",
+      "label": "Ba DanE ThiThu",
+      "entity_type": "person",
+      "degree": 1
+    },
+    {
+      "id": "Công ty INHH Kirn Ha v jct",
+      "label": "Công ty INHH Kirn Ha v jct",
+      "entity_type": "organization",
+      "degree": 4
+    },
+    {
+      "id": "Công ty CP Mia Dubrg Ttry Hda",
+      "label": "Công ty CP Mia Dubrg Ttry Hda",
+      "entity_type": "organization",
+      "degree": 1
+    },
+    {
+      "id": "Công ty CP XNK",
+      "label": "Công ty CP XNK",
+      "entity_type": "organization",
+      "degree": 2
+    },
+    {
+      "id": "Phải trả mua hàng",
+      "label": "Phải trả mua hàng",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "90.500.000",
+      "label": "90.500.000",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "11.000.000.000",
+      "label": "11.000.000.000",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "4l.Sqkien phit sint sau nsiyk6tltic ki k6lorD",
+      "label": "4l.Sqkien phit sint sau nsiyk6tltic ki k6lorD",
+      "entity_type": "event",
+      "degree": 1
+    },
+    {
+      "id": "l0 6nsNsxyan ouc Cln- Tnanh",
+      "label": "l0 6nsNsxyan ouc Cln- Tnanh",
+      "entity_type": "person",
+      "degree": 1
+    },
+    {
+      "id": "12.ong Nguyan Hnu Quanq -Phd",
+      "label": "12.ong Nguyan Hnu Quanq -Phd",
+      "entity_type": "person",
+      "degree": 1
+    },
+    {
+      "id": "ll.6np-Nararanaran,v Ra,ich;dnn -'Ph6 Td;g gir d6c",
+      "label": "ll.6np-Nararanaran,v Ra,ich;dnn -'Ph6 Td;g gir d6c",
+      "entity_type": "person",
+      "degree": 1
+    },
+    {
+      "id": "41.076 454",
+      "label": "41.076 454",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "12.040 a7a",
+      "label": "12.040 a7a",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "r 1.005.8r8.500",
+      "label": "r 1.005.8r8.500",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "127.840.r40",
+      "label": "127.840.r40",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "47.44:.545",
+      "label": "47.44:.545",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "42.56liau so sdnh",
+      "label": "42.56liau so sdnh",
+      "entity_type": "event",
+      "degree": 1
+    },
+    {
+      "id": "Tài sản dài hạn",
+      "label": "Tài sản dài hạn",
+      "entity_type": "financial_metric",
+      "degree": 4
+    },
+    {
+      "id": "Tài sản cố định hữu hình",
+      "label": "Tài sản cố định hữu hình",
+      "entity_type": "financial_metric",
+      "degree": 2
+    },
+    {
+      "id": "347 tỷ",
+      "label": "347 tỷ",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "1,958 tỷ",
+      "label": "1,958 tỷ",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "Th6! Kon Ra",
+      "label": "Th6! Kon Ra",
+      "entity_type": "person",
+      "degree": 2
+    },
+    {
+      "id": "Eang l",
+      "label": "Eang l",
+      "entity_type": "person",
+      "degree": 2
+    },
+    {
+      "id": "XaNga)tD!1",
+      "label": "XaNga)tD!1",
+      "entity_type": "organization",
+      "degree": 2
+    },
+    {
+      "id": "Tinli QuiigNBil",
+      "label": "Tinli QuiigNBil",
+      "entity_type": "person",
+      "degree": 2
+    },
+    {
+      "id": "TIIUYET MINH Bio cAo TAI cH iNH",
+      "label": "TIIUYET MINH Bio cAo TAI cH iNH",
+      "entity_type": "event",
+      "degree": 5
+    },
+    {
+      "id": "Thu),a Dtinh 36",
+      "label": "Thu),a Dtinh 36",
+      "entity_type": "regulation",
+      "degree": 2
+    },
+    {
+      "id": "THUYET MINH BAO CAO TAI CHINH",
+      "label": "THUYET MINH BAO CAO TAI CHINH",
+      "entity_type": "event",
+      "degree": 6
+    },
+    {
+      "id": "Chi phí nhiên liệu, vật liệu, bảo hiểm",
+      "label": "Chi phí nhiên liệu, vật liệu, bảo hiểm",
+      "entity_type": "financial_metric",
+      "degree": 2
+    },
+    {
+      "id": "Tài sản định điểm",
+      "label": "Tài sản định điểm",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Chi phí sản xuất",
+      "label": "Chi phí sản xuất",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Các khoản chi phí khác",
+      "label": "Các khoản chi phí khác",
+      "entity_type": "financial_metric",
+      "degree": 4
+    },
+    {
+      "id": "BHYT",
+      "label": "BHYT",
+      "entity_type": "organization",
+      "degree": 2
+    },
+    {
+      "id": "BHTN",
+      "label": "BHTN",
+      "entity_type": "organization",
+      "degree": 2
+    },
+    {
+      "id": "Luật các khoản phải trả",
+      "label": "Luật các khoản phải trả",
+      "entity_type": "regulation",
+      "degree": 3
+    },
+    {
+      "id": "Thủ tục môn báo cáo tài chính",
+      "label": "Thủ tục môn báo cáo tài chính",
+      "entity_type": "event",
+      "degree": 3
+    },
+    {
+      "id": "Công ty cổ phần Ôi Jong Kon Tum",
+      "label": "Công ty cổ phần Ôi Jong Kon Tum",
+      "entity_type": "organization",
+      "degree": 3
+    },
+    {
+      "id": "Tổng Giám đốc",
+      "label": "Tổng Giám đốc",
+      "entity_type": "other",
+      "degree": 2
+    },
+    {
+      "id": "Kế toán lưu động",
+      "label": "Kế toán lưu động",
+      "entity_type": "financial_metric",
+      "degree": 2
+    },
+    {
+      "id": "Tài Sản Dài Hạn",
+      "label": "Tài Sản Dài Hạn",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Nợ Ngắn Hạn",
+      "label": "Nợ Ngắn Hạn",
+      "entity_type": "financial_metric",
+      "degree": 2
+    },
+    {
+      "id": "Tài Sản Cố Định",
+      "label": "Tài Sản Cố Định",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Nợ Vay Ngắn Hạn",
+      "label": "Nợ Vay Ngắn Hạn",
+      "entity_type": "financial_metric",
+      "degree": 2
+    },
+    {
+      "id": "Khoản vay",
+      "label": "Khoản vay",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Chi phí vay",
+      "label": "Chi phí vay",
+      "entity_type": "financial_metric",
+      "degree": 2
+    },
+    {
+      "id": "Vốn hóa chi phí vay",
+      "label": "Vốn hóa chi phí vay",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Doanh nghiệp Hồng Kỳ",
+      "label": "Doanh nghiệp Hồng Kỳ",
+      "entity_type": "organization",
+      "degree": 5
+    },
+    {
+      "id": "Thời gian khấu hao (15 năm)",
+      "label": "Thời gian khấu hao (15 năm)",
+      "entity_type": "UNKNOWN",
+      "degree": 2
+    },
+    {
+      "id": "Thời gian khấu hao (10 năm)",
+      "label": "Thời gian khấu hao (10 năm)",
+      "entity_type": "UNKNOWN",
+      "degree": 2
+    },
+    {
+      "id": "Thời gian khấu hao (58 năm)",
+      "label": "Thời gian khấu hao (58 năm)",
+      "entity_type": "UNKNOWN",
+      "degree": 2
+    },
+    {
+      "id": "Financial Metrics",
+      "label": "Financial Metrics",
+      "entity_type": "UNKNOWN",
+      "degree": 2
+    }
+  ],
+  "edges": [
+    {
+      "source": "Bảng thể hiện mối quan hệ giữa mức độ nghiêm trọng rủi ro và chỉ số xuất hiện",
+      "target": "Mức độ nghiêm trọng rủi ro",
+      "label": "Bảng thể hiện mối quan hệ giữa mức độ nghiêm trọng rủi ro và chỉ số xuất hiện đư",
+      "weight": 1.0
+    },
+    {
+      "source": "Bảng thể hiện mối quan hệ giữa mức độ nghiêm trọng rủi ro và chỉ số xuất hiện",
+      "target": "Chỉ số xuất hiện",
+      "label": "Bảng thể hiện mối quan hệ giữa mức độ nghiêm trọng rủi ro và chỉ số xuất hiện ph",
+      "weight": 1.0
+    },
+    {
+      "source": "Bảo trì điều chỉnh",
+      "target": "Thiết bị rủi ro thấp",
+      "label": "Thiết bị rủi ro thấp được quản lý thông qua chiến lược bảo trì điều chỉnh nhằm t",
+      "weight": 1.0
+    },
+    {
+      "source": "Giảm chỉ số mức độ nghiêm trọng",
+      "target": "Thiết bị rủi ro cao",
+      "label": "Thiết bị rủi ro cao yêu cầu giảm chỉ số mức độ nghiêm trọng bằng cách nhân đôi t",
+      "weight": 1.0
+    },
+    {
+      "source": "Giảm chỉ số tần suất hỏng hóc",
+      "target": "Thiết bị rủi ro cao",
+      "label": "Thiết bị rủi ro cao cần giảm chỉ số tần suất hỏng hóc thông qua bảo trì dựa trên",
+      "weight": 1.0
+    },
+    {
+      "source": "Bảo trì dựa trên tình trạng",
+      "target": "Thiết bị rủi ro cao",
+      "label": "Bảo trì dựa trên tình trạng được áp dụng cho thiết bị rủi ro cao để giảm tần suấ",
+      "weight": 1.0
+    },
+    {
+      "source": "Bảo trì phòng ngừa",
+      "target": "Thiết bị rủi ro cao",
+      "label": "Thiết bị rủi ro cao yêu cầu tăng tần suất các quy trình bảo trì phòng ngừa để gi",
+      "weight": 1.0
+    },
+    {
+      "source": "Phần mềm bảo trì",
+      "target": "Quy trình bảo trì tinh gọn",
+      "label": "Phần mềm bảo trì hỗ trợ trình bày kết quả quản lý rủi ro trong quy trình bảo trì",
+      "weight": 1.0
+    },
+    {
+      "source": "Phần mềm bảo trì",
+      "target": "Quản lý bảo trì dựa trên rủi ro",
+      "label": "Phần mềm bảo trì trong tương lai sẽ hỗ trợ quản lý bảo trì dựa trên rủi ro một c",
+      "weight": 1.0
+    },
+    {
+      "source": "Quy trình bảo trì tinh gọn",
+      "target": "Tiết kiệm chi phí",
+      "label": "Quy trình bảo trì tinh gọn dẫn đến tiết kiệm chi phí trong quản lý rủi ro.",
+      "weight": 1.0
+    },
+    {
+      "source": "Giảm chi phí không cần thiết",
+      "target": "Quy trình bảo trì tinh gọn",
+      "label": "Quy trình bảo trì tinh gọn giúp giảm các khoản chi phí không cần thiết.",
+      "weight": 1.0
+    },
+    {
+      "source": "Nguyên nhân gây ra hỏng hóc",
+      "target": "Quy trình kỹ thuật",
+      "label": "Quy trình kỹ thuật được sử dụng để giảm thiểu nguyên nhân gây ra hỏng hóc.",
+      "weight": 1.0
+    },
+    {
+      "source": "SpeedMaint CMMS",
+      "target": "Tiết kiệm chi phí",
+      "label": "SpeedMaint CMMS giúp tiết kiệm chi phí bằng cách tối ưu hóa quy trình bảo trì và",
+      "weight": 1.0
+    },
+    {
+      "source": "Quản lý bảo trì dựa trên rủi ro",
+      "target": "Tiết kiệm chi phí",
+      "label": "Quản lý bảo trì dựa trên rủi ro dẫn đến tiết kiệm chi phí thông qua việc tập tru",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty TNHH MTV phần mềm SpeedMaint",
+      "target": "SpeedMaint Cloud CMMS",
+      "label": "Công ty TNHH MTV phần mềm SpeedMaint phát triển và cung cấp sản phẩm công nghệ S",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty TNHH MTV phần mềm SpeedMaint",
+      "target": "Văn phòng miền Bắc",
+      "label": "Công ty TNHH MTV phần mềm SpeedMaint có văn phòng miền Bắc tại địa điểm được mô ",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty TNHH MTV phần mềm SpeedMaint",
+      "target": "Văn phòng miền Nam",
+      "label": "Công ty TNHH MTV phần mềm SpeedMaint có văn phòng miền Nam tại địa điểm được mô ",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty TNHH MTV phần mềm SpeedMaint",
+      "target": "ManWinWin",
+      "label": "Tài liệu gốc được cung cấp bởi ManWinWin và được biên dịch bởi đội ngũ SpeedMain",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty TNHH MTV phần mềm SpeedMaint",
+      "target": "speedmaint.com",
+      "label": "Công ty TNHH MTV phần mềm SpeedMaint sử dụng speedmaint.com làm website chính th",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty TNHH MTV phần mềm SpeedMaint",
+      "target": "marketing@speedmaint.com",
+      "label": "Công ty TNHH MTV phần mềm SpeedMaint cung cấp email marketing@speedmaint.com để ",
+      "weight": 1.0
+    },
+    {
+      "source": "0912.76.5656",
+      "target": "Công ty TNHH MTV phần mềm SpeedMaint",
+      "label": "Công ty TNHH MTV phần mềm SpeedMaint cung cấp số hotline 0912.76.5656 cho khách ",
+      "weight": 1.0
+    },
+    {
+      "source": "Bảo Trì Dựa Trên Rủi Ro",
+      "target": "Phần Mềm Bảo Trì",
+      "label": "Phương pháp bảo trì dựa trên rủi ro sử dụng phần mềm bảo trì để tính toán chỉ số",
+      "weight": 1.0
+    },
+    {
+      "source": "Bảo Trì Dựa Trên Rủi Ro",
+      "target": "Chỉ Số Sự Cố Xảy Ra",
+      "label": "Phương pháp bảo trì dựa trên rủi ro sử dụng chỉ số sự cố xảy ra để xác định xác ",
+      "weight": 1.0
+    },
+    {
+      "source": "Bảo Trì Dựa Trên Rủi Ro",
+      "target": "Xe Đầu Kéo Cỡ Lớn",
+      "label": "Xe đầu kéo cỡ lớn là tài sản có rủi ro cao nếu hỏng, do đó được ưu tiên trong kế",
+      "weight": 1.0
+    },
+    {
+      "source": "Bảo Trì Dựa Trên Rủi Ro",
+      "target": "Thiết Bị Máy Móc",
+      "label": "Phương pháp bảo trì dựa trên rủi ro được áp dụng để quản lý và bảo trì thiết bị ",
+      "weight": 1.0
+    },
+    {
+      "source": "Bảo Trì Dựa Trên Rủi Ro",
+      "target": "Catastrophic",
+      "label": "Bảo trì dựa trên rủi ro sử dụng phân loại Catastrophic để xác định mức độ quan t",
+      "weight": 1.0
+    },
+    {
+      "source": "Bảo Trì Dựa Trên Rủi Ro",
+      "target": "Critical",
+      "label": "Bảo trì dựa trên rủi ro sử dụng phân loại Critical để đánh giá tác động của sự c",
+      "weight": 1.0
+    },
+    {
+      "source": "Bảo Trì Dựa Trên Rủi Ro",
+      "target": "Marginal",
+      "label": "Bảo trì dựa trên rủi ro sử dụng phân loại Marginal để xác định mức độ ảnh hưởng ",
+      "weight": 1.0
+    },
+    {
+      "source": "Bảo Trì Dựa Trên Rủi Ro",
+      "target": "Minor",
+      "label": "Bảo trì dựa trên rủi ro sử dụng phân loại Minor để đánh giá tác động của sự cố.",
+      "weight": 1.0
+    },
+    {
+      "source": "Bảo Trì Dựa Trên Rủi Ro",
+      "target": "Frequent",
+      "label": "Bảo trì dựa trên rủi ro sử dụng phân loại Frequent để xác định xác suất xảy ra s",
+      "weight": 1.0
+    },
+    {
+      "source": "Bảo Trì Dựa Trên Rủi Ro",
+      "target": "Likely",
+      "label": "Bảo trì dựa trên rủi ro sử dụng phân loại Likely để đánh giá xác suất sự cố.",
+      "weight": 1.0
+    },
+    {
+      "source": "Bảo Trì Dựa Trên Rủi Ro",
+      "target": "Occasional",
+      "label": "Bảo trì dựa trên rủi ro sử dụng phân loại Occasional để xác định xác suất xảy ra",
+      "weight": 1.0
+    },
+    {
+      "source": "Bảo Trì Dựa Trên Rủi Ro",
+      "target": "Unlikely",
+      "label": "Bảo trì dựa trên rủi ro sử dụng phân loại Unlikely để đánh giá xác suất sự cố.",
+      "weight": 1.0
+    },
+    {
+      "source": "Bảo Trì Dựa Trên Rủi Ro",
+      "target": "Highly unlikely",
+      "label": "Bảo trì dựa trên rủi ro sử dụng phân loại Highly unlikely để xác định xác suất x",
+      "weight": 1.0
+    },
+    {
+      "source": "Bảo Trì Dựa Trên Rủi Ro",
+      "target": "Bảo Trì Khắc Phục",
+      "label": "Bảo trì dựa trên rủi ro có thể bao gồm bảo trì khắc phục như một phần của kế hoạ",
+      "weight": 1.0
+    },
+    {
+      "source": "Bảo Trì Dựa Trên Rủi Ro",
+      "target": "Bảo Trì Dựa Trên Điều Kiện",
+      "label": "Bảo trì dựa trên rủi ro có thể liên quan đến việc thuê dịch vụ bảo trì dựa trên ",
+      "weight": 1.0
+    },
+    {
+      "source": "Phương Pháp Xác Suất",
+      "target": "Phần Mềm Bảo Trì",
+      "label": "Phần mềm bảo trì hỗ trợ tự động hóa phương pháp xác suất trong việc xác định sự ",
+      "weight": 1.0
+    },
+    {
+      "source": "Công Ty",
+      "target": "Xe Đầu Kéo Cỡ Lớn",
+      "label": "Công ty áp dụng bảo trì dựa trên rủi ro cho xe đầu kéo cỡ lớn do rủi ro cao nếu ",
+      "weight": 1.0
+    },
+    {
+      "source": "Quản lý bảo trì dựa trên rủi ro",
+      "target": "SpeedMaint CMMS",
+      "label": "SpeedMaint CMMS được sử dụng để thực hiện quản lý bảo trì dựa trên rủi ro, cung ",
+      "weight": 1.0
+    },
+    {
+      "source": "SpeedMaint",
+      "target": "SpeedMaint CMMS",
+      "label": "SpeedMaint phát triển và cung cấp phần mềm SpeedMaint CMMS như một công cụ hỗ tr",
+      "weight": 1.0
+    },
+    {
+      "source": "SpeedMaint",
+      "target": "Trải Nghiệm Miễn Phí",
+      "label": "SpeedMaint cung cấp dịch vụ Trải Nghiệm Miễn Phí để người dùng trải nghiệm phần ",
+      "weight": 1.0
+    },
+    {
+      "source": "SpeedMaint",
+      "target": "ebook-bao-tri-dua-tren-rui-ro",
+      "label": "SpeedMaint liên kết chiến dịch ebook-bao-tri-dua-tren-rui-ro với các liên kết UR",
+      "weight": 1.0
+    },
+    {
+      "source": "Trải Nghiệm Miễn Phí",
+      "target": "ebook-bao-tri-dua-tren-rui-ro",
+      "label": "Dịch vụ Trải Nghiệm Miễn Phí được tích hợp vào chiến dịch ebook-bao-tri-dua-tren",
+      "weight": 1.0
+    },
+    {
+      "source": "Chỉ Số Xuất Hiện",
+      "target": "Phương Pháp Xác Suất",
+      "label": "Phương pháp xác suất sử dụng chỉ số xuất hiện để tính toán xác suất xảy ra lỗi.",
+      "weight": 1.0
+    },
+    {
+      "source": "Chỉ Số Mức Độ Nghiêm Trọng",
+      "target": "Người Quản Lý",
+      "label": "Chỉ số mức độ nghiêm trọng được xác định thông qua phỏng vấn người quản lý.",
+      "weight": 1.0
+    },
+    {
+      "source": "Chỉ Số Mức Độ Nghiêm Trọng",
+      "target": "Người Dùng",
+      "label": "Chỉ số mức độ nghiêm trọng được xác định thông qua phỏng vấn người dùng.",
+      "weight": 1.0
+    },
+    {
+      "source": "Chỉ Số Mức Độ Nghiêm Trọng",
+      "target": "Nhà Thiết Kế Hệ Thống",
+      "label": "Chỉ số mức độ nghiêm trọng được xác định thông qua phỏng vấn nhà thiết kế hệ thố",
+      "weight": 1.0
+    },
+    {
+      "source": "Chỉ Số Mức Độ Nghiêm Trọng",
+      "target": "Rủi Ro Hỏng Hóc",
+      "label": "Rủi ro hỏng hóc được tính bằng tích số giữa chỉ số xuất hiện và chỉ số mức độ ng",
+      "weight": 1.0
+    },
+    {
+      "source": "Chỉ Số Xuất Hiện",
+      "target": "Rủi Ro Hỏng Hóc",
+      "label": "Rủi ro hỏng hóc được tính bằng tích số giữa chỉ số xuất hiện và chỉ số mức độ ng",
+      "weight": 1.0
+    },
+    {
+      "source": "Rủi Ro Chấp Nhận Được",
+      "target": "Rủi Ro Hỏng Hóc",
+      "label": "Rủi ro chấp nhận được là phân loại của rủi ro hỏng hóc dựa trên ngưỡng 1%-10% gi",
+      "weight": 1.0
+    },
+    {
+      "source": "Rủi Ro Có Thể Chấp Nhận Được",
+      "target": "Rủi Ro Hỏng Hóc",
+      "label": "Rủi ro có thể chấp nhận được là phân loại của rủi ro hỏng hóc dựa trên ngưỡng 10",
+      "weight": 1.0
+    },
+    {
+      "source": "Rủi Ro Hỏng Hóc",
+      "target": "Rủi Ro Không Thể Chấp Nhận Được",
+      "label": "Rủi ro không thể chấp nhận được là phân loại của rủi ro hỏng hóc dựa trên ngưỡng",
+      "weight": 1.0
+    },
+    {
+      "source": "Chi phí nguyên vật liệu",
+      "target": "Doanh nghiệp",
+      "label": "Doanh nghiệp ghi nhận sự giảm mạnh chi phí nguyên vật liệu giữa hai giai đoạn.",
+      "weight": 1.0
+    },
+    {
+      "source": "Doanh nghiệp",
+      "target": "Khấu hao TSCD",
+      "label": "Doanh nghiệp duy trì mức khấu hao TSCD ổn định trong cả hai giai đoạn.",
+      "weight": 1.0
+    },
+    {
+      "source": "Chi phí quản lý doanh nghiệp",
+      "target": "Doanh nghiệp",
+      "label": "Doanh nghiệp ghi nhận sự tăng chi phí quản lý doanh nghiệp giữa hai giai đoạn.",
+      "weight": 1.0
+    },
+    {
+      "source": "Doanh nghiệp",
+      "target": "Lợi nhuận sau thuế",
+      "label": "Doanh nghiệp đạt lợi nhuận sau thuế tăng từ 2.192.052.142 lên 4.466.599.418 giữa",
+      "weight": 1.0
+    },
+    {
+      "source": "Doanh nghiệp",
+      "target": "Thù lao HDQT, BKS không trực tiếp điều hành",
+      "label": "Doanh nghiệp chi trả thù lao cho HDQT và BKS không trực tiếp điều hành trong hai",
+      "weight": 1.0
+    },
+    {
+      "source": "Chi phí thu hồi nợ",
+      "target": "Doanh nghiệp",
+      "label": "Doanh nghiệp ghi nhận chi phí thu hồi nợ trong hai giai đoạn.",
+      "weight": 1.0
+    },
+    {
+      "source": "Chi phí khiếu lạ",
+      "target": "Doanh nghiệp",
+      "label": "Doanh nghiệp có chi phí khiếu lạ tăng giữa hai giai đoạn.",
+      "weight": 1.0
+    },
+    {
+      "source": "Doanh nghiệp",
+      "target": "Tổng chi phí kỳ này",
+      "label": "Doanh nghiệp ghi nhận tổng chi phí kỳ này cao hơn kỳ trước.",
+      "weight": 1.0
+    },
+    {
+      "source": "Các khoản điều chỉnh tăng - Điều chỉnh giá sổ sách: phiếu phong bì",
+      "target": "Doanh nghiệp",
+      "label": "Doanh nghiệp ghi nhận các khoản điều chỉnh tăng và điều chỉnh giá sổ sách qua ph",
+      "weight": 1.0
+    },
+    {
+      "source": "Chi phí dịch vụ liên quan đến bên ngoài",
+      "target": "Doanh nghiệp",
+      "label": "Doanh nghiệp chi trả chi phí dịch vụ liên quan đến bên ngoài trong hai giai đoạn",
+      "weight": 1.0
+    },
+    {
+      "source": "Các khoản khác",
+      "target": "Doanh nghiệp",
+      "label": "Doanh nghiệp ghi nhận các khoản khác trong báo cáo tài chính.",
+      "weight": 1.0
+    },
+    {
+      "source": "Doanh nghiệp",
+      "target": "Tài sản ngắn hạn",
+      "label": "Doanh nghiệp sở hữu tài sản ngắn hạn với tổng giá trị 347 tỷ.",
+      "weight": 1.0
+    },
+    {
+      "source": "Doanh nghiệp",
+      "target": "Tài sản dài hạn",
+      "label": "Doanh nghiệp sở hữu tài sản dài hạn với tổng giá trị 195 tỷ.",
+      "weight": 1.0
+    },
+    {
+      "source": "Doanh nghiệp",
+      "target": "Khoản vay",
+      "label": "Doanh nghiệp thực hiện huy động vốn qua khoản vay có thời hạn trên 12 tháng.",
+      "weight": 1.0
+    },
+    {
+      "source": "Doanh nghiệp",
+      "target": "Vốn hóa chi phí vay",
+      "label": "Doanh nghiệp áp dụng chế độ kế toán để vốn hóa chi phí vay vào tài sản.",
+      "weight": 1.0
+    },
+    {
+      "source": "01/07/2024–30/09/2025",
+      "target": "Chi phí nguyên vật liệu",
+      "label": "Chi phí nguyên vật liệu được ghi nhận trong giai đoạn 01/07/2024–30/09/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "01/07/2024–30/09/2025",
+      "target": "Khấu hao TSCD",
+      "label": "Khấu hao TSCD được ghi nhận trong giai đoạn 01/07/2024–30/09/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "01/07/2024–30/09/2025",
+      "target": "Chi phí quản lý doanh nghiệp",
+      "label": "Chi phí quản lý doanh nghiệp được ghi nhận trong giai đoạn 01/07/2024–30/09/2025",
+      "weight": 1.0
+    },
+    {
+      "source": "01/07/2024–30/09/2025",
+      "target": "Lợi nhuận sau thuế",
+      "label": "Lợi nhuận sau thuế được ghi nhận trong giai đoạn 01/07/2024–30/09/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "01/07/2024–30/09/2025",
+      "target": "Thù lao HDQT, BKS không trực tiếp điều hành",
+      "label": "Thù lao HDQT, BKS không trực tiếp điều hành được ghi nhận trong giai đoạn 01/07/",
+      "weight": 1.0
+    },
+    {
+      "source": "01/07/2024–30/09/2025",
+      "target": "Chi phí thu hồi nợ",
+      "label": "Chi phí thu hồi nợ được ghi nhận trong giai đoạn 01/07/2024–30/09/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "01/07/2024–30/09/2025",
+      "target": "Chi phí khiếu lạ",
+      "label": "Chi phí khiếu lạ được ghi nhận trong giai đoạn 01/07/2024–30/09/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "01/07/2024–30/09/2025",
+      "target": "Tổng chi phí kỳ này",
+      "label": "Tổng chi phí kỳ này được ghi nhận trong giai đoạn 01/07/2024–30/09/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "01/07/2024–30/09/2025",
+      "target": "Các khoản điều chỉnh tăng - Điều chỉnh giá sổ sách: phiếu phong bì",
+      "label": "Các khoản điều chỉnh tăng - Điều chỉnh giá sổ sách: phiếu phong bì được ghi nhận",
+      "weight": 1.0
+    },
+    {
+      "source": "01/07/2024–30/09/2025",
+      "target": "Chi phí dịch vụ liên quan đến bên ngoài",
+      "label": "Chi phí dịch vụ liên quan đến bên ngoài được ghi nhận trong giai đoạn 01/07/2024",
+      "weight": 1.0
+    },
+    {
+      "source": "01/07/2024–30/09/2025",
+      "target": "Các khoản khác",
+      "label": "Các khoản khác được ghi nhận trong giai đoạn 01/07/2024–30/09/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "01/07/2025–30/09/2025",
+      "target": "Chi phí nguyên vật liệu",
+      "label": "Chi phí nguyên vật liệu được ghi nhận trong giai đoạn 01/07/2025–30/09/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "01/07/2025–30/09/2025",
+      "target": "Khấu hao TSCD",
+      "label": "Khấu hao TSCD được ghi nhận trong giai đoạn 01/07/2025–30/09/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "01/07/2025–30/09/2025",
+      "target": "Chi phí quản lý doanh nghiệp",
+      "label": "Chi phí quản lý doanh nghiệp được ghi nhận trong giai đoạn 01/07/2025–30/09/2025",
+      "weight": 1.0
+    },
+    {
+      "source": "01/07/2025–30/09/2025",
+      "target": "Lợi nhuận sau thuế",
+      "label": "Lợi nhuận sau thuế được ghi nhận trong giai đoạn 01/07/2025–30/09/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "01/07/2025–30/09/2025",
+      "target": "Thù lao HDQT, BKS không trực tiếp điều hành",
+      "label": "Thù lao HDQT, BKS không trực tiếp điều hành được ghi nhận trong giai đoạn 01/07/",
+      "weight": 1.0
+    },
+    {
+      "source": "01/07/2025–30/09/2025",
+      "target": "Chi phí thu hồi nợ",
+      "label": "Chi phí thu hồi nợ được ghi nhận trong giai đoạn 01/07/2025–30/09/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "01/07/2025–30/09/2025",
+      "target": "Chi phí khiếu lạ",
+      "label": "Chi phí khiếu lạ được ghi nhận trong giai đoạn 01/07/2025–30/09/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "01/07/2025–30/09/2025",
+      "target": "Tổng chi phí kỳ này",
+      "label": "Tổng chi phí kỳ này được ghi nhận trong giai đoạn 01/07/2025–30/09/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "01/07/2025–30/09/2025",
+      "target": "Các khoản điều chỉnh tăng - Điều chỉnh giá sổ sách: phiếu phong bì",
+      "label": "Các khoản điều chỉnh tăng - Điều chỉnh giá sổ sách: phiếu phong bì được ghi nhận",
+      "weight": 1.0
+    },
+    {
+      "source": "01/07/2025–30/09/2025",
+      "target": "Chi phí dịch vụ liên quan đến bên ngoài",
+      "label": "Chi phí dịch vụ liên quan đến bên ngoài được ghi nhận trong giai đoạn 01/07/2025",
+      "weight": 1.0
+    },
+    {
+      "source": "01/07/2025–30/09/2025",
+      "target": "Các khoản khác",
+      "label": "Các khoản khác được ghi nhận trong giai đoạn 01/07/2025–30/09/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "Lợi nhuận sau thuế",
+      "target": "Thông tư số 96/2020/TT-BTC ngày 16 tháng 11 năm 2020",
+      "label": "Thông tư số 96/2020/TT-BTC yêu cầu công bố thông tin về lợi nhuận sau thuế trên ",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty Cổ phần Đường Kon Tum",
+      "target": "Lợi nhuận sau thuế",
+      "label": "Lợi nhuận sau thuế là một chỉ tiêu tài chính trong báo cáo kết quả kinh doanh củ",
+      "weight": 1.0
+    },
+    {
+      "source": "2.000.000.000",
+      "target": "30/09/2025",
+      "label": "Giá trị 2.000.000.000 được ghi nhận vào ngày 30/09/2025 trong bảng tài chính.",
+      "weight": 1.0
+    },
+    {
+      "source": "2.000.000.000",
+      "target": "Cong",
+      "label": "Cong sở hữu hoặc quản lý khoản tài chính 2.000.000.000.",
+      "weight": 1.0
+    },
+    {
+      "source": "2.000.000.000",
+      "target": "Cnng tyCP NhlE Trua,ng Th anh",
+      "label": "Cnng tyCP NhlE Trua,ng Th anh duy trì giá trị 2.000.000.000.",
+      "weight": 1.0
+    },
+    {
+      "source": "2.000.000.000",
+      "target": "Công ty CP NhlE Trung Thanh",
+      "label": "Công ty CP NhlE Trung Thanh có nghĩa vụ thanh toán số tiền 2.000.000.000.",
+      "weight": 1.0
+    },
+    {
+      "source": "2.493.580.419",
+      "target": "30/06/2025",
+      "label": "Giá trị 2.493.580.419 liên quan đến nguyên liệu/vật liệu vào ngày 30/06/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "2.493.580.419",
+      "target": "Cong",
+      "label": "Cong liên quan đến việc quản lý nguyên liệu/vật liệu với giá trị 2.493.580.419.",
+      "weight": 1.0
+    },
+    {
+      "source": "3.140.000.000",
+      "target": "Cong",
+      "label": "Cong sẽ tiếp tục thực hiện các biện pháp để thu hồi khoản 3.140.000.000.",
+      "weight": 1.0
+    },
+    {
+      "source": "3.140.000.000",
+      "target": "30/09/2025",
+      "label": "Khoản tài sản 3.140.000.000 được ghi nhận vào ngày 30/09/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "1.912.867.660",
+      "target": "30/06/2025",
+      "label": "Giá trị 1.912.867.660 xuất hiện trong bảng vào ngày 30/06/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "253.825.991.714",
+      "target": "30/09/2025",
+      "label": "Khoản mục 253.825.991.714 được ghi nhận vào ngày 30/09/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "30/06/2025",
+      "target": "669.450.135",
+      "label": "Giá trị 669.450.135 là số dư cuối kỳ vào ngày 30/06/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "Máy nông nghiệp/thiết bị",
+      "target": "Thời gian khấu hao (15 năm)",
+      "label": "Máy nông nghiệp/thiết bị có thời gian khấu hao là 15 năm.",
+      "weight": 1.0
+    },
+    {
+      "source": "Máy nông nghiệp/thiết bị",
+      "target": "Nguyên giá TSCD HH",
+      "label": "Máy nông nghiệp/thiết bị có nguyên giá là một phần của tổng nguyên giá TSCD HH.",
+      "weight": 1.0
+    },
+    {
+      "source": "Khấu hao đều",
+      "target": "Máy nông nghiệp/thiết bị",
+      "label": "Máy nông nghiệp/thiết bị được áp dụng phương pháp khấu hao đều với thời gian 15 ",
+      "weight": 1.0
+    },
+    {
+      "source": "Máy nông nghiệp/thiết bị",
+      "target": "Tài Sản Cố Định Hữu Hình (TSCD HH)",
+      "label": "Máy nông nghiệp/thiết bị là một thành phần của Tài Sản Cố Định Hữu Hình.",
+      "weight": 1.0
+    },
+    {
+      "source": "15 năm",
+      "target": "Máy nông nghiệp/thiết bị",
+      "label": "Máy nông nghiệp/thiết bị có thời gian khấu hao 15 năm.",
+      "weight": 1.0
+    },
+    {
+      "source": "Phương tiện vận tải",
+      "target": "Thời gian khấu hao (10 năm)",
+      "label": "Phương tiện vận tải có thời gian khấu hao là 10 năm.",
+      "weight": 1.0
+    },
+    {
+      "source": "Nguyên giá TSCD HH",
+      "target": "Phương tiện vận tải",
+      "label": "Phương tiện vận tải có nguyên giá là một phần của tổng nguyên giá TSCD HH.",
+      "weight": 1.0
+    },
+    {
+      "source": "Phương tiện vận tải",
+      "target": "Tài Sản Cố Định Hữu Hình (TSCD HH)",
+      "label": "Phương tiện vận tải là một thành phần của Tài Sản Cố Định Hữu Hình.",
+      "weight": 1.0
+    },
+    {
+      "source": "Khấu hao đều",
+      "target": "Phương tiện vận tải",
+      "label": "Phương tiện vận tải được áp dụng phương pháp khấu hao đều với thời gian 10 năm.",
+      "weight": 1.0
+    },
+    {
+      "source": "10 năm",
+      "target": "Phương tiện vận tải",
+      "label": "Phương tiện vận tải có thời gian khấu hao 10 năm.",
+      "weight": 1.0
+    },
+    {
+      "source": "Thiết bị quản lý",
+      "target": "Thời gian khấu hao (58 năm)",
+      "label": "Thiết bị quản lý có thời gian khấu hao là 58 năm.",
+      "weight": 1.0
+    },
+    {
+      "source": "Nguyên giá TSCD HH",
+      "target": "Thiết bị quản lý",
+      "label": "Thiết bị quản lý có nguyên giá là một phần của tổng nguyên giá TSCD HH.",
+      "weight": 1.0
+    },
+    {
+      "source": "Thiết bị quản lý",
+      "target": "Tài Sản Cố Định Hữu Hình (TSCD HH)",
+      "label": "Thiết bị quản lý là một thành phần của Tài Sản Cố Định Hữu Hình.",
+      "weight": 1.0
+    },
+    {
+      "source": "Khấu hao đều",
+      "target": "Thiết bị quản lý",
+      "label": "Thiết bị quản lý được áp dụng phương pháp khấu hao đều với thời gian 58 năm.",
+      "weight": 1.0
+    },
+    {
+      "source": "58 năm",
+      "target": "Thiết bị quản lý",
+      "label": "Thiết bị quản lý có thời gian khấu hao 58 năm.",
+      "weight": 1.0
+    },
+    {
+      "source": "Thời gian khấu hao (15 năm)",
+      "target": "Tổng thời gian khấu hao (625 năm)",
+      "label": "Tổng thời gian khấu hao bao gồm thời gian khấu hao của máy nông nghiệp/thiết bị.",
+      "weight": 1.0
+    },
+    {
+      "source": "Thời gian khấu hao (10 năm)",
+      "target": "Tổng thời gian khấu hao (625 năm)",
+      "label": "Tổng thời gian khấu hao bao gồm thời gian khấu hao của phương tiện vận tải.",
+      "weight": 1.0
+    },
+    {
+      "source": "Thời gian khấu hao (58 năm)",
+      "target": "Tổng thời gian khấu hao (625 năm)",
+      "label": "Tổng thời gian khấu hao bao gồm thời gian khấu hao của thiết bị quản lý.",
+      "weight": 1.0
+    },
+    {
+      "source": "Chi phí sản xuất kinh doanh",
+      "target": "Doanh nghiệp Hồng Kỳ",
+      "label": "Chi phí sản xuất kinh doanh là thành phần quan trọng trong báo cáo tài chính của",
+      "weight": 1.0
+    },
+    {
+      "source": "Ke toan truong",
+      "target": "NGUYEN THINGA",
+      "label": "Ke toan truong có liên quan đến cá nhân NGUYEN THINGA trong bối cảnh báo cáo tài",
+      "weight": 1.0
+    },
+    {
+      "source": "Ke toan truong",
+      "target": "Quy 12025.2016",
+      "label": "Ke toan truong liên quan đến thời kỳ tài chính Quy 12025.2016.",
+      "weight": 1.0
+    },
+    {
+      "source": "01/0rl2025",
+      "target": "Ke toan truong",
+      "label": "Ke toan truong có dữ liệu tài chính bắt đầu từ ngày 01/0rl2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "30/09/2025",
+      "target": "Ke toan truong",
+      "label": "Ke toan truong có dữ liệu tài chính kết thúc vào ngày 30/09/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "37 809 968 640",
+      "target": "Ke toan truong",
+      "label": "Chỉ số tài chính 37 809 968 640 thuộc phạm vi hoạt động kinh doanh của Ke toan t",
+      "weight": 1.0
+    },
+    {
+      "source": "111 415 423,224)",
+      "target": "Ke toan truong",
+      "label": "Chỉ số tài chính 111 415 423,224 thuộc phạm vi hoạt động kinh doanh của Ke toan ",
+      "weight": 1.0
+    },
+    {
+      "source": "3846420.7351",
+      "target": "Ke toan truong",
+      "label": "Chỉ số tài chính 3846420.7351 được tổng hợp trong báo cáo của Ke toan truong.",
+      "weight": 1.0
+    },
+    {
+      "source": "13 145 492.234",
+      "target": "Ke toan truong",
+      "label": "Chỉ số tài chính 13 145 492.234 được tổng hợp trong báo cáo của Ke toan truong.",
+      "weight": 1.0
+    },
+    {
+      "source": "13,759,240,450",
+      "target": "Ke toan truong",
+      "label": "Chỉ số tài chính 13,759,240,450 liên quan đến lưu chuyển tiền tệ từ hoạt động ki",
+      "weight": 1.0
+    },
+    {
+      "source": "4,129,093.414",
+      "target": "Ke toan truong",
+      "label": "Chỉ số tài chính 4,129,093.414 liên quan đến lưu chuyển tiền tệ từ hoạt động kin",
+      "weight": 1.0
+    },
+    {
+      "source": "383,675,822",
+      "target": "Ke toan truong",
+      "label": "Chỉ số tài chính 383,675,822 liên quan đến sử dụng vốn trong hoạt động đầu tư củ",
+      "weight": 1.0
+    },
+    {
+      "source": "3,449,906,880",
+      "target": "Ke toan truong",
+      "label": "Chỉ số tài chính 3,449,906,880 liên quan đến sử dụng vốn trong hoạt động đầu tư ",
+      "weight": 1.0
+    },
+    {
+      "source": "9,965 231",
+      "target": "Ke toan truong",
+      "label": "Chỉ số tài chính 9,965 231 liên quan đến thu nhập từ hoạt động đầu tư của Ke toa",
+      "weight": 1.0
+    },
+    {
+      "source": "1 556 711",
+      "target": "Ke toan truong",
+      "label": "Chỉ số tài chính 1 556 711 liên quan đến thu nhập từ hoạt động đầu tư của Ke toa",
+      "weight": 1.0
+    },
+    {
+      "source": "373,710,591",
+      "target": "Ke toan truong",
+      "label": "Chỉ số tài chính 373,710,591 liên quan đến lưu chuyển tiền tệ từ hoạt động đầu t",
+      "weight": 1.0
+    },
+    {
+      "source": "3,448,350.169",
+      "target": "Ke toan truong",
+      "label": "Chỉ số tài chính 3,448,350.169 liên quan đến lưu chuyển tiền tệ từ hoạt động đầu",
+      "weight": 1.0
+    },
+    {
+      "source": "3 932 093 002",
+      "target": "Ke toan truong",
+      "label": "Chỉ số tài chính 3 932 093 002 được tổng hợp trong báo cáo của Ke toan truong.",
+      "weight": 1.0
+    },
+    {
+      "source": "3 445 tO3,17l",
+      "target": "Ke toan truong",
+      "label": "Chỉ số tài chính 3 445 tO3,17l được tổng hợp trong báo cáo của Ke toan truong.",
+      "weight": 1.0
+    },
+    {
+      "source": "Baocao taichinh",
+      "target": "Ke toan truong",
+      "label": "Ke toan truong có vai trò quản lý và liên quan trực tiếp đến báo cáo tài chính.",
+      "weight": 1.0
+    },
+    {
+      "source": "Ke toan truong",
+      "target": "PPTT",
+      "label": "PPTT là một chỉ số tài chính được trình bày trong báo cáo của Ke toan truong.",
+      "weight": 1.0
+    },
+    {
+      "source": "Ke toan truong",
+      "target": "ovol/zozl ain",
+      "label": "Ngày ovol/zozl ain được ghi nhận trong dữ liệu tài chính của Ke toan truong.",
+      "weight": 1.0
+    },
+    {
+      "source": "Baocao taichinh",
+      "target": "DN",
+      "label": "DN là tổ chức chịu trách nhiệm thực hiện báo cáo tài chính.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công Ty Kirn Lla Viir",
+      "target": "Vốn Chủ Sở Hữu",
+      "label": "Công Ty Kirn Lla Viir có khoản mục Vốn Chủ Sở Hữu với giá trị 50.700.000.000.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công Ty Nsuldn Trr D?",
+      "target": "Vốn Chủ Sở Hữu",
+      "label": "Công Ty Nsuldn Trr D? có khoản mục Vốn Chủ Sở Hữu với giá trị 50.700.000.000.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công Ty Kirn Lla Viir",
+      "target": "Số Dư Đầu Kỳ",
+      "label": "Công Ty Kirn Lla Viir có Số Dư Đầu Kỳ là 2.609.812.412.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công Ty Nsuldn Trr D?",
+      "target": "Quy Định Lưu Trữ",
+      "label": "Công Ty Nsuldn Trr D? có Quy Định Lưu Trữ là 18.674.216.161.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công Ty Kirn Lla Viir",
+      "target": "Lợi Nhuận Giữ Lại",
+      "label": "Công Ty Kirn Lla Viir có Lợi Nhuận Giữ Lại là 8.903.162.917.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công Ty Nsuldn Trr D?",
+      "target": "Lợi Nhuận Giữ Lại",
+      "label": "Công Ty Nsuldn Trr D? có Lợi Nhuận Giữ Lại là 8.903.261.rr1.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công Ty Nsuldn Trr D?",
+      "target": "Lợi Nhuận",
+      "label": "Công Ty Nsuldn Trr D? có Lợi Nhuận là 2194.982.7A2.",
+      "weight": 1.0
+    },
+    {
+      "source": "30/09/2025",
+      "target": "50.700.000.000",
+      "label": "Số liệu 50.700.000.000 được ghi nhận vào ngày 30/09/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "2.609.812.412",
+      "target": "30/06/2025",
+      "label": "Số liệu 2.609.812.412 được ghi nhận vào ngày 30/06/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "18.674.216.161",
+      "target": "30/09/2025",
+      "label": "Số liệu 18.674.216.161 được ghi nhận vào ngày 30/09/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "30/06/2025",
+      "target": "8.903.162.917",
+      "label": "Số liệu 8.903.162.917 được ghi nhận vào ngày 30/06/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "30/09/2025",
+      "target": "39.507.000.000",
+      "label": "Số liệu 39.507.000.000 được ghi nhận vào ngày 30/09/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "30/09/2025",
+      "target": "385.354.368",
+      "label": "Giá trị 385.354.368 được ghi nhận tại thời điểm 30/09/2025 trong bảng so sánh.",
+      "weight": 1.0
+    },
+    {
+      "source": "30/09/2025",
+      "target": "4.160.000",
+      "label": "Giá trị 4.160.000 được ghi nhận tại thời điểm 30/09/2025 trong bảng so sánh.",
+      "weight": 1.0
+    },
+    {
+      "source": "30/09/2025",
+      "target": "8.000.000.000 VND",
+      "label": "Chỉ số tài chính 8.000.000.000 VND được ghi nhận vào ngày 30/09/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "30/09/2025",
+      "target": "Kì tài chính 2025-2026",
+      "label": "Kì tài chính 2025-2026 kết thúc vào ngày 30/09/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "30/09/2025",
+      "target": "Công ty",
+      "label": "Công ty có nghĩa vụ thanh toán vào ngày 30/09/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "30/06/2025",
+      "target": "5.07A.A00",
+      "label": "Số liệu 5.07A.A00 được ghi nhận vào ngày 30/06/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "Báo cáo tài chính",
+      "target": "Đà Nẵng",
+      "label": "Báo cáo tài chính được liên kết với thành phố Đà Nẵng, nơi diễn ra các hoạt động",
+      "weight": 1.0
+    },
+    {
+      "source": "Báo cáo tài chính",
+      "target": "Tài sản cố định vô hình",
+      "label": "Báo cáo tài chính ghi nhận thông tin về tài sản cố định vô hình tại khu dân cư I",
+      "weight": 1.0
+    },
+    {
+      "source": "0/09/2025",
+      "target": "Báo cáo tài chính",
+      "label": "Báo cáo tài chính ghi nhận các khoản đầu tư vào tài sản cố định vô hình vào ngày",
+      "weight": 1.0
+    },
+    {
+      "source": "635.080.000",
+      "target": "Báo cáo tài chính",
+      "label": "Con số 635.080.000 là một chỉ số quan trọng trong báo cáo tài chính.",
+      "weight": 1.0
+    },
+    {
+      "source": "1.958.194.286",
+      "target": "Báo cáo tài chính",
+      "label": "Giá trị 1.958.194.286 là một phần của bảng tổng hợp tài chính.",
+      "weight": 1.0
+    },
+    {
+      "source": "-1.180.000.000",
+      "target": "Báo cáo tài chính",
+      "label": "Giá trị âm -1.180.000.000 phản ánh biến động trong báo cáo tài chính.",
+      "weight": 1.0
+    },
+    {
+      "source": "1.2612i2.000",
+      "target": "Báo cáo tài chính",
+      "label": "Con số 1.2612i2.000 là một phần của bảng tổng hợp tài chính.",
+      "weight": 1.0
+    },
+    {
+      "source": "295.673.tr1,125",
+      "target": "Báo cáo tài chính",
+      "label": "Giá trị 295.673.tr1,125 được ghi nhận trong báo cáo tài chính.",
+      "weight": 1.0
+    },
+    {
+      "source": "60,151.8r t.401",
+      "target": "Báo cáo tài chính",
+      "label": "Con số 60,151.8r t.401 phản ánh biến động trong báo cáo.",
+      "weight": 1.0
+    },
+    {
+      "source": "162.031.030.36s",
+      "target": "Báo cáo tài chính",
+      "label": "Chỉ số 162.031.030.36s là một phần của bảng tài chính.",
+      "weight": 1.0
+    },
+    {
+      "source": "529.86?.0s?",
+      "target": "Báo cáo tài chính",
+      "label": "Giá trị 529.86?.0s? được ghi nhận trong báo cáo.",
+      "weight": 1.0
+    },
+    {
+      "source": "21+,{i10.576,7J'",
+      "target": "Báo cáo tài chính",
+      "label": "Con số 21+,{i10.576,7J' phản ánh biến động tài chính.",
+      "weight": 1.0
+    },
+    {
+      "source": "165.5.t5.034,615",
+      "target": "Báo cáo tài chính",
+      "label": "Chỉ số 165.5.t5.034,615 là một phần của bảng tổng hợp.",
+      "weight": 1.0
+    },
+    {
+      "source": "1.763.818,31.t",
+      "target": "Báo cáo tài chính",
+      "label": "Giá trị 1.763.818,31.t được ghi nhận trong báo cáo.",
+      "weight": 1.0
+    },
+    {
+      "source": "Báo cáo tài chính",
+      "target": "s38.374.ss3",
+      "label": "Chỉ số s38.374.ss3 là một phần của bảng tài chính.",
+      "weight": 1.0
+    },
+    {
+      "source": "224,114,603,66,t",
+      "target": "Báo cáo tài chính",
+      "label": "Giá trị 224,114,603,66,t được ghi nhận trong báo cáo.",
+      "weight": 1.0
+    },
+    {
+      "source": "50.238.9r4,09E",
+      "target": "Báo cáo tài chính",
+      "label": "Chỉ số 50.238.9r4,09E là một phần của bảng tổng hợp.",
+      "weight": 1.0
+    },
+    {
+      "source": "1J2,178,90E.?60",
+      "target": "Báo cáo tài chính",
+      "label": "Giá trị 1J2,178,90E.?60 được ghi nhận trong báo cáo.",
+      "weight": 1.0
+    },
+    {
+      "source": "5rr,rE3.65t",
+      "target": "Báo cáo tài chính",
+      "label": "Chỉ số 5rr,rE3.65t là một phần của bảng tài chính.",
+      "weight": 1.0
+    },
+    {
+      "source": "139.583,0r8",
+      "target": "Báo cáo tài chính",
+      "label": "Giá trị 139.583,0r8 được ghi nhận trong báo cáo.",
+      "weight": 1.0
+    },
+    {
+      "source": "771.466.121",
+      "target": "Báo cáo tài chính",
+      "label": "Chỉ số 771.466.121 là một phần của bảng tổng hợp.",
+      "weight": 1.0
+    },
+    {
+      "source": "1.51,1.001.2i0",
+      "target": "Báo cáo tài chính",
+      "label": "Giá trị 1.51,1.001.2i0 được ghi nhận trong báo cáo.",
+      "weight": 1.0
+    },
+    {
+      "source": "Báo cáo tài chính",
+      "target": "Công ty",
+      "label": "Công ty phát hành Báo cáo tài chính cho giai đoạn 25-2A26.",
+      "weight": 1.0
+    },
+    {
+      "source": "Báo cáo tài chính",
+      "target": "Quy định số 200/2014/TT-BTC",
+      "label": "Báo cáo tài chính được lập theo quy định số 200/2014/TT-BTC.",
+      "weight": 2.0
+    },
+    {
+      "source": "Báo cáo tài chính",
+      "target": "Giai đoạn 25-2A26",
+      "label": "Báo cáo tài chính diễn ra trong giai đoạn 25-2A26.",
+      "weight": 1.0
+    },
+    {
+      "source": "Báo cáo tài chính",
+      "target": "Chủ tịch Hội đồng quản trị",
+      "label": "Chủ tịch Hội đồng quản trị đảm bảo báo cáo tài chính đáp ứng các yêu cầu pháp lý",
+      "weight": 1.0
+    },
+    {
+      "source": "Báo cáo tài chính",
+      "target": "Bộ Tài chính Việt Nam",
+      "label": "Bộ Tài chính Việt Nam là cơ quan quản lý việc lập và trình bày báo cáo tài chính",
+      "weight": 1.0
+    },
+    {
+      "source": "Báo cáo tài chính",
+      "target": "Luật số 24/860",
+      "label": "Báo cáo tài chính phải tuân thủ các quy định của Luật số 24/860.",
+      "weight": 1.0
+    },
+    {
+      "source": "Báo cáo tài chính",
+      "target": "Tài sản",
+      "label": "Tài sản là thành phần được ghi nhận trong báo cáo tài chính.",
+      "weight": 1.0
+    },
+    {
+      "source": "Báo cáo tài chính",
+      "target": "Phải thu khách hàng",
+      "label": "Phải thu khách hàng được phân loại và trình bày trong báo cáo tài chính.",
+      "weight": 1.0
+    },
+    {
+      "source": "Báo cáo tài chính",
+      "target": "Phải thu vay",
+      "label": "Phải thu vay là khoản phải thu được ghi nhận và phân loại trong báo cáo tài chín",
+      "weight": 1.0
+    },
+    {
+      "source": "Báo cáo tài chính",
+      "target": "Phải thu khác",
+      "label": "Phải thu khác được liệt kê và phân loại trong báo cáo tài chính.",
+      "weight": 1.0
+    },
+    {
+      "source": "Báo cáo tài chính",
+      "target": "Phải thu dài hạn",
+      "label": "Phải thu dài hạn là khoản phải thu được ghi nhận trong báo cáo tài chính với kỳ ",
+      "weight": 1.0
+    },
+    {
+      "source": "Báo cáo tài chính",
+      "target": "Phân loại các khoản phải thu",
+      "label": "Phân loại các khoản phải thu là một phần trong việc lập báo cáo tài chính theo q",
+      "weight": 1.0
+    },
+    {
+      "source": "Báo cáo tài chính",
+      "target": "Nguyễn Thị Nga",
+      "label": "Nguyễn Thị Nga có liên quan đến việc chuẩn bị hoặc kiểm toán báo cáo tài chính.",
+      "weight": 1.0
+    },
+    {
+      "source": "30/06/2025",
+      "target": "Báo cáo tài chính",
+      "label": "Báo cáo tài chính được kiểm toán vào ngày 30/06/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "Báo cáo tài chính",
+      "target": "Công ty cổ phần Ôi Jong Kon Tum",
+      "label": "Công ty cổ phần Ôi Jong Kon Tum là tổ chức liên quan đến báo cáo tài chính được ",
+      "weight": 1.0
+    },
+    {
+      "source": "Báo cáo tài chính",
+      "target": "Kế toán lưu động",
+      "label": "Kế toán lưu động là một phần của Báo cáo tài chính và được kiểm toán.",
+      "weight": 1.0
+    },
+    {
+      "source": "Báo cáo tài chính",
+      "target": "Doanh nghiệp Hồng Kỳ",
+      "label": "Thông tin về nợ và chi phí được trình bày trong báo cáo tài chính của doanh nghi",
+      "weight": 1.0
+    },
+    {
+      "source": "Khu dân cư Itoa Thượng",
+      "target": "Tài sản cố định vô hình",
+      "label": "Tài sản cố định vô hình được đầu tư vào khu dân cư Itoa Thượng.",
+      "weight": 1.0
+    },
+    {
+      "source": "635.080.000",
+      "target": "ehan rndm VT'D",
+      "label": "Cột \"ehan rndm VT'D\" có giá trị cao nhất là 635.080.000.",
+      "weight": 1.0
+    },
+    {
+      "source": "1.958.194.286",
+      "target": "ConC",
+      "label": "Cột \"ConC\" chứa giá trị 1.958.194.286.",
+      "weight": 1.0
+    },
+    {
+      "source": "-1.180.000.000",
+      "target": "QurC si.",
+      "label": "Cột \"QurC si.\" ghi nhận giá trị âm -1.180.000.000.",
+      "weight": 1.0
+    },
+    {
+      "source": "-1.180.000.000",
+      "target": "Tlisin",
+      "label": "Cột \"Tlisin\" ghi nhận giá trị âm -1.180.000.000.",
+      "weight": 1.0
+    },
+    {
+      "source": "Cong ty Co phan Duong Kon Tum",
+      "target": "Quyet dinh so 1459/QD-BNN-DMDN ngay 12/05/2008 cua Bo Nong Nhan va Phat trien Nong thon",
+      "label": "Công ty Cổ phần Duong Kon Tum được thành lập dựa trên quyết định số 1459/QD-BNN-",
+      "weight": 1.0
+    },
+    {
+      "source": "Cong ty Co phan Duong Kon Tum",
+      "target": "Kon Tum",
+      "label": "Công ty Cổ phần Duong Kon Tum hoạt động tại tỉnh Kon Tum.",
+      "weight": 1.0
+    },
+    {
+      "source": "Cong ty Co phan Duong Kon Tum",
+      "target": "Quang Ngai",
+      "label": "Công ty Cổ phần Duong Kon Tum có hoạt động liên quan đến tỉnh Quảng Ngãi.",
+      "weight": 1.0
+    },
+    {
+      "source": "01/01/2025-30/09/2025",
+      "target": "Cong ty Co phan Duong Kon Tum",
+      "label": "Dòng tiền kinh doanh và đầu tư của Công ty Cổ phần Duong Kon Tum được phân tích ",
+      "weight": 1.0
+    },
+    {
+      "source": "Cong ty Co phan Duong Kon Tum",
+      "target": "ovo1/zozl",
+      "label": "Dòng tiền kinh doanh và đầu tư của Công ty Cổ phần Duong Kon Tum được phân tích ",
+      "weight": 1.0
+    },
+    {
+      "source": "37.809 tỷ",
+      "target": "Cong ty Co phan Duong Kon Tum",
+      "label": "Công ty Cổ phần Duong Kon Tum ghi nhận dòng tiền thu vào 37.809 tỷ trong báo cáo",
+      "weight": 1.0
+    },
+    {
+      "source": "-111.415 tỷ",
+      "target": "Cong ty Co phan Duong Kon Tum",
+      "label": "Công ty Cổ phần Duong Kon Tum ghi nhận dòng tiền chi ra -111.415 tỷ trong báo cá",
+      "weight": 1.0
+    },
+    {
+      "source": "-5.949 tỷ",
+      "target": "Cong ty Co phan Duong Kon Tum",
+      "label": "Công ty Cổ phần Duong Kon Tum có dòng tiền đầu tư âm -5.949 tỷ.",
+      "weight": 1.0
+    },
+    {
+      "source": "-3.828 tỷ",
+      "target": "Cong ty Co phan Duong Kon Tum",
+      "label": "Công ty Cổ phần Duong Kon Tum ghi nhận mức chênh lệch tiêu cực -3.828 tỷ trong d",
+      "weight": 1.0
+    },
+    {
+      "source": "Cong ty Co phan Duong Kon Tum",
+      "target": "Giay chung dang ki doanh nghiep so 380300011i SiL) 27110/2006",
+      "label": "Công ty Cổ phần Duong Kon Tum sử dụng giấy chứng đăng ký doanh nghiệp số 3803000",
+      "weight": 1.0
+    },
+    {
+      "source": "Cong ty Co phan Duong Kon Tum",
+      "target": "So deni ki moi 6100228101",
+      "label": "Công ty Cổ phần Duong Kon Tum được cấp số đăng ký mới 6100228101 thay thế cho gi",
+      "weight": 1.0
+    },
+    {
+      "source": "2.19 tỷ VND",
+      "target": "Công ty",
+      "label": "Công ty đạt lợi nhuận sau thuế 2.19 tỷ VND trong giai đoạn 01/01/2021 - 30/09/20",
+      "weight": 1.0
+    },
+    {
+      "source": "4.47 tỷ VND",
+      "target": "Công ty",
+      "label": "Công ty đạt lợi nhuận sau thuế 4.47 tỷ VND trong giai đoạn 01/07/2024 - 30/09/20",
+      "weight": 1.0
+    },
+    {
+      "source": "0 VND",
+      "target": "Công ty",
+      "label": "Chi phí thu hồi nợ của Công ty giảm xuống 0 VND trong giai đoạn 01/07/2024 - 30/",
+      "weight": 1.0
+    },
+    {
+      "source": "9.15 tỷ VND",
+      "target": "Công ty",
+      "label": "Công ty có chi phí lao động cho Hội đồng/Ban quản lý là 9.15 tỷ VND.",
+      "weight": 1.0
+    },
+    {
+      "source": "4.3 tỷ VND",
+      "target": "Công ty",
+      "label": "Công ty có chi phí mua nguyên vật liệu là 4.3 tỷ VND.",
+      "weight": 1.0
+    },
+    {
+      "source": "01/01/2021 - 30/09/2025",
+      "target": "Công ty",
+      "label": "Dữ liệu tài chính của Công ty được phân tích trong giai đoạn 01/01/2021 - 30/09/",
+      "weight": 1.0
+    },
+    {
+      "source": "01/07/2024 - 30/09/2025",
+      "target": "Công ty",
+      "label": "Dữ liệu tài chính của Công ty được phân tích trong giai đoạn 01/07/2024 - 30/09/",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty",
+      "target": "Rủi ro tài chính",
+      "label": "Công ty quản lý rủi ro tài chính để đảm bảo hoạt động kinh doanh ổn định.",
+      "weight": 1.0
+    },
+    {
+      "source": "Ban Giám đốc",
+      "target": "Công ty",
+      "label": "Ban Giám đốc là bộ phận quản lý trực thuộc Công ty, chịu trách nhiệm giám sát ho",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty",
+      "target": "Hội đồng/Ban quản lý",
+      "label": "Công ty có chi phí lao động cho Hội đồng/Ban quản lý là 9.15 tỷ VND.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty",
+      "target": "Nguyên vật liệu",
+      "label": "Công ty chi 4.3 tỷ VND để mua nguyên vật liệu phục vụ sản xuất kinh doanh.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty",
+      "target": "Rủi ro thị trường",
+      "label": "Công ty quản lý rủi ro thị trường liên quan đến biến động lãi suất và giá hàng h",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty",
+      "target": "Rủi ro lãi suất",
+      "label": "Công ty quản lý rủi ro lãi suất trong hoạt động kinh doanh.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty",
+      "target": "Rủi ro giá hàng hóa, nguyên liệu",
+      "label": "Công ty quản lý rủi ro giá hàng hóa, nguyên liệu ảnh hưởng đến sản xuất kinh doa",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty",
+      "target": "Rủi ro thanh khoản",
+      "label": "Công ty quản lý rủi ro thanh khoản để duy trì nguồn vốn và khả năng thanh toán.",
+      "weight": 1.0
+    },
+    {
+      "source": "50.700.000.000 đồng",
+      "target": "Công ty",
+      "label": "Công ty có vốn điều lệ đăng ký là 50.700.000.000 đồng.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty",
+      "target": "Ngày 18/11/2015",
+      "label": "Công ty thực hiện điều chỉnh lần đầu tiên vào ngày 18/11/2015.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty",
+      "target": "Hà Nội",
+      "label": "Công ty tiến hành giao dịch tại Hà Nội.",
+      "weight": 1.0
+    },
+    {
+      "source": "Bao bì",
+      "target": "Công ty",
+      "label": "Công ty sản xuất và kinh doanh sản phẩm Bao bì.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty",
+      "target": "Máy móc",
+      "label": "Công ty liên quan đến sản xuất và cung cấp Máy móc.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty",
+      "target": "Thiết bị gia công",
+      "label": "Công ty sử dụng và cung cấp Thiết bị gia công.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty",
+      "target": "Liên phẩm cốt",
+      "label": "Công ty sản xuất Liên phẩm cốt từ hoạt động kinh doanh.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty",
+      "target": "Đồng Việt Nam (VND)",
+      "label": "Công ty sử dụng Đồng Việt Nam (VND) làm đơn vị tiền tệ trong báo cáo tài chính.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty",
+      "target": "Thông tư 45/2013/TT-BTC ngày 25/4/2013 của Bộ Tài chính",
+      "label": "Công ty thực hiện các quy định về tài sản cố định theo Thông tư 45/2013/TT-BTC.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty",
+      "target": "Thông tư 117/2016/TT-BTC ngày 13/10/2016",
+      "label": "Công ty áp dụng Thông tư 117/2016/TT-BTC để quản lý tài sản cố định.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty",
+      "target": "Thông tư 28/2017/TT-BTC ngày 12/4/2017",
+      "label": "Công ty tuân thủ Thông tư 28/2017/TT-BTC trong việc quản lý tài sản cố định.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty",
+      "target": "TSCE YH",
+      "label": "Công ty thực hiện quy trình TSCE YH để phân loại tài sản cố định theo nguyên giá",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty",
+      "target": "TSCE VH",
+      "label": "Công ty thực hiện quy trình TSCE VH để phân loại tài sản cố định theo nguyên giá",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty",
+      "target": "Nguyên giá TSCD",
+      "label": "Công ty xác định và quản lý nguyên giá TSCD để áp dụng phương pháp khấu hao.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty",
+      "target": "Nguyên giá quyền sử dụng đất",
+      "label": "Công ty xác định và quản lý nguyên giá quyền sử dụng đất để tính khấu hao.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty",
+      "target": "Đường và các sản phẩm từ mía",
+      "label": "Công ty kinh doanh đường và các sản phẩm từ mía.",
+      "weight": 1.0
+    },
+    {
+      "source": "8%",
+      "target": "Công ty",
+      "label": "Công ty có nghĩa vụ tài chính với tỷ lệ 8%.",
+      "weight": 1.0
+    },
+    {
+      "source": "5%",
+      "target": "Công ty",
+      "label": "Công ty có nghĩa vụ tài chính với tỷ lệ 5%.",
+      "weight": 1.0
+    },
+    {
+      "source": "30/06/2025",
+      "target": "Công ty",
+      "label": "Công ty có nghĩa vụ thanh toán vào ngày 30/06/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "1.081.028.912",
+      "target": "Công ty",
+      "label": "Công ty thanh toán số tiền 1.081.028.912.",
+      "weight": 1.0
+    },
+    {
+      "source": "66.488.000",
+      "target": "Công ty",
+      "label": "Công ty thanh toán số tiền 66.488.000.",
+      "weight": 1.0
+    },
+    {
+      "source": "12.127,213",
+      "target": "Công ty",
+      "label": "Công ty có chi phí 12.127,213.",
+      "weight": 1.0
+    },
+    {
+      "source": "72.727.273",
+      "target": "Công ty",
+      "label": "Công ty có chi phí 72.727.273.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty",
+      "target": "Phiri t.d honc CNV",
+      "label": "Công ty có khoản mục tài chính \"Phiri t.d honc CNV\" với giá trị 1.081.028.912.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty",
+      "target": "Phri 1,i Lhn lao HDQ'I, Ban ki6n rodr",
+      "label": "Công ty có khoản mục tài chính \"Phri 1,i Lhn lao HDQ'I, Ban ki6n rodr\" với giá t",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty",
+      "target": "Doanh thu chưa thực hiện",
+      "label": "Công ty có doanh thu chưa thực hiện với giá trị 12.127,213.",
+      "weight": 1.0
+    },
+    {
+      "source": "Chi phí",
+      "target": "Công ty",
+      "label": "Công ty có chi phí với giá trị 72.727.273.",
+      "weight": 1.0
+    },
+    {
+      "source": "Rủi ro thị trường",
+      "target": "Rủi ro tài chính",
+      "label": "Rủi ro thị trường là một thành phần của rủi ro tài chính.",
+      "weight": 1.0
+    },
+    {
+      "source": "Rủi ro lãi suất",
+      "target": "Rủi ro tài chính",
+      "label": "Rủi ro lãi suất là một thành phần của rủi ro tài chính.",
+      "weight": 1.0
+    },
+    {
+      "source": "Rủi ro giá hàng hóa, nguyên liệu",
+      "target": "Rủi ro tài chính",
+      "label": "Rủi ro giá hàng hóa, nguyên liệu là một thành phần của rủi ro tài chính.",
+      "weight": 1.0
+    },
+    {
+      "source": "Rủi ro thanh khoản",
+      "target": "Rủi ro tài chính",
+      "label": "Rủi ro thanh khoản là một thành phần của rủi ro tài chính.",
+      "weight": 1.0
+    },
+    {
+      "source": "Phân loại các khoản phải thu",
+      "target": "Rủi ro tài chính",
+      "label": "Rủi ro tài chính là một tiêu chí để phân loại các khoản phải thu trong báo cáo t",
+      "weight": 1.0
+    },
+    {
+      "source": "7.021.100.000",
+      "target": "Công ty CP Edu tư & Phát triển nghề nghiệp Tín Nghĩa",
+      "label": "Công ty CP Edu tư & Phát triển nghề nghiệp Tín Nghĩa có số liệu tài chính 7.021.",
+      "weight": 1.0
+    },
+    {
+      "source": "12.024.000.000",
+      "target": "Công ty CP Edu tư & Phát triển nghề nghiệp Tín Nghĩa",
+      "label": "Công ty CP Edu tư & Phát triển nghề nghiệp Tín Nghĩa có số liệu tài chính 12.024",
+      "weight": 1.0
+    },
+    {
+      "source": "4?.441.585",
+      "target": "Công ty TNHH Kim Hiền Việt",
+      "label": "Công ty TNHH Kim Hiền Việt có số liệu tài chính 4?.441.585 tại 30/09/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": ":0.146.6EE",
+      "target": "Công ty TNHH Kim Hiền Việt",
+      "label": "Công ty TNHH Kim Hiền Việt có số liệu tài chính :0.146.6EE tại 30/06/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "535.910.000",
+      "target": "Công ty NHH MTV Kha Hòa Minh",
+      "label": "Công ty NHH MTV Kha Hòa Minh có số liệu tài chính 535.910.000 tại 30/06/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "316.727.441",
+      "target": "Công ty TNHH TM DV Ngô Gia",
+      "label": "Công ty TNHH TM DV Ngô Gia có số liệu tài chính 316.727.441 tại 30/09/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "871.155.007",
+      "target": "Công ty TNHH TM DV Ngô Gia",
+      "label": "Công ty TNHH TM DV Ngô Gia có số liệu tài chính 871.155.007 tại 30/06/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "1.916.816.190",
+      "target": "Công ty NHH MTV Phúc An Sĩ Gia",
+      "label": "Công ty NHH MTV Phúc An Sĩ Gia có số liệu tài chính 1.916.816.190 tại 30/06/2025",
+      "weight": 1.0
+    },
+    {
+      "source": "12.017.900.000",
+      "target": "Công ty CP Tổng công ty Sông Đà",
+      "label": "Công ty CP Tổng công ty Sông Đà có số liệu tài chính 12.017.900.000 tại 30/09/20",
+      "weight": 1.0
+    },
+    {
+      "source": "13.0t7.900.000",
+      "target": "Công ty CP Tổng công ty Sông Đà",
+      "label": "Công ty CP Tổng công ty Sông Đà có số liệu tài chính 13.0t7.900.000 tại 30/06/20",
+      "weight": 1.0
+    },
+    {
+      "source": "889.318.110",
+      "target": "Shrijec Process Enquirerings works LTD",
+      "label": "Shrijec Process Enquirerings works LTD có số liệu tài chính 889.318.110 tại 30/0",
+      "weight": 1.0
+    },
+    {
+      "source": "862.177.419",
+      "target": "Shrijec Process Enquirerings works LTD",
+      "label": "Shrijec Process Enquirerings works LTD có số liệu tài chính 862.177.419 tại 30/0",
+      "weight": 1.0
+    },
+    {
+      "source": "1.129.254.686",
+      "target": "Các doanh lượng khác",
+      "label": "Các doanh lượng khác có số liệu tài chính 1.129.254.686 tại 30/09/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "1.791.117.501",
+      "target": "Các doanh lượng khác",
+      "label": "Các doanh lượng khác có số liệu tài chính 1.791.117.501 tại 30/06/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "7.021.100.000",
+      "target": "Công ty CP Edu tư và Phát triển nông nghiệp Tiên Nông",
+      "label": "Công ty CP Edu tư và Phát triển nông nghiệp Tiên Nông có giá trị 7.021.100.000.",
+      "weight": 1.0
+    },
+    {
+      "source": "21.181.111.015",
+      "target": "C0NC",
+      "label": "C0NC có số liệu tài chính 21.181.111.015 tại 30/09/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "1.155.580.100",
+      "target": "Thuế thu nhập doanh nghiệp",
+      "label": "Thuế thu nhập doanh nghiệp có số dư cuối kỳ 1.155.580.100.",
+      "weight": 1.0
+    },
+    {
+      "source": "15.291.800",
+      "target": "Thuế thu nhập cá nhân",
+      "label": "Thuế thu nhập cá nhân có số dư cuối kỳ 15.291.800.",
+      "weight": 1.0
+    },
+    {
+      "source": "497.150.100",
+      "target": "Thuế nhập khẩu",
+      "label": "Thuế nhập khẩu có số dư cuối kỳ 497.150.100.",
+      "weight": 1.0
+    },
+    {
+      "source": "5.103.151.783",
+      "target": "C0NC",
+      "label": "C0NC có số liệu tài chính 5.103.151.783 tại 15.410.",
+      "weight": 1.0
+    },
+    {
+      "source": "5.601.669",
+      "target": "C0NC",
+      "label": "C0NC có số liệu tài chính 5.601.669 tại 15.410.",
+      "weight": 1.0
+    },
+    {
+      "source": "15.410",
+      "target": "C0NC",
+      "label": "C0NC có số liệu tài chính liên quan đến mốc thời gian 15.410.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty Cổ phần Du lịch Kon Tum",
+      "target": "Thông tư số 96/2020/TT-BTC ngày 16 tháng 11 năm 2020",
+      "label": "Công ty Cổ phần Du lịch Kon Tum tuân thủ quy định công bố thông tin theo Thông t",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty Cổ phần Du lịch Kon Tum",
+      "target": "Sở Giao dịch Chứng khoán Hà Nội (HNX)",
+      "label": "Công ty Cổ phần Du lịch Kon Tum nộp báo cáo tài chính lên Sở Giao dịch Chứng kho",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty Cổ phần Du lịch Kon Tum",
+      "target": "Uỷ ban Chứng khoán Nhà nước (SSC)",
+      "label": "Công ty Cổ phần Du lịch Kon Tum nộp báo cáo tài chính lên Uỷ ban Chứng khoán Nhà",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty Cổ phần Du lịch Kon Tum",
+      "target": "Quý I niên độ 2024-2025",
+      "label": "Công ty Cổ phần Du lịch Kon Tum công bố lợi nhuận sau thuế 1.166.599.148 trong Q",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty Cổ phần Du lịch Kon Tum",
+      "target": "Quý I niên độ 2025-2026",
+      "label": "Công ty Cổ phần Du lịch Kon Tum công bố lợi nhuận sau thuế 2.492.452.702 trong Q",
+      "weight": 1.0
+    },
+    {
+      "source": "Báo cáo tài chính (BCTC) được kiểm toán năm 2024",
+      "target": "Công ty Cổ phần Du lịch Kon Tum",
+      "label": "Công ty Cổ phần Du lịch Kon Tum công bố Báo cáo tài chính được kiểm toán năm 202",
+      "weight": 1.0
+    },
+    {
+      "source": "01/07/2024 đến 30/09/2024",
+      "target": "Quý I niên độ 2024-2025",
+      "label": "Quý I niên độ 2024-2025 diễn ra từ 01/07/2024 đến 30/09/2024.",
+      "weight": 1.0
+    },
+    {
+      "source": "Quý I niên độ 2024-2025",
+      "target": "Quý I niên độ 2025-2026",
+      "label": "Lợi nhuận sau thuế của Công ty Cổ phần Du lịch Kon Tum tăng 1.974.516.716% từ Qu",
+      "weight": 1.0
+    },
+    {
+      "source": "01/07/2025 đến 30/09/2025",
+      "target": "Quý I niên độ 2025-2026",
+      "label": "Quý I niên độ 2025-2026 diễn ra từ 01/07/2025 đến 30/09/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "Giá điện tăng",
+      "target": "Quý I niên độ 2025-2026",
+      "label": "Giá điện tăng trong Quý I niên độ 2025-2026 là nguyên nhân chính gây giảm lợi nh",
+      "weight": 1.0
+    },
+    {
+      "source": "1.166.599.148",
+      "target": "1.974.516.716",
+      "label": "Tỷ lệ tăng trưởng lợi nhuận sau thuế 1.974.516.716% được tính toán dựa trên lợi ",
+      "weight": 1.0
+    },
+    {
+      "source": "1.974.516.716",
+      "target": "2.492.452.702",
+      "label": "Tỷ lệ tăng trưởng lợi nhuận sau thuế 1.974.516.716% dẫn đến lợi nhuận sau thuế 2",
+      "weight": 1.0
+    },
+    {
+      "source": "Ngày 22/12/2014",
+      "target": "Quy định số 200/2014/TT-BTC",
+      "label": "Quy định số 200/2014/TT-BTC được ban hành vào ngày 22/12/2014.",
+      "weight": 1.0
+    },
+    {
+      "source": "30/06/2025",
+      "target": "363.33E.312",
+      "label": "Giá trị 363.33E.312 được ghi nhận tại thời điểm 30/06/2025 trong bảng so sánh.",
+      "weight": 1.0
+    },
+    {
+      "source": "17.120.000",
+      "target": "30/06/2025",
+      "label": "Giá trị 17.120.000 được ghi nhận tại thời điểm 30/06/2025 trong bảng so sánh.",
+      "weight": 1.0
+    },
+    {
+      "source": "30/06/2025",
+      "target": "Công ty CP Edu tư và Phát triển nông nghiệp Tiên Nông",
+      "label": "Ngày 30/06/2025 là mốc thời gian cho Công ty CP Edu tư và Phát triển nông nghiệp",
+      "weight": 1.0
+    },
+    {
+      "source": "30/06/2025",
+      "target": "Công ty TNHH Kim Huy Việt",
+      "label": "Ngày 30/06/2025 là mốc thời gian cho Công ty TNHH Kim Huy Việt.",
+      "weight": 1.0
+    },
+    {
+      "source": "30/06/2025",
+      "target": "Doanh thu bán hàng",
+      "label": "Doanh thu bán hàng được ghi nhận vào ngày 30/06/2025 như một chỉ số tài chính.<S",
+      "weight": 2.0
+    },
+    {
+      "source": "30/06/2025",
+      "target": "Doanh thu phân bò",
+      "label": "Doanh thu phân bò được ghi nhận vào ngày 30/06/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "30/06/2025",
+      "target": "59.198.078.567",
+      "label": "Tổng doanh thu bán hàng 59.198.078.567 được ghi nhận vào ngày 30/06/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "10.559.000.000 VND",
+      "target": "30/06/2025",
+      "label": "Chỉ số tài chính 10.559.000.000 VND được ghi nhận vào ngày 30/06/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "30/06/2025",
+      "target": "Giá trị giải ngân",
+      "label": "Giá trị giải ngân cho giai đoạn kết thúc ngày 30/06/2025 đạt 45,925 tỷ VND.",
+      "weight": 1.0
+    },
+    {
+      "source": "30/06/2025",
+      "target": "Lợi nhuận gộp",
+      "label": "Lợi nhuận gộp tại thời điểm 30/06/2025 là 2,119 tỷ VND.",
+      "weight": 1.0
+    },
+    {
+      "source": "30/06/2025",
+      "target": "Chi phí lao động",
+      "label": "Chi phí lao động cho giai đoạn kết thúc ngày 30/06/2025 là 252,636,497.",
+      "weight": 1.0
+    },
+    {
+      "source": "30/06/2025",
+      "target": "Chi phí khấu hao TSCĐ",
+      "label": "Chi phí khấu hao TSCĐ tại thời điểm 30/06/2025 là 26,160,546.",
+      "weight": 1.0
+    },
+    {
+      "source": "30/06/2025",
+      "target": "Chi phí dịch vụ mua ngoài",
+      "label": "Chi phí dịch vụ mua ngoài cho giai đoạn kết thúc ngày 30/06/2025 là 99,818,121.",
+      "weight": 1.0
+    },
+    {
+      "source": "30/06/2025",
+      "target": "Thu nhập khác",
+      "label": "Thu nhập khác tại thời điểm 30/06/2025 ghi nhận giá trị 0.",
+      "weight": 1.0
+    },
+    {
+      "source": "30/06/2025",
+      "target": "Mệnh giá cổ phiếu",
+      "label": "Mệnh giá cổ phiếu được xác định ở mức 10.000 VND tại thời điểm 30/06/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "30/06/2025",
+      "target": "Chi phí bảo trì, sửa chữa, bao bì",
+      "label": "Chi phí bảo trì, sửa chữa, bao bì tại 30/06/2025 là 633.815.",
+      "weight": 1.0
+    },
+    {
+      "source": "30/06/2025",
+      "target": "Chi phí dụng cụ, đi lại",
+      "label": "Chi phí dụng cụ, đi lại tại 30/06/2025 là 3.400.000.",
+      "weight": 1.0
+    },
+    {
+      "source": "30/06/2025",
+      "target": "Chi phí đào tạo, văn phòng phẩm, phương pháp",
+      "label": "Chi phí đào tạo, văn phòng phẩm, phương pháp tại 30/06/2025 là 14.812.641.",
+      "weight": 1.0
+    },
+    {
+      "source": "30/06/2025",
+      "target": "Chi phí khác",
+      "label": "Chi phí khác tại 30/06/2025 là 144.480.387.",
+      "weight": 1.0
+    },
+    {
+      "source": "30/06/2025",
+      "target": "Chi phí khấu hao TSCĐ (quản lý doanh nghiệp)",
+      "label": "Chi phí khấu hao TSCĐ trong quản lý doanh nghiệp tại 30/06/2025 là 122.532.177.",
+      "weight": 1.0
+    },
+    {
+      "source": "30/06/2025",
+      "target": "450.000 000",
+      "label": "Giá trị 450.000 000 được ghi nhận vào ngày 30/06/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "2 000 000 000",
+      "target": "30/06/2025",
+      "label": "Giá trị 2 000 000 000 được ghi nhận vào ngày 30/06/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "30/06/2025",
+      "target": "Công ty CP XD GT Thrly lgiKCn Giang",
+      "label": "Giá trị 450.000 000 của Công ty CP XD GT Thrly lgiKCn Giang được ghi nhận vào ng",
+      "weight": 1.0
+    },
+    {
+      "source": "30/06/2025",
+      "target": "4.223.700.197",
+      "label": "Ngày 30/06/2025 là ngày ghi nhận chỉ số tài chính 4.223.700.197.",
+      "weight": 1.0
+    },
+    {
+      "source": "Phương pháp đường thẳng",
+      "target": "Thông tư 45/2013/TT-BTC ngày 25/4/2013 của Bộ Tài chính",
+      "label": "Thông tư 45/2013/TT-BTC quy định phương pháp đường thẳng để khấu hao tài sản cố ",
+      "weight": 1.0
+    },
+    {
+      "source": "25/4/2013",
+      "target": "Thông tư 45/2013/TT-BTC ngày 25/4/2013 của Bộ Tài chính",
+      "label": "Thông tư 45/2013/TT-BTC được Bộ Tài chính ban hành vào ngày 25/4/2013.",
+      "weight": 1.0
+    },
+    {
+      "source": "Thông tư 45/2013/TT-BTC ngày 25/4/2013 của Bộ Tài chính",
+      "target": "Tài sản cố định vô hình và hình khai",
+      "label": "Thông tư 45/2013/TT-BTC quy định phân loại tài sản cố định vô hình và hình khai.",
+      "weight": 1.0
+    },
+    {
+      "source": "13/10/2016",
+      "target": "Thông tư 117/2016/TT-BTC ngày 13/10/2016",
+      "label": "Thông tư 117/2016/TT-BTC được Bộ Tài chính ban hành vào ngày 13/10/2016.",
+      "weight": 1.0
+    },
+    {
+      "source": "12/4/2017",
+      "target": "Thông tư 28/2017/TT-BTC ngày 12/4/2017",
+      "label": "Thông tư 28/2017/TT-BTC được Bộ Tài chính ban hành vào ngày 12/4/2017.",
+      "weight": 1.0
+    },
+    {
+      "source": "625 năm",
+      "target": "Tài sản cố định",
+      "label": "Tổng thời gian khấu hao của tài sản cố định là 625 năm.",
+      "weight": 1.0
+    },
+    {
+      "source": "Phương pháp đường thẳng",
+      "target": "Tài sản cố định",
+      "label": "Tài sản cố định được khấu hao theo phương pháp đường thẳng.",
+      "weight": 1.0
+    },
+    {
+      "source": "Tài sản cố định",
+      "target": "Tài sản cố định vô hình và hình khai",
+      "label": "Tài sản cố định được phân loại thành tài sản cố định vô hình và hình khai theo q",
+      "weight": 1.0
+    },
+    {
+      "source": "30/09/2015",
+      "target": "NHTMCPD fu&PhdI tiin - CN Ka, T hl)",
+      "label": "Chi nhánh ngân hàng NHTMCPD fu&PhdI tiin - CN Ka, T hl) có số liệu tài chính đến",
+      "weight": 1.0
+    },
+    {
+      "source": "218,t938328.r6",
+      "target": "NHTMCPD fu&PhdI tiin - CN Ka, T hl)",
+      "label": "Chi nhánh ngân hàng NHTMCPD fu&PhdI tiin - CN Ka, T hl) có số dư đầu kỳ là 218,t",
+      "weight": 1.0
+    },
+    {
+      "source": "22.387 3?6.12:",
+      "target": "NHTMCPD fu&PhdI tiin - CN Ka, T hl)",
+      "label": "Chi nhánh ngân hàng NHTMCPD fu&PhdI tiin - CN Ka, T hl) có thanh toán trong kỳ l",
+      "weight": 1.0
+    },
+    {
+      "source": "21.328 69i 052",
+      "target": "NHTMCPD fu&PhdI tiin - CN Ka, T hl)",
+      "label": "Chi nhánh ngân hàng NHTMCPD fu&PhdI tiin - CN Ka, T hl) có ghi nội bộ là 21.328 ",
+      "weight": 1.0
+    },
+    {
+      "source": "219.55J.016.2 tt",
+      "target": "NHTMCPD fu&PhdI tiin - CN Ka, T hl)",
+      "label": "Chi nhánh ngân hàng NHTMCPD fu&PhdI tiin - CN Ka, T hl) có dư cuối kỳ là 219.55J",
+      "weight": 1.0
+    },
+    {
+      "source": "NHTMCPD fu&PhdI tiin - CN Ka, T hl)",
+      "target": "Vay ngin lqn",
+      "label": "Khoản vay ngắn hạn \"Vay ngin lqn\" được ghi nhận cho chi nhánh ngân hàng NHTMCPD ",
+      "weight": 1.0
+    },
+    {
+      "source": "NHTMCPD fu&PhdI tiin - CN Ka, T hl)",
+      "target": "Vry dii 19n.l6n hin trn",
+      "label": "Khoản nợ ngắn hạn khác \"Vry dii 19n.l6n hin trn\" được ghi nhận cho chi nhánh ngâ",
+      "weight": 1.0
+    },
+    {
+      "source": "Hop ddng lin dung h+n rnirc \\o 0 t.l1 :024'b661l4HDTD ngay l0 tl'20:4",
+      "target": "Ngil hdng TMCP Diu lll vaPhatni6f viel Nan-ChLnhanh Konrum",
+      "label": "Tổ chức Ngil hdng TMCP Diu lll vaPhatni6f viel Nan-ChLnhanh Konrum có hợp đồng t",
+      "weight": 1.0
+    },
+    {
+      "source": "Hop ddng rh6 chip rdi san s6 0 l/2019/666424rIlDBD n8iy 29i l0/20 t9",
+      "target": "Ngil hdng TMCP Diu lll vaPhatni6f viel Nan-ChLnhanh Konrum",
+      "label": "Tổ chức này ký hợp đồng thế chấp tài sản số 0 l/2019/666424rIlDBD ngày 29/10/201",
+      "weight": 1.0
+    },
+    {
+      "source": "Hon d6ng the chip cdc khoin phai drll sd 02/2019/666424/HDBD ngiry 29/10/2019",
+      "target": "Ngil hdng TMCP Diu lll vaPhatni6f viel Nan-ChLnhanh Konrum",
+      "label": "Tổ chức này ký hợp đồng thế chấp khoản phải thu số 02/2019/666424/HDBD ngày 29/1",
+      "weight": 1.0
+    },
+    {
+      "source": "Ngil hdng TMCP Diu lll vaPhatni6f viel Nan-ChLnhanh Konrum",
+      "target": "llg! d6ng fie chap bat dof,g sao s0 031019r666124,+lDBo ngay 3 r/r2/?019",
+      "label": "Tổ chức này ký hợp đồng thế chấp bất động sản số 031019r666124,+lDBo ngày 3/12/2",
+      "weight": 1.0
+    },
+    {
+      "source": "Ngil hdng TMCP Diu lll vaPhatni6f viel Nan-ChLnhanh Konrum",
+      "target": "liq, ddng thd ch6p tai san s6 04/2019/666424,HDBD nSay 3l1l2r/2019",
+      "label": "Tổ chức này ký hợp đồng thế chấp tài sản số 04/2019/666424,HDBD ngày 31/12/2019.",
+      "weight": 1.0
+    },
+    {
+      "source": "Ho! ddrg thi: ohIp b6r dong sAn s6 O l/2021/666421",
+      "target": "Ngil hdng TMCP Diu lll vaPhatni6f viel Nan-ChLnhanh Konrum",
+      "label": "Tổ chức này ký hợp đồng thế chấp tài sản số O l/2021/666421 năm 2021.",
+      "weight": 1.0
+    },
+    {
+      "source": "13.400 000 000",
+      "target": "Ngil hdng TMCP Diu lll vaPhatni6f viel Nan-ChLnhanh Konrum",
+      "label": "Tổ chức Ngil hdng TMCP Diu lll vaPhatni6f viel Nan-ChLnhanh Konrum có dư đầu kỳ ",
+      "weight": 1.0
+    },
+    {
+      "source": "-11.49J.UJ2.li4(",
+      "target": "Ngil hdng TMCP Diu lll vaPhatni6f viel Nan-ChLnhanh Konrum",
+      "label": "Tổ chức Ngil hdng TMCP Diu lll vaPhatni6f viel Nan-ChLnhanh Konrum có thanh toán",
+      "weight": 1.0
+    },
+    {
+      "source": "715.041.060 → 716.837.490",
+      "target": "ConC",
+      "label": "Cột \"ConC\" ghi nhận biến động từ 715.041.060 đến 716.837.490.",
+      "weight": 1.0
+    },
+    {
+      "source": "12.024 r 00 000",
+      "target": "Công ty CP Edu tư và Phát triển nông nghiệp Tiên Nông",
+      "label": "Công ty CP Edu tư và Phát triển nông nghiệp Tiên Nông có giá trị 12.024 r 00 000",
+      "weight": 1.0
+    },
+    {
+      "source": "4?.441585",
+      "target": "Công ty TNHH Kim Huy Việt",
+      "label": "Công ty TNHH Kim Huy Việt có giá trị 4?.441585.",
+      "weight": 1.0
+    },
+    {
+      "source": ":0.146 6EE",
+      "target": "Công ty TNHH Kim Huy Việt",
+      "label": "Công ty TNHH Kim Huy Việt có giá trị :0.146 6EE.",
+      "weight": 1.0
+    },
+    {
+      "source": "4_812.120.967",
+      "target": "Xây dựng cơ bản định dạng",
+      "label": "Dự án \"Xây dựng cơ bản định dạng\" có chi phí 4_812.120.967.",
+      "weight": 1.0
+    },
+    {
+      "source": "9,231.699_9.{i}",
+      "target": "Xây dựng cơ bản định dạng",
+      "label": "Dự án \"Xây dựng cơ bản định dạng\" có chi phí 9,231.699_9.{i}.",
+      "weight": 1.0
+    },
+    {
+      "source": "Bảng tổng hợp dữ liệu tài chính",
+      "target": "Phải trả người bán",
+      "label": "Bảng tổng hợp dữ liệu tài chính bao gồm khoản mục \"Phải trả người bán\" với giá t",
+      "weight": 1.0
+    },
+    {
+      "source": "Bảng tổng hợp dữ liệu tài chính",
+      "target": "Thuế và các khoản phải nộp",
+      "label": "Bảng tổng hợp dữ liệu tài chính bao gồm khoản mục \"Thuế và các khoản phải nộp\".",
+      "weight": 1.0
+    },
+    {
+      "source": "Bảng tổng hợp dữ liệu tài chính",
+      "target": "Các khoản phải trả ngắn hạn khác",
+      "label": "Bảng tổng hợp dữ liệu tài chính bao gồm khoản mục \"Các khoản phải trả ngắn hạn k",
+      "weight": 1.0
+    },
+    {
+      "source": "Bảng tổng hợp dữ liệu tài chính",
+      "target": "Vay và cho vay",
+      "label": "Bảng tổng hợp dữ liệu tài chính bao gồm khoản mục \"Vay và cho vay\" với sự thay đ",
+      "weight": 1.0
+    },
+    {
+      "source": "Bảng tổng hợp dữ liệu tài chính",
+      "target": "Cộng",
+      "label": "Bảng tổng hợp dữ liệu tài chính có tổng giá trị được ghi nhận là \"Cộng\".",
+      "weight": 1.0
+    },
+    {
+      "source": "30/9/2025",
+      "target": "Bảng tổng hợp dữ liệu tài chính",
+      "label": "Bảng tổng hợp dữ liệu tài chính được cập nhật đến ngày 30/9/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "Bảng tổng hợp dữ liệu tài chính",
+      "target": "Khoản phải thu",
+      "label": "Bảng tổng hợp dữ liệu tài chính bao gồm khoản mục \"Khoản phải thu\".",
+      "weight": 1.0
+    },
+    {
+      "source": "Bảng tổng hợp dữ liệu tài chính",
+      "target": "Trái phiếu 1 tỷ",
+      "label": "Bảng tổng hợp dữ liệu tài chính bao gồm khoản mục \"Trái phiếu 1 tỷ\".",
+      "weight": 1.0
+    },
+    {
+      "source": "Bảng tổng hợp dữ liệu tài chính",
+      "target": "Tổng",
+      "label": "Bảng tổng hợp dữ liệu tài chính bao gồm khoản mục \"Tổng\" với giá trị 214E4..1,14",
+      "weight": 1.0
+    },
+    {
+      "source": "30/9/2025",
+      "target": "Bảng tổng hợp các khoản tài chính đến 30/9/2025",
+      "label": "Sự kiện tổng hợp tài chính kết thúc vào ngày 30/9/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "5 070.000",
+      "target": "Doanh thu bán hàng",
+      "label": "Doanh thu bán hàng có giá trị 5 070.000 trong bảng dữ liệu.",
+      "weight": 1.0
+    },
+    {
+      "source": "01/07/2024",
+      "target": "Giá vốn bán",
+      "label": "Giá vốn bán được ghi nhận bắt đầu từ ngày 01/07/2024.",
+      "weight": 1.0
+    },
+    {
+      "source": "30/09/2024",
+      "target": "Doanh thu bán hàng",
+      "label": "Doanh thu bán hàng được báo cáo cho giai đoạn kết thúc ngày 30/09/2024 với giá t",
+      "weight": 1.0
+    },
+    {
+      "source": "30/09/2024",
+      "target": "Giá trị giải ngân",
+      "label": "Giá trị giải ngân cho giai đoạn kết thúc ngày 30/09/2024 đạt 35,370 tỷ VND.",
+      "weight": 1.0
+    },
+    {
+      "source": "30/09/2024",
+      "target": "Lợi nhuận gộp",
+      "label": "Lợi nhuận gộp tại thời điểm 30/09/2024 giảm xuống còn 1,354 tỷ VND.",
+      "weight": 1.0
+    },
+    {
+      "source": "30/09/2024",
+      "target": "Chi phí lao động",
+      "label": "Chi phí lao động cho giai đoạn kết thúc ngày 30/09/2024 là 176,708,222.",
+      "weight": 1.0
+    },
+    {
+      "source": "30/09/2024",
+      "target": "Chi phí khấu hao TSCĐ",
+      "label": "Chi phí khấu hao TSCĐ tại thời điểm 30/09/2024 duy trì ở mức 26,160,546.",
+      "weight": 1.0
+    },
+    {
+      "source": "30/09/2024",
+      "target": "Chi phí dịch vụ mua ngoài",
+      "label": "Chi phí dịch vụ mua ngoài cho giai đoạn kết thúc ngày 30/09/2024 là 92,581,400.",
+      "weight": 1.0
+    },
+    {
+      "source": "30/09/2024",
+      "target": "Thu nhập khác",
+      "label": "Thu nhập khác tại thời điểm 30/09/2024 cũng ghi nhận giá trị 0.",
+      "weight": 1.0
+    },
+    {
+      "source": "30/09/2024",
+      "target": "Mệnh giá cổ phiếu",
+      "label": "Mệnh giá cổ phiếu duy trì ở mức 10.000 VND tại thời điểm 30/09/2024.",
+      "weight": 1.0
+    },
+    {
+      "source": "30/09/2024",
+      "target": "Chi phí bảo trì, sửa chữa, bao bì",
+      "label": "Chi phí bảo trì, sửa chữa, bao bì tại 30/09/2024 giảm xuống còn 136.081.",
+      "weight": 1.0
+    },
+    {
+      "source": "30/09/2024",
+      "target": "Chi phí đào tạo, văn phòng phẩm, phương pháp",
+      "label": "Chi phí đào tạo, văn phòng phẩm, phương pháp tại 30/09/2024 là 1.262.200.",
+      "weight": 1.0
+    },
+    {
+      "source": "30/09/2024",
+      "target": "Chi phí khác",
+      "label": "Chi phí khác tại 30/09/2024 là 243.909.8ts.",
+      "weight": 1.0
+    },
+    {
+      "source": "30/09/2024",
+      "target": "Chi phí khấu hao TSCĐ (quản lý doanh nghiệp)",
+      "label": "Chi phí khấu hao TSCĐ trong quản lý doanh nghiệp tại 30/09/2024 là 144.209.811.",
+      "weight": 1.0
+    },
+    {
+      "source": "30/09/2024",
+      "target": "Chi phí dịch vụ mua ngoài (quản lý doanh nghiệp)",
+      "label": "Chi phí dịch vụ mua ngoài trong quản lý doanh nghiệp tại 30/09/2024 là 7.415.551",
+      "weight": 1.0
+    },
+    {
+      "source": "Doanh thu bán hàng",
+      "target": "Giai đoạn từ 01/07/2024 đến 30/09/2024",
+      "label": "Doanh thu bán hàng trực tiếp thuộc giai đoạn từ 01/07/2024 đến 30/09/2024.",
+      "weight": 1.0
+    },
+    {
+      "source": "Doanh thu bán hàng trực tiếp",
+      "target": "Giai đoạn từ 01/07/2024 đến 30/09/2024",
+      "label": "Doanh thu bán hàng trực tiếp thuộc giai đoạn từ 01/07/2024 đến 30/09/2024.",
+      "weight": 1.0
+    },
+    {
+      "source": "Giai đoạn từ 01/07/2024 đến 30/09/2024",
+      "target": "Giá vốn bán",
+      "label": "Giá vốn bán được ghi nhận trong giai đoạn từ 01/07/2024 đến 30/09/2024.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty Cổ phần Đường Kon Tum",
+      "target": "Kon Ro Bing 1",
+      "label": "Công ty Cổ phần Đường Kon Tum có trụ sở tại thôn Kon Ro Bing 1.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty Cổ phần Đường Kon Tum",
+      "target": "Ngok Bay",
+      "label": "Công ty Cổ phần Đường Kon Tum có trụ sở tại xã Ngok Bay.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty Cổ phần Đường Kon Tum",
+      "target": "Quảng Ngãi",
+      "label": "Công ty Cổ phần Đường Kon Tum có trụ sở tại tỉnh Quảng Ngãi.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty Cổ phần Đường Kon Tum",
+      "target": "Quý I năm tài chính 2025-2026",
+      "label": "Công ty Cổ phần Đường Kon Tum thực hiện báo cáo tài chính Quý I năm tài chính 20",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty Cổ phần Đường Kon Tum",
+      "target": "Thông tư số 96/2020/TT-BTC",
+      "label": "Công ty Cổ phần Đường Kon Tum tuân thủ Thông tư số 96/2020/TT-BTC khi công bố th",
+      "weight": 1.0
+    },
+    {
+      "source": "Chênh lệch từ 5% trở lên",
+      "target": "Công ty Cổ phần Đường Kon Tum",
+      "label": "Chênh lệch từ 5% trở lên là ngưỡng biến động lợi nhuận được áp dụng trong báo cá",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty Cổ phần Đường Kon Tum",
+      "target": "Sở Giao dịch Chứng khoán Hà Nội",
+      "label": "Công ty Cổ phần Đường Kon Tum thực hiện công bố thông tin tài chính tại Sở Giao ",
+      "weight": 1.0
+    },
+    {
+      "source": "Doanh thu ban hang",
+      "target": "Doanh thu hoat dong kinh doanh",
+      "label": "Doanh thu ban hang la mot phan cua doanh thu hoat dong kinh doanh.",
+      "weight": 1.0
+    },
+    {
+      "source": "Gia thanh san pham",
+      "target": "San pham",
+      "label": "Gia thanh san pham duoc tinh toan tren co so chi phi san xuat san pham.",
+      "weight": 1.0
+    },
+    {
+      "source": "Bao cao tai chinh",
+      "target": "Cong ty",
+      "label": "Cong ty thuc hien bao cao tai chinh de phan tich cac chi tieu kinh doanh.",
+      "weight": 1.0
+    },
+    {
+      "source": "Cong ty",
+      "target": "Khoan ghi sach",
+      "label": "Cong ty phai thuc hien cac khoan ghi sach de ghi nhan chi phi va doanh thu.",
+      "weight": 1.0
+    },
+    {
+      "source": "Dai hoi dong co dong",
+      "target": "Quy dinh ve phan bo loi nhuan",
+      "label": "Dai hoi dong co dong ra quy dinh ve cach phan bo loi nhuan cho cac ben lien quan",
+      "weight": 1.0
+    },
+    {
+      "source": "Bao cao tai chinh",
+      "target": "Kiem toan",
+      "label": "Bao cao tai chinh duoc kiem toan de dam bao tinh chinh xac.",
+      "weight": 1.0
+    },
+    {
+      "source": "Bao cao tai chinh",
+      "target": "Nguyen tac thuc hien",
+      "label": "Bao cao tai chinh duoc thuc hien theo cac nguyen tac thuc hien tai chinh.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty Cổ phần Kon Tum",
+      "target": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam - CN Kon Tum",
+      "label": "Công ty Cổ phần Kon Tum và ngân hàng có quan hệ hợp đồng thế chấp bất động sản.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty Cổ phần Kon Tum",
+      "target": "Hợp đồng thế chấp bất động sản số 03/2019/666424",
+      "label": "Hợp đồng thế chấp số 03/2019/666424 liên quan đến Công ty Cổ phần Kon Tum.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty Cổ phần Kon Tum",
+      "target": "Hợp đồng thế chấp bất động sản số 02/2021/666424",
+      "label": "Hợp đồng thế chấp số 02/2021/666424 liên quan đến Công ty Cổ phần Kon Tum.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty Cổ phần Kon Tum",
+      "target": "Hợp đồng thế chấp bất động sản số 03/2019/666124",
+      "label": "Hợp đồng thế chấp số 03/2019/666124 liên quan đến Công ty Cổ phần Kon Tum.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty Cổ phần Kon Tum",
+      "target": "Hợp đồng thế chấp bất động sản số 01/2021/666421",
+      "label": "Hợp đồng thế chấp số 01/2021/666421 liên quan đến Công ty Cổ phần Kon Tum.",
+      "weight": 1.0
+    },
+    {
+      "source": "Hợp đồng thế chấp bất động sản số 03/2019/666424",
+      "target": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam - CN Kon Tum",
+      "label": "Hợp đồng thế chấp số 03/2019/666424 liên quan đến ngân hàng.",
+      "weight": 1.0
+    },
+    {
+      "source": "Hợp đồng thế chấp bất động sản số 02/2021/666424",
+      "target": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam - CN Kon Tum",
+      "label": "Hợp đồng thế chấp số 02/2021/666424 liên quan đến ngân hàng.",
+      "weight": 1.0
+    },
+    {
+      "source": "Hợp đồng thế chấp bất động sản số 03/2019/666124",
+      "target": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam - CN Kon Tum",
+      "label": "Hợp đồng thế chấp số 03/2019/666124 liên quan đến ngân hàng.",
+      "weight": 1.0
+    },
+    {
+      "source": "14.828.000.000 VND",
+      "target": "30/09/2021",
+      "label": "Chỉ số tài chính 14.828.000.000 VND được ghi nhận vào ngày 30/09/2021.",
+      "weight": 1.0
+    },
+    {
+      "source": "2.500.000.404 VND",
+      "target": "30/09/2021",
+      "label": "Chỉ số tài chính 2.500.000.404 VND được ghi nhận vào ngày 30/09/2021.",
+      "weight": 1.0
+    },
+    {
+      "source": "Luật số 24/860",
+      "target": "Phân loại các khoản phải thu",
+      "label": "Phân loại các khoản phải thu được quy định bởi Luật số 24/860 của Việt Nam.",
+      "weight": 1.0
+    },
+    {
+      "source": "Tài sản",
+      "target": "Vốn hóa chi phí vay",
+      "label": "Vốn hóa chi phí vay ảnh hưởng đến giá trị tài sản khi tài sản được đưa vào sử dụ",
+      "weight": 1.0
+    },
+    {
+      "source": "Kỳ hạn gốc",
+      "target": "Phân loại các khoản phải thu",
+      "label": "Kỳ hạn gốc là một tiêu chí để phân loại các khoản phải thu trong báo cáo tài chí",
+      "weight": 1.0
+    },
+    {
+      "source": "Bảng tổng hợp các khoản tài chính đến 30/9/2025",
+      "target": "Vay vi nq thue&ichinh",
+      "label": "Khoản vay \"Vay vi nq thue&ichinh\" với giá trị 244.3Et0t6.2r9 được ghi nhận trong",
+      "weight": 1.0
+    },
+    {
+      "source": "Bảng tổng hợp các khoản tài chính đến 30/9/2025",
+      "target": "Kh6nsqu6l",
+      "label": "Khoản phải thu \"Kh6nsqu6l\" là một thành phần dữ liệu trong bảng tổng hợp tài chí",
+      "weight": 1.0
+    },
+    {
+      "source": "Bảng tổng hợp các khoản tài chính đến 30/9/2025",
+      "target": "TrGtr 1 trim",
+      "label": "Khoản trích quý 1 \"TrGtr 1 trim\" là một thành phần dữ liệu trong bảng tổng hợp t",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty CP Lữ Đương Tự Lực",
+      "target": "Hội đồng quản trị",
+      "label": "Công ty CP Lữ Đương Tự Lực có mối liên hệ quản lý với Hội đồng quản trị.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty CP Mía Đường Sơn La",
+      "target": "Hội đồng quản trị",
+      "label": "Công ty CP Mía Đường Sơn La có mối liên hệ quản lý với Hội đồng quản trị.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty TNHH Kim Hoa",
+      "target": "Hội đồng quản trị",
+      "label": "Công ty TNHH Kim Hoa có mối liên hệ quản lý với Hội đồng quản trị.",
+      "weight": 1.0
+    },
+    {
+      "source": "1.974.516.746",
+      "target": "Công ty Cổ phần Du lịch Kontum",
+      "label": "Công ty Cổ phần Du lịch Kontum ghi nhận mức giảm lợi nhuận sau thuế là 1.974.516",
+      "weight": 1.0
+    },
+    {
+      "source": "14,21%",
+      "target": "Công ty Cổ phần Du lịch Kontum",
+      "label": "Lợi nhuận sau thuế của Công ty Cổ phần Du lịch Kontum giảm 14,21% trong kỳ tài c",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty Cổ phần Du lịch Kontum",
+      "target": "Kontum",
+      "label": "Công ty Cổ phần Du lịch Kontum có trụ sở và hoạt động tại Kontum.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty Cổ phần Du lịch Kontum",
+      "target": "Kì tài chính 2025-2026",
+      "label": "Công ty Cổ phần Du lịch Kontum báo cáo kết quả tài chính cho kỳ 2025-2026.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty Cổ phần Du lịch Kontum",
+      "target": "Kì tài chính 2024-2025",
+      "label": "Kỳ tài chính 2024-2025 được dùng làm mốc so sánh lợi nhuận của Công ty Cổ phần D",
+      "weight": 1.0
+    },
+    {
+      "source": "Bảng cân đối kế toán",
+      "target": "Công ty Cổ phần Du lịch Kontum",
+      "label": "Công ty Cổ phần Du lịch Kontum công bố Bảng cân đối kế toán cho kỳ tài chính 202",
+      "weight": 1.0
+    },
+    {
+      "source": "Kì tài chính 2024-2025",
+      "target": "Kì tài chính 2025-2026",
+      "label": "Kì tài chính 2025-2026 được so sánh với kỳ tài chính 2024-2025 để đánh giá sự th",
+      "weight": 1.0
+    },
+    {
+      "source": "14,21%",
+      "target": "Giá điện tăng",
+      "label": "Sự tăng giá điện là nguyên nhân chính gây ra mức giảm lợi nhuận 14,21% của Công ",
+      "weight": 1.0
+    },
+    {
+      "source": "Bảng cân đối kế toán",
+      "target": "Tài sản ngắn hạn",
+      "label": "Bảng cân đối kế toán bao gồm khoản mục Tài sản ngắn hạn với giá trị 347.014.895.",
+      "weight": 1.0
+    },
+    {
+      "source": "Bảng cân đối kế toán",
+      "target": "Các khoản phải thu",
+      "label": "Bảng cân đối kế toán ghi nhận khoản mục Các khoản phải thu với giá trị 18.756.00",
+      "weight": 1.0
+    },
+    {
+      "source": "347 tỷ",
+      "target": "Tài sản ngắn hạn",
+      "label": "347 tỷ là tổng giá trị của tài sản ngắn hạn.",
+      "weight": 1.0
+    },
+    {
+      "source": "150.000.000",
+      "target": "Cnng ir CP Bic-rrufs B0",
+      "label": "Cnng ir CP Bic-rrufs B0 có giá trị ban đầu là 150.000.000.",
+      "weight": 1.0
+    },
+    {
+      "source": "450.000.000",
+      "target": "Cnng ir CP Bic-rrufs B0",
+      "label": "Cnng ir CP Bic-rrufs B0 tăng giá trị lên 450.000.000.",
+      "weight": 1.0
+    },
+    {
+      "source": "150.000.000",
+      "target": "Công ty CP XD GT Thrly lgiKCn Giang",
+      "label": "Công ty CP XD GT Thrly lgiKCn Giang có giá trị ban đầu là 150.000.000.",
+      "weight": 1.0
+    },
+    {
+      "source": "150.000.000",
+      "target": "Công ty CP XD GT Thừa Thiên Huế",
+      "label": "Công ty CP XD GT Thừa Thiên Huế có nghĩa vụ thanh toán số tiền 150.000.000.",
+      "weight": 1.0
+    },
+    {
+      "source": "450.000.000",
+      "target": "Công ty CP XD GT Thừa Thiên Huế",
+      "label": "Công ty CP XD GT Thừa Thiên Huế có nghĩa vụ thanh toán số tiền 450.000.000 vào n",
+      "weight": 1.0
+    },
+    {
+      "source": "228.832. ,a t9",
+      "target": "30109D025",
+      "label": "Mã 30109D025 liên kết với giá trị 228.832. ,a t9.",
+      "weight": 1.0
+    },
+    {
+      "source": "1.518.676.07E",
+      "target": "30109D025",
+      "label": "Mã 30109D025 liên kết với doanh thu 1.518.676.07E.",
+      "weight": 1.0
+    },
+    {
+      "source": "-235 A69.436",
+      "target": "30109D025",
+      "label": "Mã 30109D025 liên kết với nợ âm -235 A69.436.",
+      "weight": 1.0
+    },
+    {
+      "source": "2.108,809.935",
+      "target": "30109D025",
+      "label": "Mã 30109D025 liên kết với doanh thu lớn 2.108,809.935.",
+      "weight": 1.0
+    },
+    {
+      "source": "-129.119.113",
+      "target": "30109D025",
+      "label": "Mã 30109D025 liên kết với nợ âm -129.119.113.",
+      "weight": 1.0
+    },
+    {
+      "source": "30109D025",
+      "target": "Cdc khonn phni n t khdc",
+      "label": "Các khoản phải thu khác (Cdc khonn phni n t khdc) liên kết với mã 30109D025 và c",
+      "weight": 1.0
+    },
+    {
+      "source": "30109D025",
+      "target": "Cic khoin phdjrhu. cho vay qud h?nrhanh toAr,IoAc chra quahan n}ulrs kh6 co kla nangftu hdj",
+      "label": "Khoản phải thu cho vay quá hạn và chưa quá hạn không có khả năng thu hồi (Cic kh",
+      "weight": 1.0
+    },
+    {
+      "source": "30/09/202s",
+      "target": "450.000 000",
+      "label": "Giá trị 450.000 000 được ghi nhận vào ngày 30/09/202s.",
+      "weight": 1.0
+    },
+    {
+      "source": "450.000 000",
+      "target": "Công ty CP XD GT Thrly lgiKCn Giang",
+      "label": "Công ty CP XD GT Thrly lgiKCn Giang tăng giá trị lên 450.000 000.",
+      "weight": 1.0
+    },
+    {
+      "source": "30/09/202s",
+      "target": "Công ty CP XD GT Thrly lgiKCn Giang",
+      "label": "Giá trị 150.000.000 của Công ty CP XD GT Thrly lgiKCn Giang được ghi nhận vào ng",
+      "weight": 1.0
+    },
+    {
+      "source": "Preferred Shares",
+      "target": "Total Capital Sources",
+      "label": "Preferred Shares contribute to the Total Capital Sources exceeding 556 billion V",
+      "weight": 1.0
+    },
+    {
+      "source": "Preferred Shares",
+      "target": "Quang N.",
+      "label": "Quang N. kiểm tra và xác nhận số liệu Preferred Shares 50,7 tỷ VNĐ.",
+      "weight": 1.0
+    },
+    {
+      "source": "Nguyễn Thị Nga",
+      "target": "Preferred Shares",
+      "label": "Nguyễn Thị Nga giám sát chỉ số Preferred Shares trong báo cáo tài chính.",
+      "weight": 1.0
+    },
+    {
+      "source": "Debt Capital",
+      "target": "Total Capital Sources",
+      "label": "Debt Capital is a component of the Total Capital Sources.",
+      "weight": 1.0
+    },
+    {
+      "source": "Debt Capital",
+      "target": "Nguyễn Thị Nga",
+      "label": "Nguyễn Thị Nga chịu trách nhiệm giám sát khoản Debt Capital 2,6 tỷ VNĐ.",
+      "weight": 1.0
+    },
+    {
+      "source": "Debt Capital",
+      "target": "Quang N.",
+      "label": "Quang N. kiểm tra và xác nhận khoản Debt Capital 2,6 tỷ VNĐ.",
+      "weight": 1.0
+    },
+    {
+      "source": "Other Equity",
+      "target": "Total Capital Sources",
+      "label": "Other Equity forms part of the Total Capital Sources.",
+      "weight": 1.0
+    },
+    {
+      "source": "Other Equity",
+      "target": "Quang N.",
+      "label": "Quang N. kiểm tra và xác nhận chỉ số Other Equity 8,9 tỷ VNĐ.",
+      "weight": 1.0
+    },
+    {
+      "source": "Nguyễn Thị Nga",
+      "target": "Other Equity",
+      "label": "Nguyễn Thị Nga giám sát chỉ số Other Equity 8,9 tỷ VNĐ.",
+      "weight": 1.0
+    },
+    {
+      "source": "Financial Metrics",
+      "target": "Nguyễn Thị Nga",
+      "label": "Nguyễn Thị Nga is associated with the financial metrics presented in the documen",
+      "weight": 1.0
+    },
+    {
+      "source": "Nguyễn Thị Nga",
+      "target": "Tổng Giám đốc",
+      "label": "Nguyễn Thị Nga đang giữ chức vụ Tổng Giám đốc tại Công ty cổ phần Ôi Jong Kon Tu",
+      "weight": 1.0
+    },
+    {
+      "source": "Financial Metrics",
+      "target": "Quang N.",
+      "label": "Quang N. is linked to the financial metrics as the accountant.",
+      "weight": 1.0
+    },
+    {
+      "source": "11.244.192.000",
+      "target": "Công ty TNHH Kim Hoa Việt",
+      "label": "Công ty TNHH Kim Hoa Việt có doanh thu 11.244.192.000.",
+      "weight": 1.0
+    },
+    {
+      "source": "11.070.000",
+      "target": "Công ty TNHH Kim Hoa Việt",
+      "label": "Công ty TNHH Kim Hoa Việt có chi phí mua hàng 11.070.000.",
+      "weight": 1.0
+    },
+    {
+      "source": "39.300.000.000",
+      "target": "Công ty TNHH Kim Hoa Việt",
+      "label": "Công ty TNHH Kim Hoa Việt có doanh thu bán hàng 39.300.000.000.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty TNHH Kim Hoa Việt",
+      "target": "Thành phố Hồ Chí Minh",
+      "label": "Công ty TNHH Kim Hoa Việt có chi nhánh tại Thành phố Hồ Chí Minh với doanh thu 4",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty TNHH Kim Hoa Việt",
+      "target": "Việt Anh",
+      "label": "Việt Anh là chi nhánh của Công ty TNHH Kim Hoa Việt.",
+      "weight": 1.0
+    },
+    {
+      "source": "15.000.000",
+      "target": "Công ty TNHH Kim Hoa Việt",
+      "label": "Công ty TNHH Kim Hoa Việt có doanh thu từ chi nhánh là 15.000.000.",
+      "weight": 1.0
+    },
+    {
+      "source": "24.000.000",
+      "target": "Công ty TNHH Kim Hoa Việt",
+      "label": "Công ty TNHH Kim Hoa Việt có chi phí hoặc doanh thu 24.000.000.",
+      "weight": 1.0
+    },
+    {
+      "source": "5.158.400.000",
+      "target": "Công ty TNHH Kim Hoa Việt",
+      "label": "Công ty TNHH Kim Hoa Việt có doanh thu từ chi nhánh thành phố Hồ Chí Minh là 5.1",
+      "weight": 1.0
+    },
+    {
+      "source": "29.076.454",
+      "target": "Công ty TNHH Kim Hoa Việt",
+      "label": "Công ty TNHH Kim Hoa Việt có chi phí tiền lương là 29.076.454.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty TNHH Kim Hoa Việt",
+      "target": "Trần Ngọc Hiện",
+      "label": "Trần Ngọc Hiện là thành viên Hội đồng Quản trị của Công ty TNHH Kim Hoa Việt.",
+      "weight": 1.0
+    },
+    {
+      "source": "Thành phố Hồ Chí Minh",
+      "target": "Trần Ngọc Hiện",
+      "label": "Trần Ngọc Hiện là thị trưởng của Thành phố Hồ Chí Minh.",
+      "weight": 1.0
+    },
+    {
+      "source": "4.223.700.197",
+      "target": "Công ty TNHH Kinr Hd Viel",
+      "label": "Công ty TNHH Kinr Hd Viel có nghĩa vụ thanh toán số tiền 4.223.700.197 vào ngày ",
+      "weight": 1.0
+    },
+    {
+      "source": "18.156.000.000",
+      "target": "Công ty Cổ phần Mia.luilrgTri Vinh",
+      "label": "Công ty Cổ phần Mia.luilrgTri Vinh có nghĩa vụ thanh toán số tiền 18.156.000.000",
+      "weight": 1.0
+    },
+    {
+      "source": "11.005.3r8.500",
+      "target": "Công ty CP MiaDuong Tuy HoA",
+      "label": "Công ty CP MiaDuong Tuy HoA có nghĩa vụ thanh toán số tiền 11.005.3r8.500 vào ng",
+      "weight": 1.0
+    },
+    {
+      "source": "51.000.000.000",
+      "target": "Công ty TNHH An Ha",
+      "label": "Công ty TNHH An Ha có nghĩa vụ thanh toán số tiền 51.000.000.000.",
+      "weight": 1.0
+    },
+    {
+      "source": "714.415.900",
+      "target": "Công ty CP Xuất Nhập Khẩu Nông Cấp",
+      "label": "Công ty CP Xuất Nhập Khẩu Nông Cấp có nghĩa vụ thanh toán số tiền 714.415.900.",
+      "weight": 1.0
+    },
+    {
+      "source": "6.182.021.100",
+      "target": "Khách hàng khác",
+      "label": "Khách hàng khác có nghĩa vụ thanh toán số tiền 6.182.021.100.",
+      "weight": 1.0
+    },
+    {
+      "source": "33.834.617",
+      "target": "Công ty TNHH Ky Sua1 Ru Dong CATEC",
+      "label": "Công ty TNHH Ky Sua1 Ru Dong CATEC có nghĩa vụ thanh toán số tiền 33.834.617.",
+      "weight": 1.0
+    },
+    {
+      "source": "840.000.000",
+      "target": "Công ty TNHH Một Thành Viên Li Thanh",
+      "label": "Công ty TNHH Một Thành Viên Li Thanh có nghĩa vụ thanh toán số tiền 840.000.000.",
+      "weight": 1.0
+    },
+    {
+      "source": "500.000.000",
+      "target": "Công ty CP Chế Biến Thực Phẩm Xuất Khẩu Khoai Kien Gian",
+      "label": "Công ty CP Chế Biến Thực Phẩm Xuất Khẩu Khoai Kien Gian có nghĩa vụ thanh toán s",
+      "weight": 1.0
+    },
+    {
+      "source": "110.000.000",
+      "target": "Công ty CP Bic-rrufs B0",
+      "label": "Công ty CP Bic-rrufs B0 có nghĩa vụ thanh toán số tiền 110.000.000.",
+      "weight": 1.0
+    },
+    {
+      "source": "190.000.000",
+      "target": "Công ty CP Bic-rrufs B0",
+      "label": "Công ty CP Bic-rrufs B0 có nghĩa vụ thanh toán số tiền 190.000.000 vào ngày 30/0",
+      "weight": 1.0
+    },
+    {
+      "source": "Cac khoin phaiftu ngln h?n",
+      "target": "Phi thu nsin han cia khbch hing",
+      "label": "Phí thu ngắn hạn của khách hàng là một khoản mục thuộc nhóm các khoản phải thu n",
+      "weight": 1.0
+    },
+    {
+      "source": "Cac khoin phaiftu ngln h?n",
+      "target": "Pha thu!; cho usynsin han",
+      "label": "Phát thu cho sử dụng ngắn hạn là một khoản mục thuộc nhóm các khoản phải thu ngắ",
+      "weight": 1.0
+    },
+    {
+      "source": "Cac khoin phaiftu ngln h?n",
+      "target": "Pha lhu ng:n han khrc",
+      "label": "Phát thu ngắn hạn khác là một khoản mục thuộc nhóm các khoản phải thu ngắn hạn.",
+      "weight": 1.0
+    },
+    {
+      "source": "Cac khoin phaiftu ngln h?n",
+      "target": "ThuC vaL cic khoan khecphd ihu Nha iudc",
+      "label": "Thuế và các khoản khác phải thu Nhà nước là một khoản mục thuộc nhóm các khoản p",
+      "weight": 1.0
+    },
+    {
+      "source": "Cac khoin phaiftu ngln h?n",
+      "target": "Giaodich mua b;n laitle phl6u Chlnh phi",
+      "label": "Giao dịch mua bán lại phiếu Chính phủ là một hoạt động tài chính thuộc nhóm các ",
+      "weight": 1.0
+    },
+    {
+      "source": "Cac khoin phaiftu ngln h?n",
+      "target": "laisin ng,n hai kh,c",
+      "label": "Lãi suất ngắn hạn khác là một khoản mục thuộc nhóm các khoản phải thu ngắn hạn.",
+      "weight": 1.0
+    },
+    {
+      "source": "Iai sAN oi, HAN",
+      "target": "TA sen Th-lu cFc xlr ti",
+      "label": "Tài sản ồi, Hạn bao gồm tài sản Th-lu các xlr ti.",
+      "weight": 1.0
+    },
+    {
+      "source": "Iai sAN oi, HAN",
+      "target": "TAr.tn c6 dinh hFu hinh",
+      "label": "Tài sản cố định hữu hình là một loại tài sản thuộc nhóm tài sản ồi, Hạn.<SEP>Tài",
+      "weight": 2.0
+    },
+    {
+      "source": "Iai sAN oi, HAN",
+      "target": "TiLisrin c6 dinhvO hlnh",
+      "label": "Tích lũy cố định vô hình là một loại tài sản thuộc nhóm tài sản ồi, Hạn.<SEP>Tài",
+      "weight": 2.0
+    },
+    {
+      "source": "90.500.000",
+      "target": "Ba DanE ThiThu",
+      "label": "Ba DanE ThiThu có khoản đóng góp tài chính 90.500.000.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty INHH Kirn Ha v jct",
+      "target": "Phải trả mua hàng",
+      "label": "Công ty INHH Kirn Ha v jct có khoản phải trả mua hàng 47.44:.545.",
+      "weight": 1.0
+    },
+    {
+      "source": "4l.Sqkien phit sint sau nsiyk6tltic ki k6lorD",
+      "target": "Công ty INHH Kirn Ha v jct",
+      "label": "Sự kiện tài chính phát sinh sau hợp đồng liên quan đến Công ty INHH Kirn Ha v jc",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty INHH Kirn Ha v jct",
+      "target": "r 1.005.8r8.500",
+      "label": "Công ty INHH Kirn Ha v jct có khoản phí thu bán hàng r 1.005.8r8.500.",
+      "weight": 1.0
+    },
+    {
+      "source": "47.44:.545",
+      "target": "Công ty INHH Kirn Ha v jct",
+      "label": "Công ty INHH Kirn Ha v jct có khoản phải trả mua hàng 47.44:.545.",
+      "weight": 1.0
+    },
+    {
+      "source": "127.840.r40",
+      "target": "Công ty CP Mia Dubrg Ttry Hda",
+      "label": "Công ty CP Mia Dubrg Ttry Hda có khoản nợ phải trả 127.840.r40.",
+      "weight": 1.0
+    },
+    {
+      "source": "11.000.000.000",
+      "target": "Công ty CP XNK",
+      "label": "Công ty CP XNK có khoản phải thu bán hàng 11.000.000.000.",
+      "weight": 1.0
+    },
+    {
+      "source": "42.56liau so sdnh",
+      "target": "Công ty CP XNK",
+      "label": "Sự kiện so sánh số liệu tài chính liên quan đến Công ty CP XNK.",
+      "weight": 1.0
+    },
+    {
+      "source": "41.076 454",
+      "target": "l0 6nsNsxyan ouc Cln- Tnanh",
+      "label": "l0 6nsNsxyan ouc Cln- Tnanh có khoản đóng góp tài chính 41.076 454.",
+      "weight": 1.0
+    },
+    {
+      "source": "12.040 a7a",
+      "target": "12.ong Nguyan Hnu Quanq -Phd",
+      "label": "12.ong Nguyan Hnu Quanq -Phd có khoản đóng góp tài chính 12.040 a7a.",
+      "weight": 1.0
+    },
+    {
+      "source": "Tài sản cố định hữu hình",
+      "target": "Tài sản dài hạn",
+      "label": "Tài sản cố định hữu hình (1,958 tỷ) là thành phần chính của tài sản dài hạn.",
+      "weight": 1.0
+    },
+    {
+      "source": "1,958 tỷ",
+      "target": "Tài sản cố định hữu hình",
+      "label": "1,958 tỷ là giá trị cụ thể của tài sản cố định hữu hình.",
+      "weight": 1.0
+    },
+    {
+      "source": "TIIUYET MINH Bio cAo TAI cH iNH",
+      "target": "Th6! Kon Ra",
+      "label": "Th6! Kon Ra có liên quan đến sự kiện TIIUYET MINH Bio cAo TAI cH iNH.",
+      "weight": 1.0
+    },
+    {
+      "source": "THUYET MINH BAO CAO TAI CHINH",
+      "target": "Th6! Kon Ra",
+      "label": "Sự kiện THUYET MINH BAO CAO TAI CHINH có liên quan đến cá nhân Th6! Kon Ra.",
+      "weight": 1.0
+    },
+    {
+      "source": "Eang l",
+      "target": "TIIUYET MINH Bio cAo TAI cH iNH",
+      "label": "Eang l có liên quan đến sự kiện TIIUYET MINH Bio cAo TAI cH iNH.",
+      "weight": 1.0
+    },
+    {
+      "source": "Eang l",
+      "target": "THUYET MINH BAO CAO TAI CHINH",
+      "label": "Sự kiện THUYET MINH BAO CAO TAI CHINH có liên quan đến cá nhân Eang l.",
+      "weight": 1.0
+    },
+    {
+      "source": "TIIUYET MINH Bio cAo TAI cH iNH",
+      "target": "XaNga)tD!1",
+      "label": "XaNga)tD!1 có liên kết với sự kiện TIIUYET MINH Bio cAo TAI cH iNH.",
+      "weight": 1.0
+    },
+    {
+      "source": "THUYET MINH BAO CAO TAI CHINH",
+      "target": "XaNga)tD!1",
+      "label": "Tổ chức XaNga)tD!1 có liên kết với sự kiện THUYET MINH BAO CAO TAI CHINH.",
+      "weight": 1.0
+    },
+    {
+      "source": "TIIUYET MINH Bio cAo TAI cH iNH",
+      "target": "Tinli QuiigNBil",
+      "label": "Tinli QuiigNBil có liên quan đến sự kiện TIIUYET MINH Bio cAo TAI cH iNH.",
+      "weight": 1.0
+    },
+    {
+      "source": "THUYET MINH BAO CAO TAI CHINH",
+      "target": "Tinli QuiigNBil",
+      "label": "Sự kiện THUYET MINH BAO CAO TAI CHINH có liên quan đến cá nhân Tinli QuiigNBil.",
+      "weight": 1.0
+    },
+    {
+      "source": "TIIUYET MINH Bio cAo TAI cH iNH",
+      "target": "Thu),a Dtinh 36",
+      "label": "Quy định Thu),a Dtinh 36 được áp dụng cho sự kiện TIIUYET MINH Bio cAo TAI cH iN",
+      "weight": 1.0
+    },
+    {
+      "source": "THUYET MINH BAO CAO TAI CHINH",
+      "target": "Thu),a Dtinh 36",
+      "label": "Quy định Thu),a Dtinh 36 được áp dụng cho sự kiện THUYET MINH BAO CAO TAI CHINH.",
+      "weight": 1.0
+    },
+    {
+      "source": "Chi phí nhiên liệu, vật liệu, bảo hiểm",
+      "target": "Chi phí sản xuất",
+      "label": "Chi phí nhiên liệu, vật liệu, bảo hiểm là thành phần cấu thành chi phí sản xuất.",
+      "weight": 1.0
+    },
+    {
+      "source": "BHYT",
+      "target": "Chi phí nhiên liệu, vật liệu, bảo hiểm",
+      "label": "BHYT là một khoản chi phí bắt buộc trong danh mục bảo hiểm của doanh nghiệp.",
+      "weight": 1.0
+    },
+    {
+      "source": "Các khoản chi phí khác",
+      "target": "Tài sản định điểm",
+      "label": "Các khoản chi phí khác có thể được ghi nhận vào tài sản định điểm tùy theo quy đ",
+      "weight": 1.0
+    },
+    {
+      "source": "Thủ tục môn báo cáo tài chính",
+      "target": "Tài sản định điểm",
+      "label": "Thủ tục môn báo cáo tài chính bao gồm việc ghi nhận và trình bày tài sản định đi",
+      "weight": 1.0
+    },
+    {
+      "source": "BHTN",
+      "target": "Chi phí sản xuất",
+      "label": "BHTN là khoản chi phí liên quan đến bảo hiểm thất nghiệp được tính vào chi phí s",
+      "weight": 1.0
+    },
+    {
+      "source": "Chi phí sản xuất",
+      "target": "Thủ tục môn báo cáo tài chính",
+      "label": "Thủ tục môn báo cáo tài chính yêu cầu phân loại chi phí sản xuất vào báo cáo tài",
+      "weight": 1.0
+    },
+    {
+      "source": "BHYT",
+      "target": "Các khoản chi phí khác",
+      "label": "BHYT là một khoản chi phí bắt buộc thuộc danh mục các khoản chi phí khác trong k",
+      "weight": 1.0
+    },
+    {
+      "source": "BHTN",
+      "target": "Các khoản chi phí khác",
+      "label": "BHTN là khoản chi phí bắt buộc thuộc danh mục các khoản chi phí khác theo quy đị",
+      "weight": 1.0
+    },
+    {
+      "source": "Các khoản chi phí khác",
+      "target": "Thủ tục môn báo cáo tài chính",
+      "label": "Thủ tục môn báo cáo tài chính yêu cầu ghi nhận các khoản chi phí khác vào báo cá",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty cổ phần Ôi Jong Kon Tum",
+      "target": "Tổng Giám đốc",
+      "label": "Công ty cổ phần Ôi Jong Kon Tum có chức danh Tổng Giám đốc.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty cổ phần Ôi Jong Kon Tum",
+      "target": "Kế toán lưu động",
+      "label": "Công ty cổ phần Ôi Jong Kon Tum liên quan đến Kế toán lưu động trong báo cáo tài",
+      "weight": 1.0
+    },
+    {
+      "source": "Tài Sản Cố Định",
+      "target": "Tài Sản Dài Hạn",
+      "label": "Tài sản cố định là một thành phần của tài sản dài hạn.",
+      "weight": 1.0
+    },
+    {
+      "source": "Nợ Ngắn Hạn",
+      "target": "Nợ Vay Ngắn Hạn",
+      "label": "Nợ vay ngắn hạn là một thành phần của nợ ngắn hạn.",
+      "weight": 1.0
+    },
+    {
+      "source": "Chi phí vay",
+      "target": "Khoản vay",
+      "label": "Khoản vay phát sinh chi phí vay bao gồm lãi và các chi phí liên quan.",
+      "weight": 1.0
+    },
+    {
+      "source": "Chi phí vay",
+      "target": "Vốn hóa chi phí vay",
+      "label": "Chi phí vay có thể được vốn hóa khi doanh nghiệp xác định được lợi ích tương lai",
+      "weight": 1.0
+    }
+  ],
+  "is_truncated": true
+}

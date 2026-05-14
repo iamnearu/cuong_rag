@@ -2,10 +2,10 @@
 Deep Document Parser
 ====================
 
-Parses documents with DeepSeek OCR (PDF/image-first) to extract markdown,
+Parses documents with MinerU/Docling/DeepSeek OCR to extract markdown,
 tables, and images with structural metadata.
 
-Supported formats: PDF + images (DeepSeek OCR)
+Supported formats: PDF + images (OCR engines)
 Fallback: TXT, MD (via legacy loader)
 """
 from __future__ import annotations
@@ -32,10 +32,14 @@ logger = logging.getLogger(__name__)
 _OCR_EXTENSIONS = {".pdf", ".png", ".jpg", ".jpeg", ".webp", ".bmp", ".tif", ".tiff"}
 _LEGACY_EXTENSIONS = {".txt", ".md"}
 
+_THINK_BLOCK_RE = re.compile(r"<think>.*?</think>\s*", re.DOTALL | re.IGNORECASE)
+_THINK_TAIL_RE = re.compile(r"<think>.*", re.DOTALL | re.IGNORECASE)
+_TOOL_CALL_RE = re.compile(r"<tool_call>.*?</tool_call>\s*", re.DOTALL | re.IGNORECASE)
+
 
 class DeepDocumentParser:
     """
-    Parses documents using DeepSeek OCR for rich structural extraction.
+    Parses documents using MinerU/Docling/DeepSeek OCR for rich structural extraction.
 
     - Converts PDF/images via DeepSeek OCR (OCR-first pipeline)
     - Chunks OCR markdown for retrieval
@@ -49,6 +53,7 @@ class DeepDocumentParser:
         self.output_dir = output_dir or (
             settings.BASE_DIR / "data" / "docling" / f"kb_{workspace_id}"
         )
+        self.last_engine: str | None = None
 
     @staticmethod
     def is_deepseek_supported(file_path: str | Path) -> bool:
@@ -75,11 +80,40 @@ class DeepDocumentParser:
         path = Path(file_path)
         suffix = path.suffix.lower()
         start_time = time.time()
+        self.last_engine = None
+
+        ocr_engine = getattr(settings, "CUONGRAG_OCR_ENGINE", "deepseek_ocr").lower()
 
         if suffix in _OCR_EXTENSIONS:
-            result = self._parse_with_deepseek(path, document_id, original_filename)
+            if ocr_engine == "docling":
+                result = self._parse_with_docling(path, document_id, original_filename)
+                self.last_engine = "docling"
+            elif ocr_engine == "mineru":
+                try:
+                    result = self._parse_with_mineru(path, document_id, original_filename)
+                    self.last_engine = "mineru"
+                except Exception as exc:
+                    fallback = (settings.CUONGRAG_MINERU_FALLBACK_ENGINE or "").strip().lower()
+                    if fallback == "docling":
+                        logger.warning("MinerU failed, fallback to Docling: %s", exc)
+                        result = self._parse_with_docling(path, document_id, original_filename)
+                        self.last_engine = "docling"
+                    elif fallback == "deepseek_ocr":
+                        logger.warning("MinerU failed, fallback to DeepSeek OCR: %s", exc)
+                        result = self._parse_with_deepseek(path, document_id, original_filename)
+                        self.last_engine = "deepseek_ocr"
+                    else:
+                        raise
+            else:
+                result = self._parse_with_deepseek(path, document_id, original_filename)
+                self.last_engine = "deepseek_ocr"
         elif suffix in _LEGACY_EXTENSIONS:
             result = self._parse_legacy(path, document_id, original_filename)
+            self.last_engine = "legacy"
+        elif ocr_engine in {"docling", "mineru"} and suffix in {".docx", ".pptx"}:
+            # Docling supports DOCX and PPTX natively (MinerU fallback)
+            result = self._parse_with_docling(path, document_id, original_filename)
+            self.last_engine = "docling"
         else:
             raise ValueError(
                 f"Unsupported file type: {suffix}. "
@@ -93,6 +127,304 @@ class DeepDocumentParser:
             f"{len(result.images)} images, {result.tables_count} tables"
         )
         return result
+
+    def _parse_with_docling(
+        self,
+        file_path: Path,
+        document_id: int,
+        original_filename: str,
+    ) -> ParsedDocument:
+        """Parse PDF/DOCX/PPTX/image with Docling (optimized pipeline) and convert to internal ParsedDocument.
+
+        Pipeline optimizations (from OCR-SERVICE):
+        - OCR enabled with RapidOCR for scanned PDFs
+        - Table structure recognition with cell matching
+        - GPU acceleration when CUDA available
+        - High-quality image extraction (images_scale=2.0)
+        - Clean markdown post-processing
+        - Optional ProtonX Vietnamese diacritics correction
+        """
+        from app.services.ocr.docling_parser_service import get_docling_parser_service
+
+        temp_output = self.output_dir / "_docling_temp" / str(document_id)
+        if temp_output.exists():
+            shutil.rmtree(temp_output, ignore_errors=True)
+        temp_output.mkdir(parents=True, exist_ok=True)
+
+        logger.info("Docling converting (optimized pipeline): %s", file_path)
+
+        docling = get_docling_parser_service()
+        parse_result = docling.parse_document(file_path, temp_output)
+        pages = parse_result.pages
+        figure_pictures = parse_result.pictures  # actual crop regions, NOT full pages
+
+        if not pages:
+            raise RuntimeError("Docling returned empty pages")
+
+        # Persist images into static image store
+        images_dir = self.output_dir / "images"
+        images_dir.mkdir(parents=True, exist_ok=True)
+
+        images: list[ExtractedImage] = []
+        markdown_pages: list[str] = []
+
+        try:
+            from PIL import Image
+        except Exception:
+            Image = None
+
+        # ── Step 1: copy Docling-extracted figure images (cropped regions) ──
+        # These are the actual picture/figure regions that Docling detected inside
+        # the document (not full page renders). We persist them to permanent
+        # storage BEFORE cleanup and build a local_ref → static_url mapping so
+        # we can rewrite the inline markdown references later.
+        figure_url_map: dict[str, str] = {}  # local_ref (e.g. "images/docling_0.jpg") -> static URL
+
+        for pic in figure_pictures:
+            src = Path(pic.image_path)
+            if not src.exists():
+                logger.warning("Docling figure image missing: %s", src)
+                continue
+
+            image_id = str(uuid.uuid4())
+            dst = images_dir / f"{image_id}.png"
+            width, height = 0, 0
+
+            try:
+                if Image is not None:
+                    with Image.open(src) as im:
+                        if im.mode in {"RGBA", "LA", "P"}:
+                            im = im.convert("RGB")
+                        width, height = im.size
+                        im.save(dst, format="PNG")
+                else:
+                    shutil.copy2(src, dst)
+            except Exception as e:
+                logger.warning("Failed to copy Docling figure %s: %s", src, e)
+                continue
+
+            static_url = (
+                f"/static/doc-images/kb_{self.workspace_id}/images/{image_id}.png"
+            )
+            figure_url_map[pic.local_ref] = static_url
+
+            images.append(
+                ExtractedImage(
+                    image_id=image_id,
+                    document_id=document_id,
+                    page_no=pic.page_no,
+                    file_path=str(dst),
+                    caption=f"Figure - Page {pic.page_no}",
+                    width=width,
+                    height=height,
+                    mime_type="image/png",
+                )
+            )
+
+        logger.info(
+            "Docling: persisted %d figure images for doc %d", len(figure_url_map), document_id
+        )
+
+        # ── Step 2: copy full-page render images (thumbnails) and build markdown ──
+        for page in pages:
+            image_id = str(uuid.uuid4())
+            dst = images_dir / f"{image_id}.png"
+            src = Path(page.image_path)
+            width = 0
+            height = 0
+
+            try:
+                if Image is not None and src.exists():
+                    with Image.open(src) as im:
+                        if im.mode in {"RGBA", "LA", "P"}:
+                            im = im.convert("RGB")
+                        width, height = im.size
+                        im.save(dst, format="PNG")
+                elif src.exists():
+                    shutil.copy2(src, dst)
+            except Exception as e:
+                logger.warning("Failed to copy Docling page image %s: %s", src, e)
+                continue
+
+            page_thumb_url = (
+                f"/static/doc-images/kb_{self.workspace_id}/images/{image_id}.png"
+            )
+            page_md = (page.markdown or "").strip()
+
+            # Replace every local figure ref with its permanent static URL so
+            # inline images in the markdown are not broken after temp cleanup.
+            for local_ref, static_url in figure_url_map.items():
+                page_md = page_md.replace(f"({local_ref})", f"({static_url})")
+
+            if page_md:
+                markdown_pages.append(
+                    f"{page_md}\n\n![Page {page.page_no}]({page_thumb_url})"
+                )
+            else:
+                markdown_pages.append(f"![Page {page.page_no}]({page_thumb_url})")
+
+        markdown = "\n\n---\n\n".join(markdown_pages).strip()
+        if not markdown:
+            raise RuntimeError("Docling markdown is empty")
+
+        # Apply ProtonX Vietnamese correction (same as MinerU path)
+        if settings.CUONGRAG_ENABLE_PROTONX_CORRECTION:
+            markdown = self._apply_protonx_correction(markdown)
+
+        tables = self._extract_tables_from_markdown(markdown, document_id)
+        if settings.CUONGRAG_ENABLE_TABLE_CAPTIONING and tables:
+            self._caption_tables(tables)
+        markdown = self._inject_table_captions(markdown, tables)
+
+        from app.utils.postprocess_json import process_single_markdown_to_document
+        doc_structure = process_single_markdown_to_document(
+            markdown_text=markdown,
+            engine="Docling",
+            job_id=str(document_id),
+            file_name=original_filename,
+        )
+        content_blocks = doc_structure.get("content", [])
+
+        page_count = len(pages)
+        chunks = self._chunk_mineru_markdown(
+            markdown=markdown,
+            document_id=document_id,
+            original_filename=original_filename,
+            images=images,
+            tables=tables,
+        )
+
+        shutil.rmtree(temp_output, ignore_errors=True)
+
+        return ParsedDocument(
+            document_id=document_id,
+            original_filename=original_filename,
+            markdown=markdown,
+            page_count=page_count,
+            chunks=chunks,
+            content_blocks=content_blocks,
+            images=images,
+            tables=tables,
+            tables_count=len(tables),
+        )
+
+    def _parse_with_mineru(
+        self,
+        file_path: Path,
+        document_id: int,
+        original_filename: str,
+    ) -> ParsedDocument:
+        """Parse PDF/image with MinerU (GPU) and convert to internal ParsedDocument."""
+        from app.services.ocr.mineru_parser_service import get_mineru_parser_service
+
+        temp_output = self.output_dir / "_mineru_temp" / str(document_id)
+        if temp_output.exists():
+            shutil.rmtree(temp_output, ignore_errors=True)
+        temp_output.mkdir(parents=True, exist_ok=True)
+
+        logger.info("MinerU converting: %s", file_path)
+
+        mineru = get_mineru_parser_service()
+        pages = mineru.parse_document(file_path, temp_output)
+
+        if not pages:
+            raise RuntimeError("MinerU returned empty pages")
+
+        # Persist page images into static image store
+        images_dir = self.output_dir / "images"
+        images_dir.mkdir(parents=True, exist_ok=True)
+
+        images: list[ExtractedImage] = []
+        markdown_pages: list[str] = []
+
+        try:
+            from PIL import Image
+        except Exception:
+            Image = None
+
+        for page in pages:
+            image_id = str(uuid.uuid4())
+            dst = images_dir / f"{image_id}.png"
+            src = Path(page.image_path)
+            width = 0
+            height = 0
+
+            try:
+                if Image is not None and src.exists():
+                    with Image.open(src) as im:
+                        if im.mode in {"RGBA", "LA", "P"}:
+                            im = im.convert("RGB")
+                        width, height = im.size
+                        im.save(dst, format="PNG")
+                elif src.exists():
+                    shutil.copy2(src, dst)
+            except Exception as e:
+                logger.warning("Failed to copy MinerU page image %s: %s", src, e)
+                continue
+
+            images.append(
+                ExtractedImage(
+                    image_id=image_id,
+                    document_id=document_id,
+                    page_no=page.page_no,
+                    file_path=str(dst),
+                    caption=f"Page {page.page_no}",
+                    width=width,
+                    height=height,
+                    mime_type="image/png",
+                )
+            )
+
+            img_url = f"/static/doc-images/kb_{self.workspace_id}/images/{image_id}.png"
+            page_md = (page.markdown or "").strip()
+            if page_md:
+                markdown_pages.append(f"{page_md}\n\n![Page {page.page_no}]({img_url})")
+            else:
+                markdown_pages.append(f"![Page {page.page_no}]({img_url})")
+
+        markdown = "\n\n---\n\n".join(markdown_pages).strip()
+        if not markdown:
+            raise RuntimeError("MinerU markdown is empty")
+
+        if settings.CUONGRAG_ENABLE_PROTONX_CORRECTION:
+            markdown = self._apply_protonx_correction(markdown)
+
+        tables = self._extract_tables_from_markdown(markdown, document_id)
+        if settings.CUONGRAG_ENABLE_TABLE_CAPTIONING and tables:
+            self._caption_tables(tables)
+        markdown = self._inject_table_captions(markdown, tables)
+
+        from app.utils.postprocess_json import process_single_markdown_to_document
+        doc_structure = process_single_markdown_to_document(
+            markdown_text=markdown,
+            engine="MinerU",
+            job_id=str(document_id),
+            file_name=original_filename,
+        )
+        content_blocks = doc_structure.get("content", [])
+
+        page_count = len(pages)
+        chunks = self._chunk_mineru_markdown(
+            markdown=markdown,
+            document_id=document_id,
+            original_filename=original_filename,
+            images=images,
+            tables=tables,
+        )
+
+        shutil.rmtree(temp_output, ignore_errors=True)
+
+        return ParsedDocument(
+            document_id=document_id,
+            original_filename=original_filename,
+            markdown=markdown,
+            page_count=page_count,
+            chunks=chunks,
+            content_blocks=content_blocks,
+            images=images,
+            tables=tables,
+            tables_count=len(tables),
+        )
 
     def _parse_with_deepseek(
         self,
@@ -184,6 +516,15 @@ class DeepDocumentParser:
             self._caption_tables(tables)
         markdown = self._inject_table_captions(markdown, tables)
 
+        from app.utils.postprocess_json import process_single_markdown_to_document
+        doc_structure = process_single_markdown_to_document(
+            markdown_text=markdown,
+            engine="DeepSeek_OCR",
+            job_id=str(document_id),
+            file_name=original_filename,
+        )
+        content_blocks = doc_structure.get("content", [])
+
         page_count = len(pages)
         chunks = self._chunk_mineru_markdown(
             markdown=markdown,
@@ -201,6 +542,7 @@ class DeepDocumentParser:
             markdown=markdown,
             page_count=page_count,
             chunks=chunks,
+            content_blocks=content_blocks,
             images=images,
             tables=tables,
             tables_count=len(tables),
@@ -422,6 +764,16 @@ class DeepDocumentParser:
             return True
         return False
 
+    @staticmethod
+    def _sanitize_caption(text: str) -> str:
+        if not text:
+            return ""
+        cleaned = _THINK_BLOCK_RE.sub("", text)
+        cleaned = _THINK_TAIL_RE.sub("", cleaned)
+        cleaned = _TOOL_CALL_RE.sub("", cleaned)
+        cleaned = " ".join(cleaned.split())
+        return cleaned
+
     _TABLE_CAPTION_PROMPT = (
         "You are a document analysis assistant. Given a markdown table, "
         "write a concise description that covers:\n"
@@ -460,7 +812,9 @@ class DeepDocumentParser:
                 )
                 result = provider.complete([message])
                 if result:
-                    tbl.caption = " ".join(result.strip().split())[:500]
+                    caption = self._sanitize_caption(result)
+                    if caption:
+                        tbl.caption = caption[:500]
             except Exception as e:
                 logger.debug(f"Failed to caption table {tbl.table_id}: {e}")
 
@@ -582,7 +936,9 @@ class DeepDocumentParser:
                 result = provider.complete([message])
                 if result:
                     # Collapse to single line — prevents breaking ![alt](url) markdown
-                    img.caption = " ".join(result.strip().split())[:500]
+                    caption = self._sanitize_caption(result)
+                    if caption:
+                        img.caption = caption[:500]
 
             except Exception as e:
                 logger.debug(f"Failed to caption image {img.image_id}: {e}")

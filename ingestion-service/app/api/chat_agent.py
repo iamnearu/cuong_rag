@@ -52,6 +52,7 @@ MAX_VISION_IMAGES = 3
 SSE_HEARTBEAT_INTERVAL = 15  # seconds
 
 _CITATION_ID_CHARS = string.ascii_lowercase + string.digits
+_TOOL_CALL_RE = re.compile(r"<tool_call>\s*(\{.*?\})\s*</tool_call>", re.DOTALL)
 
 
 def _generate_citation_id(existing: set[str]) -> str:
@@ -60,6 +61,43 @@ def _generate_citation_id(existing: set[str]) -> str:
         cid = "".join(random.choices(_CITATION_ID_CHARS, k=4))
         if any(c.isalpha() for c in cid) and cid not in existing:
             return cid
+
+
+def _strip_tool_calls(text: str) -> str:
+    if not text:
+        return text
+    return _TOOL_CALL_RE.sub("", text).strip()
+
+
+def _is_simple_greeting(text: str) -> bool:
+    normalized = re.sub(r"[^\w\s]", " ", text.lower())
+    normalized = re.sub(r"\s+", " ", normalized).strip()
+    if not normalized:
+        return False
+    if len(normalized) > 50:
+        return False
+    if re.search(r"[0-9]", normalized):
+        return False
+    greetings = (
+        "hi",
+        "hello",
+        "hey",
+        "xin chao",
+        "xin chào",
+        "chao",
+        "chào",
+        "cam on",
+        "cảm ơn",
+        "thanks",
+        "thank you",
+        "ok",
+        "okay",
+        "bye",
+        "tam biet",
+        "tạm biệt",
+        "goodbye",
+    )
+    return any(normalized == g or normalized.startswith(g + " ") for g in greetings)
 
 
 # ---------------------------------------------------------------------------
@@ -393,6 +431,9 @@ async def agent_chat_stream(
     provider_name = settings.LLM_PROVIDER.lower()
     is_gemini = provider_name == "gemini"
 
+    if not is_gemini and not force_search and not _is_simple_greeting(message):
+        force_search = True
+
     existing_ids: set[str] = set()
     all_sources: list[ChatSourceChunk] = []
     all_images: list[ChatImageRef] = []
@@ -430,16 +471,15 @@ async def agent_chat_stream(
 
         if sources:
             tool_result_parts = [
-                "I have retrieved the following document sources for you.\n",
-                "=== DOCUMENT SOURCES ===",
+                "Đã truy xuất các nguồn tài liệu liên quan dưới đây.\n",
+                "=== NGUON TAI LIEU ===",
                 context,
-                "=== END SOURCES ===\n",
-                "IMPORTANT:\n"
-                "- Read EVERY source above carefully. Answers often require "
-                "combining data from MULTIPLE sources.\n"
-                "- TABLE DATA: Sources may contain table data as 'Key, Year = Value' pairs. "
-                "Example: 'ROE, 2023 = 12,8%' means ROE was 12.8% in 2023.\n"
-                "- If no source contains relevant information, say: "
+                "=== KET THUC NGUON ===\n",
+                "QUAN TRONG:\n"
+                "- Đọc kỹ TẤT CẢ nguồn ở trên. Nhiều câu hỏi cần tổng hợp từ NHIỀU nguồn.\n"
+                "- DỮ LIỆU BẢNG: Nguồn có thể chứa dữ liệu dạng 'Chỉ số, Năm = Giá trị'. "
+                "Ví dụ: 'ROE, 2023 = 12,8%' nghĩa là ROE năm 2023 là 12,8%.\n"
+                "- Nếu không nguồn nào chứa thông tin liên quan, hãy trả lời: "
                 "\"Tài liệu không chứa thông tin này.\"\n",
             ]
             tool_result_content = "\n".join(tool_result_parts)
@@ -545,16 +585,15 @@ async def agent_chat_stream(
 
                 # Build tool result as user message with sources
                 tool_result_parts = [
-                    "I have retrieved the following document sources for you.\n",
-                    "=== DOCUMENT SOURCES ===",
+                    "Đã truy xuất các nguồn tài liệu liên quan dưới đây.\n",
+                    "=== NGUON TAI LIEU ===",
                     context,
-                    "=== END SOURCES ===\n",
-                    "IMPORTANT:\n"
-                    "- Read EVERY source above carefully. Answers often require "
-                    "combining data from MULTIPLE sources.\n"
-                    "- TABLE DATA: Sources may contain table data as 'Key, Year = Value' pairs. "
-                    "Example: 'ROE, 2023 = 12,8%' means ROE was 12.8% in 2023.\n"
-                    "- If no source contains relevant information, say: "
+                    "=== KET THUC NGUON ===\n",
+                    "QUAN TRONG:\n"
+                    "- Đọc kỹ TẤT CẢ nguồn ở trên. Nhiều câu hỏi cần tổng hợp từ NHIỀU nguồn.\n"
+                    "- DỮ LIỆU BẢNG: Nguồn có thể chứa dữ liệu dạng 'Chỉ số, Năm = Giá trị'. "
+                    "Ví dụ: 'ROE, 2023 = 12,8%' nghĩa là ROE năm 2023 là 12,8%.\n"
+                    "- Nếu không nguồn nào chứa thông tin liên quan, hãy trả lời: "
                     "\"Tài liệu không chứa thông tin này.\"\n",
                 ]
                 tool_result_content = "\n".join(tool_result_parts)
@@ -661,7 +700,7 @@ async def agent_chat_stream(
     # ── Fallback: model produced no text and no search was done ──────────
     # Small Ollama models (e.g. qwen3.5:4b) may output thinking about
     # needing to search but never produce a <tool_call> tag or any text.
-    # Auto-search and retry once to avoid "Unable to generate a response."
+    # Auto-search and retry once to avoid "Không thể tạo câu trả lời."
     if not accumulated_text and not all_sources and not is_gemini:
         logger.warning(
             "Ollama produced no text and no tool call — fallback to auto-search"
@@ -689,13 +728,13 @@ async def agent_chat_stream(
 
         if sources:
             fallback_parts = [
-                "I have retrieved the following document sources for you.\n",
-                "=== DOCUMENT SOURCES ===",
+                "Đã truy xuất các nguồn tài liệu liên quan dưới đây.\n",
+                "=== NGUON TAI LIEU ===",
                 context,
-                "=== END SOURCES ===\n",
-                "IMPORTANT:\n"
-                "- Read EVERY source above carefully.\n"
-                "- If no source contains relevant information, say: "
+                "=== KET THUC NGUON ===\n",
+                "QUAN TRONG:\n"
+                "- Đọc kỹ TẤT CẢ nguồn ở trên.\n"
+                "- Nếu không nguồn nào chứa thông tin liên quan, hãy trả lời: "
                 "\"Tài liệu không chứa thông tin này.\"\n",
             ]
             fallback_content = "\n".join(fallback_parts)
@@ -743,10 +782,11 @@ async def agent_chat_stream(
 
     # Strip artifacts
     if accumulated_text:
+        accumulated_text = _strip_tool_calls(accumulated_text)
         accumulated_text = re.sub(r'<unused\d+>:?\s*', '', accumulated_text).strip()
 
     yield {"event": "complete", "data": {
-        "answer": accumulated_text or "Unable to generate a response.",
+        "answer": accumulated_text or "Không thể tạo câu trả lời.",
         "sources": [s.model_dump() for s in all_sources],
         "image_refs": [i.model_dump() for i in all_images],
         "thinking": thinking_text or None,

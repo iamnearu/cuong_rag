@@ -24,6 +24,21 @@ export default defineConfig({
     host: "0.0.0.0",
     hmr: false,
     proxy: {
+      "/api/v1/ingest": {
+        target: process.env.VITE_INGESTION_API_URL || "http://ingestion-service:8082",
+        changeOrigin: true,
+        secure: false,
+      },
+      "/api/v1/documents": {
+        target: process.env.VITE_INGESTION_API_URL || "http://ingestion-service:8082",
+        changeOrigin: true,
+        secure: false,
+      },
+      "/api/v1/kg": {
+        target: process.env.VITE_KG_API_URL || "http://kg-service:8083",
+        changeOrigin: true,
+        secure: false,
+      },
       "/api": {
         target: process.env.VITE_API_BASE_URL || "http://localhost:8081",
         changeOrigin: true,

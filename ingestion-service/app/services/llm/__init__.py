@@ -72,6 +72,7 @@ def get_embedding_provider() -> EmbeddingProvider:
         return OllamaEmbeddingProvider(
             host=settings.OLLAMA_HOST,
             model=settings.KG_EMBEDDING_MODEL,
+            api_key=settings.OLLAMA_API_KEY,
         )
 
     if provider == "sentence_transformers":

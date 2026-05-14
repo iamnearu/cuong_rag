@@ -219,6 +219,7 @@ class DeepRetriever:
                 document_id=meta.get("document_id", 0),
                 page_no=meta.get("page_no", 0),
                 heading_path=heading_path,
+                chunk_index=meta.get("chunk_index", i),
             ))
 
         return chunks, citations

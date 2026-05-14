@@ -48,10 +48,11 @@ logger = logging.getLogger(__name__)
 # ---------------------------------------------------------------------------
 
 MAX_AGENT_ITERATIONS = 3
-MAX_VISION_IMAGES = 3
+MAX_VISION_IMAGES = 1  # FPT Cloud API only allows 1 image per prompt
 SSE_HEARTBEAT_INTERVAL = 15  # seconds
 
 _CITATION_ID_CHARS = string.ascii_lowercase + string.digits
+_TOOL_CALL_RE = re.compile(r"<tool_call>\s*(\{.*?\})\s*</tool_call>", re.DOTALL)
 
 
 def _generate_citation_id(existing: set[str]) -> str:
@@ -60,6 +61,64 @@ def _generate_citation_id(existing: set[str]) -> str:
         cid = "".join(random.choices(_CITATION_ID_CHARS, k=4))
         if any(c.isalpha() for c in cid) and cid not in existing:
             return cid
+
+
+def _strip_tool_calls(text: str) -> str:
+    if not text:
+        return text
+    return _TOOL_CALL_RE.sub("", text).strip()
+
+
+def _is_simple_greeting(text: str) -> bool:
+    """Check if a message is a casual/conversational message that does NOT
+    need document retrieval.  Covers greetings, thank-yous, meta questions
+    about the chatbot itself, and other non-document queries.
+    """
+    normalized = re.sub(r"[^\w\s]", " ", text.lower())
+    normalized = re.sub(r"\s+", " ", normalized).strip()
+    if not normalized:
+        return False
+    if len(normalized) > 80:
+        return False
+
+    # ── Exact / prefix greetings ─────────────────────────────────────────
+    greetings = (
+        "hi", "hello", "hey", "xin chao", "xin chào", "chao", "chào",
+        "cam on", "cảm ơn", "thanks", "thank you",
+        "ok", "okay", "bye", "tam biet", "tạm biệt", "goodbye",
+    )
+    if any(normalized == g or normalized.startswith(g + " ") for g in greetings):
+        return True
+
+    # ── Meta / about-the-bot questions ───────────────────────────────────
+    meta_patterns = (
+        # Vietnamese
+        r"\bban la (ai|gi|gì)\b",
+        r"\bban ten (la |)(gi|gì)\b",
+        r"\bbạn là (ai|gì)\b",
+        r"\bbạn tên (là |)(gì)\b",
+        r"\bmodel (gi|gì|nào)\b",
+        r"\bai tao ra ban\b",
+        r"\bai tạo ra bạn\b",
+        r"\bban co the lam (gi|gì)\b",
+        r"\bbạn có thể làm (gì)\b",
+        r"\bban biet (gi|gì)\b",
+        r"\bbạn biết (gì)\b",
+        r"\bgioi thieu ban than\b",
+        r"\bgiới thiệu bản thân\b",
+        # English
+        r"\bwho are you\b",
+        r"\bwhat are you\b",
+        r"\bwhat model\b",
+        r"\bwhat is your name\b",
+        r"\bwhat can you do\b",
+        r"\btell me about yourself\b",
+    )
+    for pat in meta_patterns:
+        if re.search(pat, normalized):
+            return True
+
+    return False
 
 
 # ---------------------------------------------------------------------------
@@ -284,8 +343,10 @@ async def _execute_search_documents(
         meta_parts = []
         if citation:
             meta_parts.append(citation.source_file)
-            if citation.page_no:
-                meta_parts.append(f"page {citation.page_no}")
+        chunk_id_str = f"doc_{chunk.document_id}_chunk_{chunk.chunk_index}"
+        meta_parts.append(f"chunk: {chunk_id_str}")
+        if chunk.page_no:
+            meta_parts.append(f"trang {chunk.page_no}")
         heading = " > ".join(chunk.heading_path) if chunk.heading_path else ""
         if heading:
             meta_parts.append(heading)
@@ -406,6 +467,12 @@ async def agent_chat_stream(
     provider_name = settings.LLM_PROVIDER.lower()
     is_gemini = provider_name == "gemini"
 
+    # Detect casual / meta questions that don't need document search
+    direct_answer = _is_simple_greeting(message)
+
+    if not is_gemini and not force_search and not direct_answer:
+        force_search = True
+
     def _no_info_text() -> str:
         return settings.CUONGRAG_NO_INFO_MESSAGE or "Thông tin này không có trong tài liệu được cung cấp."
 
@@ -430,7 +497,12 @@ async def agent_chat_stream(
     tools = None
     effective_system_prompt = system_prompt
 
-    if force_search:
+    if direct_answer:
+        # ── Direct answer mode: casual/meta questions ──────────────────────
+        # No document search, no tool calling — just answer naturally.
+        pass  # keep effective_system_prompt and tools as-is (no tool injection)
+
+    elif force_search:
         # ── Force-search mode: pre-search before LLM call ──────────────────
         # Retrieve sources immediately, inject as context. No tool calling needed.
         yield {"event": "status", "data": {"step": "retrieving", "detail": f"Searching: {message[:80]}..."}}
@@ -459,16 +531,15 @@ async def agent_chat_stream(
 
         if sources:
             tool_result_parts = [
-                "I have retrieved the following document sources for you.\n",
-                "=== DOCUMENT SOURCES ===",
+                "Đã truy xuất các nguồn tài liệu liên quan dưới đây.\n",
+                "=== NGUON TAI LIEU ===",
                 context,
-                "=== END SOURCES ===\n",
-                "IMPORTANT:\n"
-                "- Read EVERY source above carefully. Answers often require "
-                "combining data from MULTIPLE sources.\n"
-                "- TABLE DATA: Sources may contain table data as 'Key, Year = Value' pairs. "
-                "Example: 'ROE, 2023 = 12,8%' means ROE was 12.8% in 2023.\n"
-                "- If no source contains relevant information, say: "
+                "=== KET THUC NGUON ===\n",
+                "QUAN TRONG:\n"
+                "- Đọc kỹ TẤT CẢ nguồn ở trên. Nhiều câu hỏi cần tổng hợp từ NHIỀU nguồn.\n"
+                "- DỮ LIỆU BẢNG: Nguồn có thể chứa dữ liệu dạng 'Chỉ số, Năm = Giá trị'. "
+                "Ví dụ: 'ROE, 2023 = 12,8%' nghĩa là ROE năm 2023 là 12,8%.\n"
+                "- Nếu không nguồn nào chứa thông tin liên quan, hãy trả lời: "
                 "\"Tài liệu không chứa thông tin này.\"\n",
             ]
             tool_result_content = "\n".join(tool_result_parts)
@@ -581,16 +652,15 @@ async def agent_chat_stream(
 
                 # Build tool result as user message with sources
                 tool_result_parts = [
-                    "I have retrieved the following document sources for you.\n",
-                    "=== DOCUMENT SOURCES ===",
+                    "Đã truy xuất các nguồn tài liệu liên quan dưới đây.\n",
+                    "=== NGUON TAI LIEU ===",
                     context,
-                    "=== END SOURCES ===\n",
-                    "IMPORTANT:\n"
-                    "- Read EVERY source above carefully. Answers often require "
-                    "combining data from MULTIPLE sources.\n"
-                    "- TABLE DATA: Sources may contain table data as 'Key, Year = Value' pairs. "
-                    "Example: 'ROE, 2023 = 12,8%' means ROE was 12.8% in 2023.\n"
-                    "- If no source contains relevant information, say: "
+                    "=== KET THUC NGUON ===\n",
+                    "QUAN TRONG:\n"
+                    "- Đọc kỹ TẤT CẢ nguồn ở trên. Nhiều câu hỏi cần tổng hợp từ NHIỀU nguồn.\n"
+                    "- DỮ LIỆU BẢNG: Nguồn có thể chứa dữ liệu dạng 'Chỉ số, Năm = Giá trị'. "
+                    "Ví dụ: 'ROE, 2023 = 12,8%' nghĩa là ROE năm 2023 là 12,8%.\n"
+                    "- Nếu không nguồn nào chứa thông tin liên quan, hãy trả lời: "
                     "\"Tài liệu không chứa thông tin này.\"\n",
                 ]
                 tool_result_content = "\n".join(tool_result_parts)
@@ -694,14 +764,31 @@ async def agent_chat_stream(
             # No tool call from model — answer is in accumulated_text, done.
             break
 
-    # ── Fallback: model produced no text and no search was done ──────────
-    # Small Ollama models (e.g. qwen3.5:4b) may output thinking about
-    # needing to search but never produce a <tool_call> tag or any text.
-    # Auto-search and retry once to avoid "Unable to generate a response."
-    if not accumulated_text and not all_sources and not is_gemini:
+    # ── Fallback: model produced no usable text or raw JSON instead ────────
+    # Triggers when:
+    # 1. Model produced no text and no search was done (thinking without <tool_call>)
+    # 2. Model output raw tool call JSON as text (FPT Cloud doesn't understand XML tags)
+    _needs_fallback = False
+    if not accumulated_text and not all_sources and not is_gemini and not direct_answer:
+        _needs_fallback = True
         logger.warning(
-            "Ollama produced no text and no tool call — fallback to auto-search"
+            "Model produced no text and no tool call — fallback to auto-search"
         )
+    elif accumulated_text and not all_sources and not is_gemini and not direct_answer:
+        # Check if accumulated text is actually a raw JSON tool call
+        stripped = accumulated_text.strip()
+        if (
+            stripped.startswith('{"name"')
+            or stripped.startswith('{"function"')
+            or '"search_documents"' in stripped[:200]
+        ):
+            _needs_fallback = True
+            accumulated_text = ""  # discard the raw JSON
+            logger.warning(
+                "Model output raw JSON tool call as text — fallback to auto-search"
+            )
+
+    if _needs_fallback:
         yield {"event": "status", "data": {
             "step": "retrieving",
             "detail": f"Searching: {message[:80]}..."
@@ -735,13 +822,16 @@ async def agent_chat_stream(
 
         if sources:
             fallback_parts = [
-                "I have retrieved the following document sources for you.\n",
-                "=== DOCUMENT SOURCES ===",
+                "Đã truy xuất các nguồn tài liệu liên quan dưới đây.\n",
+                "=== NGUON TAI LIEU ===",
                 context,
-                "=== END SOURCES ===\n",
-                "IMPORTANT:\n"
-                "- Read EVERY source above carefully.\n"
-                "- If no source contains relevant information, say: "
+                "=== KET THUC NGUON ===\n",
+                "QUAN TRONG:\n"
+                "- Đọc kỹ TẤT CẢ nguồn ở trên.\n"
+                "- RICH CONTENT: Bao gồm TẤT CẢ hình ảnh [IMG-xxxx], bảng, "
+                "công thức toán (LaTeX), biểu đồ, và code snippets từ nguồn. "
+                "Đây là phần thiết yếu — KHÔNG được bỏ qua.\n"
+                "- Nếu không nguồn nào chứa thông tin liên quan, hãy trả lời: "
                 "\"Tài liệu không chứa thông tin này.\"\n",
             ]
             fallback_content = "\n".join(fallback_parts)
@@ -750,8 +840,13 @@ async def agent_chat_stream(
                 f"(chỉ dùng ngôn ngữ khác nếu người dùng yêu cầu rõ): {message}"
             )
 
-            # Remove old tool system prompt, add sources as context
-            fallback_msgs = messages.copy()
+            # Build CLEAN messages for retry — only keep recent history
+            # and the user question with sources.  Drop the tool-calling
+            # prompt that already failed, so the model focuses on answering.
+            fallback_msgs: list[LLMMessage] = []
+            for msg in history[-6:]:
+                role = "user" if msg["role"] == "user" else "assistant"
+                fallback_msgs.append(LLMMessage(role=role, content=msg["content"]))
             fallback_msgs.append(LLMMessage(role="user", content=fallback_content))
 
             yield {"event": "status", "data": {
@@ -789,10 +884,11 @@ async def agent_chat_stream(
 
     # Strip artifacts
     if accumulated_text:
+        accumulated_text = _strip_tool_calls(accumulated_text)
         accumulated_text = re.sub(r'<unused\d+>:?\s*', '', accumulated_text).strip()
 
     yield {"event": "complete", "data": {
-        "answer": accumulated_text or "Unable to generate a response.",
+        "answer": accumulated_text or "Không thể tạo câu trả lời.",
         "sources": [s.model_dump() for s in all_sources],
         "image_refs": [i.model_dump() for i in all_images],
         "thinking": thinking_text or None,

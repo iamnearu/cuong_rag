@@ -327,7 +327,14 @@ class OllamaLLMProvider(LLMProvider):
                         json=payload,
                         headers=self._openai_headers(),
                     ) as resp:
-                        resp.raise_for_status()
+                        if resp.status_code >= 400:
+                            error_body = await resp.aread()
+                            logger.error(
+                                "OpenAI-compatible streaming error %d: %s",
+                                resp.status_code,
+                                error_body.decode("utf-8", errors="replace")[:2000],
+                            )
+                            resp.raise_for_status()
                         async for line in resp.aiter_lines():
                             if not line:
                                 continue

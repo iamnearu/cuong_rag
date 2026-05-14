@@ -303,9 +303,11 @@ class CuongRAGService:
             source = chunk.metadata.get("source", "Unknown")
             page = chunk.metadata.get("page_no", 0)
             heading = chunk.metadata.get("heading_path", "")
+            chunk_id = f"doc_{chunk.metadata.get('document_id', 0)}_chunk_{chunk.metadata.get('chunk_index', i)}"
             citation = source
+            citation += f" | chunk: {chunk_id}"
             if page:
-                citation += f" | p.{page}"
+                citation += f" | trang {page}"
             if heading:
                 citation += f" | {heading}"
             context_parts.append(f"[{i + 1}] {citation}\n{chunk.content}")

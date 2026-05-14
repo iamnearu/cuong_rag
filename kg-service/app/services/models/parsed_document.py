@@ -73,12 +73,19 @@ class Citation:
     document_id: int
     page_no: int = 0
     heading_path: list[str] = field(default_factory=list)
+    chunk_index: int = -1
 
     def format(self) -> str:
-        """Format citation as a human-readable string."""
+        """Format citation as a human-readable string.
+
+        Includes chunk index and page number so both the LLM and the
+        end-user can trace exactly where the information came from.
+        """
         parts = [self.source_file]
+        if self.chunk_index >= 0:
+            parts.append(f"chunk {self.chunk_index}")
         if self.page_no > 0:
-            parts.append(f"p.{self.page_no}")
+            parts.append(f"trang {self.page_no}")
         if self.heading_path:
             parts.append(" > ".join(self.heading_path))
         return " | ".join(parts)

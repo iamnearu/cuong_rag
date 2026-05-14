@@ -65,6 +65,7 @@ class Settings(BaseSettings):
     ]
     CUONGRAG_DEFAULT_QUERY_MODE: str = "hybrid"
     CUONGRAG_DOCLING_IMAGES_SCALE: float = 2.0
+    CUONGRAG_DOCLING_NUM_THREADS: int = 4
     CUONGRAG_MAX_IMAGES_PER_DOC: int = 50
     CUONGRAG_ENABLE_FORMULA_ENRICHMENT: bool = True
 

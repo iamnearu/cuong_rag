@@ -1,0 +1,23 @@
+{
+  "doc-2bb1ea8911c1ccd9a5f0f5eb7386b355": {
+    "status": "processed",
+    "chunks_count": 5,
+    "chunks_list": [
+      "chunk-eef634fbb5143b6bff6a32162c6b6659",
+      "chunk-c7e7d2ad50715920a43ff58624fa49e3",
+      "chunk-727694d563c801baa37848f9f002ae31",
+      "chunk-742968c1348875f455f41b248eaea0dd",
+      "chunk-b71bc1f9b1b2a67f43c99e8aae5cd6ce"
+    ],
+    "content_summary": "![Image](images/docling_0.jpg)\n\n![Image](images/docling_1.jpg)\n\n\n## Bảo trì dựa trên rủi ro Cách triển khai hiệu quả\n\n![Image](images/docling_2.jpg)\n\n![Image](images/docling_3.jpg)\n\nThiết bị máy móc của nhà máy ngày càng nhiều, việc quản lý và bảo tr...",
+    "content_length": 16887,
+    "created_at": "2026-05-14T09:59:55.226539+00:00",
+    "updated_at": "2026-05-14T10:02:16.254756+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260514_095955_b587f109",
+    "metadata": {
+      "processing_start_time": 1778752795,
+      "processing_end_time": 1778752936
+    }
+  }
+}

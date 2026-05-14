@@ -508,13 +508,48 @@ class OllamaEmbeddingProvider(EmbeddingProvider):
         self,
         host: str = "http://localhost:11434",
         model: str = "bge-m3",
+        api_key: str = "",
     ):
         self._host = host
         self._model = model
+        self._api_key = (api_key or "").strip()
+        self._openai_mode = bool(self._api_key) or "mkp-api.fptcloud.com" in (host or "")
         self._dimension: Optional[int] = None
+
+    def _openai_endpoint(self) -> str:
+        base = (self._host or "").rstrip("/")
+        if base.endswith("/v1/embeddings"):
+            return base
+        if base.endswith("/v1"):
+            return f"{base}/embeddings"
+        return f"{base}/v1/embeddings"
+
+    def _openai_headers(self) -> dict[str, str]:
+        headers = {"Content-Type": "application/json"}
+        if self._api_key:
+            headers["Authorization"] = f"Bearer {self._api_key}"
+        return headers
 
     def _detect_dimension(self) -> int:
         """Detect embedding dimension by running a probe."""
+        if self._openai_mode:
+            import requests
+            try:
+                resp = requests.post(
+                    self._openai_endpoint(),
+                    json={"model": self._model, "input": ["probe"]},
+                    headers=self._openai_headers(),
+                    timeout=30,
+                )
+                resp.raise_for_status()
+                dim = len(resp.json()["data"][0]["embedding"])
+                logger.info(f"Detected OpenAI embedding dimension: {dim} for model {self._model}")
+                return dim
+            except Exception as e:
+                logger.warning(f"Failed to detect embedding dimension: {e}, defaulting to config")
+                from app.core.config import settings
+                return settings.KG_EMBEDDING_DIMENSION
+
         import ollama
 
         try:
@@ -546,9 +581,31 @@ class OllamaEmbeddingProvider(EmbeddingProvider):
         return sanitized
 
     def embed_sync(self, texts: list[str]) -> np.ndarray:
-        import ollama
-
         clean = self._sanitize_texts(texts)
+        
+        if self._openai_mode:
+            try:
+                import requests
+                resp = requests.post(
+                    self._openai_endpoint(),
+                    json={"model": self._model, "input": clean},
+                    headers=self._openai_headers(),
+                    timeout=60,
+                )
+                resp.raise_for_status()
+                data = resp.json()
+                embeddings = [item["embedding"] for item in data.get("data", [])]
+                arr = np.array(embeddings, dtype=np.float32)
+                if np.any(np.isnan(arr)):
+                    logger.warning("OpenAI-compatible embed_sync produced NaN values")
+                    arr = np.nan_to_num(arr, nan=0.0)
+                return arr
+            except Exception as e:
+                logger.error(f"OpenAI-compatible embedding failed: {e}")
+                dim = self.get_dimension()
+                return np.zeros((len(texts), dim), dtype=np.float32)
+
+        import ollama
         try:
             result = ollama.embed(model=self._model, input=clean)
             arr = np.array(result.embeddings, dtype=np.float32)
@@ -564,9 +621,30 @@ class OllamaEmbeddingProvider(EmbeddingProvider):
 
     async def embed(self, texts: list[str]) -> np.ndarray:
         """Native async embedding via ollama.AsyncClient."""
-        import ollama
-
         clean = self._sanitize_texts(texts)
+        
+        if self._openai_mode:
+            try:
+                async with httpx.AsyncClient(timeout=60.0) as client:
+                    resp = await client.post(
+                        self._openai_endpoint(),
+                        json={"model": self._model, "input": clean},
+                        headers=self._openai_headers(),
+                    )
+                    resp.raise_for_status()
+                    data = resp.json()
+                    embeddings = [item["embedding"] for item in data.get("data", [])]
+                    arr = np.array(embeddings, dtype=np.float32)
+                    if np.any(np.isnan(arr)):
+                        logger.warning("OpenAI-compatible async embed produced NaN values")
+                        arr = np.nan_to_num(arr, nan=0.0)
+                    return arr
+            except Exception as e:
+                logger.error(f"OpenAI-compatible async embedding failed: {e}")
+                dim = self.get_dimension()
+                return np.zeros((len(texts), dim), dtype=np.float32)
+
+        import ollama
         try:
             client = ollama.AsyncClient(host=self._host)
             result = await client.embed(model=self._model, input=clean)

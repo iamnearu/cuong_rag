@@ -93,7 +93,7 @@ class CuongRAGService:
     ) -> None:
         """Write indexed document payload to JSON in output folder."""
         try:
-            output_dir = Path(settings.CUONGRAG_INDEX_OUTPUT_DIR)
+            output_dir = self._get_output_dir(document.id)
             output_dir.mkdir(parents=True, exist_ok=True)
 
             payload = {
@@ -108,19 +108,63 @@ class CuongRAGService:
                 "processing_time_ms": elapsed_ms,
                 "indexed_at": int(time.time()),
                 "markdown": parsed.markdown,
+                "content_blocks": parsed.content_blocks,
                 "chunks": [asdict(c) for c in parsed.chunks],
                 "images": [asdict(i) for i in parsed.images],
                 "tables": [asdict(t) for t in parsed.tables],
             }
 
-            out_path = output_dir / f"workspace_{self.workspace_id}_doc_{document.id}.json"
-            out_path.write_text(
-                json.dumps(payload, ensure_ascii=False, indent=2),
-                encoding="utf-8",
-            )
-            logger.info(f"Saved indexing JSON to {out_path}")
+            if settings.CUONGRAG_EXPORT_INDEX_JSON:
+                out_path = output_dir / "index.json"
+                out_path.write_text(
+                    json.dumps(payload, ensure_ascii=False, indent=2),
+                    encoding="utf-8",
+                )
+                logger.info(f"Saved indexing JSON to {out_path}")
+
+            if settings.CUONGRAG_EXPORT_MARKDOWN and parsed.markdown:
+                md_path = output_dir / "markdown.md"
+                md_path.write_text(parsed.markdown, encoding="utf-8")
+
+            if settings.CUONGRAG_EXPORT_EMBEDDINGS:
+                self._export_embeddings_json(output_dir, document.id)
         except Exception as exc:
             logger.warning(f"Failed to save indexing JSON for doc {document.id}: {exc}")
+
+    def _get_output_dir(self, document_id: int) -> Path:
+        base_dir = Path(settings.CUONGRAG_INDEX_OUTPUT_DIR)
+        layout = (settings.CUONGRAG_OUTPUT_LAYOUT or "document").strip().lower()
+        if layout in {"workspace", "workspace_id"}:
+            return base_dir / f"workspace_{self.workspace_id}" / f"doc_{document_id}"
+        return base_dir / f"doc_{document_id}"
+
+    def _export_embeddings_json(self, output_dir: Path, document_id: int) -> None:
+        try:
+            rows = self.vector_store.get_embeddings_by_document_id(document_id)
+            out_path = output_dir / "embeddings.json"
+            out_path.write_text(
+                json.dumps(rows, ensure_ascii=False, indent=2),
+                encoding="utf-8",
+            )
+        except Exception as exc:
+            logger.warning(f"Failed to export embeddings for doc {document_id}: {exc}")
+
+    async def _export_kg_graph_json(self, document_id: int) -> None:
+        if not self.kg_service:
+            return
+        try:
+            output_dir = self._get_output_dir(document_id)
+            output_dir.mkdir(parents=True, exist_ok=True)
+            data = await self.kg_service.get_graph_data(
+                max_nodes=max(1, settings.CUONGRAG_KG_EXPORT_MAX_NODES)
+            )
+            out_path = output_dir / "kg_graph.json"
+            out_path.write_text(
+                json.dumps(data, ensure_ascii=False, indent=2),
+                encoding="utf-8",
+            )
+        except Exception as exc:
+            logger.warning(f"Failed to export KG graph for doc {document_id}: {exc}")
 
     # ------------------------------------------------------------------
     # Document Processing
@@ -159,11 +203,7 @@ class CuongRAGService:
             document.markdown_content = parsed.markdown
             document.page_count = parsed.page_count
             document.table_count = parsed.tables_count
-            document.parser_version = (
-                "deepseek_ocr"
-                if DeepDocumentParser.is_deepseek_supported(file_path)
-                else "legacy"
-            )
+            document.parser_version = self.parser.last_engine or "legacy"
             await self.db.commit()
 
             # Clean up old image records before saving new ones (handles re-processing)
@@ -297,6 +337,9 @@ class CuongRAGService:
                 elapsed_ms=elapsed_ms,
             )
 
+            if settings.CUONGRAG_EXPORT_KG_GRAPH:
+                await self._export_kg_graph_json(document.id)
+
             logger.info(
                 f"CuongRAG processed document {document_id}: "
                 f"{chunk_count} chunks, {len(parsed.images)} images, "
@@ -355,9 +398,11 @@ class CuongRAGService:
             source = chunk.metadata.get("source", "Unknown")
             page = chunk.metadata.get("page_no", 0)
             heading = chunk.metadata.get("heading_path", "")
+            chunk_id = f"doc_{chunk.metadata.get('document_id', 0)}_chunk_{chunk.metadata.get('chunk_index', i)}"
             citation = source
+            citation += f" | chunk: {chunk_id}"
             if page:
-                citation += f" | p.{page}"
+                citation += f" | trang {page}"
             if heading:
                 citation += f" | {heading}"
             context_parts.append(f"[{i + 1}] {citation}\n{chunk.content}")

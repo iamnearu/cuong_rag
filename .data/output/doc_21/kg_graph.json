@@ -1,0 +1,601 @@
+{
+  "nodes": [
+    {
+      "id": "Bảo trì dựa trên rủi ro",
+      "label": "Bảo trì dựa trên rủi ro",
+      "entity_type": "technology",
+      "degree": 2
+    },
+    {
+      "id": "Phần mềm bảo trì",
+      "label": "Phần mềm bảo trì",
+      "entity_type": "product",
+      "degree": 2
+    },
+    {
+      "id": "Xe đầu kéo cỡ lớn",
+      "label": "Xe đầu kéo cỡ lớn",
+      "entity_type": "product",
+      "degree": 1
+    },
+    {
+      "id": "Tài sản",
+      "label": "Tài sản",
+      "entity_type": "product",
+      "degree": 6
+    },
+    {
+      "id": "Chỉ số sự cố xảy ra",
+      "label": "Chỉ số sự cố xảy ra",
+      "entity_type": "concept",
+      "degree": 5
+    },
+    {
+      "id": "Catastrophic",
+      "label": "Catastrophic",
+      "entity_type": "concept",
+      "degree": 2
+    },
+    {
+      "id": "Critical",
+      "label": "Critical",
+      "entity_type": "concept",
+      "degree": 2
+    },
+    {
+      "id": "Marginal",
+      "label": "Marginal",
+      "entity_type": "concept",
+      "degree": 2
+    },
+    {
+      "id": "Minor",
+      "label": "Minor",
+      "entity_type": "concept",
+      "degree": 2
+    },
+    {
+      "id": "Frequent",
+      "label": "Frequent",
+      "entity_type": "concept",
+      "degree": 1
+    },
+    {
+      "id": "Likely",
+      "label": "Likely",
+      "entity_type": "concept",
+      "degree": 1
+    },
+    {
+      "id": "Occasional",
+      "label": "Occasional",
+      "entity_type": "concept",
+      "degree": 1
+    },
+    {
+      "id": "Unlikely",
+      "label": "Unlikely",
+      "entity_type": "concept",
+      "degree": 1
+    },
+    {
+      "id": "Highly unlikely",
+      "label": "Highly unlikely",
+      "entity_type": "concept",
+      "degree": 1
+    },
+    {
+      "id": "Bảng Quan Hệ Rủi Ro",
+      "label": "Bảng Quan Hệ Rủi Ro",
+      "entity_type": "product",
+      "degree": 3
+    },
+    {
+      "id": "Mức Độ Nghiêm Trọng Rủi Ro",
+      "label": "Mức Độ Nghiêm Trọng Rủi Ro",
+      "entity_type": "other",
+      "degree": 2
+    },
+    {
+      "id": "Chỉ Số Xuất Hiện",
+      "label": "Chỉ Số Xuất Hiện",
+      "entity_type": "other",
+      "degree": 2
+    },
+    {
+      "id": "Ma Trận Rủi Ro",
+      "label": "Ma Trận Rủi Ro",
+      "entity_type": "product",
+      "degree": 2
+    },
+    {
+      "id": "Thiết Bị Rủi Ro Thấp",
+      "label": "Thiết Bị Rủi Ro Thấp",
+      "entity_type": "other",
+      "degree": 2
+    },
+    {
+      "id": "Thiết Bị Rủi Ro Cao",
+      "label": "Thiết Bị Rủi Ro Cao",
+      "entity_type": "other",
+      "degree": 2
+    },
+    {
+      "id": "Bảo Trì Dựa Trên Tình Trạng",
+      "label": "Bảo Trì Dựa Trên Tình Trạng",
+      "entity_type": "technology",
+      "degree": 1
+    },
+    {
+      "id": "Bảo Trì Phòng Ngừa",
+      "label": "Bảo Trì Phòng Ngừa",
+      "entity_type": "technology",
+      "degree": 1
+    },
+    {
+      "id": "Phần Mềm Bảo Trì",
+      "label": "Phần Mềm Bảo Trì",
+      "entity_type": "product",
+      "degree": 1
+    },
+    {
+      "id": "Thiết Bị Rủi Ro Vừa Phải",
+      "label": "Thiết Bị Rủi Ro Vừa Phải",
+      "entity_type": "other",
+      "degree": 1
+    },
+    {
+      "id": "Tối Ưu Hóa Chi Phí Bảo Trì",
+      "label": "Tối Ưu Hóa Chi Phí Bảo Trì",
+      "entity_type": "other",
+      "degree": 1
+    },
+    {
+      "id": "Bảo Trì Điều Chỉnh",
+      "label": "Bảo Trì Điều Chỉnh",
+      "entity_type": "technology",
+      "degree": 1
+    },
+    {
+      "id": "Bộ Máy Quan Liêu",
+      "label": "Bộ Máy Quan Liêu",
+      "entity_type": "other",
+      "degree": 1
+    },
+    {
+      "id": "SpeedMaint CMMS",
+      "label": "SpeedMaint CMMS",
+      "entity_type": "product",
+      "degree": 3
+    },
+    {
+      "id": "Ban Quản Lý",
+      "label": "Ban Quản Lý",
+      "entity_type": "organization",
+      "degree": 2
+    },
+    {
+      "id": "Ban Lãnh Đạo Cấp Cao",
+      "label": "Ban Lãnh Đạo Cấp Cao",
+      "entity_type": "organization",
+      "degree": 1
+    },
+    {
+      "id": "Doanh Nghiệp",
+      "label": "Doanh Nghiệp",
+      "entity_type": "organization",
+      "degree": 1
+    },
+    {
+      "id": "Các Nhà Quản Lý",
+      "label": "Các Nhà Quản Lý",
+      "entity_type": "person",
+      "degree": 1
+    },
+    {
+      "id": "Chỉ số mức độ xảy ra",
+      "label": "Chỉ số mức độ xảy ra",
+      "entity_type": "financial_metric",
+      "degree": 2
+    },
+    {
+      "id": "Chỉ số mức độ nghiêm trọng",
+      "label": "Chỉ số mức độ nghiêm trọng",
+      "entity_type": "financial_metric",
+      "degree": 6
+    },
+    {
+      "id": "Rủi ro hỏng hóc",
+      "label": "Rủi ro hỏng hóc",
+      "entity_type": "concept",
+      "degree": 3
+    },
+    {
+      "id": "1% đến 10% giá trị rủi ro tối đa",
+      "label": "1% đến 10% giá trị rủi ro tối đa",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "10% đến 30% giá trị rủi ro tối đa",
+      "label": "10% đến 30% giá trị rủi ro tối đa",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "Trên 30% giá trị rủi ro tối đa",
+      "label": "Trên 30% giá trị rủi ro tối đa",
+      "entity_type": "financial_metric",
+      "degree": 1
+    },
+    {
+      "id": "MứcĐộNghiêmTrọng Rủi Ro",
+      "label": "MứcĐộNghiêmTrọng Rủi Ro",
+      "entity_type": "concept",
+      "degree": 1
+    },
+    {
+      "id": "100 mức giá trị rủi ro",
+      "label": "100 mức giá trị rủi ro",
+      "entity_type": "financial_metric",
+      "degree": 0
+    },
+    {
+      "id": "Công ty TNHH MTV phần mềm SpeedMaint",
+      "label": "Công ty TNHH MTV phần mềm SpeedMaint",
+      "entity_type": "organization",
+      "degree": 7
+    },
+    {
+      "id": "Văn phòng miền Bắc",
+      "label": "Văn phòng miền Bắc",
+      "entity_type": "location",
+      "degree": 1
+    },
+    {
+      "id": "Văn phòng miền Nam",
+      "label": "Văn phòng miền Nam",
+      "entity_type": "location",
+      "degree": 1
+    },
+    {
+      "id": "Dịch vụ bảo trì",
+      "label": "Dịch vụ bảo trì",
+      "entity_type": "product",
+      "degree": 1
+    },
+    {
+      "id": "https://speedmaint.com/",
+      "label": "https://speedmaint.com/",
+      "entity_type": "product",
+      "degree": 1
+    },
+    {
+      "id": "ManWinWin",
+      "label": "ManWinWin",
+      "entity_type": "organization",
+      "degree": 1
+    },
+    {
+      "id": "https://signup.speedmaint.com/dich-vu-bao-tri/?utm_source=NhungvtSEO&utm_medium=LoT01&utm_campaign=ebook-bao-tri-dua-tren-rui-ro",
+      "label": "https://signup.speedmaint.com/dich-vu-bao-tri/?utm_source=NhungvtSEO&utm_medium=LoT01&utm_campaign=ebook-bao-tri-dua-tren-rui-ro",
+      "entity_type": "product",
+      "degree": 4
+    },
+    {
+      "id": "NhungvtSEO",
+      "label": "NhungvtSEO",
+      "entity_type": "organization",
+      "degree": 1
+    },
+    {
+      "id": "LoT01",
+      "label": "LoT01",
+      "entity_type": "product",
+      "degree": 1
+    },
+    {
+      "id": "ebook-bao-tri-dua-tren-rui-ro",
+      "label": "ebook-bao-tri-dua-tren-rui-ro",
+      "entity_type": "product",
+      "degree": 1
+    },
+    {
+      "id": "SpeedMaint Cloud CMMS",
+      "label": "SpeedMaint Cloud CMMS",
+      "entity_type": "product",
+      "degree": 1
+    },
+    {
+      "id": "Financial_Metric",
+      "label": "Financial_Metric",
+      "entity_type": "UNKNOWN",
+      "degree": 2
+    }
+  ],
+  "edges": [
+    {
+      "source": "Bảo trì dựa trên rủi ro",
+      "target": "Tài sản",
+      "label": "Bảo trì dựa trên rủi ro được áp dụng để xác định và phân bổ nguồn lực cho các tà",
+      "weight": 1.0
+    },
+    {
+      "source": "Bảo trì dựa trên rủi ro",
+      "target": "Phần mềm bảo trì",
+      "label": "Phần mềm bảo trì hỗ trợ tính toán chỉ số xuất hiện sự cố, giúp loại bỏ tính chủ ",
+      "weight": 1.0
+    },
+    {
+      "source": "Chỉ số mức độ xảy ra",
+      "target": "Phần mềm bảo trì",
+      "label": "Phần mềm bảo trì tự động hóa việc xác định sự cố và tính toán xác suất theo thời",
+      "weight": 1.0
+    },
+    {
+      "source": "Tài sản",
+      "target": "Xe đầu kéo cỡ lớn",
+      "label": "Xe đầu kéo cỡ lớn là ví dụ điển hình về tài sản có rủi ro cao nếu xảy ra sự cố.",
+      "weight": 1.0
+    },
+    {
+      "source": "Catastrophic",
+      "target": "Tài sản",
+      "label": "Lỗi \"Catastrophic\" có ảnh hưởng nghiêm trọng đến tài sản, gây dừng hệ thống hoàn",
+      "weight": 1.0
+    },
+    {
+      "source": "Critical",
+      "target": "Tài sản",
+      "label": "Lỗi \"Critical\" ảnh hưởng đến tài sản, làm giảm hiệu suất hoạt động của thiết bị.",
+      "weight": 1.0
+    },
+    {
+      "source": "Marginal",
+      "target": "Tài sản",
+      "label": "Lỗi \"Marginal\" có ảnh hưởng nhẹ đến tài sản, tùy thuộc vào thời gian xảy ra.",
+      "weight": 1.0
+    },
+    {
+      "source": "Minor",
+      "target": "Tài sản",
+      "label": "Lỗi \"Minor\" ảnh hưởng nhỏ đến tài sản, không gây gián đoạn hiệu suất hoạt động.",
+      "weight": 1.0
+    },
+    {
+      "source": "Chỉ số sự cố xảy ra",
+      "target": "Frequent",
+      "label": "Chỉ số sự cố xảy ra được phân loại thành \"Frequent\" với xác suất cao xảy ra tron",
+      "weight": 1.0
+    },
+    {
+      "source": "Chỉ số sự cố xảy ra",
+      "target": "Likely",
+      "label": "Chỉ số sự cố xảy ra được phân loại thành \"Likely\" với xác suất trung bình xảy ra",
+      "weight": 1.0
+    },
+    {
+      "source": "Chỉ số sự cố xảy ra",
+      "target": "Occasional",
+      "label": "Chỉ số sự cố xảy ra được phân loại thành \"Occasional\" với xác suất thỉnh thoảng ",
+      "weight": 1.0
+    },
+    {
+      "source": "Chỉ số sự cố xảy ra",
+      "target": "Unlikely",
+      "label": "Chỉ số sự cố xảy ra được phân loại thành \"Unlikely\" với xác suất thấp xảy ra tro",
+      "weight": 1.0
+    },
+    {
+      "source": "Chỉ số sự cố xảy ra",
+      "target": "Highly unlikely",
+      "label": "Chỉ số sự cố xảy ra được phân loại thành \"Highly unlikely\" với xác suất gần như ",
+      "weight": 1.0
+    },
+    {
+      "source": "Catastrophic",
+      "target": "Chỉ số mức độ nghiêm trọng",
+      "label": "Catastrophic là một phân loại trong chỉ số mức độ nghiêm trọng, biểu thị sự thất",
+      "weight": 1.0
+    },
+    {
+      "source": "Chỉ số mức độ nghiêm trọng",
+      "target": "Critical",
+      "label": "Critical là một phân loại trong chỉ số mức độ nghiêm trọng, biểu thị sự cố làm g",
+      "weight": 1.0
+    },
+    {
+      "source": "Chỉ số mức độ nghiêm trọng",
+      "target": "Marginal",
+      "label": "Marginal là một phân loại trong chỉ số mức độ nghiêm trọng, biểu thị lỗi có thể ",
+      "weight": 1.0
+    },
+    {
+      "source": "Chỉ số mức độ nghiêm trọng",
+      "target": "Minor",
+      "label": "Minor là một phân loại trong chỉ số mức độ nghiêm trọng, biểu thị lỗi không ảnh ",
+      "weight": 1.0
+    },
+    {
+      "source": "Bảng Quan Hệ Rủi Ro",
+      "target": "Mức Độ Nghiêm Trọng Rủi Ro",
+      "label": "Bảng Quan Hệ Rủi Ro sử dụng Mức Độ Nghiêm Trọng Rủi Ro như một yếu tố cấu thành ",
+      "weight": 1.0
+    },
+    {
+      "source": "Bảng Quan Hệ Rủi Ro",
+      "target": "Chỉ Số Xuất Hiện",
+      "label": "Bảng Quan Hệ Rủi Ro sử dụng Chỉ Số Xuất Hiện như một yếu tố cấu thành để tính to",
+      "weight": 1.0
+    },
+    {
+      "source": "Bảng Quan Hệ Rủi Ro",
+      "target": "Ma Trận Rủi Ro",
+      "label": "Ma Trận Rủi Ro là thành phần trực tiếp của Bảng Quan Hệ Rủi Ro, thể hiện giá trị",
+      "weight": 1.0
+    },
+    {
+      "source": "Financial_Metric",
+      "target": "Mức Độ Nghiêm Trọng Rủi Ro",
+      "label": "Mức Độ Nghiêm Trọng Rủi Ro là chỉ số tài chính đánh giá mức độ ảnh hưởng của rủi",
+      "weight": 1.0
+    },
+    {
+      "source": "Chỉ Số Xuất Hiện",
+      "target": "Financial_Metric",
+      "label": "Chỉ Số Xuất Hiện là chỉ số tài chính đo lường tần suất xảy ra sự cố.",
+      "weight": 1.0
+    },
+    {
+      "source": "Ma Trận Rủi Ro",
+      "target": "Phần Mềm Bảo Trì",
+      "label": "Phần Mềm Bảo Trì hỗ trợ theo dõi và cập nhật Ma Trận Rủi Ro theo thời gian thực.",
+      "weight": 1.0
+    },
+    {
+      "source": "Thiết Bị Rủi Ro Thấp",
+      "target": "Tối Ưu Hóa Chi Phí Bảo Trì",
+      "label": "Thiết Bị Rủi Ro Thấp áp dụng chiến lược Tối Ưu Hóa Chi Phí Bảo Trì để giảm chi p",
+      "weight": 1.0
+    },
+    {
+      "source": "Bảo Trì Điều Chỉnh",
+      "target": "Thiết Bị Rủi Ro Thấp",
+      "label": "Thiết Bị Rủi Ro Thấp có thể thực hiện Bảo Trì Điều Chỉnh như một phương pháp bảo",
+      "weight": 1.0
+    },
+    {
+      "source": "Bảo Trì Dựa Trên Tình Trạng",
+      "target": "Thiết Bị Rủi Ro Cao",
+      "label": "Thiết Bị Rủi Ro Cao áp dụng Bảo Trì Dựa Trên Tình Trạng để giảm tần suất hỏng hó",
+      "weight": 1.0
+    },
+    {
+      "source": "Bảo Trì Phòng Ngừa",
+      "target": "Thiết Bị Rủi Ro Cao",
+      "label": "Thiết Bị Rủi Ro Cao sử dụng Bảo Trì Phòng Ngừa để giảm tần suất hỏng hóc.",
+      "weight": 1.0
+    },
+    {
+      "source": "Bộ Máy Quan Liêu",
+      "target": "Thiết Bị Rủi Ro Vừa Phải",
+      "label": "Thiết Bị Rủi Ro Vừa Phải yêu cầu giảm bớt Bộ Máy Quan Liêu trong quy trình quản ",
+      "weight": 1.0
+    },
+    {
+      "source": "Ban Quản Lý",
+      "target": "SpeedMaint CMMS",
+      "label": "Ban Quản Lý sử dụng SpeedMaint CMMS để thu thập dữ liệu và tự động hóa tính toán",
+      "weight": 1.0
+    },
+    {
+      "source": "Doanh Nghiệp",
+      "target": "SpeedMaint CMMS",
+      "label": "SpeedMaint CMMS cung cấp nền tảng thông tin giúp Doanh Nghiệp triển khai bảo trì",
+      "weight": 1.0
+    },
+    {
+      "source": "Các Nhà Quản Lý",
+      "target": "SpeedMaint CMMS",
+      "label": "Các Nhà Quản Lý sử dụng SpeedMaint CMMS để phân tích dữ liệu và lựa chọn quyết đ",
+      "weight": 1.0
+    },
+    {
+      "source": "Ban Lãnh Đạo Cấp Cao",
+      "target": "Ban Quản Lý",
+      "label": "Ban Quản Lý chuyển đổi ngôn ngữ kỹ thuật về độ tin cậy thiết bị để Ban Lãnh Đạo ",
+      "weight": 1.0
+    },
+    {
+      "source": "Chỉ số mức độ nghiêm trọng",
+      "target": "Chỉ số mức độ xảy ra",
+      "label": "Tích số giữa chỉ số mức độ xảy ra và chỉ số mức độ nghiêm trọng dẫn đến rủi ro h",
+      "weight": 1.0
+    },
+    {
+      "source": "Chỉ số mức độ nghiêm trọng",
+      "target": "MứcĐộNghiêmTrọng Rủi Ro",
+      "label": "Chỉ số mức độ nghiêm trọng sử dụng thang phân loại MứcĐộNghiêmTrọng Rủi Ro từ 1 ",
+      "weight": 1.0
+    },
+    {
+      "source": "1% đến 10% giá trị rủi ro tối đa",
+      "target": "Rủi ro hỏng hóc",
+      "label": "Ngưỡng 1% đến 10% giá trị rủi ro tối đa xác định rủi ro hỏng hóc là chấp nhận đư",
+      "weight": 1.0
+    },
+    {
+      "source": "10% đến 30% giá trị rủi ro tối đa",
+      "target": "Rủi ro hỏng hóc",
+      "label": "Ngưỡng 10% đến 30% giá trị rủi ro tối đa xác định rủi ro hỏng hóc là có thể chấp",
+      "weight": 1.0
+    },
+    {
+      "source": "Rủi ro hỏng hóc",
+      "target": "Trên 30% giá trị rủi ro tối đa",
+      "label": "Ngưỡng trên 30% giá trị rủi ro tối đa xác định rủi ro hỏng hóc là không thể chấp",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty TNHH MTV phần mềm SpeedMaint",
+      "target": "Văn phòng miền Bắc",
+      "label": "Công ty TNHH MTV phần mềm SpeedMaint có văn phòng tại Tầng 07, tòa nhà Lotus, Hà",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty TNHH MTV phần mềm SpeedMaint",
+      "target": "Văn phòng miền Nam",
+      "label": "Công ty TNHH MTV phần mềm SpeedMaint có văn phòng tại Số 927/1, đường Cách Mạng ",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty TNHH MTV phần mềm SpeedMaint",
+      "target": "Dịch vụ bảo trì",
+      "label": "Công ty TNHH MTV phần mềm SpeedMaint cung cấp Dịch vụ bảo trì.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty TNHH MTV phần mềm SpeedMaint",
+      "target": "https://speedmaint.com/",
+      "label": "https://speedmaint.com/ là website chính thức của Công ty TNHH MTV phần mềm Spee",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty TNHH MTV phần mềm SpeedMaint",
+      "target": "ManWinWin",
+      "label": "Công ty TNHH MTV phần mềm SpeedMaint đã biên dịch tài liệu từ nguồn ManWinWin.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty TNHH MTV phần mềm SpeedMaint",
+      "target": "https://signup.speedmaint.com/dich-vu-bao-tri/?utm_source=NhungvtSEO&utm_medium=LoT01&utm_campaign=ebook-bao-tri-dua-tren-rui-ro",
+      "label": "Công ty TNHH MTV phần mềm SpeedMaint triển khai chiến dịch marketing thông qua đ",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty TNHH MTV phần mềm SpeedMaint",
+      "target": "SpeedMaint Cloud CMMS",
+      "label": "SpeedMaint Cloud CMMS là fanpage mạng xã hội chính thức của Công ty TNHH MTV phầ",
+      "weight": 1.0
+    },
+    {
+      "source": "NhungvtSEO",
+      "target": "https://signup.speedmaint.com/dich-vu-bao-tri/?utm_source=NhungvtSEO&utm_medium=LoT01&utm_campaign=ebook-bao-tri-dua-tren-rui-ro",
+      "label": "Chiến dịch marketing của SpeedMaint sử dụng NhungvtSEO làm nguồn traffic.",
+      "weight": 1.0
+    },
+    {
+      "source": "LoT01",
+      "target": "https://signup.speedmaint.com/dich-vu-bao-tri/?utm_source=NhungvtSEO&utm_medium=LoT01&utm_campaign=ebook-bao-tri-dua-tren-rui-ro",
+      "label": "Chiến dịch marketing của SpeedMaint sử dụng LoT01 làm kênh truyền thông.",
+      "weight": 1.0
+    },
+    {
+      "source": "ebook-bao-tri-dua-tren-rui-ro",
+      "target": "https://signup.speedmaint.com/dich-vu-bao-tri/?utm_source=NhungvtSEO&utm_medium=LoT01&utm_campaign=ebook-bao-tri-dua-tren-rui-ro",
+      "label": "Chiến dịch marketing của SpeedMaint bao gồm nội dung ebook-bao-tri-dua-tren-rui-",
+      "weight": 1.0
+    }
+  ],
+  "is_truncated": false
+}

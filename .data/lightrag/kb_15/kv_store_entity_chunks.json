@@ -1,0 +1,573 @@
+{
+  "Rủi ro chấp nhận được": {
+    "chunk_ids": [
+      "chunk-830bd8d1cb943cc7c07e9b72b5c6927e"
+    ],
+    "count": 1,
+    "create_time": 1778758168,
+    "update_time": 1778758168,
+    "_id": "Rủi ro chấp nhận được"
+  },
+  "Rủi ro có thể chấp nhận được": {
+    "chunk_ids": [
+      "chunk-830bd8d1cb943cc7c07e9b72b5c6927e"
+    ],
+    "count": 1,
+    "create_time": 1778758168,
+    "update_time": 1778758168,
+    "_id": "Rủi ro có thể chấp nhận được"
+  },
+  "Rủi ro không thể chấp nhận được": {
+    "chunk_ids": [
+      "chunk-830bd8d1cb943cc7c07e9b72b5c6927e"
+    ],
+    "count": 1,
+    "create_time": 1778758168,
+    "update_time": 1778758168,
+    "_id": "Rủi ro không thể chấp nhận được"
+  },
+  "Mức Độ Nghiêm Trọng Rủi Ro": {
+    "chunk_ids": [
+      "chunk-830bd8d1cb943cc7c07e9b72b5c6927e"
+    ],
+    "count": 1,
+    "create_time": 1778758168,
+    "update_time": 1778758168,
+    "_id": "Mức Độ Nghiêm Trọng Rủi Ro"
+  },
+  "Chỉ Số Xuất Hiện": {
+    "chunk_ids": [
+      "chunk-830bd8d1cb943cc7c07e9b72b5c6927e"
+    ],
+    "count": 1,
+    "create_time": 1778758168,
+    "update_time": 1778758168,
+    "_id": "Chỉ Số Xuất Hiện"
+  },
+  "100 mức giá trị rủi ro khác nhau": {
+    "chunk_ids": [
+      "chunk-830bd8d1cb943cc7c07e9b72b5c6927e"
+    ],
+    "count": 1,
+    "create_time": 1778758168,
+    "update_time": 1778758168,
+    "_id": "100 mức giá trị rủi ro khác nhau"
+  },
+  "SpeedMaint CMMS": {
+    "chunk_ids": [
+      "chunk-e263a8266442d27657db1d4fdc65bd4b"
+    ],
+    "count": 1,
+    "create_time": 1778758168,
+    "update_time": 1778758168,
+    "_id": "SpeedMaint CMMS"
+  },
+  "Ban quản lý": {
+    "chunk_ids": [
+      "chunk-e263a8266442d27657db1d4fdc65bd4b"
+    ],
+    "count": 1,
+    "create_time": 1778758168,
+    "update_time": 1778758168,
+    "_id": "Ban quản lý"
+  },
+  "Phần mềm bảo trì": {
+    "chunk_ids": [
+      "chunk-e263a8266442d27657db1d4fdc65bd4b",
+      "chunk-6b2ecf4cbd557237a856faefe5e09506"
+    ],
+    "count": 2,
+    "create_time": 1778758168,
+    "update_time": 1778758168,
+    "_id": "Phần mềm bảo trì"
+  },
+  "Thiết bị": {
+    "chunk_ids": [
+      "chunk-e263a8266442d27657db1d4fdc65bd4b"
+    ],
+    "count": 1,
+    "create_time": 1778758168,
+    "update_time": 1778758168,
+    "_id": "Thiết bị"
+  },
+  "Tính hiệu quả về chi phí": {
+    "chunk_ids": [
+      "chunk-e263a8266442d27657db1d4fdc65bd4b"
+    ],
+    "count": 1,
+    "create_time": 1778758168,
+    "update_time": 1778758168,
+    "_id": "Tính hiệu quả về chi phí"
+  },
+  "Dữ liệu": {
+    "chunk_ids": [
+      "chunk-e263a8266442d27657db1d4fdc65bd4b"
+    ],
+    "count": 1,
+    "create_time": 1778758169,
+    "update_time": 1778758169,
+    "_id": "Dữ liệu"
+  },
+  "Bảo trì dựa trên tình trạng": {
+    "chunk_ids": [
+      "chunk-e263a8266442d27657db1d4fdc65bd4b"
+    ],
+    "count": 1,
+    "create_time": 1778758169,
+    "update_time": 1778758169,
+    "_id": "Bảo trì dựa trên tình trạng"
+  },
+  "Bảo trì phòng ngừa": {
+    "chunk_ids": [
+      "chunk-e263a8266442d27657db1d4fdc65bd4b"
+    ],
+    "count": 1,
+    "create_time": 1778758169,
+    "update_time": 1778758169,
+    "_id": "Bảo trì phòng ngừa"
+  },
+  "Chỉ số mức độ nghiêm trọng": {
+    "chunk_ids": [
+      "chunk-e263a8266442d27657db1d4fdc65bd4b",
+      "chunk-6b2ecf4cbd557237a856faefe5e09506"
+    ],
+    "count": 2,
+    "create_time": 1778758169,
+    "update_time": 1778758169,
+    "_id": "Chỉ số mức độ nghiêm trọng"
+  },
+  "Chỉ số tần suất hỏng hóc": {
+    "chunk_ids": [
+      "chunk-e263a8266442d27657db1d4fdc65bd4b"
+    ],
+    "count": 1,
+    "create_time": 1778758169,
+    "update_time": 1778758169,
+    "_id": "Chỉ số tần suất hỏng hóc"
+  },
+  "Quy trình kỹ thuật": {
+    "chunk_ids": [
+      "chunk-e263a8266442d27657db1d4fdc65bd4b"
+    ],
+    "count": 1,
+    "create_time": 1778758170,
+    "update_time": 1778758170,
+    "_id": "Quy trình kỹ thuật"
+  },
+  "Người dùng": {
+    "chunk_ids": [
+      "chunk-e263a8266442d27657db1d4fdc65bd4b"
+    ],
+    "count": 1,
+    "create_time": 1778758170,
+    "update_time": 1778758170,
+    "_id": "Người dùng"
+  },
+  "Rủi ro hỏng hóc": {
+    "chunk_ids": [
+      "chunk-e263a8266442d27657db1d4fdc65bd4b",
+      "chunk-6b2ecf4cbd557237a856faefe5e09506"
+    ],
+    "count": 2,
+    "create_time": 1778758170,
+    "update_time": 1778758170,
+    "_id": "Rủi ro hỏng hóc"
+  },
+  "Frequent": {
+    "chunk_ids": [
+      "chunk-6b2ecf4cbd557237a856faefe5e09506"
+    ],
+    "count": 1,
+    "create_time": 1778758170,
+    "update_time": 1778758170,
+    "_id": "Frequent"
+  },
+  "Likely": {
+    "chunk_ids": [
+      "chunk-6b2ecf4cbd557237a856faefe5e09506"
+    ],
+    "count": 1,
+    "create_time": 1778758171,
+    "update_time": 1778758171,
+    "_id": "Likely"
+  },
+  "Occasional": {
+    "chunk_ids": [
+      "chunk-6b2ecf4cbd557237a856faefe5e09506"
+    ],
+    "count": 1,
+    "create_time": 1778758171,
+    "update_time": 1778758171,
+    "_id": "Occasional"
+  },
+  "Unlikely": {
+    "chunk_ids": [
+      "chunk-6b2ecf4cbd557237a856faefe5e09506"
+    ],
+    "count": 1,
+    "create_time": 1778758171,
+    "update_time": 1778758171,
+    "_id": "Unlikely"
+  },
+  "Highly unlikely": {
+    "chunk_ids": [
+      "chunk-6b2ecf4cbd557237a856faefe5e09506"
+    ],
+    "count": 1,
+    "create_time": 1778758171,
+    "update_time": 1778758171,
+    "_id": "Highly unlikely"
+  },
+  "Catastrophic": {
+    "chunk_ids": [
+      "chunk-6b2ecf4cbd557237a856faefe5e09506"
+    ],
+    "count": 1,
+    "create_time": 1778758171,
+    "update_time": 1778758171,
+    "_id": "Catastrophic"
+  },
+  "Critical": {
+    "chunk_ids": [
+      "chunk-6b2ecf4cbd557237a856faefe5e09506"
+    ],
+    "count": 1,
+    "create_time": 1778758172,
+    "update_time": 1778758172,
+    "_id": "Critical"
+  },
+  "Marginal (5-6)": {
+    "chunk_ids": [
+      "chunk-6b2ecf4cbd557237a856faefe5e09506"
+    ],
+    "count": 1,
+    "create_time": 1778758172,
+    "update_time": 1778758172,
+    "_id": "Marginal (5-6)"
+  },
+  "Marginal (3-4)": {
+    "chunk_ids": [
+      "chunk-6b2ecf4cbd557237a856faefe5e09506"
+    ],
+    "count": 1,
+    "create_time": 1778758172,
+    "update_time": 1778758172,
+    "_id": "Marginal (3-4)"
+  },
+  "Minor": {
+    "chunk_ids": [
+      "chunk-6b2ecf4cbd557237a856faefe5e09506"
+    ],
+    "count": 1,
+    "create_time": 1778758173,
+    "update_time": 1778758173,
+    "_id": "Minor"
+  },
+  "Chỉ số mức độ xảy ra": {
+    "chunk_ids": [
+      "chunk-6b2ecf4cbd557237a856faefe5e09506"
+    ],
+    "count": 1,
+    "create_time": 1778758173,
+    "update_time": 1778758173,
+    "_id": "Chỉ số mức độ xảy ra"
+  },
+  "1% đến 10% giá trị rủi ro tối đa": {
+    "chunk_ids": [
+      "chunk-6b2ecf4cbd557237a856faefe5e09506",
+      "chunk-830bd8d1cb943cc7c07e9b72b5c6927e"
+    ],
+    "count": 2,
+    "update_time": 1778758181,
+    "_id": "1% đến 10% giá trị rủi ro tối đa"
+  },
+  "10% đến 30% giá trị rủi ro tối đa": {
+    "chunk_ids": [
+      "chunk-6b2ecf4cbd557237a856faefe5e09506",
+      "chunk-830bd8d1cb943cc7c07e9b72b5c6927e"
+    ],
+    "count": 2,
+    "update_time": 1778758181,
+    "_id": "10% đến 30% giá trị rủi ro tối đa"
+  },
+  "Trên 30% giá trị rủi ro tối đa": {
+    "chunk_ids": [
+      "chunk-6b2ecf4cbd557237a856faefe5e09506",
+      "chunk-830bd8d1cb943cc7c07e9b72b5c6927e"
+    ],
+    "count": 2,
+    "update_time": 1778758181,
+    "_id": "Trên 30% giá trị rủi ro tối đa"
+  },
+  "Phương pháp tính toán": {
+    "chunk_ids": [
+      "chunk-6b2ecf4cbd557237a856faefe5e09506"
+    ],
+    "count": 1,
+    "create_time": 1778758174,
+    "update_time": 1778758174,
+    "_id": "Phương pháp tính toán"
+  },
+  "Bảo Trì Dựa Trên Rủi Ro": {
+    "chunk_ids": [
+      "chunk-0912b49eef9f80b4abc10b3347845c9b"
+    ],
+    "count": 1,
+    "create_time": 1778758174,
+    "update_time": 1778758174,
+    "_id": "Bảo Trì Dựa Trên Rủi Ro"
+  },
+  "Tài Sản": {
+    "chunk_ids": [
+      "chunk-0912b49eef9f80b4abc10b3347845c9b"
+    ],
+    "count": 1,
+    "create_time": 1778758174,
+    "update_time": 1778758174,
+    "_id": "Tài Sản"
+  },
+  "Rủi Ro Hỏng Hóc": {
+    "chunk_ids": [
+      "chunk-0912b49eef9f80b4abc10b3347845c9b"
+    ],
+    "count": 1,
+    "create_time": 1778758174,
+    "update_time": 1778758174,
+    "_id": "Rủi Ro Hỏng Hóc"
+  },
+  "Xe Đầu Kéo Cỡ Lớn": {
+    "chunk_ids": [
+      "chunk-0912b49eef9f80b4abc10b3347845c9b"
+    ],
+    "count": 1,
+    "create_time": 1778758174,
+    "update_time": 1778758174,
+    "_id": "Xe Đầu Kéo Cỡ Lớn"
+  },
+  "Chỉ Số Sự Cố Xảy Ra": {
+    "chunk_ids": [
+      "chunk-0912b49eef9f80b4abc10b3347845c9b"
+    ],
+    "count": 1,
+    "create_time": 1778758175,
+    "update_time": 1778758175,
+    "_id": "Chỉ Số Sự Cố Xảy Ra"
+  },
+  "Nhà Máy": {
+    "chunk_ids": [
+      "chunk-0912b49eef9f80b4abc10b3347845c9b"
+    ],
+    "count": 1,
+    "create_time": 1778758175,
+    "update_time": 1778758175,
+    "_id": "Nhà Máy"
+  },
+  "Doanh Nghiệp": {
+    "chunk_ids": [
+      "chunk-0912b49eef9f80b4abc10b3347845c9b"
+    ],
+    "count": 1,
+    "create_time": 1778758175,
+    "update_time": 1778758175,
+    "_id": "Doanh Nghiệp"
+  },
+  "Thiết Bị Máy Móc": {
+    "chunk_ids": [
+      "chunk-0912b49eef9f80b4abc10b3347845c9b"
+    ],
+    "count": 1,
+    "create_time": 1778758175,
+    "update_time": 1778758175,
+    "_id": "Thiết Bị Máy Móc"
+  },
+  "Bảo Trì Dựa Trên Điều Kiện": {
+    "chunk_ids": [
+      "chunk-0912b49eef9f80b4abc10b3347845c9b"
+    ],
+    "count": 1,
+    "create_time": 1778758175,
+    "update_time": 1778758175,
+    "_id": "Bảo Trì Dựa Trên Điều Kiện"
+  },
+  "Bảo Trì Khắc Phục": {
+    "chunk_ids": [
+      "chunk-0912b49eef9f80b4abc10b3347845c9b"
+    ],
+    "count": 1,
+    "create_time": 1778758175,
+    "update_time": 1778758175,
+    "_id": "Bảo Trì Khắc Phục"
+  },
+  "Chính Sách Bảo Trì Sửa Chữa": {
+    "chunk_ids": [
+      "chunk-0912b49eef9f80b4abc10b3347845c9b"
+    ],
+    "count": 1,
+    "create_time": 1778758176,
+    "update_time": 1778758176,
+    "_id": "Chính Sách Bảo Trì Sửa Chữa"
+  },
+  "Chế Độ Hỏng Hóc": {
+    "chunk_ids": [
+      "chunk-0912b49eef9f80b4abc10b3347845c9b"
+    ],
+    "count": 1,
+    "create_time": 1778758176,
+    "update_time": 1778758176,
+    "_id": "Chế Độ Hỏng Hóc"
+  },
+  "Công ty TNHH MTV phần mềm SpeedMaint": {
+    "chunk_ids": [
+      "chunk-7b399ef35cd82d4185ee53e7642bfb58"
+    ],
+    "count": 1,
+    "create_time": 1778758176,
+    "update_time": 1778758176,
+    "_id": "Công ty TNHH MTV phần mềm SpeedMaint"
+  },
+  "SpeedMaint Cloud CMMS": {
+    "chunk_ids": [
+      "chunk-7b399ef35cd82d4185ee53e7642bfb58",
+      "chunk-0fc46d17072220b69b635b0b9d05459c"
+    ],
+    "count": 2,
+    "create_time": 1778758176,
+    "update_time": 1778758176,
+    "_id": "SpeedMaint Cloud CMMS"
+  },
+  "Hà Nội": {
+    "chunk_ids": [
+      "chunk-7b399ef35cd82d4185ee53e7642bfb58"
+    ],
+    "count": 1,
+    "create_time": 1778758177,
+    "update_time": 1778758177,
+    "_id": "Hà Nội"
+  },
+  "TP. Hồ Chí Minh": {
+    "chunk_ids": [
+      "chunk-7b399ef35cd82d4185ee53e7642bfb58"
+    ],
+    "count": 1,
+    "create_time": 1778758177,
+    "update_time": 1778758177,
+    "_id": "TP. Hồ Chí Minh"
+  },
+  "speedmaint.com": {
+    "chunk_ids": [
+      "chunk-7b399ef35cd82d4185ee53e7642bfb58"
+    ],
+    "count": 1,
+    "create_time": 1778758177,
+    "update_time": 1778758177,
+    "_id": "speedmaint.com"
+  },
+  "ManWinWin": {
+    "chunk_ids": [
+      "chunk-7b399ef35cd82d4185ee53e7642bfb58"
+    ],
+    "count": 1,
+    "create_time": 1778758177,
+    "update_time": 1778758177,
+    "_id": "ManWinWin"
+  },
+  "Trải Nghiệm Miễn Phí": {
+    "chunk_ids": [
+      "chunk-7b399ef35cd82d4185ee53e7642bfb58"
+    ],
+    "count": 1,
+    "create_time": 1778758177,
+    "update_time": 1778758177,
+    "_id": "Trải Nghiệm Miễn Phí"
+  },
+  "Dịch Vụ Bảo Trì": {
+    "chunk_ids": [
+      "chunk-7b399ef35cd82d4185ee53e7642bfb58"
+    ],
+    "count": 1,
+    "create_time": 1778758178,
+    "update_time": 1778758178,
+    "_id": "Dịch Vụ Bảo Trì"
+  },
+  "ebook-bao-tri-dua-tren-rui-ro": {
+    "chunk_ids": [
+      "chunk-7b399ef35cd82d4185ee53e7642bfb58"
+    ],
+    "count": 1,
+    "create_time": 1778758178,
+    "update_time": 1778758178,
+    "_id": "ebook-bao-tri-dua-tren-rui-ro"
+  },
+  "SpeedMaint": {
+    "chunk_ids": [
+      "chunk-0fc46d17072220b69b635b0b9d05459c"
+    ],
+    "count": 1,
+    "create_time": 1778758179,
+    "update_time": 1778758179,
+    "_id": "SpeedMaint"
+  },
+  "Dịch Vọng Hậu, Q. Cầu Giấy, TP. Hà Nội": {
+    "chunk_ids": [
+      "chunk-0fc46d17072220b69b635b0b9d05459c"
+    ],
+    "count": 1,
+    "create_time": 1778758179,
+    "update_time": 1778758179,
+    "_id": "Dịch Vọng Hậu, Q. Cầu Giấy, TP. Hà Nội"
+  },
+  "P7, Q. Tân Bình, TP. Hồ Chí Minh": {
+    "chunk_ids": [
+      "chunk-0fc46d17072220b69b635b0b9d05459c"
+    ],
+    "count": 1,
+    "create_time": 1778758179,
+    "update_time": 1778758179,
+    "_id": "P7, Q. Tân Bình, TP. Hồ Chí Minh"
+  },
+  "Chỉ Số Xuất Hiện 10": {
+    "chunk_ids": [
+      "chunk-830bd8d1cb943cc7c07e9b72b5c6927e"
+    ],
+    "count": 1,
+    "create_time": 1778758181,
+    "update_time": 1778758181,
+    "_id": "Chỉ Số Xuất Hiện 10"
+  },
+  "Mức Độ Nghiêm Trọng Rủi Ro 10": {
+    "chunk_ids": [
+      "chunk-830bd8d1cb943cc7c07e9b72b5c6927e"
+    ],
+    "count": 1,
+    "create_time": 1778758182,
+    "update_time": 1778758182,
+    "_id": "Mức Độ Nghiêm Trọng Rủi Ro 10"
+  },
+  "Tăng tần suất bảo trì phòng ngừa": {
+    "chunk_ids": [
+      "chunk-e263a8266442d27657db1d4fdc65bd4b"
+    ],
+    "count": 1,
+    "create_time": 1778758186,
+    "update_time": 1778758186,
+    "_id": "Tăng tần suất bảo trì phòng ngừa"
+  },
+  "Global Tech Index": {
+    "chunk_ids": [
+      "chunk-6b2ecf4cbd557237a856faefe5e09506"
+    ],
+    "count": 1,
+    "create_time": 1778758186,
+    "update_time": 1778758186,
+    "_id": "Global Tech Index"
+  },
+  "Market Selloff": {
+    "chunk_ids": [
+      "chunk-6b2ecf4cbd557237a856faefe5e09506"
+    ],
+    "count": 1,
+    "create_time": 1778758187,
+    "update_time": 1778758187,
+    "_id": "Market Selloff"
+  }
+}

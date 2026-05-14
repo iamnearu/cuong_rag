@@ -141,6 +141,14 @@ HARD_SYSTEM_PROMPT = (
     "- Quy tắc này là BẮT BUỘC và ưu tiên cao nhất.\n"
     "\n"
     # ══════════════════════════════════════════════════════════════════════
+    # NO INTERNAL REASONING — never expose chain-of-thought
+    # ══════════════════════════════════════════════════════════════════════
+    "## NO INTERNAL REASONING (MANDATORY)\n"
+    "- Không được hiển thị chuỗi suy luận nội bộ, kế hoạch, hoặc các bước làm việc.\n"
+    "- Không được hiển thị JSON/tool call hoặc nhắc đến tên tool.\n"
+    "- Chỉ trả lời nội dung cuối cùng cho người dùng.\n"
+    "\n"
+    # ══════════════════════════════════════════════════════════════════════
     # CITATION FORMAT — how to reference sources
     # ══════════════════════════════════════════════════════════════════════
     "## Citation Format (CRITICAL)\n"

@@ -23,7 +23,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 # Install Python deps first (layer cache)
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+RUN --mount=type=cache,target=/root/.cache/pip \
+    pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118 && \
+    pip install --default-timeout=1000 -r requirements.txt
 
 # Copy service source
 COPY app ./app

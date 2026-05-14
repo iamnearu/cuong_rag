@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import { toast } from "react-toastify";
 import { useWorkspace } from "../App";
 import { api } from "../api/client";
@@ -45,7 +45,63 @@ function TypingIndicator() {
     );
 }
 
-function ChatMessage({ msg }) {
+/* ─── Source Chunk Viewer Modal ────────────────────────────────── */
+function SourceModal({ source, onClose }) {
+    if (!source) return null;
+
+    return (
+        <div className="modal-overlay" onClick={onClose}>
+            <div
+                className="source-modal"
+                onClick={(e) => e.stopPropagation()}
+            >
+                <div className="source-modal-header">
+                    <div>
+                        <div className="source-modal-title">
+                            [{source.index}] {source.chunk_id || "chunk"}
+                        </div>
+                        <div className="source-modal-meta">
+                            {source.page_no ? `Trang ${source.page_no}` : ""}
+                            {source.heading_path?.length > 0 && ` · ${source.heading_path.join(" > ")}`}
+                            {source.score > 0 && ` · Score: ${source.score.toFixed(3)}`}
+                        </div>
+                    </div>
+                    <button className="source-modal-close" onClick={onClose}>✕</button>
+                </div>
+                <div className="source-modal-body">
+                    <pre className="source-modal-content">{source.content || "Không có nội dung"}</pre>
+                </div>
+            </div>
+        </div>
+    );
+}
+
+/* ─── Source Chip (clickable) ─────────────────────────────────── */
+function SourceChip({ source, index, onClick }) {
+    const hasContent = source.content && source.content.length > 0;
+    return (
+        <div
+            className={`source-chip ${hasContent ? "source-chip-clickable" : ""}`}
+            onClick={() => hasContent && onClick(source)}
+            title={hasContent ? "Click để xem nội dung chunk" : ""}
+        >
+            <div className="source-chip-header">
+                <strong>[{source.index || index + 1}] {source.chunk_id || "chunk"}</strong>
+                {source.page_no ? <span className="source-chip-page">Trang {source.page_no}</span> : null}
+            </div>
+            {hasContent && (
+                <div className="source-chip-preview">
+                    {source.content.slice(0, 200)}{source.content.length > 200 ? "…" : ""}
+                </div>
+            )}
+            {hasContent && (
+                <div className="source-chip-action">📄 Xem chi tiết</div>
+            )}
+        </div>
+    );
+}
+
+function ChatMessage({ msg, onSourceClick }) {
     const [showSources, setShowSources] = useState(false);
     const isUser = msg.role === "user";
     const sources = msg.sources || [];
@@ -68,15 +124,17 @@ function ChatMessage({ msg }) {
                     {!isUser && sources.length > 0 && (
                         <>
                             <button className="sources-toggle" onClick={() => setShowSources((s) => !s)}>
-                                {showSources ? "▲" : "▶"} {sources.length} source{sources.length !== 1 ? "s" : ""}
+                                {showSources ? "▲ Ẩn" : "▶ Xem"} {sources.length} nguồn tài liệu
                             </button>
                             {showSources && (
                                 <div className="sources-panel">
-                                    {sources.slice(0, 5).map((src, i) => (
-                                        <div key={i} className="source-chip">
-                                            <strong>[{src.index || i + 1}] {src.chunk_id || "chunk"}</strong>
-                                            {src.content?.slice(0, 150)}{src.content?.length > 150 ? "..." : ""}
-                                        </div>
+                                    {sources.map((src, i) => (
+                                        <SourceChip
+                                            key={i}
+                                            source={src}
+                                            index={i}
+                                            onClick={onSourceClick}
+                                        />
                                     ))}
                                 </div>
                             )}
@@ -95,8 +153,8 @@ export default function ChatPage() {
     const [messages, setMessages] = useState([]);
     const [input, setInput] = useState("");
     const [streaming, setStreaming] = useState(false);
+    const [selectedSource, setSelectedSource] = useState(null);
     const messagesEndRef = useRef(null);
-    const abortRef = useRef(null);
 
     useEffect(() => {
         api.listWorkspaces().then(setWorkspaces).catch(() => { });
@@ -124,17 +182,17 @@ export default function ChatPage() {
 
     const handleClear = async () => {
         if (!selectedWorkspace) return;
-        if (!confirm("Clear all chat history for this workspace?")) return;
+        if (!confirm("Xóa toàn bộ lịch sử chat?")) return;
         try {
             await api.clearChatHistory(selectedWorkspace.id);
             setMessages([]);
-            toast.success("Chat history cleared");
+            toast.success("Đã xóa lịch sử chat");
         } catch (err) {
-            toast.error("Failed to clear: " + err.message);
+            toast.error("Lỗi: " + err.message);
         }
     };
 
-    const handleSend = async () => {
+    const handleSend = useCallback(async () => {
         if (!input.trim() || !selectedWorkspace || streaming) return;
 
         const userMessage = { role: "user", content: input.trim(), sources: [] };
@@ -162,42 +220,51 @@ export default function ChatPage() {
             setMessages((prev) => [...prev, { role: "assistant", content: "", sources: [] }]);
 
             let currentEvent = "";
+            let buffer = "";  // Buffer for incomplete SSE lines
 
             while (true) {
                 const { value, done } = await reader.read();
                 if (done) break;
 
-                const chunk = decoder.decode(value, { stream: true });
-                const lines = chunk.split("\n");
+                // Append new data to buffer
+                buffer += decoder.decode(value, { stream: true });
+
+                // Process complete lines only (split by \n)
+                const lines = buffer.split("\n");
+                // Keep the last incomplete line in buffer
+                buffer = lines.pop() || "";
 
                 for (const line of lines) {
-                    if (line.startsWith("event: ")) {
-                        currentEvent = line.slice(7).trim();
-                    } else if (line.startsWith("data: ")) {
-                        const data = line.slice(6).trim();
-                        if (data === "[DONE]") break;
+                    const trimmed = line.trim();
+                    if (!trimmed) continue;
+
+                    if (trimmed.startsWith("event: ")) {
+                        currentEvent = trimmed.slice(7).trim();
+                    } else if (trimmed.startsWith("data: ")) {
+                        const data = trimmed.slice(6).trim();
+                        if (data === "[DONE]") continue;
+
                         try {
                             const parsed = JSON.parse(data);
 
-                            // Event: token
                             if (currentEvent === "token" && parsed.text) {
                                 assistantContent += parsed.text;
-                            }
-                            // Event: complete (fallback in case tokens missed)
-                            else if (currentEvent === "complete") {
+                            } else if (currentEvent === "token_rollback") {
+                                // Model started a tool call after streaming tokens
+                                // — discard speculative tokens
+                                assistantContent = "";
+                            } else if (currentEvent === "complete") {
                                 if (parsed.answer && !assistantContent) {
                                     assistantContent = parsed.answer;
                                 }
                                 if (parsed.sources) {
                                     assistantSources = parsed.sources;
                                 }
-                            }
-                            // Event: sources (when sent before complete)
-                            else if (currentEvent === "sources" && parsed.sources) {
+                            } else if (currentEvent === "sources" && parsed.sources) {
                                 assistantSources = parsed.sources;
                             }
 
-                            // Always update state to render the UI
+                            // Update UI immediately for each token
                             setMessages((prev) => {
                                 const updated = [...prev];
                                 updated[updated.length - 1] = {
@@ -207,16 +274,43 @@ export default function ChatPage() {
                                 };
                                 return updated;
                             });
-
                         } catch (e) {
-                            console.warn("Error parsing chunk:", data, e);
+                            // JSON parse error — could be a partial chunk, skip
                         }
+                    }
+                }
+            }
+
+            // Process any remaining buffer
+            if (buffer.trim()) {
+                const trimmed = buffer.trim();
+                if (trimmed.startsWith("data: ")) {
+                    const data = trimmed.slice(6).trim();
+                    if (data !== "[DONE]") {
+                        try {
+                            const parsed = JSON.parse(data);
+                            if (parsed.answer && !assistantContent) {
+                                assistantContent = parsed.answer;
+                            }
+                            if (parsed.sources) {
+                                assistantSources = parsed.sources;
+                            }
+                            setMessages((prev) => {
+                                const updated = [...prev];
+                                updated[updated.length - 1] = {
+                                    role: "assistant",
+                                    content: assistantContent,
+                                    sources: assistantSources,
+                                };
+                                return updated;
+                            });
+                        } catch (e) { /* ignore */ }
                     }
                 }
             }
         } catch (err) {
             if (err.name !== "AbortError") {
-                toast.error("Chat failed: " + err.message);
+                toast.error("Chat thất bại: " + err.message);
                 setMessages((prev) => {
                     const updated = [...prev];
                     if (updated[updated.length - 1]?.role === "assistant" && !assistantContent) {
@@ -228,7 +322,7 @@ export default function ChatPage() {
         } finally {
             setStreaming(false);
         }
-    };
+    }, [input, selectedWorkspace, streaming, messages]);
 
     const handleKeyDown = (e) => {
         if (e.key === "Enter" && !e.shiftKey) {
@@ -245,13 +339,13 @@ export default function ChatPage() {
                 <div style={{ flex: 1 }}>
                     <div style={{ fontWeight: 600, fontSize: "15px" }}>Chat & Retrieval</div>
                     <div style={{ fontSize: "11px", color: "var(--on-surface-variant)" }}>
-                        {selectedWorkspace ? `Workspace: ${selectedWorkspace.name}` : "Select a workspace to start"}
+                        {selectedWorkspace ? `Workspace: ${selectedWorkspace.name}` : "Chọn workspace để bắt đầu"}
                     </div>
                 </div>
                 <WorkspaceSelector workspaces={workspaces} selected={selectedWorkspace} onSelect={setSelectedWorkspace} />
                 {selectedWorkspace && messages.length > 0 && (
                     <button className="btn btn-ghost btn-sm" onClick={handleClear}>
-                        🗑️ Clear
+                        🗑️ Xóa
                     </button>
                 )}
             </div>
@@ -261,17 +355,23 @@ export default function ChatPage() {
                 {!selectedWorkspace ? (
                     <div className="empty-state">
                         <span className="empty-state-icon">🔍</span>
-                        <h3>Select a workspace</h3>
-                        <p>Choose a workspace with indexed documents to start chatting</p>
+                        <h3>Chọn workspace</h3>
+                        <p>Chọn một workspace có tài liệu đã index để bắt đầu chat</p>
                     </div>
                 ) : messages.length === 0 ? (
                     <div className="empty-state">
                         <BotAvatar className="empty-state-chat-avatar" size={56} />
-                        <h3>Start a conversation</h3>
-                        <p>Ask anything about your documents in <strong>{selectedWorkspace.name}</strong></p>
+                        <h3>Bắt đầu hội thoại</h3>
+                        <p>Hỏi bất kỳ điều gì về tài liệu trong <strong>{selectedWorkspace.name}</strong></p>
                     </div>
                 ) : (
-                    messages.map((msg, i) => <ChatMessage key={i} msg={msg} />)
+                    messages.map((msg, i) => (
+                        <ChatMessage
+                            key={i}
+                            msg={msg}
+                            onSourceClick={setSelectedSource}
+                        />
+                    ))
                 )}
                 {streaming && !messages[messages.length - 1]?.content && <TypingIndicator />}
                 <div ref={messagesEndRef} />
@@ -283,7 +383,7 @@ export default function ChatPage() {
                     <textarea
                         className="chat-textarea"
                         rows={2}
-                        placeholder={selectedWorkspace ? "Ask a question about your documents..." : "Select a workspace first"}
+                        placeholder={selectedWorkspace ? "Đặt câu hỏi về tài liệu..." : "Chọn workspace trước"}
                         value={input}
                         onChange={(e) => setInput(e.target.value)}
                         onKeyDown={handleKeyDown}
@@ -295,13 +395,16 @@ export default function ChatPage() {
                         disabled={!selectedWorkspace || !input.trim() || streaming}
                         style={{ height: "fit-content" }}
                     >
-                        {streaming ? <span className="spinner" /> : "Send ↑"}
+                        {streaming ? <span className="spinner" /> : "Gửi ↑"}
                     </button>
                 </div>
                 <div style={{ fontSize: "11px", color: "var(--outline)", marginTop: "6px" }}>
-                    Enter to send · Shift+Enter for newline
+                    Enter để gửi · Shift+Enter xuống dòng
                 </div>
             </div>
+
+            {/* Source Detail Modal */}
+            <SourceModal source={selectedSource} onClose={() => setSelectedSource(null)} />
         </div>
     );
 }

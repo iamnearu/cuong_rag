@@ -1,0 +1,907 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d13" for="edge" attr.name="truncate" attr.type="string"/>
+<key id="d12" for="edge" attr.name="created_at" attr.type="long"/>
+<key id="d11" for="edge" attr.name="file_path" attr.type="string"/>
+<key id="d10" for="edge" attr.name="source_id" attr.type="string"/>
+<key id="d9" for="edge" attr.name="keywords" attr.type="string"/>
+<key id="d8" for="edge" attr.name="description" attr.type="string"/>
+<key id="d7" for="edge" attr.name="weight" attr.type="double"/>
+<key id="d6" for="node" attr.name="truncate" attr.type="string"/>
+<key id="d5" for="node" attr.name="created_at" attr.type="long"/>
+<key id="d4" for="node" attr.name="file_path" attr.type="string"/>
+<key id="d3" for="node" attr.name="source_id" attr.type="string"/>
+<key id="d2" for="node" attr.name="description" attr.type="string"/>
+<key id="d1" for="node" attr.name="entity_type" attr.type="string"/>
+<key id="d0" for="node" attr.name="entity_id" attr.type="string"/>
+<graph edgedefault="undirected"><node id="Bảo trì dựa trên rủi ro">
+  <data key="d0">Bảo trì dựa trên rủi ro</data>
+  <data key="d1">technology</data>
+  <data key="d2">Bảo trì dựa trên rủi ro là phương pháp bảo trì sử dụng các nguyên tắc đánh giá rủi ro để tối ưu hóa nhiệm vụ bảo trì và phân bổ nguồn lực cho các tài sản có rủi ro cao nhất.</data>
+  <data key="d3">chunk-eef634fbb5143b6bff6a32162c6b6659</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1778752907</data>
+  <data key="d6"></data>
+</node>
+<node id="Phần mềm bảo trì">
+  <data key="d0">Phần mềm bảo trì</data>
+  <data key="d1">product</data>
+  <data key="d2">Phần mềm bảo trì là công cụ hỗ trợ tính toán chỉ số xuất hiện sự cố, giúp giảm tính chủ quan trong đánh giá rủi ro hỏng hóc của thiết bị.&lt;SEP&gt;Phần mềm bảo trì là công cụ được sử dụng để tự động hóa việc xác định sự cố và tính toán xác suất theo thời gian.</data>
+  <data key="d3">chunk-eef634fbb5143b6bff6a32162c6b6659&lt;SEP&gt;chunk-c7e7d2ad50715920a43ff58624fa49e3</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1778752907</data>
+  <data key="d6"></data>
+</node>
+<node id="Xe đầu kéo cỡ lớn">
+  <data key="d0">Xe đầu kéo cỡ lớn</data>
+  <data key="d1">product</data>
+  <data key="d2">Xe đầu kéo cỡ lớn là tài sản có rủi ro cao nếu hỏng hóc, thường được sử dụng để minh họa cho phương pháp bảo trì dựa trên rủi ro.</data>
+  <data key="d3">chunk-eef634fbb5143b6bff6a32162c6b6659</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1778752907</data>
+  <data key="d6"></data>
+</node>
+<node id="Tài sản">
+  <data key="d0">Tài sản</data>
+  <data key="d1">product</data>
+  <data key="d2">Tài sản là các thiết bị hoặc máy móc trong nhà máy, được phân loại theo mức độ quan trọng và rủi ro hỏng hóc để xây dựng kế hoạch bảo trì.</data>
+  <data key="d3">chunk-eef634fbb5143b6bff6a32162c6b6659</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1778752907</data>
+  <data key="d6"></data>
+</node>
+<node id="Chỉ số sự cố xảy ra">
+  <data key="d0">Chỉ số sự cố xảy ra</data>
+  <data key="d1">concept</data>
+  <data key="d2">Chỉ số sự cố xảy ra là chỉ số xác suất hỏng hóc của thiết bị, được tính toán dựa trên lịch sử thiết bị và phân loại theo thang điểm 1-10.</data>
+  <data key="d3">chunk-eef634fbb5143b6bff6a32162c6b6659</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1778752907</data>
+  <data key="d6"></data>
+</node>
+<node id="Catastrophic">
+  <data key="d0">Catastrophic</data>
+  <data key="d1">concept</data>
+  <data key="d2">Catastrophic là mức phân loại trong chỉ số mức độ nghiêm trọng, biểu thị sự thất bại khiến hệ thống dừng lại.&lt;SEP&gt;Catastrophic là mức độ ảnh hưởng nghiêm trọng của lỗi hệ thống, gây dừng hệ thống hoàn toàn.</data>
+  <data key="d3">chunk-eef634fbb5143b6bff6a32162c6b6659&lt;SEP&gt;chunk-c7e7d2ad50715920a43ff58624fa49e3</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1778752907</data>
+  <data key="d6"></data>
+</node>
+<node id="Critical">
+  <data key="d0">Critical</data>
+  <data key="d1">concept</data>
+  <data key="d2">Critical là mức phân loại trong chỉ số mức độ nghiêm trọng, biểu thị sự cố làm giảm hiệu suất và có thể dẫn đến hậu quả bất lợi.&lt;SEP&gt;Critical là mức độ ảnh hưởng của lỗi hệ thống, làm giảm hiệu suất hoạt động của thiết bị.</data>
+  <data key="d3">chunk-eef634fbb5143b6bff6a32162c6b6659&lt;SEP&gt;chunk-c7e7d2ad50715920a43ff58624fa49e3</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1778752907</data>
+  <data key="d6"></data>
+</node>
+<node id="Marginal">
+  <data key="d0">Marginal</data>
+  <data key="d1">concept</data>
+  <data key="d2">Marginal là mức phân loại trong chỉ số mức độ nghiêm trọng, biểu thị lỗi có thể ảnh hưởng đến hiệu suất hệ thống.&lt;SEP&gt;Marginal là mức độ ảnh hưởng của lỗi hệ thống, có tác động tùy thời gian và không gây gián đoạn nghiêm trọng.</data>
+  <data key="d3">chunk-eef634fbb5143b6bff6a32162c6b6659&lt;SEP&gt;chunk-c7e7d2ad50715920a43ff58624fa49e3</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1778752907</data>
+  <data key="d6"></data>
+</node>
+<node id="Minor">
+  <data key="d0">Minor</data>
+  <data key="d1">concept</data>
+  <data key="d2">Minor là mức phân loại trong chỉ số mức độ nghiêm trọng, biểu thị lỗi không ảnh hưởng đến hiệu suất hệ thống.&lt;SEP&gt;Minor là mức độ ảnh hưởng nhỏ của lỗi hệ thống, không ảnh hưởng đến hiệu suất hoạt động.</data>
+  <data key="d3">chunk-eef634fbb5143b6bff6a32162c6b6659&lt;SEP&gt;chunk-c7e7d2ad50715920a43ff58624fa49e3</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1778752908</data>
+  <data key="d6"></data>
+</node>
+<node id="Frequent">
+  <data key="d0">Frequent</data>
+  <data key="d1">concept</data>
+  <data key="d2">Frequent là phân loại xác suất sự cố xảy ra cao trong khoảng thời gian hoạt động của thiết bị.</data>
+  <data key="d3">chunk-eef634fbb5143b6bff6a32162c6b6659</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1778752910</data>
+  <data key="d6"></data>
+</node>
+<node id="Likely">
+  <data key="d0">Likely</data>
+  <data key="d1">concept</data>
+  <data key="d2">Likely là phân loại xác suất sự cố xảy ra ở mức trung bình trong thời gian hoạt động của thiết bị.</data>
+  <data key="d3">chunk-eef634fbb5143b6bff6a32162c6b6659</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1778752910</data>
+  <data key="d6"></data>
+</node>
+<node id="Occasional">
+  <data key="d0">Occasional</data>
+  <data key="d1">concept</data>
+  <data key="d2">Occasional là phân loại xác suất sự cố xảy ra thỉnh thoảng trong thời gian hoạt động của thiết bị.</data>
+  <data key="d3">chunk-eef634fbb5143b6bff6a32162c6b6659</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1778752910</data>
+  <data key="d6"></data>
+</node>
+<node id="Unlikely">
+  <data key="d0">Unlikely</data>
+  <data key="d1">concept</data>
+  <data key="d2">Unlikely là phân loại xác suất sự cố xảy ra thấp trong thời gian hoạt động của thiết bị.</data>
+  <data key="d3">chunk-eef634fbb5143b6bff6a32162c6b6659</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1778752910</data>
+  <data key="d6"></data>
+</node>
+<node id="Highly unlikely">
+  <data key="d0">Highly unlikely</data>
+  <data key="d1">concept</data>
+  <data key="d2">Highly unlikely là phân loại xác suất sự cố xảy ra gần như bằng không trong thời gian hoạt động của thiết bị.</data>
+  <data key="d3">chunk-eef634fbb5143b6bff6a32162c6b6659</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1778752911</data>
+  <data key="d6"></data>
+</node>
+<node id="Bảng Quan Hệ Rủi Ro">
+  <data key="d0">Bảng Quan Hệ Rủi Ro</data>
+  <data key="d1">product</data>
+  <data key="d2">Bảng Quan Hệ Rủi Ro là bảng thể hiện mối quan hệ giữa mức độ nghiêm trọng rủi ro (1-10) và chỉ số xuất hiện (1-10), với giá trị trong ô là tích của hai chỉ số này.</data>
+  <data key="d3">chunk-727694d563c801baa37848f9f002ae31</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1778752911</data>
+  <data key="d6"></data>
+</node>
+<node id="Mức Độ Nghiêm Trọng Rủi Ro">
+  <data key="d0">Mức Độ Nghiêm Trọng Rủi Ro</data>
+  <data key="d1">other</data>
+  <data key="d2">Mức Độ Nghiêm Trọng Rủi Ro là chỉ số đánh giá mức độ ảnh hưởng của rủi ro, được chia thành 10 cấp độ từ 1 đến 10.</data>
+  <data key="d3">chunk-727694d563c801baa37848f9f002ae31</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1778752911</data>
+  <data key="d6"></data>
+</node>
+<node id="Chỉ Số Xuất Hiện">
+  <data key="d0">Chỉ Số Xuất Hiện</data>
+  <data key="d1">other</data>
+  <data key="d2">Chỉ Số Xuất Hiện là chỉ số đo lường tần suất xảy ra sự cố, được chia thành 10 cấp độ từ 1 đến 10.</data>
+  <data key="d3">chunk-727694d563c801baa37848f9f002ae31</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1778752911</data>
+  <data key="d6"></data>
+</node>
+<node id="Ma Trận Rủi Ro">
+  <data key="d0">Ma Trận Rủi Ro</data>
+  <data key="d1">product</data>
+  <data key="d2">Ma Trận Rủi Ro là bảng tính toán rủi ro bằng cách nhân Mức Độ Nghiêm Trọng Rủi Ro với Chỉ Số Xuất Hiện, giá trị cao nhất đạt 100 (10x10).</data>
+  <data key="d3">chunk-727694d563c801baa37848f9f002ae31</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1778752911</data>
+  <data key="d6"></data>
+</node>
+<node id="Thiết Bị Rủi Ro Thấp">
+  <data key="d0">Thiết Bị Rủi Ro Thấp</data>
+  <data key="d1">other</data>
+  <data key="d2">Thiết Bị Rủi Ro Thấp là các thiết bị có mức rủi ro thấp, được đề xuất tối ưu hóa chi phí bảo trì và thực hiện bảo trì điều chỉnh.</data>
+  <data key="d3">chunk-727694d563c801baa37848f9f002ae31</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1778752912</data>
+  <data key="d6"></data>
+</node>
+<node id="Thiết Bị Rủi Ro Cao">
+  <data key="d0">Thiết Bị Rủi Ro Cao</data>
+  <data key="d1">other</data>
+  <data key="d2">Thiết Bị Rủi Ro Cao là các thiết bị có mức rủi ro cao, yêu cầu giảm chỉ số mức độ nghiêm trọng và tần suất hỏng hóc thông qua các phương pháp như bảo trì dựa trên tình trạng hoặc tăng tần suất bảo trì phòng ngừa.</data>
+  <data key="d3">chunk-727694d563c801baa37848f9f002ae31</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1778752914</data>
+  <data key="d6"></data>
+</node>
+<node id="Bảo Trì Dựa Trên Tình Trạng">
+  <data key="d0">Bảo Trì Dựa Trên Tình Trạng</data>
+  <data key="d1">technology</data>
+  <data key="d2">Bảo Trì Dựa Trên Tình Trạng là phương pháp hiệu quả để giảm tần suất hỏng hóc cho thiết bị rủi ro cao.</data>
+  <data key="d3">chunk-727694d563c801baa37848f9f002ae31</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1778752914</data>
+  <data key="d6"></data>
+</node>
+<node id="Bảo Trì Phòng Ngừa">
+  <data key="d0">Bảo Trì Phòng Ngừa</data>
+  <data key="d1">technology</data>
+  <data key="d2">Bảo Trì Phòng Ngừa là quy trình được áp dụng để giảm tần suất hỏng hóc bằng cách tăng tần suất bảo trì định kỳ.</data>
+  <data key="d3">chunk-727694d563c801baa37848f9f002ae31</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1778752914</data>
+  <data key="d6"></data>
+</node>
+<node id="Phần Mềm Bảo Trì">
+  <data key="d0">Phần Mềm Bảo Trì</data>
+  <data key="d1">product</data>
+  <data key="d2">Phần Mềm Bảo Trì là công cụ đóng vai trò quan trọng trong việc theo dõi và trình bày kết quả rủi ro tự động, theo thời gian thực.</data>
+  <data key="d3">chunk-727694d563c801baa37848f9f002ae31</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1778752914</data>
+  <data key="d6"></data>
+</node>
+<node id="Thiết Bị Rủi Ro Vừa Phải">
+  <data key="d0">Thiết Bị Rủi Ro Vừa Phải</data>
+  <data key="d1">other</data>
+  <data key="d2">Thiết Bị Rủi Ro Vừa Phải là các thiết bị có mức rủi ro trung bình, được khuyến nghị duy trì thói quen bảo trì hiện tại và đơn giản hóa quy trình quản lý.</data>
+  <data key="d3">chunk-727694d563c801baa37848f9f002ae31</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1778752915</data>
+  <data key="d6"></data>
+</node>
+<node id="Tối Ưu Hóa Chi Phí Bảo Trì">
+  <data key="d0">Tối Ưu Hóa Chi Phí Bảo Trì</data>
+  <data key="d1">other</data>
+  <data key="d2">Tối Ưu Hóa Chi Phí Bảo Trì là chiến lược quản lý rủi ro nhằm giảm chi phí cho thiết bị có mức rủi ro thấp.</data>
+  <data key="d3">chunk-727694d563c801baa37848f9f002ae31</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1778752915</data>
+  <data key="d6"></data>
+</node>
+<node id="Bảo Trì Điều Chỉnh">
+  <data key="d0">Bảo Trì Điều Chỉnh</data>
+  <data key="d1">technology</data>
+  <data key="d2">Bảo Trì Điều Chỉnh là phương pháp bảo trì được xem xét áp dụng cho thiết bị rủi ro thấp để tối ưu hóa hiệu quả.</data>
+  <data key="d3">chunk-727694d563c801baa37848f9f002ae31</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1778752915</data>
+  <data key="d6"></data>
+</node>
+<node id="Bộ Máy Quan Liêu">
+  <data key="d0">Bộ Máy Quan Liêu</data>
+  <data key="d1">other</data>
+  <data key="d2">Bộ Máy Quan Liêu là hệ thống quy trình hành chính phức tạp, cần được giảm bớt để đơn giản hóa quản lý bảo trì cho thiết bị rủi ro vừa phải.</data>
+  <data key="d3">chunk-727694d563c801baa37848f9f002ae31</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1778752915</data>
+  <data key="d6"></data>
+</node>
+<node id="SpeedMaint CMMS">
+  <data key="d0">SpeedMaint CMMS</data>
+  <data key="d1">product</data>
+  <data key="d2">SpeedMaint CMMS là phần mềm quản lý bảo trì giúp số hóa quy trình bảo trì, theo dõi sự cố, phân tích báo cáo và quản lý vật tư, hỗ trợ doanh nghiệp triển khai chiến lược bảo trì có tính đến yếu tố rủi ro một cách hiệu quả.</data>
+  <data key="d3">chunk-742968c1348875f455f41b248eaea0dd</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1778752915</data>
+  <data key="d6"></data>
+</node>
+<node id="Ban Quản Lý">
+  <data key="d0">Ban Quản Lý</data>
+  <data key="d1">organization</data>
+  <data key="d2">Ban Quản Lý là nhóm chịu trách nhiệm đưa ra các quyết định dựa trên dữ liệu về bảo trì và rủi ro thiết bị.</data>
+  <data key="d3">chunk-742968c1348875f455f41b248eaea0dd</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1778752916</data>
+  <data key="d6"></data>
+</node>
+<node id="Ban Lãnh Đạo Cấp Cao">
+  <data key="d0">Ban Lãnh Đạo Cấp Cao</data>
+  <data key="d1">organization</data>
+  <data key="d2">Ban Lãnh Đạo Cấp Cao là nhóm được chuyển đổi ngôn ngữ kỹ thuật về độ tin cậy thiết bị thành thông tin dễ hiểu để hỗ trợ ra quyết định.</data>
+  <data key="d3">chunk-742968c1348875f455f41b248eaea0dd</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1778752916</data>
+  <data key="d6"></data>
+</node>
+<node id="Doanh Nghiệp">
+  <data key="d0">Doanh Nghiệp</data>
+  <data key="d1">organization</data>
+  <data key="d2">Doanh Nghiệp là tổ chức triển khai chiến lược bảo trì có tính đến yếu tố rủi ro thông qua phần mềm như SpeedMaint CMMS.</data>
+  <data key="d3">chunk-742968c1348875f455f41b248eaea0dd</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1778752916</data>
+  <data key="d6"></data>
+</node>
+<node id="Các Nhà Quản Lý">
+  <data key="d0">Các Nhà Quản Lý</data>
+  <data key="d1">person</data>
+  <data key="d2">Các Nhà Quản Lý là cá nhân sử dụng phần mềm để phân tích dữ liệu và đưa ra quyết định bảo trì hiệu quả nhất.</data>
+  <data key="d3">chunk-742968c1348875f455f41b248eaea0dd</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1778752916</data>
+  <data key="d6"></data>
+</node>
+<node id="Chỉ số mức độ xảy ra">
+  <data key="d0">Chỉ số mức độ xảy ra</data>
+  <data key="d1">financial_metric</data>
+  <data key="d2">Chỉ số mức độ xảy ra là một chỉ số xác định khả năng xảy ra lỗi dựa trên dữ liệu lịch sử.</data>
+  <data key="d3">chunk-c7e7d2ad50715920a43ff58624fa49e3</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1778752917</data>
+  <data key="d6"></data>
+</node>
+<node id="Chỉ số mức độ nghiêm trọng">
+  <data key="d0">Chỉ số mức độ nghiêm trọng</data>
+  <data key="d1">financial_metric</data>
+  <data key="d2">Chỉ số mức độ nghiêm trọng được xác định dựa trên mức độ ảnh hưởng của thiết bị đến mục tiêu của hệ thống.</data>
+  <data key="d3">chunk-c7e7d2ad50715920a43ff58624fa49e3</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1778752917</data>
+  <data key="d6"></data>
+</node>
+<node id="Rủi ro hỏng hóc">
+  <data key="d0">Rủi ro hỏng hóc</data>
+  <data key="d1">concept</data>
+  <data key="d2">Rủi ro hỏng hóc là tích số giữa chỉ số mức độ xảy ra và chỉ số mức độ nghiêm trọng, được sử dụng để đánh giá mức độ chấp nhận được của rủi ro.</data>
+  <data key="d3">chunk-c7e7d2ad50715920a43ff58624fa49e3</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1778752917</data>
+  <data key="d6"></data>
+</node>
+<node id="1% đến 10% giá trị rủi ro tối đa">
+  <data key="d0">1% đến 10% giá trị rủi ro tối đa</data>
+  <data key="d1">financial_metric</data>
+  <data key="d2">1% đến 10% giá trị rủi ro tối đa là ngưỡng xác định rủi ro chấp nhận được.</data>
+  <data key="d3">chunk-c7e7d2ad50715920a43ff58624fa49e3</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1778752918</data>
+  <data key="d6"></data>
+</node>
+<node id="10% đến 30% giá trị rủi ro tối đa">
+  <data key="d0">10% đến 30% giá trị rủi ro tối đa</data>
+  <data key="d1">financial_metric</data>
+  <data key="d2">10% đến 30% giá trị rủi ro tối đa là ngưỡng xác định rủi ro có thể chấp nhận được.</data>
+  <data key="d3">chunk-c7e7d2ad50715920a43ff58624fa49e3</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1778752918</data>
+  <data key="d6"></data>
+</node>
+<node id="Trên 30% giá trị rủi ro tối đa">
+  <data key="d0">Trên 30% giá trị rủi ro tối đa</data>
+  <data key="d1">financial_metric</data>
+  <data key="d2">Trên 30% giá trị rủi ro tối đa là ngưỡng xác định rủi ro không thể chấp nhận được.</data>
+  <data key="d3">chunk-c7e7d2ad50715920a43ff58624fa49e3</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1778752918</data>
+  <data key="d6"></data>
+</node>
+<node id="MứcĐộNghiêmTrọng Rủi Ro">
+  <data key="d0">MứcĐộNghiêmTrọng Rủi Ro</data>
+  <data key="d1">concept</data>
+  <data key="d2">MứcĐộNghiêmTrọng Rủi Ro là thang phân loại từ 1 đến 10, xác định mức độ ảnh hưởng của lỗi đến hệ thống.</data>
+  <data key="d3">chunk-c7e7d2ad50715920a43ff58624fa49e3</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1778752918</data>
+  <data key="d6"></data>
+</node>
+<node id="100 mức giá trị rủi ro">
+  <data key="d0">100 mức giá trị rủi ro</data>
+  <data key="d1">financial_metric</data>
+  <data key="d2">100 mức giá trị rủi ro là giá trị tối đa được sử dụng để đánh giá ngưỡng chấp nhận rủi ro trong bảng phân loại.</data>
+  <data key="d3">chunk-c7e7d2ad50715920a43ff58624fa49e3</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1778752919</data>
+  <data key="d6"></data>
+</node>
+<node id="Công ty TNHH MTV phần mềm SpeedMaint">
+  <data key="d0">Công ty TNHH MTV phần mềm SpeedMaint</data>
+  <data key="d1">organization</data>
+  <data key="d2">Công ty TNHH MTV phần mềm SpeedMaint là một tổ chức cung cấp dịch vụ bảo trì và có văn phòng tại Hà Nội và TP. Hồ Chí Minh.</data>
+  <data key="d3">chunk-b71bc1f9b1b2a67f43c99e8aae5cd6ce</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1778752919</data>
+  <data key="d6"></data>
+</node>
+<node id="Văn phòng miền Bắc">
+  <data key="d0">Văn phòng miền Bắc</data>
+  <data key="d1">location</data>
+  <data key="d2">Văn phòng miền Bắc của SpeedMaint tọa lạc tại Tầng 07, tòa nhà Lotus, số 02 đường Duy Tân, P. Dịch Vọng Hậu, Q. Cầu Giấy, TP. Hà Nội.</data>
+  <data key="d3">chunk-b71bc1f9b1b2a67f43c99e8aae5cd6ce</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1778752920</data>
+  <data key="d6"></data>
+</node>
+<node id="Văn phòng miền Nam">
+  <data key="d0">Văn phòng miền Nam</data>
+  <data key="d1">location</data>
+  <data key="d2">Văn phòng miền Nam của SpeedMaint tọa lạc tại Số 927/1, đường Cách Mạng Tháng 08, P7, Q. Tân Bình, TP. Hồ Chí Minh.</data>
+  <data key="d3">chunk-b71bc1f9b1b2a67f43c99e8aae5cd6ce</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1778752920</data>
+  <data key="d6"></data>
+</node>
+<node id="Dịch vụ bảo trì">
+  <data key="d0">Dịch vụ bảo trì</data>
+  <data key="d1">product</data>
+  <data key="d2">Dịch vụ bảo trì là sản phẩm chính được cung cấp bởi Công ty TNHH MTV phần mềm SpeedMaint.</data>
+  <data key="d3">chunk-b71bc1f9b1b2a67f43c99e8aae5cd6ce</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1778752920</data>
+  <data key="d6"></data>
+</node>
+<node id="https://speedmaint.com/">
+  <data key="d0">https://speedmaint.com/</data>
+  <data key="d1">product</data>
+  <data key="d2">https://speedmaint.com/ là website chính thức của Công ty TNHH MTV phần mềm SpeedMaint.</data>
+  <data key="d3">chunk-b71bc1f9b1b2a67f43c99e8aae5cd6ce</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1778752920</data>
+  <data key="d6"></data>
+</node>
+<node id="ManWinWin">
+  <data key="d0">ManWinWin</data>
+  <data key="d1">organization</data>
+  <data key="d2">ManWinWin là nguồn tài liệu gốc được biên dịch bởi đội ngũ SpeedMaint.</data>
+  <data key="d3">chunk-b71bc1f9b1b2a67f43c99e8aae5cd6ce</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1778752921</data>
+  <data key="d6"></data>
+</node>
+<node id="https://signup.speedmaint.com/dich-vu-bao-tri/?utm_source=NhungvtSEO&amp;utm_medium=LoT01&amp;utm_campaign=ebook-bao-tri-dua-tren-rui-ro">
+  <data key="d0">https://signup.speedmaint.com/dich-vu-bao-tri/?utm_source=NhungvtSEO&amp;utm_medium=LoT01&amp;utm_campaign=ebook-bao-tri-dua-tren-rui-ro</data>
+  <data key="d1">product</data>
+  <data key="d2">https://signup.speedmaint.com/dich-vu-bao-tri/?utm_source=NhungvtSEO&amp;utm_medium=LoT01&amp;utm_campaign=ebook-bao-tri-dua-tren-rui-ro là chiến dịch marketing dưới dạng đường dẫn đăng ký dịch vụ bảo trì của SpeedMaint.</data>
+  <data key="d3">chunk-b71bc1f9b1b2a67f43c99e8aae5cd6ce</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1778752921</data>
+  <data key="d6"></data>
+</node>
+<node id="NhungvtSEO">
+  <data key="d0">NhungvtSEO</data>
+  <data key="d1">organization</data>
+  <data key="d2">NhungvtSEO là nguồn traffic được sử dụng trong chiến dịch marketing của SpeedMaint.</data>
+  <data key="d3">chunk-b71bc1f9b1b2a67f43c99e8aae5cd6ce</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1778752921</data>
+  <data key="d6"></data>
+</node>
+<node id="LoT01">
+  <data key="d0">LoT01</data>
+  <data key="d1">product</data>
+  <data key="d2">LoT01 là kênh truyền thông (medium) trong chiến dịch marketing của SpeedMaint.</data>
+  <data key="d3">chunk-b71bc1f9b1b2a67f43c99e8aae5cd6ce</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1778752921</data>
+  <data key="d6"></data>
+</node>
+<node id="ebook-bao-tri-dua-tren-rui-ro">
+  <data key="d0">ebook-bao-tri-dua-tren-rui-ro</data>
+  <data key="d1">product</data>
+  <data key="d2">ebook-bao-tri-dua-tren-rui-ro là tên chiến dịch ebook về bảo trì dựa trên rủi ro được triển khai bởi SpeedMaint.</data>
+  <data key="d3">chunk-b71bc1f9b1b2a67f43c99e8aae5cd6ce</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1778752921</data>
+  <data key="d6"></data>
+</node>
+<node id="SpeedMaint Cloud CMMS">
+  <data key="d0">SpeedMaint Cloud CMMS</data>
+  <data key="d1">product</data>
+  <data key="d2">SpeedMaint Cloud CMMS là fanpage chính thức của SpeedMaint trên mạng xã hội.</data>
+  <data key="d3">chunk-b71bc1f9b1b2a67f43c99e8aae5cd6ce</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1778752922</data>
+  <data key="d6"></data>
+</node>
+<node id="Financial_Metric">
+  <data key="d0">Financial_Metric</data>
+  <data key="d3">chunk-727694d563c801baa37848f9f002ae31</data>
+  <data key="d2">Mức Độ Nghiêm Trọng Rủi Ro là chỉ số tài chính đánh giá mức độ ảnh hưởng của rủi ro.</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1778752928</data>
+  <data key="d6"></data>
+</node>
+<edge source="Bảo trì dựa trên rủi ro" target="Tài sản">
+  <data key="d7">1.0</data>
+  <data key="d8">Bảo trì dựa trên rủi ro được áp dụng để xác định và phân bổ nguồn lực cho các tài sản có rủi ro hỏng hóc cao nhất.</data>
+  <data key="d9">phân bổ nguồn lực,tối ưu hóa</data>
+  <data key="d10">chunk-eef634fbb5143b6bff6a32162c6b6659</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1778752923</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Bảo trì dựa trên rủi ro" target="Phần mềm bảo trì">
+  <data key="d7">1.0</data>
+  <data key="d8">Phần mềm bảo trì hỗ trợ tính toán chỉ số xuất hiện sự cố, giúp loại bỏ tính chủ quan trong đánh giá rủi ro.</data>
+  <data key="d9">giảm tính chủ quan,hỗ trợ tính toán</data>
+  <data key="d10">chunk-eef634fbb5143b6bff6a32162c6b6659</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1778752924</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Phần mềm bảo trì" target="Chỉ số mức độ xảy ra">
+  <data key="d7">1.0</data>
+  <data key="d8">Phần mềm bảo trì tự động hóa việc xác định sự cố và tính toán xác suất theo thời gian, hỗ trợ phương pháp sử dụng chỉ số mức độ xảy ra.</data>
+  <data key="d9">hỗ trợ tính toán,tự động hóa</data>
+  <data key="d10">chunk-c7e7d2ad50715920a43ff58624fa49e3</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1778752929</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Xe đầu kéo cỡ lớn" target="Tài sản">
+  <data key="d7">1.0</data>
+  <data key="d8">Xe đầu kéo cỡ lớn là ví dụ điển hình về tài sản có rủi ro cao nếu xảy ra sự cố.</data>
+  <data key="d9">rủi ro cao,ví dụ</data>
+  <data key="d10">chunk-eef634fbb5143b6bff6a32162c6b6659</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1778752924</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Tài sản" target="Catastrophic">
+  <data key="d7">1.0</data>
+  <data key="d8">Lỗi "Catastrophic" có ảnh hưởng nghiêm trọng đến tài sản, gây dừng hệ thống hoàn toàn.</data>
+  <data key="d9">dừng hệ thống,ảnh hưởng nghiêm trọng</data>
+  <data key="d10">chunk-eef634fbb5143b6bff6a32162c6b6659</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1778752924</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Tài sản" target="Critical">
+  <data key="d7">1.0</data>
+  <data key="d8">Lỗi "Critical" ảnh hưởng đến tài sản, làm giảm hiệu suất hoạt động của thiết bị.</data>
+  <data key="d9">giảm hiệu suất,ảnh hưởng trung bình</data>
+  <data key="d10">chunk-eef634fbb5143b6bff6a32162c6b6659</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1778752925</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Tài sản" target="Marginal">
+  <data key="d7">1.0</data>
+  <data key="d8">Lỗi "Marginal" có ảnh hưởng nhẹ đến tài sản, tùy thuộc vào thời gian xảy ra.</data>
+  <data key="d9">tùy thời gian,ảnh hưởng nhẹ</data>
+  <data key="d10">chunk-eef634fbb5143b6bff6a32162c6b6659</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1778752926</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Tài sản" target="Minor">
+  <data key="d7">1.0</data>
+  <data key="d8">Lỗi "Minor" ảnh hưởng nhỏ đến tài sản, không gây gián đoạn hiệu suất hoạt động.</data>
+  <data key="d9">không gián đoạn,ảnh hưởng nhỏ</data>
+  <data key="d10">chunk-eef634fbb5143b6bff6a32162c6b6659</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1778752927</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Chỉ số sự cố xảy ra" target="Frequent">
+  <data key="d7">1.0</data>
+  <data key="d8">Chỉ số sự cố xảy ra được phân loại thành "Frequent" với xác suất cao xảy ra trong thời gian hoạt động của thiết bị.</data>
+  <data key="d9">phân loại xác suất,đánh giá rủi ro</data>
+  <data key="d10">chunk-eef634fbb5143b6bff6a32162c6b6659</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1778752923</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Chỉ số sự cố xảy ra" target="Likely">
+  <data key="d7">1.0</data>
+  <data key="d8">Chỉ số sự cố xảy ra được phân loại thành "Likely" với xác suất trung bình xảy ra trong thời gian hoạt động của thiết bị.</data>
+  <data key="d9">phân loại xác suất,đánh giá rủi ro</data>
+  <data key="d10">chunk-eef634fbb5143b6bff6a32162c6b6659</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1778752924</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Chỉ số sự cố xảy ra" target="Occasional">
+  <data key="d7">1.0</data>
+  <data key="d8">Chỉ số sự cố xảy ra được phân loại thành "Occasional" với xác suất thỉnh thoảng xảy ra trong thời gian hoạt động của thiết bị.</data>
+  <data key="d9">phân loại xác suất,đánh giá rủi ro</data>
+  <data key="d10">chunk-eef634fbb5143b6bff6a32162c6b6659</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1778752925</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Chỉ số sự cố xảy ra" target="Unlikely">
+  <data key="d7">1.0</data>
+  <data key="d8">Chỉ số sự cố xảy ra được phân loại thành "Unlikely" với xác suất thấp xảy ra trong thời gian hoạt động của thiết bị.</data>
+  <data key="d9">phân loại xác suất,đánh giá rủi ro</data>
+  <data key="d10">chunk-eef634fbb5143b6bff6a32162c6b6659</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1778752925</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Chỉ số sự cố xảy ra" target="Highly unlikely">
+  <data key="d7">1.0</data>
+  <data key="d8">Chỉ số sự cố xảy ra được phân loại thành "Highly unlikely" với xác suất gần như bằng không xảy ra trong thời gian hoạt động của thiết bị.</data>
+  <data key="d9">phân loại xác suất,đánh giá rủi ro</data>
+  <data key="d10">chunk-eef634fbb5143b6bff6a32162c6b6659</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1778752927</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Catastrophic" target="Chỉ số mức độ nghiêm trọng">
+  <data key="d7">1.0</data>
+  <data key="d8">Catastrophic là một phân loại trong chỉ số mức độ nghiêm trọng, biểu thị sự thất bại khiến hệ thống dừng lại.</data>
+  <data key="d9">mức độ cao,phân loại</data>
+  <data key="d10">chunk-c7e7d2ad50715920a43ff58624fa49e3</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1778752931</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Critical" target="Chỉ số mức độ nghiêm trọng">
+  <data key="d7">1.0</data>
+  <data key="d8">Critical là một phân loại trong chỉ số mức độ nghiêm trọng, biểu thị sự cố làm giảm hiệu suất và có thể dẫn đến hậu quả bất lợi.</data>
+  <data key="d9">mức độ trung bình,phân loại</data>
+  <data key="d10">chunk-c7e7d2ad50715920a43ff58624fa49e3</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1778752932</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Marginal" target="Chỉ số mức độ nghiêm trọng">
+  <data key="d7">1.0</data>
+  <data key="d8">Marginal là một phân loại trong chỉ số mức độ nghiêm trọng, biểu thị lỗi có thể ảnh hưởng đến hiệu suất hệ thống.</data>
+  <data key="d9">mức độ thấp,phân loại</data>
+  <data key="d10">chunk-c7e7d2ad50715920a43ff58624fa49e3</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1778752933</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Minor" target="Chỉ số mức độ nghiêm trọng">
+  <data key="d7">1.0</data>
+  <data key="d8">Minor là một phân loại trong chỉ số mức độ nghiêm trọng, biểu thị lỗi không ảnh hưởng đến hiệu suất hệ thống.</data>
+  <data key="d9">mức độ rất thấp,phân loại</data>
+  <data key="d10">chunk-c7e7d2ad50715920a43ff58624fa49e3</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1778752934</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Bảng Quan Hệ Rủi Ro" target="Mức Độ Nghiêm Trọng Rủi Ro">
+  <data key="d7">1.0</data>
+  <data key="d8">Bảng Quan Hệ Rủi Ro sử dụng Mức Độ Nghiêm Trọng Rủi Ro như một yếu tố cấu thành để tính toán rủi ro.</data>
+  <data key="d9">data structure,risk assessment</data>
+  <data key="d10">chunk-727694d563c801baa37848f9f002ae31</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1778752925</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Bảng Quan Hệ Rủi Ro" target="Chỉ Số Xuất Hiện">
+  <data key="d7">1.0</data>
+  <data key="d8">Bảng Quan Hệ Rủi Ro sử dụng Chỉ Số Xuất Hiện như một yếu tố cấu thành để tính toán rủi ro.</data>
+  <data key="d9">data structure,risk assessment</data>
+  <data key="d10">chunk-727694d563c801baa37848f9f002ae31</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1778752926</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Bảng Quan Hệ Rủi Ro" target="Ma Trận Rủi Ro">
+  <data key="d7">1.0</data>
+  <data key="d8">Ma Trận Rủi Ro là thành phần trực tiếp của Bảng Quan Hệ Rủi Ro, thể hiện giá trị rủi ro qua tích của hai chỉ số.</data>
+  <data key="d9">component,risk calculation</data>
+  <data key="d10">chunk-727694d563c801baa37848f9f002ae31</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1778752927</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Mức Độ Nghiêm Trọng Rủi Ro" target="Financial_Metric">
+  <data key="d7">1.0</data>
+  <data key="d8">Mức Độ Nghiêm Trọng Rủi Ro là chỉ số tài chính đánh giá mức độ ảnh hưởng của rủi ro.</data>
+  <data key="d9">quantitative analysis,risk severity metric</data>
+  <data key="d10">chunk-727694d563c801baa37848f9f002ae31</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1778752929</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Chỉ Số Xuất Hiện" target="Financial_Metric">
+  <data key="d7">1.0</data>
+  <data key="d8">Chỉ Số Xuất Hiện là chỉ số tài chính đo lường tần suất xảy ra sự cố.</data>
+  <data key="d9">failure frequency metric,quantitative analysis</data>
+  <data key="d10">chunk-727694d563c801baa37848f9f002ae31</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1778752930</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Ma Trận Rủi Ro" target="Phần Mềm Bảo Trì">
+  <data key="d7">1.0</data>
+  <data key="d8">Phần Mềm Bảo Trì hỗ trợ theo dõi và cập nhật Ma Trận Rủi Ro theo thời gian thực.</data>
+  <data key="d9">automation,real-time monitoring</data>
+  <data key="d10">chunk-727694d563c801baa37848f9f002ae31</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1778752928</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Thiết Bị Rủi Ro Thấp" target="Tối Ưu Hóa Chi Phí Bảo Trì">
+  <data key="d7">1.0</data>
+  <data key="d8">Thiết Bị Rủi Ro Thấp áp dụng chiến lược Tối Ưu Hóa Chi Phí Bảo Trì để giảm chi phí.</data>
+  <data key="d9">cost optimization,risk management strategy</data>
+  <data key="d10">chunk-727694d563c801baa37848f9f002ae31</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1778752926</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Thiết Bị Rủi Ro Thấp" target="Bảo Trì Điều Chỉnh">
+  <data key="d7">1.0</data>
+  <data key="d8">Thiết Bị Rủi Ro Thấp có thể thực hiện Bảo Trì Điều Chỉnh như một phương pháp bảo trì.</data>
+  <data key="d9">maintenance method,risk mitigation</data>
+  <data key="d10">chunk-727694d563c801baa37848f9f002ae31</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1778752927</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Thiết Bị Rủi Ro Cao" target="Bảo Trì Dựa Trên Tình Trạng">
+  <data key="d7">1.0</data>
+  <data key="d8">Thiết Bị Rủi Ro Cao áp dụng Bảo Trì Dựa Trên Tình Trạng để giảm tần suất hỏng hóc.</data>
+  <data key="d9">risk mitigation,technology application</data>
+  <data key="d10">chunk-727694d563c801baa37848f9f002ae31</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1778752926</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Thiết Bị Rủi Ro Cao" target="Bảo Trì Phòng Ngừa">
+  <data key="d7">1.0</data>
+  <data key="d8">Thiết Bị Rủi Ro Cao sử dụng Bảo Trì Phòng Ngừa để giảm tần suất hỏng hóc.</data>
+  <data key="d9">maintenance practice,risk mitigation</data>
+  <data key="d10">chunk-727694d563c801baa37848f9f002ae31</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1778752928</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Thiết Bị Rủi Ro Vừa Phải" target="Bộ Máy Quan Liêu">
+  <data key="d7">1.0</data>
+  <data key="d8">Thiết Bị Rủi Ro Vừa Phải yêu cầu giảm bớt Bộ Máy Quan Liêu trong quy trình quản lý bảo trì.</data>
+  <data key="d9">bureaucracy reduction,process simplification</data>
+  <data key="d10">chunk-727694d563c801baa37848f9f002ae31</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1778752927</data>
+  <data key="d13"></data>
+</edge>
+<edge source="SpeedMaint CMMS" target="Ban Quản Lý">
+  <data key="d7">1.0</data>
+  <data key="d8">Ban Quản Lý sử dụng SpeedMaint CMMS để thu thập dữ liệu và tự động hóa tính toán rủi ro.</data>
+  <data key="d9">công cụ hỗ trợ,quản lý bảo trì</data>
+  <data key="d10">chunk-742968c1348875f455f41b248eaea0dd</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1778752928</data>
+  <data key="d13"></data>
+</edge>
+<edge source="SpeedMaint CMMS" target="Doanh Nghiệp">
+  <data key="d7">1.0</data>
+  <data key="d8">SpeedMaint CMMS cung cấp nền tảng thông tin giúp Doanh Nghiệp triển khai bảo trì có tính đến rủi ro.</data>
+  <data key="d9">chiến lược bảo trì,công nghệ số hóa</data>
+  <data key="d10">chunk-742968c1348875f455f41b248eaea0dd</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1778752930</data>
+  <data key="d13"></data>
+</edge>
+<edge source="SpeedMaint CMMS" target="Các Nhà Quản Lý">
+  <data key="d7">1.0</data>
+  <data key="d8">Các Nhà Quản Lý sử dụng SpeedMaint CMMS để phân tích dữ liệu và lựa chọn quyết định bảo trì hiệu quả.</data>
+  <data key="d9">phân tích dữ liệu,tối ưu hóa</data>
+  <data key="d10">chunk-742968c1348875f455f41b248eaea0dd</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1778752931</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Ban Quản Lý" target="Ban Lãnh Đạo Cấp Cao">
+  <data key="d7">1.0</data>
+  <data key="d8">Ban Quản Lý chuyển đổi ngôn ngữ kỹ thuật về độ tin cậy thiết bị để Ban Lãnh Đạo Cấp Cao hiểu và hỗ trợ.</data>
+  <data key="d9">ra quyết định,truyền đạt thông tin</data>
+  <data key="d10">chunk-742968c1348875f455f41b248eaea0dd</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1778752930</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Chỉ số mức độ xảy ra" target="Chỉ số mức độ nghiêm trọng">
+  <data key="d7">1.0</data>
+  <data key="d8">Tích số giữa chỉ số mức độ xảy ra và chỉ số mức độ nghiêm trọng dẫn đến rủi ro hỏng hóc.</data>
+  <data key="d9">tích số,tính toán rủi ro</data>
+  <data key="d10">chunk-c7e7d2ad50715920a43ff58624fa49e3</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1778752930</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Chỉ số mức độ nghiêm trọng" target="MứcĐộNghiêmTrọng Rủi Ro">
+  <data key="d7">1.0</data>
+  <data key="d8">Chỉ số mức độ nghiêm trọng sử dụng thang phân loại MứcĐộNghiêmTrọng Rủi Ro từ 1 đến 10 để đánh giá mức độ ảnh hưởng.</data>
+  <data key="d9">phân loại,thang đo</data>
+  <data key="d10">chunk-c7e7d2ad50715920a43ff58624fa49e3</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1778752934</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Rủi ro hỏng hóc" target="1% đến 10% giá trị rủi ro tối đa">
+  <data key="d7">1.0</data>
+  <data key="d8">Ngưỡng 1% đến 10% giá trị rủi ro tối đa xác định rủi ro hỏng hóc là chấp nhận được.</data>
+  <data key="d9">ngưỡng chấp nhận,phân loại rủi ro</data>
+  <data key="d10">chunk-c7e7d2ad50715920a43ff58624fa49e3</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1778752931</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Rủi ro hỏng hóc" target="10% đến 30% giá trị rủi ro tối đa">
+  <data key="d7">1.0</data>
+  <data key="d8">Ngưỡng 10% đến 30% giá trị rủi ro tối đa xác định rủi ro hỏng hóc là có thể chấp nhận được.</data>
+  <data key="d9">ngưỡng chấp nhận,phân loại rủi ro</data>
+  <data key="d10">chunk-c7e7d2ad50715920a43ff58624fa49e3</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1778752932</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Rủi ro hỏng hóc" target="Trên 30% giá trị rủi ro tối đa">
+  <data key="d7">1.0</data>
+  <data key="d8">Ngưỡng trên 30% giá trị rủi ro tối đa xác định rủi ro hỏng hóc là không thể chấp nhận được.</data>
+  <data key="d9">ngưỡng chấp nhận,phân loại rủi ro</data>
+  <data key="d10">chunk-c7e7d2ad50715920a43ff58624fa49e3</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1778752933</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Công ty TNHH MTV phần mềm SpeedMaint" target="Văn phòng miền Bắc">
+  <data key="d7">1.0</data>
+  <data key="d8">Công ty TNHH MTV phần mềm SpeedMaint có văn phòng tại Tầng 07, tòa nhà Lotus, Hà Nội.</data>
+  <data key="d9">văn phòng,địa điểm</data>
+  <data key="d10">chunk-b71bc1f9b1b2a67f43c99e8aae5cd6ce</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1778752932</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Công ty TNHH MTV phần mềm SpeedMaint" target="Văn phòng miền Nam">
+  <data key="d7">1.0</data>
+  <data key="d8">Công ty TNHH MTV phần mềm SpeedMaint có văn phòng tại Số 927/1, đường Cách Mạng Tháng 08, TP. Hồ Chí Minh.</data>
+  <data key="d9">văn phòng,địa điểm</data>
+  <data key="d10">chunk-b71bc1f9b1b2a67f43c99e8aae5cd6ce</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1778752933</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Công ty TNHH MTV phần mềm SpeedMaint" target="Dịch vụ bảo trì">
+  <data key="d7">1.0</data>
+  <data key="d8">Công ty TNHH MTV phần mềm SpeedMaint cung cấp Dịch vụ bảo trì.</data>
+  <data key="d9">cung cấp,sản phẩm</data>
+  <data key="d10">chunk-b71bc1f9b1b2a67f43c99e8aae5cd6ce</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1778752933</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Công ty TNHH MTV phần mềm SpeedMaint" target="https://speedmaint.com/">
+  <data key="d7">1.0</data>
+  <data key="d8">https://speedmaint.com/ là website chính thức của Công ty TNHH MTV phần mềm SpeedMaint.</data>
+  <data key="d9">liên kết,website</data>
+  <data key="d10">chunk-b71bc1f9b1b2a67f43c99e8aae5cd6ce</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1778752934</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Công ty TNHH MTV phần mềm SpeedMaint" target="ManWinWin">
+  <data key="d7">1.0</data>
+  <data key="d8">Công ty TNHH MTV phần mềm SpeedMaint đã biên dịch tài liệu từ nguồn ManWinWin.</data>
+  <data key="d9">biên dịch,nguồn tài liệu</data>
+  <data key="d10">chunk-b71bc1f9b1b2a67f43c99e8aae5cd6ce</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1778752934</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Công ty TNHH MTV phần mềm SpeedMaint" target="https://signup.speedmaint.com/dich-vu-bao-tri/?utm_source=NhungvtSEO&amp;utm_medium=LoT01&amp;utm_campaign=ebook-bao-tri-dua-tren-rui-ro">
+  <data key="d7">1.0</data>
+  <data key="d8">Công ty TNHH MTV phần mềm SpeedMaint triển khai chiến dịch marketing thông qua đường dẫn chứa UTM parameters.</data>
+  <data key="d9">chiến dịch marketing,liên kết</data>
+  <data key="d10">chunk-b71bc1f9b1b2a67f43c99e8aae5cd6ce</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1778752935</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Công ty TNHH MTV phần mềm SpeedMaint" target="SpeedMaint Cloud CMMS">
+  <data key="d7">1.0</data>
+  <data key="d8">SpeedMaint Cloud CMMS là fanpage mạng xã hội chính thức của Công ty TNHH MTV phần mềm SpeedMaint.</data>
+  <data key="d9">mạng xã hội,đại diện</data>
+  <data key="d10">chunk-b71bc1f9b1b2a67f43c99e8aae5cd6ce</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1778752936</data>
+  <data key="d13"></data>
+</edge>
+<edge source="https://signup.speedmaint.com/dich-vu-bao-tri/?utm_source=NhungvtSEO&amp;utm_medium=LoT01&amp;utm_campaign=ebook-bao-tri-dua-tren-rui-ro" target="NhungvtSEO">
+  <data key="d7">1.0</data>
+  <data key="d8">Chiến dịch marketing của SpeedMaint sử dụng NhungvtSEO làm nguồn traffic.</data>
+  <data key="d9">chiến dịch,nguồn traffic</data>
+  <data key="d10">chunk-b71bc1f9b1b2a67f43c99e8aae5cd6ce</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1778752933</data>
+  <data key="d13"></data>
+</edge>
+<edge source="https://signup.speedmaint.com/dich-vu-bao-tri/?utm_source=NhungvtSEO&amp;utm_medium=LoT01&amp;utm_campaign=ebook-bao-tri-dua-tren-rui-ro" target="LoT01">
+  <data key="d7">1.0</data>
+  <data key="d8">Chiến dịch marketing của SpeedMaint sử dụng LoT01 làm kênh truyền thông.</data>
+  <data key="d9">chiến dịch,kênh truyền thông</data>
+  <data key="d10">chunk-b71bc1f9b1b2a67f43c99e8aae5cd6ce</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1778752934</data>
+  <data key="d13"></data>
+</edge>
+<edge source="https://signup.speedmaint.com/dich-vu-bao-tri/?utm_source=NhungvtSEO&amp;utm_medium=LoT01&amp;utm_campaign=ebook-bao-tri-dua-tren-rui-ro" target="ebook-bao-tri-dua-tren-rui-ro">
+  <data key="d7">1.0</data>
+  <data key="d8">Chiến dịch marketing của SpeedMaint bao gồm nội dung ebook-bao-tri-dua-tren-rui-ro.</data>
+  <data key="d9">liên kết,nội dung chiến dịch</data>
+  <data key="d10">chunk-b71bc1f9b1b2a67f43c99e8aae5cd6ce</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1778752935</data>
+  <data key="d13"></data>
+</edge>
+</graph></graphml>

@@ -1,0 +1,6847 @@
+{
+  "nodes": [
+    {
+      "id": "Công việc C",
+      "label": "Công việc C",
+      "entity_type": "other",
+      "degree": 4
+    },
+    {
+      "id": "Công ty",
+      "label": "Công ty",
+      "entity_type": "organization",
+      "degree": 53
+    },
+    {
+      "id": "Phương pháp trọng số giản đơn",
+      "label": "Phương pháp trọng số giản đơn",
+      "entity_type": "other",
+      "degree": 7
+    },
+    {
+      "id": "Ke toan truong",
+      "label": "Ke toan truong",
+      "entity_type": "organization",
+      "degree": 31
+    },
+    {
+      "id": "Công ty INHH Kirn Ha v jct",
+      "label": "Công ty INHH Kirn Ha v jct",
+      "entity_type": "organization",
+      "degree": 4
+    },
+    {
+      "id": "Doanh thu bán hàng",
+      "label": "Doanh thu bán hàng",
+      "entity_type": "financial_metric",
+      "degree": 7
+    },
+    {
+      "id": "Máy nông nghiệp/thiết bị",
+      "label": "Máy nông nghiệp/thiết bị",
+      "entity_type": "product",
+      "degree": 6
+    },
+    {
+      "id": "Báo cáo tài chính",
+      "label": "Báo cáo tài chính",
+      "entity_type": "event",
+      "degree": 66
+    },
+    {
+      "id": "Day chuyen cong trinh nhip cham",
+      "label": "Day chuyen cong trinh nhip cham",
+      "entity_type": "technology",
+      "degree": 4
+    },
+    {
+      "id": "Thời hạn phân bổ",
+      "label": "Thời hạn phân bổ",
+      "entity_type": "concept",
+      "degree": 4
+    },
+    {
+      "id": "MAD",
+      "label": "MAD",
+      "entity_type": "financial_metric",
+      "degree": 4
+    },
+    {
+      "id": "Tài sản dài hạn",
+      "label": "Tài sản dài hạn",
+      "entity_type": "financial_metric",
+      "degree": 9
+    },
+    {
+      "id": "Chi phí tổng cộng",
+      "label": "Chi phí tổng cộng",
+      "entity_type": "financial_metric",
+      "degree": 4
+    },
+    {
+      "id": "4-5",
+      "label": "4-5",
+      "entity_type": "event",
+      "degree": 5
+    },
+    {
+      "id": "Tài chính",
+      "label": "Tài chính",
+      "entity_type": "other",
+      "degree": 3
+    },
+    {
+      "id": "Phòng Thi công",
+      "label": "Phòng Thi công",
+      "entity_type": "organization",
+      "degree": 7
+    },
+    {
+      "id": "Bước 4: Xác Định Thông Số Không Gian",
+      "label": "Bước 4: Xác Định Thông Số Không Gian",
+      "entity_type": "event",
+      "degree": 3
+    },
+    {
+      "id": "Điểm hòa vốn",
+      "label": "Điểm hòa vốn",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Duong 2-4-5-6",
+      "label": "Duong 2-4-5-6",
+      "entity_type": "UNKNOWN",
+      "degree": 4
+    },
+    {
+      "id": "Tài Nguyên Thu Hồi",
+      "label": "Tài Nguyên Thu Hồi",
+      "entity_type": "other",
+      "degree": 6
+    },
+    {
+      "id": "Khấu hao TSCD",
+      "label": "Khấu hao TSCD",
+      "entity_type": "financial_metric",
+      "degree": 5
+    },
+    {
+      "id": "Bảng cân đối kế toán",
+      "label": "Bảng cân đối kế toán",
+      "entity_type": "product",
+      "degree": 5
+    },
+    {
+      "id": "Quý 1",
+      "label": "Quý 1",
+      "entity_type": "date",
+      "degree": 4
+    },
+    {
+      "id": "Sự Kiện I",
+      "label": "Sự Kiện I",
+      "entity_type": "event",
+      "degree": 4
+    },
+    {
+      "id": "JIT",
+      "label": "JIT",
+      "entity_type": "technology",
+      "degree": 20
+    },
+    {
+      "id": "Doanh số máy hút bụi",
+      "label": "Doanh số máy hút bụi",
+      "entity_type": "financial_metric",
+      "degree": 9
+    },
+    {
+      "id": "Hội đồng quản trị",
+      "label": "Hội đồng quản trị",
+      "entity_type": "organization",
+      "degree": 5
+    },
+    {
+      "id": "Doanh nghiệp Hồng Kỳ",
+      "label": "Doanh nghiệp Hồng Kỳ",
+      "entity_type": "organization",
+      "degree": 5
+    },
+    {
+      "id": "Phương pháp hoạch định xu hướng",
+      "label": "Phương pháp hoạch định xu hướng",
+      "entity_type": "technology",
+      "degree": 4
+    },
+    {
+      "id": "Ngôi nhà hệ thống sản xuất Toyota",
+      "label": "Ngôi nhà hệ thống sản xuất Toyota",
+      "entity_type": "event",
+      "degree": 3
+    },
+    {
+      "id": "Chương II",
+      "label": "Chương II",
+      "entity_type": "other",
+      "degree": 3
+    },
+    {
+      "id": "1-3 năm",
+      "label": "1-3 năm",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Đường cong kinh nghiệm",
+      "label": "Đường cong kinh nghiệm",
+      "entity_type": "concept",
+      "degree": 6
+    },
+    {
+      "id": "Hòan thiện (1)",
+      "label": "Hòan thiện (1)",
+      "entity_type": "organization",
+      "degree": 4
+    },
+    {
+      "id": "Toyota Bến Thành",
+      "label": "Toyota Bến Thành",
+      "entity_type": "organization",
+      "degree": 7
+    },
+    {
+      "id": "Tài sản cố định",
+      "label": "Tài sản cố định",
+      "entity_type": "financial_metric",
+      "degree": 5
+    },
+    {
+      "id": "Cac khoin phaiftu ngln h?n",
+      "label": "Cac khoin phaiftu ngln h?n",
+      "entity_type": "financial_metric",
+      "degree": 6
+    },
+    {
+      "id": "Iai sAN oi, HAN",
+      "label": "Iai sAN oi, HAN",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Phòng chuyên viên",
+      "label": "Phòng chuyên viên",
+      "entity_type": "location",
+      "degree": 4
+    },
+    {
+      "id": "B.D",
+      "label": "B.D",
+      "entity_type": "event",
+      "degree": 4
+    },
+    {
+      "id": "Nơi Tiêu Thụ",
+      "label": "Nơi Tiêu Thụ",
+      "entity_type": "location",
+      "degree": 6
+    },
+    {
+      "id": "Công ty cổ phần Ôi Jong Kon Tum",
+      "label": "Công ty cổ phần Ôi Jong Kon Tum",
+      "entity_type": "organization",
+      "degree": 3
+    },
+    {
+      "id": "Các Bước Lập Dây Chuyền Xây Dựng",
+      "label": "Các Bước Lập Dây Chuyền Xây Dựng",
+      "entity_type": "event",
+      "degree": 5
+    },
+    {
+      "id": "Vay vi nq thue&ichinh",
+      "label": "Vay vi nq thue&ichinh",
+      "entity_type": "financial_metric",
+      "degree": 4
+    },
+    {
+      "id": "Rủi Ro Hỏng Hóc",
+      "label": "Rủi Ro Hỏng Hóc",
+      "entity_type": "financial_metric",
+      "degree": 5
+    },
+    {
+      "id": "Công việc 2-4",
+      "label": "Công việc 2-4",
+      "entity_type": "event",
+      "degree": 7
+    },
+    {
+      "id": "Dây chuyền lắp ráp",
+      "label": "Dây chuyền lắp ráp",
+      "entity_type": "other",
+      "degree": 4
+    },
+    {
+      "id": "Nguyễn Thị Nga",
+      "label": "Nguyễn Thị Nga",
+      "entity_type": "person",
+      "degree": 9
+    },
+    {
+      "id": "Tài Sản Cố Định Hữu Hình (TSCD HH)",
+      "label": "Tài Sản Cố Định Hữu Hình (TSCD HH)",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "H",
+      "label": "H",
+      "entity_type": "event",
+      "degree": 4
+    },
+    {
+      "id": "Khoi Luong Cong Viec",
+      "label": "Khoi Luong Cong Viec",
+      "entity_type": "financial_metric",
+      "degree": 5
+    },
+    {
+      "id": "Công ty CP Lữ Gia Đường Tự",
+      "label": "Công ty CP Lữ Gia Đường Tự",
+      "entity_type": "organization",
+      "degree": 5
+    },
+    {
+      "id": "m",
+      "label": "m",
+      "entity_type": "financial_metric",
+      "degree": 4
+    },
+    {
+      "id": "Biểu đồ xiên",
+      "label": "Biểu đồ xiên",
+      "entity_type": "product",
+      "degree": 3
+    },
+    {
+      "id": "TO CHUC XAY DUNG",
+      "label": "TO CHUC XAY DUNG",
+      "entity_type": "product",
+      "degree": 9
+    },
+    {
+      "id": "X5",
+      "label": "X5",
+      "entity_type": "event",
+      "degree": 7
+    },
+    {
+      "id": "Cong trinh",
+      "label": "Cong trinh",
+      "entity_type": "product",
+      "degree": 15
+    },
+    {
+      "id": "Phan doan",
+      "label": "Phan doan",
+      "entity_type": "technology",
+      "degree": 5
+    },
+    {
+      "id": "Tổ (Đội) 1",
+      "label": "Tổ (Đội) 1",
+      "entity_type": "organization",
+      "degree": 4
+    },
+    {
+      "id": "Công ty TNHH Kim Hiền Việt",
+      "label": "Công ty TNHH Kim Hiền Việt",
+      "entity_type": "organization",
+      "degree": 5
+    },
+    {
+      "id": "JIT (Just-In-Time)",
+      "label": "JIT (Just-In-Time)",
+      "entity_type": "technology",
+      "degree": 3
+    },
+    {
+      "id": "30/09/2024",
+      "label": "30/09/2024",
+      "entity_type": "date",
+      "degree": 14
+    },
+    {
+      "id": "Chi phí dịch vụ liên quan đến bên ngoài",
+      "label": "Chi phí dịch vụ liên quan đến bên ngoài",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "tmin",
+      "label": "tmin",
+      "entity_type": "financial_metric",
+      "degree": 9
+    },
+    {
+      "id": "Tổ chức xây dựng theo phương pháp dây chuyền",
+      "label": "Tổ chức xây dựng theo phương pháp dây chuyền",
+      "entity_type": "technology",
+      "degree": 5
+    },
+    {
+      "id": "Thiết kế dây chuyền công trình",
+      "label": "Thiết kế dây chuyền công trình",
+      "entity_type": "event",
+      "degree": 6
+    },
+    {
+      "id": "so do mang (SDM)",
+      "label": "so do mang (SDM)",
+      "entity_type": "technology",
+      "degree": 13
+    },
+    {
+      "id": "Quý I năm tài chính 2025-2026",
+      "label": "Quý I năm tài chính 2025-2026",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Chi phí khiếu lạ",
+      "label": "Chi phí khiếu lạ",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "2-4",
+      "label": "2-4",
+      "entity_type": "event",
+      "degree": 4
+    },
+    {
+      "id": "210",
+      "label": "210",
+      "entity_type": "financial_metric",
+      "degree": 7
+    },
+    {
+      "id": "Sản xuất tinh gọn",
+      "label": "Sản xuất tinh gọn",
+      "entity_type": "technology",
+      "degree": 29
+    },
+    {
+      "id": "Đóng gói (3)",
+      "label": "Đóng gói (3)",
+      "entity_type": "organization",
+      "degree": 4
+    },
+    {
+      "id": "Toc Do Cua Day Chuyen",
+      "label": "Toc Do Cua Day Chuyen",
+      "entity_type": "financial_metric",
+      "degree": 6
+    },
+    {
+      "id": "258,348,632,669",
+      "label": "258,348,632,669",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Giấy chứng nhận đăng ký doanh nghiệp",
+      "label": "Giấy chứng nhận đăng ký doanh nghiệp",
+      "entity_type": "document",
+      "degree": 3
+    },
+    {
+      "id": "Marketing",
+      "label": "Marketing",
+      "entity_type": "other",
+      "degree": 6
+    },
+    {
+      "id": "X4",
+      "label": "X4",
+      "entity_type": "event",
+      "degree": 8
+    },
+    {
+      "id": "Dự Báo Kỹ Thuật Công Nghệ",
+      "label": "Dự Báo Kỹ Thuật Công Nghệ",
+      "entity_type": "event",
+      "degree": 3
+    },
+    {
+      "id": "Cong Viec",
+      "label": "Cong Viec",
+      "entity_type": "event",
+      "degree": 8
+    },
+    {
+      "id": "Bảng",
+      "label": "Bảng",
+      "entity_type": "artifact",
+      "degree": 3
+    },
+    {
+      "id": "Can Bang Day Chuyen",
+      "label": "Can Bang Day Chuyen",
+      "entity_type": "event",
+      "degree": 7
+    },
+    {
+      "id": "Tổ chức sản xuất",
+      "label": "Tổ chức sản xuất",
+      "entity_type": "organization",
+      "degree": 5
+    },
+    {
+      "id": "Tổng chi phí kỳ này",
+      "label": "Tổng chi phí kỳ này",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Jidoka",
+      "label": "Jidoka",
+      "entity_type": "technology",
+      "degree": 7
+    },
+    {
+      "id": "Công Trình A",
+      "label": "Công Trình A",
+      "entity_type": "event",
+      "degree": 5
+    },
+    {
+      "id": "San Bằng Mũ",
+      "label": "San Bằng Mũ",
+      "entity_type": "technology",
+      "degree": 4
+    },
+    {
+      "id": "oX",
+      "label": "oX",
+      "entity_type": "other",
+      "degree": 7
+    },
+    {
+      "id": "Các doanh nghiệp khác",
+      "label": "Các doanh nghiệp khác",
+      "entity_type": "other",
+      "degree": 10
+    },
+    {
+      "id": "Phân loại các khoản phải thu",
+      "label": "Phân loại các khoản phải thu",
+      "entity_type": "other",
+      "degree": 4
+    },
+    {
+      "id": "Phri 1,i Lhn lao HDQ'I, Ban ki6n rodr",
+      "label": "Phri 1,i Lhn lao HDQ'I, Ban ki6n rodr",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Lập thiết kế",
+      "label": "Lập thiết kế",
+      "entity_type": "event",
+      "degree": 3
+    },
+    {
+      "id": "Bước I: Phân Tích Công Nghệ Xây Dựng",
+      "label": "Bước I: Phân Tích Công Nghệ Xây Dựng",
+      "entity_type": "event",
+      "degree": 3
+    },
+    {
+      "id": "Công suất",
+      "label": "Công suất",
+      "entity_type": "concept",
+      "degree": 28
+    },
+    {
+      "id": "Kì tài chính 2025-2026",
+      "label": "Kì tài chính 2025-2026",
+      "entity_type": "event",
+      "degree": 3
+    },
+    {
+      "id": "Bộ Tài Chính",
+      "label": "Bộ Tài Chính",
+      "entity_type": "organization",
+      "degree": 3
+    },
+    {
+      "id": "Phân xưởng",
+      "label": "Phân xưởng",
+      "entity_type": "location",
+      "degree": 7
+    },
+    {
+      "id": "Tài Sản Cố Định",
+      "label": "Tài Sản Cố Định",
+      "entity_type": "financial_metric",
+      "degree": 4
+    },
+    {
+      "id": "Day chuyen chuyen mon hoa",
+      "label": "Day chuyen chuyen mon hoa",
+      "entity_type": "product",
+      "degree": 12
+    },
+    {
+      "id": "Lấy ý kiến của Ban điều hành doanh nghiệp",
+      "label": "Lấy ý kiến của Ban điều hành doanh nghiệp",
+      "entity_type": "UNKNOWN",
+      "degree": 3
+    },
+    {
+      "id": "F",
+      "label": "F",
+      "entity_type": "technology",
+      "degree": 3
+    },
+    {
+      "id": "Chi phí thuê địa điểm",
+      "label": "Chi phí thuê địa điểm",
+      "entity_type": "financial_metric",
+      "degree": 9
+    },
+    {
+      "id": "Vừa",
+      "label": "Vừa",
+      "entity_type": "product",
+      "degree": 4
+    },
+    {
+      "id": "Bố Trí Mặt Bằng Sản Xuất Theo Sản Phẩm",
+      "label": "Bố Trí Mặt Bằng Sản Xuất Theo Sản Phẩm",
+      "entity_type": "other",
+      "degree": 5
+    },
+    {
+      "id": "Phòng kế toán",
+      "label": "Phòng kế toán",
+      "entity_type": "organization",
+      "degree": 3
+    },
+    {
+      "id": "Công nghệ",
+      "label": "Công nghệ",
+      "entity_type": "technology",
+      "degree": 3
+    },
+    {
+      "id": "Bước 2: Xác Định Mức Độ Chuyên Môn Hóa",
+      "label": "Bước 2: Xác Định Mức Độ Chuyên Môn Hóa",
+      "entity_type": "event",
+      "degree": 3
+    },
+    {
+      "id": "CPM",
+      "label": "CPM",
+      "entity_type": "technology",
+      "degree": 3
+    },
+    {
+      "id": "Thiết Kế Kỹ Thuật",
+      "label": "Thiết Kế Kỹ Thuật",
+      "entity_type": "event",
+      "degree": 6
+    },
+    {
+      "id": "Phòng vật tư",
+      "label": "Phòng vật tư",
+      "entity_type": "organization",
+      "degree": 3
+    },
+    {
+      "id": "Ket som",
+      "label": "Ket som",
+      "entity_type": "other",
+      "degree": 3
+    },
+    {
+      "id": "130",
+      "label": "130",
+      "entity_type": "financial_metric",
+      "degree": 9
+    },
+    {
+      "id": "Năng Suất Tổng Hợp",
+      "label": "Năng Suất Tổng Hợp",
+      "entity_type": "financial_metric",
+      "degree": 13
+    },
+    {
+      "id": "Day Chuyen T",
+      "label": "Day Chuyen T",
+      "entity_type": "product",
+      "degree": 8
+    },
+    {
+      "id": "Quy định những ngành nghề không được cấp phép mới trong khu dân cư tập trung",
+      "label": "Quy định những ngành nghề không được cấp phép mới trong khu dân cư tập trung",
+      "entity_type": "regulation",
+      "degree": 5
+    },
+    {
+      "id": "Other Equity",
+      "label": "Other Equity",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "ChƣƠNG I. GIỚI THIỆU CHUNG VỀ QUẢN TRỊ SẢN XUẤT VÀ TÁC NGHIỆP",
+      "label": "ChƣƠNG I. GIỚI THIỆU CHUNG VỀ QUẢN TRỊ SẢN XUẤT VÀ TÁC NGHIỆP",
+      "entity_type": "event",
+      "degree": 3
+    },
+    {
+      "id": "Tiến độ ban đầu",
+      "label": "Tiến độ ban đầu",
+      "entity_type": "event",
+      "degree": 5
+    },
+    {
+      "id": "Tài Nguyên Không Thu Hồi",
+      "label": "Tài Nguyên Không Thu Hồi",
+      "entity_type": "other",
+      "degree": 5
+    },
+    {
+      "id": "Sơ đồ ngang",
+      "label": "Sơ đồ ngang",
+      "entity_type": "product",
+      "degree": 5
+    },
+    {
+      "id": "BC-6",
+      "label": "BC-6",
+      "entity_type": "product",
+      "degree": 4
+    },
+    {
+      "id": "Ket muon",
+      "label": "Ket muon",
+      "entity_type": "other",
+      "degree": 4
+    },
+    {
+      "id": "3-4",
+      "label": "3-4",
+      "entity_type": "event",
+      "degree": 8
+    },
+    {
+      "id": "Kiểm tra (6)",
+      "label": "Kiểm tra (6)",
+      "entity_type": "organization",
+      "degree": 4
+    },
+    {
+      "id": "Nguyên tắc kế toán",
+      "label": "Nguyên tắc kế toán",
+      "entity_type": "regulation",
+      "degree": 5
+    },
+    {
+      "id": "Công ty CP Tổng công ty Sông Đà",
+      "label": "Công ty CP Tổng công ty Sông Đà",
+      "entity_type": "organization",
+      "degree": 3
+    },
+    {
+      "id": "Debt Capital",
+      "label": "Debt Capital",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Dự trữ công việc",
+      "label": "Dự trữ công việc",
+      "entity_type": "other",
+      "degree": 4
+    },
+    {
+      "id": "Lựa chọn phương án công suất trong điều kiện rủi ro",
+      "label": "Lựa chọn phương án công suất trong điều kiện rủi ro",
+      "entity_type": "event",
+      "degree": 4
+    },
+    {
+      "id": "Phòng Vật Tư",
+      "label": "Phòng Vật Tư",
+      "entity_type": "organization",
+      "degree": 5
+    },
+    {
+      "id": "Lập kế hoạch, tổ chức và chỉ đạo thi công",
+      "label": "Lập kế hoạch, tổ chức và chỉ đạo thi công",
+      "entity_type": "product",
+      "degree": 27
+    },
+    {
+      "id": "Nơi làm việc 1",
+      "label": "Nơi làm việc 1",
+      "entity_type": "location",
+      "degree": 4
+    },
+    {
+      "id": "Công Nghệ",
+      "label": "Công Nghệ",
+      "entity_type": "technology",
+      "degree": 4
+    },
+    {
+      "id": "Tiết kiệm chi phí",
+      "label": "Tiết kiệm chi phí",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Ban chỉ huy công trình",
+      "label": "Ban chỉ huy công trình",
+      "entity_type": "organization",
+      "degree": 4
+    },
+    {
+      "id": "Phân tích hòa vốn",
+      "label": "Phân tích hòa vốn",
+      "entity_type": "method",
+      "degree": 4
+    },
+    {
+      "id": "Buoc 7",
+      "label": "Buoc 7",
+      "entity_type": "event",
+      "degree": 3
+    },
+    {
+      "id": "Su Kien",
+      "label": "Su Kien",
+      "entity_type": "event",
+      "degree": 8
+    },
+    {
+      "id": "Trung tâm đào tạo xây dựng VIETCONS",
+      "label": "Trung tâm đào tạo xây dựng VIETCONS",
+      "entity_type": "organization",
+      "degree": 11
+    },
+    {
+      "id": "Quy trình kiểm soát thi công",
+      "label": "Quy trình kiểm soát thi công",
+      "entity_type": "event",
+      "degree": 3
+    },
+    {
+      "id": "Dự báo 2012",
+      "label": "Dự báo 2012",
+      "entity_type": "financial_metric",
+      "degree": 5
+    },
+    {
+      "id": "Thong s6 s6m",
+      "label": "Thong s6 s6m",
+      "entity_type": "concept",
+      "degree": 8
+    },
+    {
+      "id": "Văn phòng thư ký",
+      "label": "Văn phòng thư ký",
+      "entity_type": "location",
+      "degree": 5
+    },
+    {
+      "id": "Cot 5",
+      "label": "Cot 5",
+      "entity_type": "financial_metric",
+      "degree": 4
+    },
+    {
+      "id": "30109D025",
+      "label": "30109D025",
+      "entity_type": "date",
+      "degree": 8
+    },
+    {
+      "id": "Yên tĩnh",
+      "label": "Yên tĩnh",
+      "entity_type": "other",
+      "degree": 5
+    },
+    {
+      "id": "Tiến độ thi công",
+      "label": "Tiến độ thi công",
+      "entity_type": "event",
+      "degree": 13
+    },
+    {
+      "id": "Công ty Cổ phần Du lịch Kon Tum",
+      "label": "Công ty Cổ phần Du lịch Kon Tum",
+      "entity_type": "organization",
+      "degree": 12
+    },
+    {
+      "id": "Day chuyen chuyen mon",
+      "label": "Day chuyen chuyen mon",
+      "entity_type": "product",
+      "degree": 7
+    },
+    {
+      "id": "Công ty An Phúc",
+      "label": "Công ty An Phúc",
+      "entity_type": "organization",
+      "degree": 6
+    },
+    {
+      "id": "Công việc 4-6 (TT 9)",
+      "label": "Công việc 4-6 (TT 9)",
+      "entity_type": "event",
+      "degree": 6
+    },
+    {
+      "id": "Nhỏ",
+      "label": "Nhỏ",
+      "entity_type": "product",
+      "degree": 3
+    },
+    {
+      "id": "Tài Nguyên",
+      "label": "Tài Nguyên",
+      "entity_type": "other",
+      "degree": 10
+    },
+    {
+      "id": "Biểu đồ day chuyền",
+      "label": "Biểu đồ day chuyền",
+      "entity_type": "product",
+      "degree": 4
+    },
+    {
+      "id": "Tài sản cố định vô hình",
+      "label": "Tài sản cố định vô hình",
+      "entity_type": "financial_metric",
+      "degree": 4
+    },
+    {
+      "id": "Lập tiến độ ban đầu",
+      "label": "Lập tiến độ ban đầu",
+      "entity_type": "event",
+      "degree": 4
+    },
+    {
+      "id": "Phương tiện vận tải",
+      "label": "Phương tiện vận tải",
+      "entity_type": "product",
+      "degree": 6
+    },
+    {
+      "id": "Total Capital Sources",
+      "label": "Total Capital Sources",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Du an tien kha thi",
+      "label": "Du an tien kha thi",
+      "entity_type": "product",
+      "degree": 7
+    },
+    {
+      "id": "BHTN",
+      "label": "BHTN",
+      "entity_type": "product",
+      "degree": 3
+    },
+    {
+      "id": "The Machine that Changed the World",
+      "label": "The Machine that Changed the World",
+      "entity_type": "product",
+      "degree": 8
+    },
+    {
+      "id": "T",
+      "label": "T",
+      "entity_type": "financial_metric",
+      "degree": 7
+    },
+    {
+      "id": "30/06/2025",
+      "label": "30/06/2025",
+      "entity_type": "date",
+      "degree": 43
+    },
+    {
+      "id": "Vốn góp cổ đông",
+      "label": "Vốn góp cổ đông",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Tiến hành nhận hàng",
+      "label": "Tiến hành nhận hàng",
+      "entity_type": "event",
+      "degree": 5
+    },
+    {
+      "id": "Quý 3",
+      "label": "Quý 3",
+      "entity_type": "date",
+      "degree": 4
+    },
+    {
+      "id": "E",
+      "label": "E",
+      "entity_type": "financial_metric",
+      "degree": 5
+    },
+    {
+      "id": "18.156.000.000",
+      "label": "18.156.000.000",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "50%",
+      "label": "50%",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Công suất hiệu quả",
+      "label": "Công suất hiệu quả",
+      "entity_type": "concept",
+      "degree": 3
+    },
+    {
+      "id": "Công việc E",
+      "label": "Công việc E",
+      "entity_type": "product",
+      "degree": 3
+    },
+    {
+      "id": "San bằng số mũ có điều chỉnh xu hướng",
+      "label": "San bằng số mũ có điều chỉnh xu hướng",
+      "entity_type": "technology",
+      "degree": 5
+    },
+    {
+      "id": "In ấn (2)",
+      "label": "In ấn (2)",
+      "entity_type": "organization",
+      "degree": 4
+    },
+    {
+      "id": "SDM",
+      "label": "SDM",
+      "entity_type": "technology",
+      "degree": 84
+    },
+    {
+      "id": "Định vị doanh nghiệp hợp lý",
+      "label": "Định vị doanh nghiệp hợp lý",
+      "entity_type": "concept",
+      "degree": 8
+    },
+    {
+      "id": "01/07/2024–30/09/2025",
+      "label": "01/07/2024–30/09/2025",
+      "entity_type": "date",
+      "degree": 19
+    },
+    {
+      "id": "Công việc G",
+      "label": "Công việc G",
+      "entity_type": "other",
+      "degree": 3
+    },
+    {
+      "id": "Nhip cua day chuyen",
+      "label": "Nhip cua day chuyen",
+      "entity_type": "technology",
+      "degree": 5
+    },
+    {
+      "id": "Các khoản khác",
+      "label": "Các khoản khác",
+      "entity_type": "financial_metric",
+      "degree": 4
+    },
+    {
+      "id": "Bố Trí Mặt Bằng Sản Xuất Theo Vị Trí Cố Định",
+      "label": "Bố Trí Mặt Bằng Sản Xuất Theo Vị Trí Cố Định",
+      "entity_type": "other",
+      "degree": 4
+    },
+    {
+      "id": "Tổng thời gian khấu hao (625 năm)",
+      "label": "Tổng thời gian khấu hao (625 năm)",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "X1",
+      "label": "X1",
+      "entity_type": "event",
+      "degree": 10
+    },
+    {
+      "id": "Tài Sản Dài Hạn",
+      "label": "Tài Sản Dài Hạn",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Quý I niên độ 2024-2025",
+      "label": "Quý I niên độ 2024-2025",
+      "entity_type": "event",
+      "degree": 5
+    },
+    {
+      "id": "450.000 000",
+      "label": "450.000 000",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Công suất thiết kế",
+      "label": "Công suất thiết kế",
+      "entity_type": "concept",
+      "degree": 5
+    },
+    {
+      "id": "Cong",
+      "label": "Cong",
+      "entity_type": "organization",
+      "degree": 3
+    },
+    {
+      "id": "Buoc 6",
+      "label": "Buoc 6",
+      "entity_type": "event",
+      "degree": 5
+    },
+    {
+      "id": "C",
+      "label": "C",
+      "entity_type": "event",
+      "degree": 7
+    },
+    {
+      "id": "Cong ty Co phan Duong Kon Tum",
+      "label": "Cong ty Co phan Duong Kon Tum",
+      "entity_type": "organization",
+      "degree": 11
+    },
+    {
+      "id": "Bố trí theo sản phẩm",
+      "label": "Bố trí theo sản phẩm",
+      "entity_type": "other",
+      "degree": 10
+    },
+    {
+      "id": "01/01/2021–30/09/2025",
+      "label": "01/01/2021–30/09/2025",
+      "entity_type": "date",
+      "degree": 9
+    },
+    {
+      "id": "Mức độ ùn tắc giao thông",
+      "label": "Mức độ ùn tắc giao thông",
+      "entity_type": "other",
+      "degree": 5
+    },
+    {
+      "id": "Thiết Kế Công Trình Xây Dựng",
+      "label": "Thiết Kế Công Trình Xây Dựng",
+      "entity_type": "event",
+      "degree": 19
+    },
+    {
+      "id": "SpeedMaint",
+      "label": "SpeedMaint",
+      "entity_type": "organization",
+      "degree": 3
+    },
+    {
+      "id": "Năng suất",
+      "label": "Năng suất",
+      "entity_type": "concept",
+      "degree": 10
+    },
+    {
+      "id": "Vốn Đầu Tư",
+      "label": "Vốn Đầu Tư",
+      "entity_type": "financial_metric",
+      "degree": 9
+    },
+    {
+      "id": "Bảng 5.1",
+      "label": "Bảng 5.1",
+      "entity_type": "product",
+      "degree": 3
+    },
+    {
+      "id": "Tổ (Đội) 3",
+      "label": "Tổ (Đội) 3",
+      "entity_type": "organization",
+      "degree": 4
+    },
+    {
+      "id": "Định vị doanh nghiệp",
+      "label": "Định vị doanh nghiệp",
+      "entity_type": "other",
+      "degree": 7
+    },
+    {
+      "id": "30/09/2025",
+      "label": "30/09/2025",
+      "entity_type": "date",
+      "degree": 68
+    },
+    {
+      "id": "Day chuyen",
+      "label": "Day chuyen",
+      "entity_type": "product",
+      "degree": 38
+    },
+    {
+      "id": "Công ty TNHH MTV phần mềm SpeedMaint",
+      "label": "Công ty TNHH MTV phần mềm SpeedMaint",
+      "entity_type": "organization",
+      "degree": 7
+    },
+    {
+      "id": "Lợi Nhuận",
+      "label": "Lợi Nhuận",
+      "entity_type": "financial_metric",
+      "degree": 4
+    },
+    {
+      "id": "Công việc I",
+      "label": "Công việc I",
+      "entity_type": "other",
+      "degree": 4
+    },
+    {
+      "id": "To chuc xay dung",
+      "label": "To chuc xay dung",
+      "entity_type": "technology",
+      "degree": 9
+    },
+    {
+      "id": "Cong viec",
+      "label": "Cong viec",
+      "entity_type": "other",
+      "degree": 6
+    },
+    {
+      "id": "Phương Án Công Suất",
+      "label": "Phương Án Công Suất",
+      "entity_type": "product",
+      "degree": 5
+    },
+    {
+      "id": "Bieu do the hien tien do thi cong",
+      "label": "Bieu do the hien tien do thi cong",
+      "entity_type": "product",
+      "degree": 4
+    },
+    {
+      "id": "70%",
+      "label": "70%",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Cong viec i-j",
+      "label": "Cong viec i-j",
+      "entity_type": "event",
+      "degree": 5
+    },
+    {
+      "id": "Thiết bị rủi ro cao",
+      "label": "Thiết bị rủi ro cao",
+      "entity_type": "other",
+      "degree": 4
+    },
+    {
+      "id": "Bố Trí Mặt Bằng Hỗn Hợp",
+      "label": "Bố Trí Mặt Bằng Hỗn Hợp",
+      "entity_type": "other",
+      "degree": 3
+    },
+    {
+      "id": "Phan Dot Thi Cong",
+      "label": "Phan Dot Thi Cong",
+      "entity_type": "product",
+      "degree": 3
+    },
+    {
+      "id": "THIEt Ke tO cHUc xAy DUNG",
+      "label": "THIEt Ke tO cHUc xAy DUNG",
+      "entity_type": "event",
+      "degree": 5
+    },
+    {
+      "id": "A",
+      "label": "A",
+      "entity_type": "event",
+      "degree": 6
+    },
+    {
+      "id": "X3",
+      "label": "X3",
+      "entity_type": "other",
+      "degree": 9
+    },
+    {
+      "id": "Quản trị sản xuất và tác nghiệp",
+      "label": "Quản trị sản xuất và tác nghiệp",
+      "entity_type": "product",
+      "degree": 24
+    },
+    {
+      "id": "Điều kiện không chắc chắn",
+      "label": "Điều kiện không chắc chắn",
+      "entity_type": "concept",
+      "degree": 4
+    },
+    {
+      "id": "30%",
+      "label": "30%",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "MINH BÁO CÁO TÀI CHÍNH (idp rheo)",
+      "label": "MINH BÁO CÁO TÀI CHÍNH (idp rheo)",
+      "entity_type": "event",
+      "degree": 4
+    },
+    {
+      "id": "Z",
+      "label": "Z",
+      "entity_type": "financial_metric",
+      "degree": 5
+    },
+    {
+      "id": "635.080.000",
+      "label": "635.080.000",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "B",
+      "label": "B",
+      "entity_type": "event",
+      "degree": 8
+    },
+    {
+      "id": "Day chuyen da lap",
+      "label": "Day chuyen da lap",
+      "entity_type": "product",
+      "degree": 12
+    },
+    {
+      "id": "Chuyên Đề Quản Trị Sản Xuất",
+      "label": "Chuyên Đề Quản Trị Sản Xuất",
+      "entity_type": "product",
+      "degree": 9
+    },
+    {
+      "id": "Chi phí nguyên liệu, vật liệu",
+      "label": "Chi phí nguyên liệu, vật liệu",
+      "entity_type": "financial_metric",
+      "degree": 4
+    },
+    {
+      "id": "Công ty kinh doanh",
+      "label": "Công ty kinh doanh",
+      "entity_type": "organization",
+      "degree": 7
+    },
+    {
+      "id": "Công Trình C",
+      "label": "Công Trình C",
+      "entity_type": "event",
+      "degree": 5
+    },
+    {
+      "id": "Nghiên cứu thị trường người tiêu dùng",
+      "label": "Nghiên cứu thị trường người tiêu dùng",
+      "entity_type": "UNKNOWN",
+      "degree": 3
+    },
+    {
+      "id": "Phòng điều hành",
+      "label": "Phòng điều hành",
+      "entity_type": "location",
+      "degree": 4
+    },
+    {
+      "id": "Vốn hóa chi phí vay",
+      "label": "Vốn hóa chi phí vay",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Maximax",
+      "label": "Maximax",
+      "entity_type": "other",
+      "degree": 3
+    },
+    {
+      "id": "Vốn Chủ Sở Hữu",
+      "label": "Vốn Chủ Sở Hữu",
+      "entity_type": "financial_metric",
+      "degree": 5
+    },
+    {
+      "id": "Quy trình bảo trì tinh gọn",
+      "label": "Quy trình bảo trì tinh gọn",
+      "entity_type": "other",
+      "degree": 3
+    },
+    {
+      "id": "Thù lao HDQT, BKS không trực tiếp điều hành",
+      "label": "Thù lao HDQT, BKS không trực tiếp điều hành",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Công Nhân",
+      "label": "Công Nhân",
+      "entity_type": "person",
+      "degree": 5
+    },
+    {
+      "id": "Địa điểm C",
+      "label": "Địa điểm C",
+      "entity_type": "location",
+      "degree": 3
+    },
+    {
+      "id": "Công ty Việt Ahh",
+      "label": "Công ty Việt Ahh",
+      "entity_type": "organization",
+      "degree": 6
+    },
+    {
+      "id": "Preferred Shares",
+      "label": "Preferred Shares",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Chỉ Số Mức Độ Nghiêm Trọng",
+      "label": "Chỉ Số Mức Độ Nghiêm Trọng",
+      "entity_type": "financial_metric",
+      "degree": 4
+    },
+    {
+      "id": "2-3",
+      "label": "2-3",
+      "entity_type": "event",
+      "degree": 6
+    },
+    {
+      "id": "Phương pháp bố trí theo quá trình",
+      "label": "Phương pháp bố trí theo quá trình",
+      "entity_type": "method",
+      "degree": 4
+    },
+    {
+      "id": "Giá trị gia tăng",
+      "label": "Giá trị gia tăng",
+      "entity_type": "other",
+      "degree": 3
+    },
+    {
+      "id": "Rủi ro tài chính",
+      "label": "Rủi ro tài chính",
+      "entity_type": "financial_metric",
+      "degree": 8
+    },
+    {
+      "id": "Toyota Production System (TPS)",
+      "label": "Toyota Production System (TPS)",
+      "entity_type": "technology",
+      "degree": 3
+    },
+    {
+      "id": "Ban Kiểm Tra Quản Lý Dự Án",
+      "label": "Ban Kiểm Tra Quản Lý Dự Án",
+      "entity_type": "organization",
+      "degree": 4
+    },
+    {
+      "id": "Duong gang",
+      "label": "Duong gang",
+      "entity_type": "other",
+      "degree": 6
+    },
+    {
+      "id": "Quản trị tác nghiệp",
+      "label": "Quản trị tác nghiệp",
+      "entity_type": "product",
+      "degree": 3
+    },
+    {
+      "id": "100%",
+      "label": "100%",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Công nghiệp hóa ngành xây dựng",
+      "label": "Công nghiệp hóa ngành xây dựng",
+      "entity_type": "event",
+      "degree": 4
+    },
+    {
+      "id": "Du tru",
+      "label": "Du tru",
+      "entity_type": "other",
+      "degree": 3
+    },
+    {
+      "id": "Xay Dung",
+      "label": "Xay Dung",
+      "entity_type": "organization",
+      "degree": 14
+    },
+    {
+      "id": "Tài khoản 36",
+      "label": "Tài khoản 36",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Tổng số tiền",
+      "label": "Tổng số tiền",
+      "entity_type": "financial_metric",
+      "degree": 4
+    },
+    {
+      "id": "Tien do thi cong",
+      "label": "Tien do thi cong",
+      "entity_type": "product",
+      "degree": 24
+    },
+    {
+      "id": "30/09/2021",
+      "label": "30/09/2021",
+      "entity_type": "date",
+      "degree": 10
+    },
+    {
+      "id": "Tài sản ngắn hạn",
+      "label": "Tài sản ngắn hạn",
+      "entity_type": "financial_metric",
+      "degree": 9
+    },
+    {
+      "id": "Cân bằng dây chuyền",
+      "label": "Cân bằng dây chuyền",
+      "entity_type": "technology",
+      "degree": 10
+    },
+    {
+      "id": "Lấy ý kiến của lực lượng bán hàng",
+      "label": "Lấy ý kiến của lực lượng bán hàng",
+      "entity_type": "UNKNOWN",
+      "degree": 3
+    },
+    {
+      "id": "Dự Báo Ngắn Hạn",
+      "label": "Dự Báo Ngắn Hạn",
+      "entity_type": "concept",
+      "degree": 3
+    },
+    {
+      "id": "Chi phí sản xuất kinh doanh",
+      "label": "Chi phí sản xuất kinh doanh",
+      "entity_type": "financial_metric",
+      "degree": 4
+    },
+    {
+      "id": "Khẩn trương (100 nghìn đồng)",
+      "label": "Khẩn trương (100 nghìn đồng)",
+      "entity_type": "financial_metric",
+      "degree": 9
+    },
+    {
+      "id": "Bố trí mặt bằng sản xuất",
+      "label": "Bố trí mặt bằng sản xuất",
+      "entity_type": "other",
+      "degree": 9
+    },
+    {
+      "id": "eij (100 nghìn đồng)",
+      "label": "eij (100 nghìn đồng)",
+      "entity_type": "financial_metric",
+      "degree": 9
+    },
+    {
+      "id": "Phương trình chi phí vận chuyển nguyên vật liệu",
+      "label": "Phương trình chi phí vận chuyển nguyên vật liệu",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Bố Trí Mặt Bằng Sản Xuất Dạng Tế Bào",
+      "label": "Bố Trí Mặt Bằng Sản Xuất Dạng Tế Bào",
+      "entity_type": "product",
+      "degree": 16
+    },
+    {
+      "id": "Lợi nhuận sau thuế",
+      "label": "Lợi nhuận sau thuế",
+      "entity_type": "financial_metric",
+      "degree": 7
+    },
+    {
+      "id": "D",
+      "label": "D",
+      "entity_type": "event",
+      "degree": 5
+    },
+    {
+      "id": "Chuẩn Hóa Quy Trình",
+      "label": "Chuẩn Hóa Quy Trình",
+      "entity_type": "concept",
+      "degree": 4
+    },
+    {
+      "id": "Chế Biến Gỗ",
+      "label": "Chế Biến Gỗ",
+      "entity_type": "organization",
+      "degree": 3
+    },
+    {
+      "id": "Các quy trình trong doanh nghiệp Xây dựng Ebook Free",
+      "label": "Các quy trình trong doanh nghiệp Xây dựng Ebook Free",
+      "entity_type": "product",
+      "degree": 9
+    },
+    {
+      "id": "Công ty TNHH Kim Huy Việt",
+      "label": "Công ty TNHH Kim Huy Việt",
+      "entity_type": "organization",
+      "degree": 3
+    },
+    {
+      "id": "Công Trình Xây Dựng",
+      "label": "Công Trình Xây Dựng",
+      "entity_type": "product",
+      "degree": 8
+    },
+    {
+      "id": "Tổ Chức Sản Xuất Theo Dây Chuyền",
+      "label": "Tổ Chức Sản Xuất Theo Dây Chuyền",
+      "entity_type": "other",
+      "degree": 6
+    },
+    {
+      "id": "Công ty Cổ phần Đá Vàng Kon Tum",
+      "label": "Công ty Cổ phần Đá Vàng Kon Tum",
+      "entity_type": "organization",
+      "degree": 3
+    },
+    {
+      "id": "Siêu thị điện máy",
+      "label": "Siêu thị điện máy",
+      "entity_type": "organization",
+      "degree": 6
+    },
+    {
+      "id": "Công Ty",
+      "label": "Công Ty",
+      "entity_type": "organization",
+      "degree": 12
+    },
+    {
+      "id": "Operation Management",
+      "label": "Operation Management",
+      "entity_type": "product",
+      "degree": 3
+    },
+    {
+      "id": "Doanh nghiệp",
+      "label": "Doanh nghiệp",
+      "entity_type": "organization",
+      "degree": 38
+    },
+    {
+      "id": "Công Ty Cổ Phần Duong",
+      "label": "Công Ty Cổ Phần Duong",
+      "entity_type": "organization",
+      "degree": 13
+    },
+    {
+      "id": "Trung tâm Đào tạo Xây dựng VIETCONS",
+      "label": "Trung tâm Đào tạo Xây dựng VIETCONS",
+      "entity_type": "organization",
+      "degree": 13
+    },
+    {
+      "id": "Quý 2",
+      "label": "Quý 2",
+      "entity_type": "date",
+      "degree": 4
+    },
+    {
+      "id": "2 năm",
+      "label": "2 năm",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Bảo hiểm",
+      "label": "Bảo hiểm",
+      "entity_type": "concept",
+      "degree": 4
+    },
+    {
+      "id": "Bố Trí Mặt Bằng Sản Xuất Theo Quá Trình",
+      "label": "Bố Trí Mặt Bằng Sản Xuất Theo Quá Trình",
+      "entity_type": "other",
+      "degree": 10
+    },
+    {
+      "id": "Nghị định số 200/2014/TT-BTC",
+      "label": "Nghị định số 200/2014/TT-BTC",
+      "entity_type": "regulation",
+      "degree": 3
+    },
+    {
+      "id": "Du tru toan phan",
+      "label": "Du tru toan phan",
+      "entity_type": "financial_metric",
+      "degree": 4
+    },
+    {
+      "id": "5-6",
+      "label": "5-6",
+      "entity_type": "event",
+      "degree": 8
+    },
+    {
+      "id": "Doanh số",
+      "label": "Doanh số",
+      "entity_type": "financial_metric",
+      "degree": 4
+    },
+    {
+      "id": "Công Ty Nsuldn Trr D?",
+      "label": "Công Ty Nsuldn Trr D?",
+      "entity_type": "organization",
+      "degree": 4
+    },
+    {
+      "id": "Day chuyền chuyên môn",
+      "label": "Day chuyền chuyên môn",
+      "entity_type": "product",
+      "degree": 4
+    },
+    {
+      "id": "Phòng tiếp khách",
+      "label": "Phòng tiếp khách",
+      "entity_type": "location",
+      "degree": 5
+    },
+    {
+      "id": "Phòng nhận phát thư",
+      "label": "Phòng nhận phát thư",
+      "entity_type": "location",
+      "degree": 5
+    },
+    {
+      "id": "Chi phí thu hồi nợ",
+      "label": "Chi phí thu hồi nợ",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Tổng thời gian khấu hao 625 năm",
+      "label": "Tổng thời gian khấu hao 625 năm",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Tổng doanh thu",
+      "label": "Tổng doanh thu",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Toyota",
+      "label": "Toyota",
+      "entity_type": "organization",
+      "degree": 9
+    },
+    {
+      "id": "NCC",
+      "label": "NCC",
+      "entity_type": "organization",
+      "degree": 3
+    },
+    {
+      "id": "Công ty Cổ phần Đường Kon Tum",
+      "label": "Công ty Cổ phần Đường Kon Tum",
+      "entity_type": "organization",
+      "degree": 10
+    },
+    {
+      "id": "Khoản vay",
+      "label": "Khoản vay",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "-1.180.000.000",
+      "label": "-1.180.000.000",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Vdn h6a",
+      "label": "Vdn h6a",
+      "entity_type": "financial_metric",
+      "degree": 4
+    },
+    {
+      "id": "Bình thường (100 nghìn đồng)",
+      "label": "Bình thường (100 nghìn đồng)",
+      "entity_type": "financial_metric",
+      "degree": 9
+    },
+    {
+      "id": "Chu dau tu",
+      "label": "Chu dau tu",
+      "entity_type": "organization",
+      "degree": 5
+    },
+    {
+      "id": "Dự Toán Công Trình",
+      "label": "Dự Toán Công Trình",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Năng Suất",
+      "label": "Năng Suất",
+      "entity_type": "other",
+      "degree": 13
+    },
+    {
+      "id": "Công Ty A",
+      "label": "Công Ty A",
+      "entity_type": "organization",
+      "degree": 5
+    },
+    {
+      "id": "Chi phí sản xuất",
+      "label": "Chi phí sản xuất",
+      "entity_type": "financial_metric",
+      "degree": 5
+    },
+    {
+      "id": "Cot 6",
+      "label": "Cot 6",
+      "entity_type": "financial_metric",
+      "degree": 4
+    },
+    {
+      "id": "Bang 4.3",
+      "label": "Bang 4.3",
+      "entity_type": "product",
+      "degree": 11
+    },
+    {
+      "id": "Lý thuyết quyết định",
+      "label": "Lý thuyết quyết định",
+      "entity_type": "concept",
+      "degree": 3
+    },
+    {
+      "id": "Lớn",
+      "label": "Lớn",
+      "entity_type": "product",
+      "degree": 3
+    },
+    {
+      "id": "INHH Kirn Ha v jct",
+      "label": "INHH Kirn Ha v jct",
+      "entity_type": "organization",
+      "degree": 4
+    },
+    {
+      "id": "Tài sản định điểm",
+      "label": "Tài sản định điểm",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Các phương pháp hỗ trợ lựa chọn công suất",
+      "label": "Các phương pháp hỗ trợ lựa chọn công suất",
+      "entity_type": "concept",
+      "degree": 4
+    },
+    {
+      "id": "Vật Tư",
+      "label": "Vật Tư",
+      "entity_type": "product",
+      "degree": 3
+    },
+    {
+      "id": "Biểu đồ nhân lực",
+      "label": "Biểu đồ nhân lực",
+      "entity_type": "product",
+      "degree": 9
+    },
+    {
+      "id": "San bằng số mũ giản đơn",
+      "label": "San bằng số mũ giản đơn",
+      "entity_type": "technology",
+      "degree": 3
+    },
+    {
+      "id": "Sản Xuất Xây Dựng",
+      "label": "Sản Xuất Xây Dựng",
+      "entity_type": "product",
+      "degree": 7
+    },
+    {
+      "id": "Thong so thoi gian",
+      "label": "Thong so thoi gian",
+      "entity_type": "other",
+      "degree": 5
+    },
+    {
+      "id": "BHYT",
+      "label": "BHYT",
+      "entity_type": "product",
+      "degree": 3
+    },
+    {
+      "id": "Bài toán tối ưu sơ đồ mạng",
+      "label": "Bài toán tối ưu sơ đồ mạng",
+      "entity_type": "event",
+      "degree": 6
+    },
+    {
+      "id": "Tập đoàn sản xuất điện thoại",
+      "label": "Tập đoàn sản xuất điện thoại",
+      "entity_type": "organization",
+      "degree": 7
+    },
+    {
+      "id": "Gian doan",
+      "label": "Gian doan",
+      "entity_type": "financial_metric",
+      "degree": 7
+    },
+    {
+      "id": "SDM nút",
+      "label": "SDM nút",
+      "entity_type": "product",
+      "degree": 13
+    },
+    {
+      "id": "C0NC",
+      "label": "C0NC",
+      "entity_type": "organization",
+      "degree": 5
+    },
+    {
+      "id": "Nguyên giá TSCD HH",
+      "label": "Nguyên giá TSCD HH",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Dây chuyền nhip boi",
+      "label": "Dây chuyền nhip boi",
+      "entity_type": "technology",
+      "degree": 4
+    },
+    {
+      "id": "Khấu hao đều",
+      "label": "Khấu hao đều",
+      "entity_type": "technology",
+      "degree": 6
+    },
+    {
+      "id": "Công ty CP Edu tư và Phát triển nông nghiệp Tiên Nông",
+      "label": "Công ty CP Edu tư và Phát triển nông nghiệp Tiên Nông",
+      "entity_type": "organization",
+      "degree": 3
+    },
+    {
+      "id": "Báo cáo kinh tế kỹ thuật",
+      "label": "Báo cáo kinh tế kỹ thuật",
+      "entity_type": "product",
+      "degree": 15
+    },
+    {
+      "id": "SDM nut",
+      "label": "SDM nut",
+      "entity_type": "technology",
+      "degree": 12
+    },
+    {
+      "id": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam - CN Kon Tum",
+      "label": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam - CN Kon Tum",
+      "entity_type": "organization",
+      "degree": 4
+    },
+    {
+      "id": "Kết quả kinh doanh Quý I niên độ 2025-2026",
+      "label": "Kết quả kinh doanh Quý I niên độ 2025-2026",
+      "entity_type": "financial_metric",
+      "degree": 4
+    },
+    {
+      "id": "Điều chỉnh biểu đồ nhân lực",
+      "label": "Điều chỉnh biểu đồ nhân lực",
+      "entity_type": "event",
+      "degree": 7
+    },
+    {
+      "id": "10/04/2025",
+      "label": "10/04/2025",
+      "entity_type": "date",
+      "degree": 3
+    },
+    {
+      "id": "Day Chuyen Tuong Duong",
+      "label": "Day Chuyen Tuong Duong",
+      "entity_type": "concept",
+      "degree": 4
+    },
+    {
+      "id": "7.021.100.000",
+      "label": "7.021.100.000",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Công ty Cổ phần Kon Tum",
+      "label": "Công ty Cổ phần Kon Tum",
+      "entity_type": "organization",
+      "degree": 5
+    },
+    {
+      "id": "TIIUYET MINH Bio cAo TAI cH iNH",
+      "label": "TIIUYET MINH Bio cAo TAI cH iNH",
+      "entity_type": "event",
+      "degree": 5
+    },
+    {
+      "id": "Quý 4",
+      "label": "Quý 4",
+      "entity_type": "date",
+      "degree": 5
+    },
+    {
+      "id": "Tổng cộng tài sản",
+      "label": "Tổng cộng tài sản",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Tổng chi phí",
+      "label": "Tổng chi phí",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Chi phí",
+      "label": "Chi phí",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Luật các khoản phải trả",
+      "label": "Luật các khoản phải trả",
+      "entity_type": "regulation",
+      "degree": 3
+    },
+    {
+      "id": "Thời gian chu kỳ (TCK)",
+      "label": "Thời gian chu kỳ (TCK)",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Gần thị trường tiêu thụ",
+      "label": "Gần thị trường tiêu thụ",
+      "entity_type": "concept",
+      "degree": 3
+    },
+    {
+      "id": "Buoc 8",
+      "label": "Buoc 8",
+      "entity_type": "event",
+      "degree": 4
+    },
+    {
+      "id": "Sơ đồ Mạng",
+      "label": "Sơ đồ Mạng",
+      "entity_type": "technology",
+      "degree": 7
+    },
+    {
+      "id": "Sản xuất",
+      "label": "Sản xuất",
+      "entity_type": "other",
+      "degree": 3
+    },
+    {
+      "id": "Tien do phap lenh",
+      "label": "Tien do phap lenh",
+      "entity_type": "product",
+      "degree": 4
+    },
+    {
+      "id": "Dây chuyền hoàn thiện",
+      "label": "Dây chuyền hoàn thiện",
+      "entity_type": "product",
+      "degree": 4
+    },
+    {
+      "id": "Công ty Cổ phần Du lịch Kontum",
+      "label": "Công ty Cổ phần Du lịch Kontum",
+      "entity_type": "organization",
+      "degree": 14
+    },
+    {
+      "id": "Tổng nhu cầu 4 năm",
+      "label": "Tổng nhu cầu 4 năm",
+      "entity_type": "financial_metric",
+      "degree": 5
+    },
+    {
+      "id": "X6",
+      "label": "X6",
+      "entity_type": "event",
+      "degree": 7
+    },
+    {
+      "id": "Hồ sơ dự án khả thi",
+      "label": "Hồ sơ dự án khả thi",
+      "entity_type": "product",
+      "degree": 4
+    },
+    {
+      "id": "Phương pháp Tổ chức Dây chuyền",
+      "label": "Phương pháp Tổ chức Dây chuyền",
+      "entity_type": "technology",
+      "degree": 9
+    },
+    {
+      "id": "Thiết bị quản lý",
+      "label": "Thiết bị quản lý",
+      "entity_type": "product",
+      "degree": 6
+    },
+    {
+      "id": "Công Trình D",
+      "label": "Công Trình D",
+      "entity_type": "event",
+      "degree": 5
+    },
+    {
+      "id": "Thông tư số 96/2020/TT-BTC ngày 16 tháng 11 năm 2020",
+      "label": "Thông tư số 96/2020/TT-BTC ngày 16 tháng 11 năm 2020",
+      "entity_type": "regulation",
+      "degree": 4
+    },
+    {
+      "id": "Các khoản chi phí khác",
+      "label": "Các khoản chi phí khác",
+      "entity_type": "financial_metric",
+      "degree": 4
+    },
+    {
+      "id": "Thời Gian Thi Công",
+      "label": "Thời Gian Thi Công",
+      "entity_type": "financial_metric",
+      "degree": 4
+    },
+    {
+      "id": "Ban chỉ huy",
+      "label": "Ban chỉ huy",
+      "entity_type": "organization",
+      "degree": 5
+    },
+    {
+      "id": "Báo cáo tài chính năm 2024",
+      "label": "Báo cáo tài chính năm 2024",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Công Ty Kirn Lla Viir",
+      "label": "Công Ty Kirn Lla Viir",
+      "entity_type": "organization",
+      "degree": 3
+    },
+    {
+      "id": "PERT",
+      "label": "PERT",
+      "entity_type": "technology",
+      "degree": 11
+    },
+    {
+      "id": "Chủ đầu tư",
+      "label": "Chủ đầu tư",
+      "entity_type": "organization",
+      "degree": 7
+    },
+    {
+      "id": "Chủ nhiệm kế toán Việt Nam",
+      "label": "Chủ nhiệm kế toán Việt Nam",
+      "entity_type": "regulation",
+      "degree": 3
+    },
+    {
+      "id": "Bảng tổng hợp dữ liệu tài chính",
+      "label": "Bảng tổng hợp dữ liệu tài chính",
+      "entity_type": "financial_metric",
+      "degree": 19
+    },
+    {
+      "id": "Thủ tục môn báo cáo tài chính",
+      "label": "Thủ tục môn báo cáo tài chính",
+      "entity_type": "event",
+      "degree": 3
+    },
+    {
+      "id": "VIETCONS",
+      "label": "VIETCONS",
+      "entity_type": "organization",
+      "degree": 12
+    },
+    {
+      "id": "Tiến Độ",
+      "label": "Tiến Độ",
+      "entity_type": "other",
+      "degree": 8
+    },
+    {
+      "id": "Chi phí quản lý doanh nghiệp",
+      "label": "Chi phí quản lý doanh nghiệp",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Tổ (Đội) 2",
+      "label": "Tổ (Đội) 2",
+      "entity_type": "organization",
+      "degree": 4
+    },
+    {
+      "id": "Công Ty CP XNK",
+      "label": "Công Ty CP XNK",
+      "entity_type": "organization",
+      "degree": 3
+    },
+    {
+      "id": "4-6",
+      "label": "4-6",
+      "entity_type": "event",
+      "degree": 7
+    },
+    {
+      "id": "Khoan vay",
+      "label": "Khoan vay",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Lantech",
+      "label": "Lantech",
+      "entity_type": "organization",
+      "degree": 6
+    },
+    {
+      "id": "Bình quân di động giản đơn",
+      "label": "Bình quân di động giản đơn",
+      "entity_type": "UNKNOWN",
+      "degree": 3
+    },
+    {
+      "id": "Phân tích Delphi",
+      "label": "Phân tích Delphi",
+      "entity_type": "UNKNOWN",
+      "degree": 3
+    },
+    {
+      "id": "Thong sd muon",
+      "label": "Thong sd muon",
+      "entity_type": "concept",
+      "degree": 8
+    },
+    {
+      "id": "Số công nhân tối đa (N max)",
+      "label": "Số công nhân tối đa (N max)",
+      "entity_type": "other",
+      "degree": 3
+    },
+    {
+      "id": "Chức năng sản xuất",
+      "label": "Chức năng sản xuất",
+      "entity_type": "other",
+      "degree": 3
+    },
+    {
+      "id": "12 tháng",
+      "label": "12 tháng",
+      "entity_type": "date",
+      "degree": 4
+    },
+    {
+      "id": "Tháng 7",
+      "label": "Tháng 7",
+      "entity_type": "date",
+      "degree": 3
+    },
+    {
+      "id": "Cong viec a",
+      "label": "Cong viec a",
+      "entity_type": "event",
+      "degree": 4
+    },
+    {
+      "id": "3-5",
+      "label": "3-5",
+      "entity_type": "event",
+      "degree": 6
+    },
+    {
+      "id": "Công việc A",
+      "label": "Công việc A",
+      "entity_type": "other",
+      "degree": 8
+    },
+    {
+      "id": "Quản trị sản xuất",
+      "label": "Quản trị sản xuất",
+      "entity_type": "product",
+      "degree": 8
+    },
+    {
+      "id": "Phuong phap day chuyen",
+      "label": "Phuong phap day chuyen",
+      "entity_type": "technology",
+      "degree": 4
+    },
+    {
+      "id": "Kh?i muon",
+      "label": "Kh?i muon",
+      "entity_type": "other",
+      "degree": 4
+    },
+    {
+      "id": "Công ty Cổ phần",
+      "label": "Công ty Cổ phần",
+      "entity_type": "organization",
+      "degree": 3
+    },
+    {
+      "id": "Đường Găng",
+      "label": "Đường Găng",
+      "entity_type": "financial_metric",
+      "degree": 5
+    },
+    {
+      "id": "Phương pháp tịnh tiến",
+      "label": "Phương pháp tịnh tiến",
+      "entity_type": "technology",
+      "degree": 4
+    },
+    {
+      "id": "Khoản phải thu",
+      "label": "Khoản phải thu",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Bố Trí Theo Nhóm",
+      "label": "Bố Trí Theo Nhóm",
+      "entity_type": "product",
+      "degree": 13
+    },
+    {
+      "id": "Ban quản lý",
+      "label": "Ban quản lý",
+      "entity_type": "organization",
+      "degree": 3
+    },
+    {
+      "id": "01/07/2025–30/09/2025",
+      "label": "01/07/2025–30/09/2025",
+      "entity_type": "date",
+      "degree": 11
+    },
+    {
+      "id": "Tiêu chuẩn Việt Nam",
+      "label": "Tiêu chuẩn Việt Nam",
+      "entity_type": "regulation",
+      "degree": 4
+    },
+    {
+      "id": "SpeedMaint CMMS",
+      "label": "SpeedMaint CMMS",
+      "entity_type": "product",
+      "degree": 3
+    },
+    {
+      "id": "Dự Báo Cầu",
+      "label": "Dự Báo Cầu",
+      "entity_type": "event",
+      "degree": 4
+    },
+    {
+      "id": "Công ty Hoàng Long",
+      "label": "Công ty Hoàng Long",
+      "entity_type": "organization",
+      "degree": 3
+    },
+    {
+      "id": "FastCons",
+      "label": "FastCons",
+      "entity_type": "product",
+      "degree": 24
+    },
+    {
+      "id": "Chi phí nguyên vật liệu",
+      "label": "Chi phí nguyên vật liệu",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "THUYET MINH BAO CAO TAI CHINH",
+      "label": "THUYET MINH BAO CAO TAI CHINH",
+      "entity_type": "event",
+      "degree": 6
+    },
+    {
+      "id": "Công việc D",
+      "label": "Công việc D",
+      "entity_type": "other",
+      "degree": 9
+    },
+    {
+      "id": "Walt Disney",
+      "label": "Walt Disney",
+      "entity_type": "organization",
+      "degree": 14
+    },
+    {
+      "id": "TOng",
+      "label": "TOng",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Doanh Nghiệp",
+      "label": "Doanh Nghiệp",
+      "entity_type": "organization",
+      "degree": 12
+    },
+    {
+      "id": "May rủi ngang nhau",
+      "label": "May rủi ngang nhau",
+      "entity_type": "other",
+      "degree": 3
+    },
+    {
+      "id": "Công Nghiệp Hóa Ngành Xây Dựng",
+      "label": "Công Nghiệp Hóa Ngành Xây Dựng",
+      "entity_type": "event",
+      "degree": 5
+    },
+    {
+      "id": "Dieu le C6ng ty",
+      "label": "Dieu le C6ng ty",
+      "entity_type": "regulation",
+      "degree": 3
+    },
+    {
+      "id": "Duong Gang",
+      "label": "Duong Gang",
+      "entity_type": "technology",
+      "degree": 8
+    },
+    {
+      "id": "150.000.000",
+      "label": "150.000.000",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Sản Xuất Tinh Gọn",
+      "label": "Sản Xuất Tinh Gọn",
+      "entity_type": "concept",
+      "degree": 6
+    },
+    {
+      "id": "Ngân hàng TMCP Đầu tư & Phát triển Việt Nam - CN Kon Tum",
+      "label": "Ngân hàng TMCP Đầu tư & Phát triển Việt Nam - CN Kon Tum",
+      "entity_type": "organization",
+      "degree": 6
+    },
+    {
+      "id": "Các nhân tố ảnh hưởng đến chọn vùng",
+      "label": "Các nhân tố ảnh hưởng đến chọn vùng",
+      "entity_type": "concept",
+      "degree": 4
+    },
+    {
+      "id": "Sơ Đồ Chuỗi Giá Trị",
+      "label": "Sơ Đồ Chuỗi Giá Trị",
+      "entity_type": "product",
+      "degree": 4
+    },
+    {
+      "id": "30/09/2015",
+      "label": "30/09/2015",
+      "entity_type": "date",
+      "degree": 8
+    },
+    {
+      "id": "Hồ sơ thanh toán",
+      "label": "Hồ sơ thanh toán",
+      "entity_type": "product",
+      "degree": 11
+    },
+    {
+      "id": "1-3",
+      "label": "1-3",
+      "entity_type": "event",
+      "degree": 9
+    },
+    {
+      "id": "Chỉ số mùa vụ",
+      "label": "Chỉ số mùa vụ",
+      "entity_type": "financial_metric",
+      "degree": 5
+    },
+    {
+      "id": "Đường găng",
+      "label": "Đường găng",
+      "entity_type": "technology",
+      "degree": 4
+    },
+    {
+      "id": "Thiết Kế Thi Công",
+      "label": "Thiết Kế Thi Công",
+      "entity_type": "event",
+      "degree": 4
+    },
+    {
+      "id": "01/07/2025",
+      "label": "01/07/2025",
+      "entity_type": "date",
+      "degree": 3
+    },
+    {
+      "id": "Phan Doan",
+      "label": "Phan Doan",
+      "entity_type": "product",
+      "degree": 6
+    },
+    {
+      "id": "Giai Doan On Dinh",
+      "label": "Giai Doan On Dinh",
+      "entity_type": "event",
+      "degree": 4
+    },
+    {
+      "id": "Lean Manufacturing",
+      "label": "Lean Manufacturing",
+      "entity_type": "technology",
+      "degree": 5
+    },
+    {
+      "id": "Tổ Chức Xây Dựng",
+      "label": "Tổ Chức Xây Dựng",
+      "entity_type": "organization",
+      "degree": 5
+    },
+    {
+      "id": "Day chuyen nhip nhang",
+      "label": "Day chuyen nhip nhang",
+      "entity_type": "other",
+      "degree": 7
+    },
+    {
+      "id": "Kon Tum",
+      "label": "Kon Tum",
+      "entity_type": "location",
+      "degree": 3
+    },
+    {
+      "id": "Bố Trí Theo Sản Phẩm",
+      "label": "Bố Trí Theo Sản Phẩm",
+      "entity_type": "product",
+      "degree": 3
+    },
+    {
+      "id": "Xây Dựng",
+      "label": "Xây Dựng",
+      "entity_type": "other",
+      "degree": 5
+    },
+    {
+      "id": "Công ty TNHH Kim Hoa Việt",
+      "label": "Công ty TNHH Kim Hoa Việt",
+      "entity_type": "organization",
+      "degree": 11
+    },
+    {
+      "id": "Quản lý bảo trì dựa trên rủi ro",
+      "label": "Quản lý bảo trì dựa trên rủi ro",
+      "entity_type": "technology",
+      "degree": 3
+    },
+    {
+      "id": "Địa điểm A",
+      "label": "Địa điểm A",
+      "entity_type": "location",
+      "degree": 3
+    },
+    {
+      "id": "Tổ (Đội) 4",
+      "label": "Tổ (Đội) 4",
+      "entity_type": "organization",
+      "degree": 4
+    },
+    {
+      "id": "Bảng so sánh ba phương án (A, B, C)",
+      "label": "Bảng so sánh ba phương án (A, B, C)",
+      "entity_type": "data",
+      "degree": 3
+    },
+    {
+      "id": "Bảng thể hiện tỷ lệ luân chuyển giữa các giai đoạn sản xuất",
+      "label": "Bảng thể hiện tỷ lệ luân chuyển giữa các giai đoạn sản xuất",
+      "entity_type": "product",
+      "degree": 6
+    },
+    {
+      "id": "Nơi làm việc 3",
+      "label": "Nơi làm việc 3",
+      "entity_type": "location",
+      "degree": 3
+    },
+    {
+      "id": "Các khoản điều chỉnh tăng - Điều chỉnh giá sổ sách: phiếu phong bì",
+      "label": "Các khoản điều chỉnh tăng - Điều chỉnh giá sổ sách: phiếu phong bì",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "t6 chuc san xuat day chuyen",
+      "label": "t6 chuc san xuat day chuyen",
+      "entity_type": "other",
+      "degree": 5
+    },
+    {
+      "id": "To chuc san xuat theo day chuyen",
+      "label": "To chuc san xuat theo day chuyen",
+      "entity_type": "UNKNOWN",
+      "degree": 8
+    },
+    {
+      "id": "Thiết Kế Tổ Chức Xây Dựng",
+      "label": "Thiết Kế Tổ Chức Xây Dựng",
+      "entity_type": "UNKNOWN",
+      "degree": 11
+    },
+    {
+      "id": "Công Trình",
+      "label": "Công Trình",
+      "entity_type": "product",
+      "degree": 15
+    },
+    {
+      "id": "X2",
+      "label": "X2",
+      "entity_type": "event",
+      "degree": 9
+    },
+    {
+      "id": "Kế Hoạch Xây Dựng",
+      "label": "Kế Hoạch Xây Dựng",
+      "entity_type": "event",
+      "degree": 8
+    },
+    {
+      "id": "Quang N.",
+      "label": "Quang N.",
+      "entity_type": "person",
+      "degree": 4
+    },
+    {
+      "id": "Dây Chuyền Xây Dựng",
+      "label": "Dây Chuyền Xây Dựng",
+      "entity_type": "product",
+      "degree": 5
+    },
+    {
+      "id": "TKTCTC",
+      "label": "TKTCTC",
+      "entity_type": "organization",
+      "degree": 24
+    },
+    {
+      "id": "Quản lý đấu thầu dự án",
+      "label": "Quản lý đấu thầu dự án",
+      "entity_type": "organization",
+      "degree": 7
+    },
+    {
+      "id": "Ngân hàng TMCP Đầu tư & Phát triển Việt Nam - Chi nhánh Kon Tum",
+      "label": "Ngân hàng TMCP Đầu tư & Phát triển Việt Nam - Chi nhánh Kon Tum",
+      "entity_type": "organization",
+      "degree": 6
+    },
+    {
+      "id": "Thông tư 45/2013/TT-BTC ngày 25/4/2013 của Bộ Tài chính",
+      "label": "Thông tư 45/2013/TT-BTC ngày 25/4/2013 của Bộ Tài chính",
+      "entity_type": "regulation",
+      "degree": 4
+    },
+    {
+      "id": "phương pháp định tính",
+      "label": "phương pháp định tính",
+      "entity_type": "other",
+      "degree": 4
+    },
+    {
+      "id": "50,700,000,000",
+      "label": "50,700,000,000",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Day Chuyen",
+      "label": "Day Chuyen",
+      "entity_type": "event",
+      "degree": 4
+    },
+    {
+      "id": "Maximin",
+      "label": "Maximin",
+      "entity_type": "other",
+      "degree": 4
+    },
+    {
+      "id": "Phiri t.d honc CNV",
+      "label": "Phiri t.d honc CNV",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Day chuyen cong trinh nhieu nha cung loai khong nhip nhang",
+      "label": "Day chuyen cong trinh nhieu nha cung loai khong nhip nhang",
+      "entity_type": "technology",
+      "degree": 5
+    },
+    {
+      "id": "Giai đoạn từ 01/07/2024 đến 30/09/2024",
+      "label": "Giai đoạn từ 01/07/2024 đến 30/09/2024",
+      "entity_type": "event",
+      "degree": 3
+    },
+    {
+      "id": "Công Trình B",
+      "label": "Công Trình B",
+      "entity_type": "event",
+      "degree": 5
+    },
+    {
+      "id": "Thời gian thi công",
+      "label": "Thời gian thi công",
+      "entity_type": "financial_metric",
+      "degree": 4
+    },
+    {
+      "id": "2.000.000.000",
+      "label": "2.000.000.000",
+      "entity_type": "financial_metric",
+      "degree": 4
+    },
+    {
+      "id": "Bao cao tai chinh",
+      "label": "Bao cao tai chinh",
+      "entity_type": "event",
+      "degree": 3
+    },
+    {
+      "id": "Chi phí dịch vụ mua ngoài",
+      "label": "Chi phí dịch vụ mua ngoài",
+      "entity_type": "financial_metric",
+      "degree": 4
+    },
+    {
+      "id": "Hệ Thống Sản Xuất Linh Hoạt",
+      "label": "Hệ Thống Sản Xuất Linh Hoạt",
+      "entity_type": "technology",
+      "degree": 5
+    },
+    {
+      "id": "Day Chuyen Nhip Boi",
+      "label": "Day Chuyen Nhip Boi",
+      "entity_type": "event",
+      "degree": 5
+    },
+    {
+      "id": "Bước 3: Xác Định Các Thông Số Công Nghệ",
+      "label": "Bước 3: Xác Định Các Thông Số Công Nghệ",
+      "entity_type": "event",
+      "degree": 3
+    },
+    {
+      "id": "Bước 5: Xác Định Thông Số Thời Gian",
+      "label": "Bước 5: Xác Định Thông Số Thời Gian",
+      "entity_type": "event",
+      "degree": 4
+    },
+    {
+      "id": "Ngil hdng TMCP Diu lll vaPhatni6f viel Nan-ChLnhanh Konrum",
+      "label": "Ngil hdng TMCP Diu lll vaPhatni6f viel Nan-ChLnhanh Konrum",
+      "entity_type": "organization",
+      "degree": 8
+    },
+    {
+      "id": "Công ty CP XD GT Thrly lgiKCn Giang",
+      "label": "Công ty CP XD GT Thrly lgiKCn Giang",
+      "entity_type": "organization",
+      "degree": 4
+    },
+    {
+      "id": "Xây Dựng Chính",
+      "label": "Xây Dựng Chính",
+      "entity_type": "other",
+      "degree": 6
+    },
+    {
+      "id": "MPM",
+      "label": "MPM",
+      "entity_type": "technology",
+      "degree": 3
+    },
+    {
+      "id": "Công ty Cổ phần Đường Kontum",
+      "label": "Công ty Cổ phần Đường Kontum",
+      "entity_type": "organization",
+      "degree": 6
+    },
+    {
+      "id": "Bảng tổng hợp các khoản tài chính đến 30/9/2025",
+      "label": "Bảng tổng hợp các khoản tài chính đến 30/9/2025",
+      "entity_type": "event",
+      "degree": 4
+    },
+    {
+      "id": "X7",
+      "label": "X7",
+      "entity_type": "event",
+      "degree": 6
+    },
+    {
+      "id": "200",
+      "label": "200",
+      "entity_type": "financial_metric",
+      "degree": 8
+    },
+    {
+      "id": "Fruit Snack",
+      "label": "Fruit Snack",
+      "entity_type": "product",
+      "degree": 5
+    },
+    {
+      "id": "Quản lý thiết kế kỹ thuật",
+      "label": "Quản lý thiết kế kỹ thuật",
+      "entity_type": "organization",
+      "degree": 4
+    },
+    {
+      "id": "Nơi làm việc 2",
+      "label": "Nơi làm việc 2",
+      "entity_type": "location",
+      "degree": 4
+    },
+    {
+      "id": "Cot 4",
+      "label": "Cot 4",
+      "entity_type": "financial_metric",
+      "degree": 4
+    },
+    {
+      "id": "Bảo Trì Dựa Trên Rủi Ro",
+      "label": "Bảo Trì Dựa Trên Rủi Ro",
+      "entity_type": "other",
+      "degree": 15
+    },
+    {
+      "id": "Phòng họp",
+      "label": "Phòng họp",
+      "entity_type": "location",
+      "degree": 5
+    },
+    {
+      "id": "Sự Kiện Phát Sinh Sau Ngày Kết Thúc Kỳ Kế Toán",
+      "label": "Sự Kiện Phát Sinh Sau Ngày Kết Thúc Kỳ Kế Toán",
+      "entity_type": "event",
+      "degree": 3
+    },
+    {
+      "id": "http://www.vietcons.org",
+      "label": "http://www.vietcons.org",
+      "entity_type": "product",
+      "degree": 3
+    },
+    {
+      "id": "Đường gang 1-3-4-6",
+      "label": "Đường gang 1-3-4-6",
+      "entity_type": "event",
+      "degree": 4
+    },
+    {
+      "id": "Công việc B",
+      "label": "Công việc B",
+      "entity_type": "other",
+      "degree": 7
+    },
+    {
+      "id": "NHTMCPD fu&PhdI tiin - CN Ka, T hl)",
+      "label": "NHTMCPD fu&PhdI tiin - CN Ka, T hl)",
+      "entity_type": "organization",
+      "degree": 7
+    },
+    {
+      "id": "Phương Pháp Đường Tích Phân",
+      "label": "Phương Pháp Đường Tích Phân",
+      "entity_type": "technology",
+      "degree": 3
+    },
+    {
+      "id": "150",
+      "label": "150",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Quý I niên độ 2025-2026",
+      "label": "Quý I niên độ 2025-2026",
+      "entity_type": "event",
+      "degree": 9
+    },
+    {
+      "id": "Khu Dân Cư",
+      "label": "Khu Dân Cư",
+      "entity_type": "location",
+      "degree": 3
+    },
+    {
+      "id": "Chi phí khác",
+      "label": "Chi phí khác",
+      "entity_type": "financial_metric",
+      "degree": 3
+    },
+    {
+      "id": "Sự kiện i",
+      "label": "Sự kiện i",
+      "entity_type": "UNKNOWN",
+      "degree": 6
+    },
+    {
+      "id": "Phuong an 3",
+      "label": "Phuong an 3",
+      "entity_type": "product",
+      "degree": 5
+    },
+    {
+      "id": "Trung Tâm Đào Tạo Xây Dựng VIETCONS",
+      "label": "Trung Tâm Đào Tạo Xây Dựng VIETCONS",
+      "entity_type": "organization",
+      "degree": 9
+    },
+    {
+      "id": "day chuyen xay dung",
+      "label": "day chuyen xay dung",
+      "entity_type": "other",
+      "degree": 4
+    },
+    {
+      "id": "Cnng ir CP Bic-rrufs B0",
+      "label": "Cnng ir CP Bic-rrufs B0",
+      "entity_type": "organization",
+      "degree": 3
+    },
+    {
+      "id": "Cơ Giới Hóa",
+      "label": "Cơ Giới Hóa",
+      "entity_type": "technology",
+      "degree": 4
+    }
+  ],
+  "edges": [
+    {
+      "source": "Công việc A",
+      "target": "Công việc C",
+      "label": "Công việc A là điều kiện tiên quyết để thực hiện Công việc C.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công việc C",
+      "target": "Công việc D",
+      "label": "Công việc C là điều kiện tiên quyết để thực hiện Công việc D.<SEP>Công việc D bắ",
+      "weight": 2.0
+    },
+    {
+      "source": "Công việc C",
+      "target": "Nơi làm việc 2",
+      "label": "Công việc C được bố trí tại Nơi làm việc 2.",
+      "weight": 1.0
+    },
+    {
+      "source": "30/09/2025",
+      "target": "Công ty",
+      "label": "Công ty có nghĩa vụ thanh toán vào ngày 30/09/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "Báo cáo tài chính",
+      "target": "Công ty",
+      "label": "Công ty phát hành Báo cáo tài chính cho giai đoạn 25-2A26.<SEP>Báo cáo tài chính",
+      "weight": 2.0
+    },
+    {
+      "source": "Công ty",
+      "target": "Rủi ro tài chính",
+      "label": "Công ty quản lý rủi ro tài chính để đảm bảo hoạt động kinh doanh ổn định.<SEP>Cô",
+      "weight": 2.0
+    },
+    {
+      "source": "Công ty",
+      "target": "Thông tư 45/2013/TT-BTC ngày 25/4/2013 của Bộ Tài chính",
+      "label": "Công ty thực hiện các quy định về tài sản cố định theo Thông tư 45/2013/TT-BTC.",
+      "weight": 1.0
+    },
+    {
+      "source": "30/06/2025",
+      "target": "Công ty",
+      "label": "Công ty có nghĩa vụ thanh toán vào ngày 30/06/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty",
+      "target": "Phiri t.d honc CNV",
+      "label": "Công ty có khoản mục tài chính \"Phiri t.d honc CNV\" với giá trị 1.081.028.912.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty",
+      "target": "Phri 1,i Lhn lao HDQ'I, Ban ki6n rodr",
+      "label": "Công ty có khoản mục tài chính \"Phri 1,i Lhn lao HDQ'I, Ban ki6n rodr\" với giá t",
+      "weight": 1.0
+    },
+    {
+      "source": "Chi phí",
+      "target": "Công ty",
+      "label": "Công ty có chi phí với giá trị 72.727.273.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty",
+      "target": "Nguyên tắc kế toán",
+      "label": "Công ty tuân thủ nguyên tắc kế toán để đảm bảo báo cáo tài chính chính xác.",
+      "weight": 1.0
+    },
+    {
+      "source": "A",
+      "target": "Phương pháp trọng số giản đơn",
+      "label": "Địa điểm A có tổng số điểm 77 sau khi áp dụng phương pháp trọng số giản đơn.",
+      "weight": 1.0
+    },
+    {
+      "source": "B",
+      "target": "Phương pháp trọng số giản đơn",
+      "label": "Địa điểm B có tổng số điểm 82 sau khi áp dụng phương pháp trọng số giản đơn.",
+      "weight": 1.0
+    },
+    {
+      "source": "C",
+      "target": "Phương pháp trọng số giản đơn",
+      "label": "Địa điểm C có tổng số điểm 82 sau khi áp dụng phương pháp trọng số giản đơn.",
+      "weight": 1.0
+    },
+    {
+      "source": "Chi phí thuê địa điểm",
+      "target": "Phương pháp trọng số giản đơn",
+      "label": "Phương pháp trọng số giản đơn sử dụng nhân tố \"Chi phí thuê địa điểm\" với trọng ",
+      "weight": 1.0
+    },
+    {
+      "source": "Phương pháp trọng số giản đơn",
+      "target": "Yên tĩnh",
+      "label": "Phương pháp trọng số giản đơn sử dụng nhân tố \"Yên tĩnh\" với trọng số 0,1 để đán",
+      "weight": 1.0
+    },
+    {
+      "source": "Mức độ ùn tắc giao thông",
+      "target": "Phương pháp trọng số giản đơn",
+      "label": "Phương pháp trọng số giản đơn sử dụng nhân tố \"Mức độ ùn tắc giao thông\" với trọ",
+      "weight": 1.0
+    },
+    {
+      "source": "30/09/2025",
+      "target": "Ke toan truong",
+      "label": "Ke toan truong có dữ liệu tài chính kết thúc vào ngày 30/09/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "Báo cáo tài chính",
+      "target": "Doanh thu bán hàng",
+      "label": "Doanh thu bán hàng là một chỉ tiêu tài chính được ghi nhận trong báo cáo.",
+      "weight": 1.0
+    },
+    {
+      "source": "30/06/2025",
+      "target": "Doanh thu bán hàng",
+      "label": "Doanh thu bán hàng được ghi nhận vào ngày 30/06/2025 như một chỉ số tài chính.<S",
+      "weight": 2.0
+    },
+    {
+      "source": "30/09/2024",
+      "target": "Doanh thu bán hàng",
+      "label": "Doanh thu bán hàng được báo cáo cho giai đoạn kết thúc ngày 30/09/2024 với giá t",
+      "weight": 1.0
+    },
+    {
+      "source": "Doanh thu bán hàng",
+      "target": "Giai đoạn từ 01/07/2024 đến 30/09/2024",
+      "label": "Doanh thu bán hàng trực tiếp thuộc giai đoạn từ 01/07/2024 đến 30/09/2024.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty Việt Ahh",
+      "target": "Doanh thu bán hàng",
+      "label": "Doanh thu bán hàng là nguồn thu chính của Công ty Việt Ahh.",
+      "weight": 1.0
+    },
+    {
+      "source": "Doanh thu bán hàng",
+      "target": "Tổng số tiền",
+      "label": "Tổng số tiền bao gồm Doanh thu bán hàng 39.3 tỷ VND.",
+      "weight": 1.0
+    },
+    {
+      "source": "Máy nông nghiệp/thiết bị",
+      "target": "Nguyên giá TSCD HH",
+      "label": "Máy nông nghiệp/thiết bị có nguyên giá là một phần của tổng nguyên giá TSCD HH.",
+      "weight": 1.0
+    },
+    {
+      "source": "Khấu hao đều",
+      "target": "Máy nông nghiệp/thiết bị",
+      "label": "Máy nông nghiệp/thiết bị được áp dụng phương pháp khấu hao đều với thời gian 15 ",
+      "weight": 1.0
+    },
+    {
+      "source": "Máy nông nghiệp/thiết bị",
+      "target": "Tài Sản Cố Định Hữu Hình (TSCD HH)",
+      "label": "Máy nông nghiệp/thiết bị là một thành phần của Tài Sản Cố Định Hữu Hình.",
+      "weight": 1.0
+    },
+    {
+      "source": "Máy nông nghiệp/thiết bị",
+      "target": "Tổng thời gian khấu hao 625 năm",
+      "label": "Tổng thời gian khấu hao 625 năm bao gồm thời gian khấu hao của máy nông nghiệp/t",
+      "weight": 1.0
+    },
+    {
+      "source": "30/09/2025",
+      "target": "Báo cáo tài chính",
+      "label": "Ngày 30/09/2025 là mốc thời gian kết thúc của báo cáo tài chính.",
+      "weight": 1.0
+    },
+    {
+      "source": "Báo cáo tài chính",
+      "target": "Tài sản cố định vô hình",
+      "label": "Báo cáo tài chính ghi nhận thông tin về tài sản cố định vô hình tại khu dân cư I",
+      "weight": 1.0
+    },
+    {
+      "source": "635.080.000",
+      "target": "Báo cáo tài chính",
+      "label": "Con số 635.080.000 là một chỉ số quan trọng trong báo cáo tài chính.",
+      "weight": 1.0
+    },
+    {
+      "source": "-1.180.000.000",
+      "target": "Báo cáo tài chính",
+      "label": "Giá trị âm -1.180.000.000 phản ánh biến động trong báo cáo tài chính.",
+      "weight": 1.0
+    },
+    {
+      "source": "Báo cáo tài chính",
+      "target": "Phân loại các khoản phải thu",
+      "label": "Phân loại các khoản phải thu là một phần trong việc lập báo cáo tài chính theo q",
+      "weight": 1.0
+    },
+    {
+      "source": "Báo cáo tài chính",
+      "target": "Nguyễn Thị Nga",
+      "label": "Nguyễn Thị Nga có liên quan đến việc chuẩn bị hoặc kiểm toán báo cáo tài chính.<",
+      "weight": 2.0
+    },
+    {
+      "source": "30/06/2025",
+      "target": "Báo cáo tài chính",
+      "label": "Báo cáo tài chính được kiểm toán vào ngày 30/06/2025.<SEP>Ngày 30/06/2025 là mốc",
+      "weight": 2.0
+    },
+    {
+      "source": "Báo cáo tài chính",
+      "target": "Công ty cổ phần Ôi Jong Kon Tum",
+      "label": "Công ty cổ phần Ôi Jong Kon Tum là tổ chức liên quan đến báo cáo tài chính được ",
+      "weight": 1.0
+    },
+    {
+      "source": "Báo cáo tài chính",
+      "target": "Doanh nghiệp Hồng Kỳ",
+      "label": "Thông tin về nợ và chi phí được trình bày trong báo cáo tài chính của doanh nghi",
+      "weight": 1.0
+    },
+    {
+      "source": "Báo cáo tài chính",
+      "target": "Chủ nhiệm kế toán Việt Nam",
+      "label": "Báo cáo tài chính được lập và trình bày theo quy định của Chủ nhiệm kế toán Việt",
+      "weight": 1.0
+    },
+    {
+      "source": "Báo cáo tài chính",
+      "target": "Chi phí nguyên liệu, vật liệu",
+      "label": "Báo cáo tài chính phản ánh sự giảm chi phí nguyên liệu từ 25.949 tỷ xuống 42.157",
+      "weight": 1.0
+    },
+    {
+      "source": "01/07/2025",
+      "target": "Báo cáo tài chính",
+      "label": "Ngày 01/07/2025 là mốc thời gian bắt đầu của báo cáo tài chính.",
+      "weight": 1.0
+    },
+    {
+      "source": "30/09/2024",
+      "target": "Báo cáo tài chính",
+      "label": "Ngày 30/09/2024 là mốc thời gian kết thúc của báo cáo tài chính năm 2024.",
+      "weight": 1.0
+    },
+    {
+      "source": "1-3 năm",
+      "target": "Thời hạn phân bổ",
+      "label": "1-3 năm là thời hạn phân bổ cho các khoản chi phí sửa chữa lớn.",
+      "weight": 1.0
+    },
+    {
+      "source": "2 năm",
+      "target": "Thời hạn phân bổ",
+      "label": "2 năm là thời hạn phân bổ cho các khoản chi phí khác.",
+      "weight": 1.0
+    },
+    {
+      "source": "12 tháng",
+      "target": "Thời hạn phân bổ",
+      "label": "12 tháng là thời hạn phân bổ áp dụng cho các khoản chi phí dài hạn.",
+      "weight": 1.0
+    },
+    {
+      "source": "Dự báo 2012",
+      "target": "MAD",
+      "label": "MAD được sử dụng để đánh giá độ chính xác của dự báo 2012.",
+      "weight": 1.0
+    },
+    {
+      "source": "Doanh nghiệp",
+      "target": "Tài sản dài hạn",
+      "label": "Doanh nghiệp sở hữu tài sản dài hạn với tổng giá trị 195 tỷ.",
+      "weight": 1.0
+    },
+    {
+      "source": "Tài sản dài hạn",
+      "target": "Tổng cộng tài sản",
+      "label": "Tổng cộng tài sản bao gồm tài sản ngắn hạn và dài hạn.",
+      "weight": 1.0
+    },
+    {
+      "source": "Chi phí tổng cộng",
+      "target": "SDM",
+      "label": "Phương pháp SDM được sử dụng để tối ưu hóa chi phí tổng cộng trong thi công.",
+      "weight": 1.0
+    },
+    {
+      "source": "4-5",
+      "target": "tmin",
+      "label": "Công việc 4-5 có thời gian tối thiểu 0 ngày.",
+      "weight": 1.0
+    },
+    {
+      "source": "4-5",
+      "target": "Bình thường (100 nghìn đồng)",
+      "label": "Công việc 4-5 có chi phí bình thường 0 (100 nghìn đồng).",
+      "weight": 1.0
+    },
+    {
+      "source": "4-5",
+      "target": "Khẩn trương (100 nghìn đồng)",
+      "label": "Công việc 4-5 có chi phí khẩn trương 0 (100 nghìn đồng).",
+      "weight": 1.0
+    },
+    {
+      "source": "4-5",
+      "target": "eij (100 nghìn đồng)",
+      "label": "Công việc 4-5 có giá trị eij là 0.",
+      "weight": 1.0
+    },
+    {
+      "source": "Quản trị sản xuất và tác nghiệp",
+      "target": "Tài chính",
+      "label": "Chức năng tài chính cung cấp nguồn tài chính cần thiết và phân tích chi phí cho ",
+      "weight": 1.0
+    },
+    {
+      "source": "Sản xuất",
+      "target": "Tài chính",
+      "label": "Chức năng tài chính cung cấp nguồn tài chính cần thiết cho hoạt động sản xuất.",
+      "weight": 1.0
+    },
+    {
+      "source": "Marketing",
+      "target": "Tài chính",
+      "label": "Chức năng tài chính và marketing có thể mâu thuẫn về mục tiêu nhưng cần phối hợp",
+      "weight": 1.0
+    },
+    {
+      "source": "Chủ đầu tư",
+      "target": "Phòng Thi công",
+      "label": "Phòng Thi công tiếp nhận yêu cầu từ Chủ đầu tư và lập kế hoạch thi công dựa trên",
+      "weight": 1.0
+    },
+    {
+      "source": "Bước 3: Xác Định Các Thông Số Công Nghệ",
+      "target": "Bước 4: Xác Định Thông Số Không Gian",
+      "label": "Bước 3 kết nối với Bước 4 để hoàn thiện quy trình tổ chức không gian.",
+      "weight": 1.0
+    },
+    {
+      "source": "Bước 4: Xác Định Thông Số Không Gian",
+      "target": "Bước 5: Xác Định Thông Số Thời Gian",
+      "label": "Bước 4 dẫn đến Bước 5 trong việc xác định nhịp dây chuyền.",
+      "weight": 1.0
+    },
+    {
+      "source": "Bước 4: Xác Định Thông Số Không Gian",
+      "target": "Các Bước Lập Dây Chuyền Xây Dựng",
+      "label": "Các Bước Lập Dây Chuyền Xây Dựng bao gồm Bước 4 như một giai đoạn tiếp theo.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công suất",
+      "target": "Điểm hòa vốn",
+      "label": "Công suất tối thiểu được xác định dựa trên điểm hòa vốn.",
+      "weight": 1.0
+    },
+    {
+      "source": "Tổng chi phí",
+      "target": "Điểm hòa vốn",
+      "label": "Điểm hòa vốn được xác định khi tổng chi phí bằng tổng doanh thu.",
+      "weight": 1.0
+    },
+    {
+      "source": "Tổng doanh thu",
+      "target": "Điểm hòa vốn",
+      "label": "Điểm hòa vốn được xác định khi tổng chi phí bằng tổng doanh thu.",
+      "weight": 1.0
+    },
+    {
+      "source": "Trung Tâm Đào Tạo Xây Dựng VIETCONS",
+      "target": "Tài Nguyên Thu Hồi",
+      "label": "Tài nguyên thu hồi được Trung Tâm Đào Tạo Xây Dựng VIETCONS quản lý và phân bổ t",
+      "weight": 1.0
+    },
+    {
+      "source": "Doanh nghiệp",
+      "target": "Khấu hao TSCD",
+      "label": "Doanh nghiệp duy trì mức khấu hao TSCD ổn định trong cả hai giai đoạn.",
+      "weight": 1.0
+    },
+    {
+      "source": "01/07/2024–30/09/2025",
+      "target": "Khấu hao TSCD",
+      "label": "Khấu hao TSCD được ghi nhận trong giai đoạn 01/07/2024–30/09/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "01/07/2025–30/09/2025",
+      "target": "Khấu hao TSCD",
+      "label": "Khấu hao TSCD được ghi nhận trong giai đoạn 01/07/2025–30/09/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "30/09/2025",
+      "target": "Khấu hao TSCD",
+      "label": "Khấu hao TSCD duy trì mức 26,160,546 vào ngày 30/09/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "30/09/2021",
+      "target": "Khấu hao TSCD",
+      "label": "Khấu hao TSCD duy trì mức 26,160,546 vào ngày 30/09/2021.",
+      "weight": 1.0
+    },
+    {
+      "source": "Bảng cân đối kế toán",
+      "target": "Công ty Cổ phần Du lịch Kontum",
+      "label": "Công ty Cổ phần Du lịch Kontum công bố Bảng cân đối kế toán cho kỳ tài chính 202",
+      "weight": 1.0
+    },
+    {
+      "source": "Bảng cân đối kế toán",
+      "target": "Tài sản ngắn hạn",
+      "label": "Bảng cân đối kế toán bao gồm khoản mục Tài sản ngắn hạn với giá trị 347.014.895.",
+      "weight": 2.0
+    },
+    {
+      "source": "Bảng cân đối kế toán",
+      "target": "Công ty Cổ phần Đường Kontum",
+      "label": "Công ty Cổ phần Đường Kontum công bố Bảng cân đối kế toán trong Quý I niên độ 20",
+      "weight": 1.0
+    },
+    {
+      "source": "200",
+      "target": "Quý 1",
+      "label": "Quý 1 năm 2008 có mức tiêu thụ máy điều hòa là 200.",
+      "weight": 1.0
+    },
+    {
+      "source": "Quý 1",
+      "target": "Tổng nhu cầu 4 năm",
+      "label": "Tổng nhu cầu Quý 1 (880) là thành phần của tổng nhu cầu 4 năm (9.120).",
+      "weight": 1.0
+    },
+    {
+      "source": "JIT",
+      "target": "Quản trị sản xuất và tác nghiệp",
+      "label": "JIT là phương pháp quản trị hiện đại được khuyến khích áp dụng.",
+      "weight": 1.0
+    },
+    {
+      "source": "JIT",
+      "target": "Sản xuất tinh gọn",
+      "label": "JIT là thành phần cốt lõi của hệ thống sản xuất tinh gọn, hỗ trợ giảm tồn kho và",
+      "weight": 1.0
+    },
+    {
+      "source": "JIT",
+      "target": "Năng Suất Tổng Hợp",
+      "label": "JIT (Sản xuất kịp thời) là công nghệ cải thiện năng suất tổng hợp thông qua tối ",
+      "weight": 1.0
+    },
+    {
+      "source": "Doanh số máy hút bụi",
+      "target": "Tháng 7",
+      "label": "Doanh số máy hút bụi tháng 7 là 11 nghìn chiếc.",
+      "weight": 1.0
+    },
+    {
+      "source": "Chi phí sản xuất kinh doanh",
+      "target": "Doanh nghiệp Hồng Kỳ",
+      "label": "Chi phí sản xuất kinh doanh là thành phần quan trọng trong báo cáo tài chính của",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty Hoàng Long",
+      "target": "Phương pháp hoạch định xu hướng",
+      "label": "Công ty Hoàng Long áp dụng phương pháp hoạch định xu hướng để dự báo nhu cầu cho",
+      "weight": 1.0
+    },
+    {
+      "source": "Phương pháp hoạch định xu hướng",
+      "target": "Tháng 7",
+      "label": "Phương pháp hoạch định xu hướng được sử dụng để dự báo nhu cầu cho tháng 7.",
+      "weight": 1.0
+    },
+    {
+      "source": "Phương pháp hoạch định xu hướng",
+      "target": "Tập đoàn sản xuất điện thoại",
+      "label": "Tập đoàn sử dụng phương pháp hoạch định xu hướng để dự báo nhu cầu sản xuất.",
+      "weight": 1.0
+    },
+    {
+      "source": "Ngôi nhà hệ thống sản xuất Toyota",
+      "target": "Toyota",
+      "label": "Ngôi nhà hệ thống sản xuất là biểu tượng của triết lý sản xuất Toyota.",
+      "weight": 1.0
+    },
+    {
+      "source": "JIT (Just-In-Time)",
+      "target": "Ngôi nhà hệ thống sản xuất Toyota",
+      "label": "JIT là một cột trụ trong cấu trúc hệ thống sản xuất Toyota được biểu tượng hóa q",
+      "weight": 1.0
+    },
+    {
+      "source": "Jidoka",
+      "target": "Ngôi nhà hệ thống sản xuất Toyota",
+      "label": "Jidoka là một cột trụ trong cấu trúc hệ thống sản xuất Toyota được biểu tượng hó",
+      "weight": 1.0
+    },
+    {
+      "source": "Chương II",
+      "target": "Các phương pháp hỗ trợ lựa chọn công suất",
+      "label": "Chương II tập trung vào \"Các phương pháp hỗ trợ lựa chọn công suất\" từ trang 29 ",
+      "weight": 1.0
+    },
+    {
+      "source": "1-3 năm",
+      "target": "Luật các khoản phải trả",
+      "label": "Luật các khoản phải trả quy định thời gian thanh toán tối đa 1-3 năm cho các kho",
+      "weight": 1.0
+    },
+    {
+      "source": "Các phương pháp hỗ trợ lựa chọn công suất",
+      "target": "Đường cong kinh nghiệm",
+      "label": "Đường cong kinh nghiệm là một phương pháp thuộc nhóm các phương pháp hỗ trợ lựa ",
+      "weight": 1.0
+    },
+    {
+      "source": "T",
+      "target": "Đường cong kinh nghiệm",
+      "label": "T là thời gian hoặc chi phí sản xuất đơn vị đầu tiên trong công thức đường cong ",
+      "weight": 1.0
+    },
+    {
+      "source": "Hòan thiện (1)",
+      "target": "In ấn (2)",
+      "label": "Hòan thiện (1) vận chuyển 50 tấn đến In ấn (2).",
+      "weight": 1.0
+    },
+    {
+      "source": "Hòan thiện (1)",
+      "target": "Đóng gói (3)",
+      "label": "Hòan thiện (1) vận chuyển 100 tấn đến Đóng gói (3).",
+      "weight": 1.0
+    },
+    {
+      "source": "Hòan thiện (1)",
+      "target": "Kiểm tra (6)",
+      "label": "Hòan thiện (1) vận chuyển 20 tấn đến Kiểm tra (6).",
+      "weight": 1.0
+    },
+    {
+      "source": "Bảng thể hiện tỷ lệ luân chuyển giữa các giai đoạn sản xuất",
+      "target": "Hòan thiện (1)",
+      "label": "Bảng thể hiện tỷ lệ luân chuyển giữa các giai đoạn sản xuất chứa dữ liệu về Hòan",
+      "weight": 1.0
+    },
+    {
+      "source": "Lean Manufacturing",
+      "target": "Toyota Bến Thành",
+      "label": "Toyota Bến Thành áp dụng Lean Manufacturing để giảm thời gian bảo trì xe.",
+      "weight": 1.0
+    },
+    {
+      "source": "30/06/2025",
+      "target": "Tài sản cố định",
+      "label": "Ngày 30/06/2025 ghi nhận giá trị tài sản cố định và các khoản liên quan.",
+      "weight": 1.0
+    },
+    {
+      "source": "Nguyên tắc kế toán",
+      "target": "Tài sản cố định",
+      "label": "Nguyên tắc kế toán quy định việc quản lý và khấu hao tài sản cố định.",
+      "weight": 1.0
+    },
+    {
+      "source": "Phòng chuyên viên",
+      "target": "Phòng nhận phát thư",
+      "label": "Có 2 lần di chuyển hàng tuần giữa Phòng nhận phát thư và Phòng chuyên viên.",
+      "weight": 1.0
+    },
+    {
+      "source": "Phòng chuyên viên",
+      "target": "Văn phòng thư ký",
+      "label": "Có 14 lần di chuyển hàng tuần giữa Văn phòng thư ký và Phòng chuyên viên.",
+      "weight": 1.0
+    },
+    {
+      "source": "Phòng chuyên viên",
+      "target": "Phòng họp",
+      "label": "Có 5 lần di chuyển hàng tuần giữa Phòng họp và Phòng chuyên viên.",
+      "weight": 1.0
+    },
+    {
+      "source": "Phòng chuyên viên",
+      "target": "Phòng tiếp khách",
+      "label": "Có 9 lần di chuyển hàng tuần giữa Phòng tiếp khách và Phòng chuyên viên.",
+      "weight": 1.0
+    },
+    {
+      "source": "A",
+      "target": "B.D",
+      "label": "Công việc A có công việc liên trước là B.D, ảnh hưởng đến khởi sự của A.",
+      "weight": 1.0
+    },
+    {
+      "source": "B",
+      "target": "B.D",
+      "label": "Công việc B có công việc liên trước là B.D, ảnh hưởng đến khởi sự của B.",
+      "weight": 1.0
+    },
+    {
+      "source": "B.D",
+      "target": "C",
+      "label": "Công việc C có công việc liên trước là B.D, ảnh hưởng đến khởi sự của C.",
+      "weight": 1.0
+    },
+    {
+      "source": "B.D",
+      "target": "SDM",
+      "label": "SDM được sử dụng để tính toán khởi sự và khởi muộn cho công việc B.D.",
+      "weight": 1.0
+    },
+    {
+      "source": "Bước I: Phân Tích Công Nghệ Xây Dựng",
+      "target": "Các Bước Lập Dây Chuyền Xây Dựng",
+      "label": "Các Bước Lập Dây Chuyền Xây Dựng bao gồm Bước I như một giai đoạn đầu tiên.",
+      "weight": 1.0
+    },
+    {
+      "source": "Bước 3: Xác Định Các Thông Số Công Nghệ",
+      "target": "Các Bước Lập Dây Chuyền Xây Dựng",
+      "label": "Các Bước Lập Dây Chuyền Xây Dựng chuyển tiếp đến Bước 3.",
+      "weight": 1.0
+    },
+    {
+      "source": "Bước 2: Xác Định Mức Độ Chuyên Môn Hóa",
+      "target": "Các Bước Lập Dây Chuyền Xây Dựng",
+      "label": "Các Bước Lập Dây Chuyền Xây Dựng tiếp tục với Bước 2 trong quy trình.",
+      "weight": 1.0
+    },
+    {
+      "source": "Bước 5: Xác Định Thông Số Thời Gian",
+      "target": "Các Bước Lập Dây Chuyền Xây Dựng",
+      "label": "Các Bước Lập Dây Chuyền Xây Dựng kết thúc với Bước 5.",
+      "weight": 1.0
+    },
+    {
+      "source": "Bảng tổng hợp dữ liệu tài chính",
+      "target": "Vay vi nq thue&ichinh",
+      "label": "Khoản vay \"Vay vi nq thue&ichinh\" là một phần của bảng tổng hợp dữ liệu tài chín",
+      "weight": 1.0
+    },
+    {
+      "source": "Bảng tổng hợp các khoản tài chính đến 30/9/2025",
+      "target": "Vay vi nq thue&ichinh",
+      "label": "Khoản vay \"Vay vi nq thue&ichinh\" với giá trị 244.3Et0t6.2r9 được ghi nhận trong",
+      "weight": 1.0
+    },
+    {
+      "source": "TOng",
+      "target": "Vay vi nq thue&ichinh",
+      "label": "Tổng cộng của khoản vay \"Vay vi nq thue&ichinh\" là 244.3Et0t6.2r9.",
+      "weight": 1.0
+    },
+    {
+      "source": "Chỉ Số Mức Độ Nghiêm Trọng",
+      "target": "Rủi Ro Hỏng Hóc",
+      "label": "Rủi ro hỏng hóc được tính bằng tích số giữa chỉ số xuất hiện và chỉ số mức độ ng",
+      "weight": 1.0
+    },
+    {
+      "source": "Dây chuyền lắp ráp",
+      "target": "Nơi làm việc 1",
+      "label": "Nơi làm việc 1 là một phần của dây chuyền lắp ráp.",
+      "weight": 1.0
+    },
+    {
+      "source": "Dây chuyền lắp ráp",
+      "target": "Nơi làm việc 2",
+      "label": "Nơi làm việc 2 là một phần của dây chuyền lắp ráp.",
+      "weight": 1.0
+    },
+    {
+      "source": "Dây chuyền lắp ráp",
+      "target": "Nơi làm việc 3",
+      "label": "Nơi làm việc 3 là một phần của dây chuyền lắp ráp.",
+      "weight": 1.0
+    },
+    {
+      "source": "Dây chuyền lắp ráp",
+      "target": "Phương pháp bố trí theo quá trình",
+      "label": "Phương pháp bố trí theo quá trình được áp dụng để thiết kế dây chuyền lắp ráp.",
+      "weight": 1.0
+    },
+    {
+      "source": "Nguyễn Thị Nga",
+      "target": "Preferred Shares",
+      "label": "Nguyễn Thị Nga giám sát chỉ số Preferred Shares trong báo cáo tài chính.",
+      "weight": 1.0
+    },
+    {
+      "source": "Debt Capital",
+      "target": "Nguyễn Thị Nga",
+      "label": "Nguyễn Thị Nga chịu trách nhiệm giám sát khoản Debt Capital 2,6 tỷ VNĐ.",
+      "weight": 1.0
+    },
+    {
+      "source": "Nguyễn Thị Nga",
+      "target": "Other Equity",
+      "label": "Nguyễn Thị Nga giám sát chỉ số Other Equity 8,9 tỷ VNĐ.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công Ty Cổ Phần Duong",
+      "target": "Nguyễn Thị Nga",
+      "label": "Nguyễn Thị Nga có mối liên hệ với Công Ty Cổ Phần Duong, có thể là người đại diệ",
+      "weight": 1.0
+    },
+    {
+      "source": "Phương tiện vận tải",
+      "target": "Tài Sản Cố Định Hữu Hình (TSCD HH)",
+      "label": "Phương tiện vận tải là một thành phần của Tài Sản Cố Định Hữu Hình.",
+      "weight": 1.0
+    },
+    {
+      "source": "Thiết bị quản lý",
+      "target": "Tài Sản Cố Định Hữu Hình (TSCD HH)",
+      "label": "Thiết bị quản lý là một thành phần của Tài Sản Cố Định Hữu Hình.",
+      "weight": 1.0
+    },
+    {
+      "source": "E",
+      "target": "H",
+      "label": "Công việc H có công việc liên trước là E, ảnh hưởng đến khởi sự của H.",
+      "weight": 1.0
+    },
+    {
+      "source": "D",
+      "target": "H",
+      "label": "Công việc H có công việc liên trước là D, ảnh hưởng đến khởi sự của H.",
+      "weight": 1.0
+    },
+    {
+      "source": "H",
+      "target": "SDM",
+      "label": "SDM được sử dụng để tính toán khởi sự và khởi muộn cho công việc H.",
+      "weight": 1.0
+    },
+    {
+      "source": "Du tru toan phan",
+      "target": "H",
+      "label": "Công việc H có du tru toan phan được xác định theo công thức (5.7).",
+      "weight": 1.0
+    },
+    {
+      "source": "Day Chuyen",
+      "target": "Khoi Luong Cong Viec",
+      "label": "Khối lượng công việc là tham số quan trọng trong tổ chức dây chuyền sản xuất.",
+      "weight": 1.0
+    },
+    {
+      "source": "Z",
+      "target": "m",
+      "label": "Z tỷ lệ thuận với m, khiến thời hạn của dây chuyền bị kéo dài khi m càng lớn.",
+      "weight": 1.0
+    },
+    {
+      "source": "Biểu đồ xiên",
+      "target": "Lập tiến độ ban đầu",
+      "label": "Biểu đồ xiên được áp dụng khi cần sự chặt chẽ về thời gian và không gian trong l",
+      "weight": 1.0
+    },
+    {
+      "source": "Biểu đồ xiên",
+      "target": "Trung tâm đào tạo xây dựng VIETCONS",
+      "label": "Trung tâm đào tạo xây dựng VIETCONS sử dụng biểu đồ xiên để thể hiện tiến độ dây",
+      "weight": 1.0
+    },
+    {
+      "source": "X1",
+      "target": "X5",
+      "label": "Công việc X5 phụ thuộc vào công việc X1, phải hoàn thành sau X1.",
+      "weight": 1.0
+    },
+    {
+      "source": "X2",
+      "target": "X5",
+      "label": "Công việc X5 phụ thuộc vào công việc X2, phải hoàn thành sau X2.<SEP>X2 là công ",
+      "weight": 2.0
+    },
+    {
+      "source": "X5",
+      "target": "X7",
+      "label": "Công việc X7 phụ thuộc vào công việc X5, phải hoàn thành sau X5.<SEP>X5 là công ",
+      "weight": 2.0
+    },
+    {
+      "source": "SDM",
+      "target": "X5",
+      "label": "X5 có thời gian thực hiện dài nhất (5 đơn vị) trong phương pháp SDM.<SEP>X5 là m",
+      "weight": 2.0
+    },
+    {
+      "source": "Bang 4.3",
+      "target": "X5",
+      "label": "X5 được ghi vào Bang 4.3 với thời gian dài nhất (5 đơn vị) và chênh lệch thông s",
+      "weight": 1.0
+    },
+    {
+      "source": "Thong s6 s6m",
+      "target": "X5",
+      "label": "X5 có thông số sớm là 2 và 7.",
+      "weight": 1.0
+    },
+    {
+      "source": "Thong sd muon",
+      "target": "X5",
+      "label": "X5 có thông số muộn là 5 và 10.",
+      "weight": 1.0
+    },
+    {
+      "source": "Cong trinh",
+      "target": "Tien do thi cong",
+      "label": "Tiến độ thi công quản lý các hạng mục và tổng thể công trình theo kế hoạch.",
+      "weight": 1.0
+    },
+    {
+      "source": "Cong trinh",
+      "target": "THIEt Ke tO cHUc xAy DUNG",
+      "label": "THIEt Ke tO cHUc xAy DUNG là quá trình thiết kế tổ chức và thi công nhằm hoàn th",
+      "weight": 1.0
+    },
+    {
+      "source": "Cong trinh",
+      "target": "Du an tien kha thi",
+      "label": "Du an tien kha thi liên quan đến công trình được đề xuất xây dựng hoặc cải tạo.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công Trình A",
+      "target": "Tổ (Đội) 1",
+      "label": "Tổ (Đội) 1 thực hiện công việc tại Công Trình A theo phương pháp dây chuyền.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công Trình B",
+      "target": "Tổ (Đội) 1",
+      "label": "Tổ (Đội) 1 thực hiện công việc tại Công Trình B theo phương pháp dây chuyền.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công Trình C",
+      "target": "Tổ (Đội) 1",
+      "label": "Tổ (Đội) 1 thực hiện công việc tại Công Trình C theo phương pháp dây chuyền.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công Trình D",
+      "target": "Tổ (Đội) 1",
+      "label": "Tổ (Đội) 1 thực hiện công việc tại Công Trình D theo phương pháp dây chuyền.",
+      "weight": 1.0
+    },
+    {
+      "source": "30/06/2025",
+      "target": "Công ty TNHH Kim Hiền Việt",
+      "label": "Công ty TNHH Kim Hiền Việt có số liệu tài chính được ghi nhận vào ngày 30/06/202",
+      "weight": 1.0
+    },
+    {
+      "source": "Các doanh nghiệp khác",
+      "target": "Công ty TNHH Kim Hiền Việt",
+      "label": "Công ty TNHH Kim Hiền Việt và Các doanh nghiệp khác đều có số liệu tài chính đượ",
+      "weight": 1.0
+    },
+    {
+      "source": "JIT (Just-In-Time)",
+      "target": "Toyota",
+      "label": "Toyota áp dụng JIT như một cột trụ chính trong hệ thống sản xuất của mình.",
+      "weight": 1.0
+    },
+    {
+      "source": "JIT (Just-In-Time)",
+      "target": "Jidoka",
+      "label": "JIT và Jidoka là hai cột trụ song song trong hệ thống sản xuất của Toyota.",
+      "weight": 1.0
+    },
+    {
+      "source": "30/09/2024",
+      "target": "Chi phí dịch vụ mua ngoài",
+      "label": "Chi phí dịch vụ mua ngoài cho giai đoạn kết thúc ngày 30/09/2024 là 92,581,400.",
+      "weight": 1.0
+    },
+    {
+      "source": "30/09/2024",
+      "target": "Chi phí khác",
+      "label": "Chi phí khác tại 30/09/2024 là 243.909.8ts.",
+      "weight": 1.0
+    },
+    {
+      "source": "Chi phí dịch vụ liên quan đến bên ngoài",
+      "target": "Doanh nghiệp",
+      "label": "Doanh nghiệp chi trả chi phí dịch vụ liên quan đến bên ngoài trong hai giai đoạn",
+      "weight": 1.0
+    },
+    {
+      "source": "01/07/2024–30/09/2025",
+      "target": "Chi phí dịch vụ liên quan đến bên ngoài",
+      "label": "Chi phí dịch vụ liên quan đến bên ngoài được ghi nhận trong giai đoạn 01/07/2024",
+      "weight": 1.0
+    },
+    {
+      "source": "01/07/2025–30/09/2025",
+      "target": "Chi phí dịch vụ liên quan đến bên ngoài",
+      "label": "Chi phí dịch vụ liên quan đến bên ngoài được ghi nhận trong giai đoạn 01/07/2025",
+      "weight": 1.0
+    },
+    {
+      "source": "1-3",
+      "target": "tmin",
+      "label": "Công việc 1-3 có thời gian tối thiểu 20 ngày.",
+      "weight": 1.0
+    },
+    {
+      "source": "2-3",
+      "target": "tmin",
+      "label": "Công việc 2-3 có thời gian tối thiểu 10 ngày.",
+      "weight": 1.0
+    },
+    {
+      "source": "2-4",
+      "target": "tmin",
+      "label": "Công việc 2-4 có thời gian tối thiểu 8 ngày.",
+      "weight": 1.0
+    },
+    {
+      "source": "3-4",
+      "target": "tmin",
+      "label": "Công việc 3-4 có thời gian tối thiểu 22 ngày.",
+      "weight": 1.0
+    },
+    {
+      "source": "3-5",
+      "target": "tmin",
+      "label": "Công việc 3-5 có thời gian tối thiểu 18 ngày.",
+      "weight": 1.0
+    },
+    {
+      "source": "4-6",
+      "target": "tmin",
+      "label": "Công việc 4-6 có thời gian tối thiểu 16 ngày.",
+      "weight": 1.0
+    },
+    {
+      "source": "5-6",
+      "target": "tmin",
+      "label": "Công việc 5-6 có thời gian tối thiểu 10 ngày.",
+      "weight": 1.0
+    },
+    {
+      "source": "Dây chuyền hoàn thiện",
+      "target": "Thiết kế dây chuyền công trình",
+      "label": "Thiết kế dây chuyền công trình yêu cầu xác định số lượng và hướng phát triển của",
+      "weight": 1.0
+    },
+    {
+      "source": "30/09/2025",
+      "target": "Quý I năm tài chính 2025-2026",
+      "label": "Quý I năm tài chính 2025-2026 kết thúc vào ngày 30/09/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty Cổ phần Đường Kon Tum",
+      "target": "Quý I năm tài chính 2025-2026",
+      "label": "Công ty Cổ phần Đường Kon Tum thực hiện báo cáo tài chính Quý I năm tài chính 20",
+      "weight": 2.0
+    },
+    {
+      "source": "01/07/2025",
+      "target": "Quý I năm tài chính 2025-2026",
+      "label": "Quý I năm tài chính 2025-2026 bắt đầu vào ngày 01/07/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "Chi phí khiếu lạ",
+      "target": "Doanh nghiệp",
+      "label": "Doanh nghiệp có chi phí khiếu lạ tăng giữa hai giai đoạn.",
+      "weight": 1.0
+    },
+    {
+      "source": "01/07/2024–30/09/2025",
+      "target": "Chi phí khiếu lạ",
+      "label": "Chi phí khiếu lạ được ghi nhận trong giai đoạn 01/07/2024–30/09/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "01/07/2025–30/09/2025",
+      "target": "Chi phí khiếu lạ",
+      "label": "Chi phí khiếu lạ được ghi nhận trong giai đoạn 01/07/2025–30/09/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "2-4",
+      "target": "Bình thường (100 nghìn đồng)",
+      "label": "Công việc 2-4 có chi phí bình thường 12 (100 nghìn đồng).",
+      "weight": 1.0
+    },
+    {
+      "source": "2-4",
+      "target": "Khẩn trương (100 nghìn đồng)",
+      "label": "Công việc 2-4 có chi phí khẩn trương 4,5 (100 nghìn đồng).",
+      "weight": 1.0
+    },
+    {
+      "source": "2-4",
+      "target": "eij (100 nghìn đồng)",
+      "label": "Công việc 2-4 có giá trị eij là 0.125.",
+      "weight": 1.0
+    },
+    {
+      "source": "200",
+      "target": "210",
+      "label": "Khoản mục 210 thuộc nhóm tài sản ngắn hạn (200).",
+      "weight": 1.0
+    },
+    {
+      "source": "Quản trị sản xuất và tác nghiệp",
+      "target": "Sản xuất tinh gọn",
+      "label": "Quản trị sản xuất và tác nghiệp là nền tảng lý thuyết cho việc áp dụng hệ thống ",
+      "weight": 1.0
+    },
+    {
+      "source": "Bảng 5.1",
+      "target": "Sản xuất tinh gọn",
+      "label": "Bảng 5.1 so sánh các tiêu chí giữa sản xuất truyền thống và sản xuất tinh gọn.",
+      "weight": 1.0
+    },
+    {
+      "source": "Sản xuất tinh gọn",
+      "target": "Toyota Production System (TPS)",
+      "label": "TPS là nguồn gốc trực tiếp của sản xuất tinh gọn, được cải tiến và phổ biến rộng",
+      "weight": 1.0
+    },
+    {
+      "source": "Sản xuất tinh gọn",
+      "target": "The Machine that Changed the World",
+      "label": "Sách \"The Machine that Changed the World\" là tài liệu đầu tiên giới thiệu khái n",
+      "weight": 1.0
+    },
+    {
+      "source": "Lean Manufacturing",
+      "target": "Sản xuất tinh gọn",
+      "label": "Lean Manufacturing là tên gọi tiếng Anh cho khái niệm \"Sản xuất tinh gọn\".",
+      "weight": 1.0
+    },
+    {
+      "source": "In ấn (2)",
+      "target": "Đóng gói (3)",
+      "label": "In ấn (2) vận chuyển 30 tấn đến Đóng gói (3).",
+      "weight": 1.0
+    },
+    {
+      "source": "Kiểm tra (6)",
+      "target": "Đóng gói (3)",
+      "label": "Đóng gói (3) vận chuyển 100 tấn đến Kiểm tra (6).",
+      "weight": 1.0
+    },
+    {
+      "source": "Bảng thể hiện tỷ lệ luân chuyển giữa các giai đoạn sản xuất",
+      "target": "Đóng gói (3)",
+      "label": "Bảng thể hiện tỷ lệ luân chuyển giữa các giai đoạn sản xuất chứa dữ liệu về Đóng",
+      "weight": 1.0
+    },
+    {
+      "source": "258,348,632,669",
+      "target": "Vốn Chủ Sở Hữu",
+      "label": "Vốn chủ sở hữu có giá trị ban đầu 258,348,632,669.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty Cổ phần",
+      "target": "Giấy chứng nhận đăng ký doanh nghiệp",
+      "label": "Giấy chứng nhận đăng ký doanh nghiệp xác nhận Công ty Cổ phần là pháp nhân được ",
+      "weight": 1.0
+    },
+    {
+      "source": "Doanh nghiệp",
+      "target": "Marketing",
+      "label": "Marketing tạo ra nhu cầu và cung cấp thông tin thị trường cho doanh nghiệp.",
+      "weight": 1.0
+    },
+    {
+      "source": "Marketing",
+      "target": "Quản trị sản xuất và tác nghiệp",
+      "label": "Marketing tạo ra nhu cầu và cung cấp thông tin thị trường để bộ phận sản xuất lậ",
+      "weight": 1.0
+    },
+    {
+      "source": "Marketing",
+      "target": "Sản xuất",
+      "label": "Sản xuất và marketing có mâu thuẫn về thời gian, chất lượng và đa dạng sản phẩm,",
+      "weight": 1.0
+    },
+    {
+      "source": "Chức năng sản xuất",
+      "target": "Marketing",
+      "label": "Chức năng sản xuất và Marketing có mâu thuẫn về thời gian, chất lượng và đa dạng",
+      "weight": 1.0
+    },
+    {
+      "source": "Dự Báo Cầu",
+      "target": "Marketing",
+      "label": "Dự báo cầu cung cấp cơ sở để hoạch định chiến lược marketing và tài chính của do",
+      "weight": 1.0
+    },
+    {
+      "source": "X1",
+      "target": "X4",
+      "label": "Công việc X4 phụ thuộc vào công việc X1, phải hoàn thành sau X1.",
+      "weight": 1.0
+    },
+    {
+      "source": "X2",
+      "target": "X4",
+      "label": "Công việc X4 phụ thuộc vào công việc X2, phải hoàn thành sau X2.<SEP>X2 là công ",
+      "weight": 2.0
+    },
+    {
+      "source": "X4",
+      "target": "X6",
+      "label": "Công việc X6 phụ thuộc vào công việc X4, phải hoàn thành sau X4.<SEP>X4 là công ",
+      "weight": 2.0
+    },
+    {
+      "source": "SDM",
+      "target": "X4",
+      "label": "X4 là một công việc trong phương pháp SDM.",
+      "weight": 1.0
+    },
+    {
+      "source": "Bang 4.3",
+      "target": "X4",
+      "label": "X4 được ghi vào Bang 4.3 với các thông số cụ thể.",
+      "weight": 1.0
+    },
+    {
+      "source": "Thong s6 s6m",
+      "target": "X4",
+      "label": "X4 có thông số sớm là 2 và 6.",
+      "weight": 1.0
+    },
+    {
+      "source": "Thong sd muon",
+      "target": "X4",
+      "label": "X4 có thông số muộn là 2 và 6.",
+      "weight": 1.0
+    },
+    {
+      "source": "X3",
+      "target": "X4",
+      "label": "X3 là công việc trước của X4 (3-4).",
+      "weight": 1.0
+    },
+    {
+      "source": "Cong Viec",
+      "target": "SDM",
+      "label": "Cong Viec được biểu diễn bằng mũi tên liền nét trên SDM, không có tỷ lệ liên qua",
+      "weight": 1.0
+    },
+    {
+      "source": "Cong Viec",
+      "target": "Duong Gang",
+      "label": "Duong Gang bao gom cac Cong Viec khong co thoi gian du tru va anh huong truc tie",
+      "weight": 1.0
+    },
+    {
+      "source": "Cong Viec",
+      "target": "Su Kien",
+      "label": "Cong Viec ket thuc muon lien ket voi Su Kien dat tai moc T\".<SEP>Cong Viec bat d",
+      "weight": 2.0
+    },
+    {
+      "source": "Bảng",
+      "target": "Bố trí mặt bằng sản xuất",
+      "label": "Bảng trình bày chi tiết về bố trí mặt bằng sản xuất và các hình thức cụ thể.",
+      "weight": 1.0
+    },
+    {
+      "source": "Bảng",
+      "target": "Công suất",
+      "label": "Bảng trình bày nội dung về công suất như một chủ đề chính trong tài liệu.",
+      "weight": 1.0
+    },
+    {
+      "source": "Bảng",
+      "target": "Định vị doanh nghiệp",
+      "label": "Bảng bao gồm phần định vị doanh nghiệp và các phương pháp liên quan.",
+      "weight": 1.0
+    },
+    {
+      "source": "Can Bang Day Chuyen",
+      "target": "Trung Tâm Đào Tạo Xây Dựng VIETCONS",
+      "label": "Trung Tâm Đào Tạo Xây Dựng VIETCONS liên quan đến quy trình cân bằng dây chuyền ",
+      "weight": 1.0
+    },
+    {
+      "source": "Doanh nghiệp",
+      "target": "Tổng chi phí kỳ này",
+      "label": "Doanh nghiệp ghi nhận tổng chi phí kỳ này cao hơn kỳ trước.",
+      "weight": 1.0
+    },
+    {
+      "source": "01/07/2024–30/09/2025",
+      "target": "Tổng chi phí kỳ này",
+      "label": "Tổng chi phí kỳ này được ghi nhận trong giai đoạn 01/07/2024–30/09/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "01/07/2025–30/09/2025",
+      "target": "Tổng chi phí kỳ này",
+      "label": "Tổng chi phí kỳ này được ghi nhận trong giai đoạn 01/07/2025–30/09/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "Jidoka",
+      "target": "Toyota",
+      "label": "Toyota áp dụng Jidoka như một cột trụ chính trong hệ thống sản xuất của mình.",
+      "weight": 1.0
+    },
+    {
+      "source": "Doanh Nghiệp",
+      "target": "Jidoka",
+      "label": "Doanh nghiệp ứng dụng công nghệ Jidoka để cải tiến quy trình sản xuất.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công Nhân",
+      "target": "Jidoka",
+      "label": "Công nhân thực hiện các công đoạn có ứng dụng công nghệ Jidoka để kiểm soát chất",
+      "weight": 1.0
+    },
+    {
+      "source": "Công Trình A",
+      "target": "Tổ Chức Sản Xuất Theo Dây Chuyền",
+      "label": "Tổ chức sản xuất theo dây chuyền được áp dụng để xây dựng Công Trình A.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công Trình A",
+      "target": "Tổ (Đội) 2",
+      "label": "Tổ (Đội) 2 thực hiện công việc tại Công Trình A theo phương pháp dây chuyền.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công Trình A",
+      "target": "Tổ (Đội) 3",
+      "label": "Tổ (Đội) 3 thực hiện công việc tại Công Trình A theo phương pháp dây chuyền.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công Trình A",
+      "target": "Tổ (Đội) 4",
+      "label": "Tổ (Đội) 4 thực hiện công việc tại Công Trình A theo phương pháp dây chuyền.",
+      "weight": 1.0
+    },
+    {
+      "source": "Chuyên Đề Quản Trị Sản Xuất",
+      "target": "San Bằng Mũ",
+      "label": "Chuyên Đề Quản Trị Sản Xuất sử dụng kỹ thuật San Bằng Mũ để phân tích dữ liệu.",
+      "weight": 1.0
+    },
+    {
+      "source": "SDM",
+      "target": "oX",
+      "label": "oX là một công việc trong phương pháp SDM.",
+      "weight": 1.0
+    },
+    {
+      "source": "Bang 4.3",
+      "target": "oX",
+      "label": "oX được ghi vào Bang 4.3 với thời gian thực hiện bằng 0.",
+      "weight": 1.0
+    },
+    {
+      "source": "Thong s6 s6m",
+      "target": "oX",
+      "label": "oX có thông số sớm là 2 và 2.",
+      "weight": 1.0
+    },
+    {
+      "source": "Thong sd muon",
+      "target": "oX",
+      "label": "oX có thông số muộn là 2 và 2.",
+      "weight": 1.0
+    },
+    {
+      "source": "X1",
+      "target": "oX",
+      "label": "X1 là công việc trước của oX (2-3).",
+      "weight": 1.0
+    },
+    {
+      "source": "X2",
+      "target": "oX",
+      "label": "X2 là công việc trước của oX (2-3).",
+      "weight": 1.0
+    },
+    {
+      "source": "X3",
+      "target": "oX",
+      "label": "oX là công việc trước của X3 (2-4).",
+      "weight": 1.0
+    },
+    {
+      "source": "30/09/2025",
+      "target": "Các doanh nghiệp khác",
+      "label": "30/09/2025 là thời điểm ghi nhận số liệu tài chính của Các doanh nghiệp khác.",
+      "weight": 1.0
+    },
+    {
+      "source": "Các doanh nghiệp khác",
+      "target": "Công ty CP Tổng công ty Sông Đà",
+      "label": "Công ty CP Tổng công ty Sông Đà có giá trị tài chính cao nhất (13.0t7.900.000) v",
+      "weight": 1.0
+    },
+    {
+      "source": "30/06/2025",
+      "target": "Các doanh nghiệp khác",
+      "label": "30/06/2025 là thời điểm ghi nhận số liệu tài chính của Các doanh nghiệp khác.",
+      "weight": 1.0
+    },
+    {
+      "source": "Phân loại các khoản phải thu",
+      "target": "Rủi ro tài chính",
+      "label": "Rủi ro tài chính là một tiêu chí để phân loại các khoản phải thu trong báo cáo t",
+      "weight": 1.0
+    },
+    {
+      "source": "30/09/2025",
+      "target": "Phri 1,i Lhn lao HDQ'I, Ban ki6n rodr",
+      "label": "Phri 1,i Lhn lao HDQ'I, Ban ki6n rodr có giá trị 66.488.000 vào ngày 30/09/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "30/06/2025",
+      "target": "Phri 1,i Lhn lao HDQ'I, Ban ki6n rodr",
+      "label": "Phri 1,i Lhn lao HDQ'I, Ban ki6n rodr có giá trị 66.488.000 vào ngày 30/06/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "Lập thiết kế",
+      "target": "Quản lý thiết kế kỹ thuật",
+      "label": "Quản lý thiết kế kỹ thuật thực hiện công việc lập thiết kế dự án.",
+      "weight": 1.0
+    },
+    {
+      "source": "Lập thiết kế",
+      "target": "Quản lý đấu thầu dự án",
+      "label": "Quản lý đấu thầu dự án phối hợp với Quản lý thiết kế kỹ thuật và Phó tổng Giám đ",
+      "weight": 1.0
+    },
+    {
+      "source": "Bước I: Phân Tích Công Nghệ Xây Dựng",
+      "target": "Trung Tâm Đào Tạo Xây Dựng VIETCONS",
+      "label": "Trung Tâm Đào Tạo Xây Dựng VIETCONS tham gia vào phân tích công nghệ xây dựng tr",
+      "weight": 1.0
+    },
+    {
+      "source": "Bước 2: Xác Định Mức Độ Chuyên Môn Hóa",
+      "target": "Bước I: Phân Tích Công Nghệ Xây Dựng",
+      "label": "Bước I dẫn đến Bước 2 trong quy trình lập dây chuyền xây dựng.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công nghệ",
+      "target": "Công suất",
+      "label": "Các đặc điểm của công nghệ như trình độ, loại hình và năng lực ảnh hưởng quyết đ",
+      "weight": 2.0
+    },
+    {
+      "source": "Công suất",
+      "target": "Công suất thiết kế",
+      "label": "Công suất thiết kế là dạng công suất lý thuyết tối đa trong điều kiện lý tưởng.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công suất",
+      "target": "Công suất hiệu quả",
+      "label": "Công suất hiệu quả là mục tiêu công suất mà doanh nghiệp kỳ vọng đạt được trong ",
+      "weight": 1.0
+    },
+    {
+      "source": "Công suất",
+      "target": "Phân tích hòa vốn",
+      "label": "Phân tích hòa vốn được sử dụng để xác định công suất tối thiểu cần thiết.",
+      "weight": 1.0
+    },
+    {
+      "source": "30/09/2025",
+      "target": "Kì tài chính 2025-2026",
+      "label": "Kì tài chính 2025-2026 kết thúc vào ngày 30/09/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty Cổ phần Du lịch Kontum",
+      "target": "Kì tài chính 2025-2026",
+      "label": "Công ty Cổ phần Du lịch Kontum báo cáo kết quả tài chính cho kỳ 2025-2026.",
+      "weight": 1.0
+    },
+    {
+      "source": "Phân xưởng",
+      "target": "Phương pháp bố trí theo quá trình",
+      "label": "Phương pháp bố trí theo quá trình được áp dụng trong phân xưởng để sắp xếp các b",
+      "weight": 1.0
+    },
+    {
+      "source": "Tài Sản Cố Định",
+      "target": "Tài Sản Dài Hạn",
+      "label": "Tài sản cố định là một thành phần của tài sản dài hạn.",
+      "weight": 1.0
+    },
+    {
+      "source": "Day chuyen chuyen mon hoa",
+      "target": "Phuong an 3",
+      "label": "Phuong an 3 cân bằng dây chuyền theo nhịp nhanh.",
+      "weight": 1.0
+    },
+    {
+      "source": "Day chuyen chuyen mon hoa",
+      "target": "Gian doan",
+      "label": "Gian doan là khoảng trống giữa các dây chuyền chuyên môn hóa.",
+      "weight": 1.0
+    },
+    {
+      "source": "Day chuyen chuyen mon hoa",
+      "target": "Day chuyen cong trinh nhieu nha cung loai khong nhip nhang",
+      "label": "Day chuyen cong trinh nhieu nha cung loai khong nhip nhang được tạo thành từ các",
+      "weight": 1.0
+    },
+    {
+      "source": "Doanh nghiệp",
+      "target": "Lấy ý kiến của Ban điều hành doanh nghiệp",
+      "label": "Doanh nghiệp sử dụng phương pháp lấy ý kiến của Ban điều hành doanh nghiệp để dự",
+      "weight": 1.0
+    },
+    {
+      "source": "Lấy ý kiến của Ban điều hành doanh nghiệp",
+      "target": "phương pháp định tính",
+      "label": "Lấy ý kiến của Ban điều hành doanh nghiệp thuộc nhóm phương pháp định tính.",
+      "weight": 1.0
+    },
+    {
+      "source": "D",
+      "target": "F",
+      "label": "Công việc F có công việc liên trước là D, ảnh hưởng đến khởi sự của F.",
+      "weight": 1.0
+    },
+    {
+      "source": "C",
+      "target": "F",
+      "label": "Công việc F có công việc liên trước là C, ảnh hưởng đến khởi sự của F.",
+      "weight": 1.0
+    },
+    {
+      "source": "F",
+      "target": "SDM",
+      "label": "SDM được sử dụng để tính toán khởi sự và khởi muộn cho công việc F.",
+      "weight": 1.0
+    },
+    {
+      "source": "Chi phí thuê địa điểm",
+      "target": "Địa điểm A",
+      "label": "Địa điểm A có điểm \"Chi phí thuê địa điểm\" thấp hơn B và C, ảnh hưởng đến tổng s",
+      "weight": 1.0
+    },
+    {
+      "source": "Chi phí thuê địa điểm",
+      "target": "Địa điểm C",
+      "label": "Địa điểm C có điểm \"Chi phí thuê địa điểm\" (38) thấp hơn B nhưng cao hơn A.",
+      "weight": 1.0
+    },
+    {
+      "source": "Bố trí mặt bằng sản xuất",
+      "target": "Chi phí thuê địa điểm",
+      "label": "Việc bố trí mặt bằng sản xuất ảnh hưởng trực tiếp đến chi phí và hiệu quả sử dụn",
+      "weight": 1.0
+    },
+    {
+      "source": "A",
+      "target": "Chi phí thuê địa điểm",
+      "label": "Địa điểm A đạt điểm số 70 cho nhân tố \"Chi phí thuê địa điểm\" trong phương pháp ",
+      "weight": 1.0
+    },
+    {
+      "source": "B",
+      "target": "Chi phí thuê địa điểm",
+      "label": "Địa điểm B đạt điểm số 80 cho nhân tố \"Chi phí thuê địa điểm\" trong phương pháp ",
+      "weight": 1.0
+    },
+    {
+      "source": "C",
+      "target": "Chi phí thuê địa điểm",
+      "label": "Địa điểm C đạt điểm số 76 cho nhân tố \"Chi phí thuê địa điểm\" trong phương pháp ",
+      "weight": 1.0
+    },
+    {
+      "source": "May rủi ngang nhau",
+      "target": "Vừa",
+      "label": "Tiêu chí May rủi ngang nhau chọn phương án công suất vừa với giá trị 10,33 triệu",
+      "weight": 1.0
+    },
+    {
+      "source": "Lựa chọn phương án công suất trong điều kiện rủi ro",
+      "target": "Vừa",
+      "label": "Phương án công suất vừa được chọn do có giá trị kỳ vọng lớn nhất trong điều kiện",
+      "weight": 1.0
+    },
+    {
+      "source": "Bố Trí Mặt Bằng Hỗn Hợp",
+      "target": "Bố Trí Mặt Bằng Sản Xuất Theo Sản Phẩm",
+      "label": "Bố trí mặt bằng hỗn hợp kết hợp với bố trí theo sản phẩm.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công nghệ",
+      "target": "Quản trị sản xuất",
+      "label": "Quản trị sản xuất khai thác công nghệ như một yếu tố đầu vào để nâng cao hiệu qu",
+      "weight": 1.0
+    },
+    {
+      "source": "Công nghệ",
+      "target": "Tiến độ thi công",
+      "label": "Tiến độ thi công sử dụng công nghệ để nâng cao chất lượng và hiệu quả thi công.",
+      "weight": 1.0
+    },
+    {
+      "source": "Bước 2: Xác Định Mức Độ Chuyên Môn Hóa",
+      "target": "Bước 3: Xác Định Các Thông Số Công Nghệ",
+      "label": "Bước 2 là tiền đề cho Bước 3 trong việc thiết lập dây chuyền.",
+      "weight": 1.0
+    },
+    {
+      "source": "CPM",
+      "target": "To chuc san xuat theo day chuyen",
+      "label": "Tổ chức sản xuất theo dây chuyền có thể được thể hiện bằng phương pháp CPM.",
+      "weight": 1.0
+    },
+    {
+      "source": "CPM",
+      "target": "Sơ đồ Mạng",
+      "label": "Sơ đồ mạng bao gồm phương pháp CPM như một thành phần quan trọng.",
+      "weight": 1.0
+    },
+    {
+      "source": "Thiết Kế Kỹ Thuật",
+      "target": "Thiết Kế Thi Công",
+      "label": "Thiết kế kỹ thuật là giai đoạn đầu tiên, dẫn đến thiết kế thi công trong quá trì",
+      "weight": 1.0
+    },
+    {
+      "source": "Thiết Kế Kỹ Thuật",
+      "target": "VIETCONS",
+      "label": "VIETCONS cung cấp thông tin và đào tạo về thiết kế kỹ thuật và thiết kế thi công",
+      "weight": 1.0
+    },
+    {
+      "source": "Phòng vật tư",
+      "target": "Tiến hành nhận hàng",
+      "label": "Phòng vật tư kiểm tra và nhập kho hàng hóa từ nhà cung cấp.",
+      "weight": 1.0
+    },
+    {
+      "source": "Cong viec",
+      "target": "Ket som",
+      "label": "Kết sớm của một công việc được xác định thông qua công việc liền trước trong sơ ",
+      "weight": 1.0
+    },
+    {
+      "source": "Day Chuyen T",
+      "target": "Giai Doan On Dinh",
+      "label": "Day chuyen T đạt giai đoạn ổn định khi triển khai hết công suất và hoạt động ổn ",
+      "weight": 1.0
+    },
+    {
+      "source": "Other Equity",
+      "target": "Total Capital Sources",
+      "label": "Other Equity forms part of the Total Capital Sources.",
+      "weight": 1.0
+    },
+    {
+      "source": "Other Equity",
+      "target": "Quang N.",
+      "label": "Quang N. kiểm tra và xác nhận chỉ số Other Equity 8,9 tỷ VNĐ.",
+      "weight": 1.0
+    },
+    {
+      "source": "Chuyên Đề Quản Trị Sản Xuất",
+      "target": "ChƣƠNG I. GIỚI THIỆU CHUNG VỀ QUẢN TRỊ SẢN XUẤT VÀ TÁC NGHIỆP",
+      "label": "ChƣƠNG I là một phần của Chuyên Đề Quản Trị Sản Xuất.",
+      "weight": 1.0
+    },
+    {
+      "source": "SDM",
+      "target": "Tiến độ ban đầu",
+      "label": "SDM được dùng để tính toán các tham số của mô hình sản xuất trong tiến độ ban đầ",
+      "weight": 1.0
+    },
+    {
+      "source": "Trung Tâm Đào Tạo Xây Dựng VIETCONS",
+      "target": "Tài Nguyên Không Thu Hồi",
+      "label": "Trung Tâm Đào Tạo Xây Dựng VIETCONS lập kế hoạch tiêu thụ tài nguyên không thu h",
+      "weight": 1.0
+    },
+    {
+      "source": "SDM",
+      "target": "Sơ đồ ngang",
+      "label": "SDM được thể hiện các thông số trên sơ đồ ngang.<SEP>SDM được chuyển đổi sang sơ",
+      "weight": 2.0
+    },
+    {
+      "source": "Biểu đồ nhân lực",
+      "target": "Sơ đồ ngang",
+      "label": "Sơ đồ ngang được sử dụng để tạo biểu đồ nhân lực, thể hiện sự biến thiên nhân lự",
+      "weight": 1.0
+    },
+    {
+      "source": "BC-6",
+      "target": "Công Ty A",
+      "label": "Công Ty A cung cấp sản phẩm BC-6 cho các cửa hiệu ảnh.",
+      "weight": 1.0
+    },
+    {
+      "source": "Ket muon",
+      "target": "Kh?i muon",
+      "label": "Kết muôn được tính ngược từ khởi muôn của công việc liền sau theo công thức (5.1",
+      "weight": 1.0
+    },
+    {
+      "source": "Du tru",
+      "target": "Ket muon",
+      "label": "Dự trữ được xác định bằng hiệu số giữa kết muôn và kết sớm của công việc.",
+      "weight": 1.0
+    },
+    {
+      "source": "3-4",
+      "target": "Bình thường (100 nghìn đồng)",
+      "label": "Công việc 3-4 có chi phí bình thường 36 (100 nghìn đồng).",
+      "weight": 1.0
+    },
+    {
+      "source": "3-4",
+      "target": "Khẩn trương (100 nghìn đồng)",
+      "label": "Công việc 3-4 có chi phí khẩn trương 14 (100 nghìn đồng).",
+      "weight": 1.0
+    },
+    {
+      "source": "3-4",
+      "target": "eij (100 nghìn đồng)",
+      "label": "Công việc 3-4 có giá trị eij là 0.143.",
+      "weight": 1.0
+    },
+    {
+      "source": "3-4",
+      "target": "Đường gang 1-3-4-6",
+      "label": "Công việc 3-4 là một phần của đường gang 1-3-4-6.",
+      "weight": 1.0
+    },
+    {
+      "source": "3-4",
+      "target": "Buoc 7",
+      "label": "Buoc 7 trong bảng 4.6 liên quan đến việc rút ngắn công việc 3-4.",
+      "weight": 1.0
+    },
+    {
+      "source": "3-4",
+      "target": "Buoc 8",
+      "label": "Buoc 8 trong bảng 4.6 liên quan đến việc rút ngắn công việc 3-4.",
+      "weight": 1.0
+    },
+    {
+      "source": "In ấn (2)",
+      "target": "Kiểm tra (6)",
+      "label": "In ấn (2) vận chuyển 10 tấn đến Kiểm tra (6).",
+      "weight": 1.0
+    },
+    {
+      "source": "Bảng thể hiện tỷ lệ luân chuyển giữa các giai đoạn sản xuất",
+      "target": "Kiểm tra (6)",
+      "label": "Bảng thể hiện tỷ lệ luân chuyển giữa các giai đoạn sản xuất chứa dữ liệu về Kiểm",
+      "weight": 1.0
+    },
+    {
+      "source": "Chi phí sản xuất",
+      "target": "Nguyên tắc kế toán",
+      "label": "Nguyên tắc kế toán quy định cách ghi nhận và phân bổ chi phí sản xuất trong kỳ.",
+      "weight": 1.0
+    },
+    {
+      "source": "Debt Capital",
+      "target": "Total Capital Sources",
+      "label": "Debt Capital is a component of the Total Capital Sources.",
+      "weight": 1.0
+    },
+    {
+      "source": "Debt Capital",
+      "target": "Quang N.",
+      "label": "Quang N. kiểm tra và xác nhận khoản Debt Capital 2,6 tỷ VNĐ.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công việc A",
+      "target": "Dự trữ công việc",
+      "label": "Công việc A không có dự trữ (z = 0), thể hiện mối liên hệ chặt chẽ với khái niệm",
+      "weight": 1.0
+    },
+    {
+      "source": "Công việc B",
+      "target": "Dự trữ công việc",
+      "label": "Công việc B không có dự trữ (z = 0), thể hiện mối liên hệ chặt chẽ với khái niệm",
+      "weight": 1.0
+    },
+    {
+      "source": "Công việc D",
+      "target": "Dự trữ công việc",
+      "label": "Công việc D không có dự trữ (z = 0), thể hiện mối liên hệ chặt chẽ với khái niệm",
+      "weight": 1.0
+    },
+    {
+      "source": "Công việc E",
+      "target": "Dự trữ công việc",
+      "label": "Công việc E không có dự trữ (z = 0), thể hiện mối liên hệ chặt chẽ với khái niệm",
+      "weight": 1.0
+    },
+    {
+      "source": "Doanh nghiệp",
+      "target": "Lựa chọn phương án công suất trong điều kiện rủi ro",
+      "label": "Doanh nghiệp thực hiện quy trình lựa chọn công suất dưới điều kiện rủi ro.",
+      "weight": 1.0
+    },
+    {
+      "source": "Ban Kiểm Tra Quản Lý Dự Án",
+      "target": "Phòng Vật Tư",
+      "label": "Ban Kiểm Tra Quản Lý Dự Án kiểm tra tiêu chuẩn kỹ thuật, giá cả và lợi nhuận của",
+      "weight": 1.0
+    },
+    {
+      "source": "Lập kế hoạch, tổ chức và chỉ đạo thi công",
+      "target": "Trung tâm đào tạo xây dựng VIETCONS",
+      "label": "Trung tâm đào tạo xây dựng VIETCONS có liên quan đến tài liệu.",
+      "weight": 1.0
+    },
+    {
+      "source": "Lập kế hoạch, tổ chức và chỉ đạo thi công",
+      "target": "Đường găng",
+      "label": "Đường găng là một phần nội dung trong tài liệu.",
+      "weight": 1.0
+    },
+    {
+      "source": "Day chuyen cong trinh nhieu nha cung loai khong nhip nhang",
+      "target": "Lập kế hoạch, tổ chức và chỉ đạo thi công",
+      "label": "Day chuyen cong trinh nhieu nha cung loai khong nhip nhang là một phần nội dung ",
+      "weight": 1.0
+    },
+    {
+      "source": "Công việc A",
+      "target": "Nơi làm việc 1",
+      "label": "Công việc A được bố trí tại Nơi làm việc 1.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công việc B",
+      "target": "Nơi làm việc 1",
+      "label": "Công việc B được bố trí tại Nơi làm việc 1.",
+      "weight": 1.0
+    },
+    {
+      "source": "Nơi làm việc 1",
+      "target": "Nơi làm việc 2",
+      "label": "Nơi làm việc 1 được bố trí trước Nơi làm việc 2 trong dây chuyền.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công Nghệ",
+      "target": "Trung Tâm Đào Tạo Xây Dựng VIETCONS",
+      "label": "Trung Tâm Đào Tạo Xây Dựng VIETCONS đào tạo và phát triển công nghệ trong ngành ",
+      "weight": 1.0
+    },
+    {
+      "source": "Công Nghệ",
+      "target": "Cơ Giới Hóa",
+      "label": "Cơ Giới Hóa cần đồng bộ với công nghệ, năng suất và chất lượng để phát huy hiệu ",
+      "weight": 1.0
+    },
+    {
+      "source": "Công Nghiệp Hóa Ngành Xây Dựng",
+      "target": "Công Nghệ",
+      "label": "Công Nghiệp Hóa Ngành Xây Dựng phụ thuộc vào việc ứng dụng các công nghệ mới.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công Nghệ",
+      "target": "SDM",
+      "label": "Công nghệ xác định tiến độ thi công và nhu cầu nhân lực trong sơ đồ mạng SDM.",
+      "weight": 1.0
+    },
+    {
+      "source": "Quy trình bảo trì tinh gọn",
+      "target": "Tiết kiệm chi phí",
+      "label": "Quy trình bảo trì tinh gọn dẫn đến tiết kiệm chi phí trong quản lý rủi ro.",
+      "weight": 1.0
+    },
+    {
+      "source": "SpeedMaint CMMS",
+      "target": "Tiết kiệm chi phí",
+      "label": "SpeedMaint CMMS giúp tiết kiệm chi phí bằng cách tối ưu hóa quy trình bảo trì và",
+      "weight": 1.0
+    },
+    {
+      "source": "Quản lý bảo trì dựa trên rủi ro",
+      "target": "Tiết kiệm chi phí",
+      "label": "Quản lý bảo trì dựa trên rủi ro dẫn đến tiết kiệm chi phí thông qua việc tập tru",
+      "weight": 1.0
+    },
+    {
+      "source": "Ban chỉ huy công trình",
+      "target": "Hồ sơ thanh toán",
+      "label": "Ban chỉ huy công trình kiểm tra và phê duyệt hồ sơ thanh toán trong quy trình.",
+      "weight": 1.0
+    },
+    {
+      "source": "Ban chỉ huy công trình",
+      "target": "Quy trình kiểm soát thi công",
+      "label": "Quy trình kiểm soát thi công được điều phối bởi Ban chỉ huy công trình để đảm bả",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty An Phúc",
+      "target": "Phân tích hòa vốn",
+      "label": "Phân tích hòa vốn được áp dụng để xác định điểm hòa vốn của Công ty An Phúc.",
+      "weight": 1.0
+    },
+    {
+      "source": "Buoc 7",
+      "target": "Day chuyen",
+      "label": "Buoc 7 tính toán các chỉ số đánh giá hiệu quả của Day chuyen.",
+      "weight": 1.0
+    },
+    {
+      "source": "Buoc 7",
+      "target": "SDM",
+      "label": "Buoc 7 áp dụng phương pháp SDM để tính toán và rút ngắn thời gian công việc.",
+      "weight": 1.0
+    },
+    {
+      "source": "SDM",
+      "target": "Su Kien",
+      "label": "Su Kien được biểu diễn bằng vòng tròn có danh số thứ tự trên SDM, đánh dấu sự bắ",
+      "weight": 1.0
+    },
+    {
+      "source": "Trung tâm đào tạo xây dựng VIETCONS",
+      "target": "http://www.vietcons.org",
+      "label": "http://www.vietcons.org là trang web của Trung tâm đào tạo xây dựng VIETCONS.",
+      "weight": 1.0
+    },
+    {
+      "source": "SDM nút",
+      "target": "Trung tâm đào tạo xây dựng VIETCONS",
+      "label": "Trung tâm đào tạo xây dựng VIETCONS đề cập đến SDM nút trong tài liệu này như mộ",
+      "weight": 1.0
+    },
+    {
+      "source": "Bieu do the hien tien do thi cong",
+      "target": "Trung tâm đào tạo xây dựng VIETCONS",
+      "label": "Trung tâm đào tạo xây dựng VIETCONS là tổ chức phát triển biểu đồ tiến độ thi cô",
+      "weight": 1.0
+    },
+    {
+      "source": "SDM",
+      "target": "Trung tâm đào tạo xây dựng VIETCONS",
+      "label": "Trung tâm đào tạo xây dựng VIETCONS sử dụng SDM như một phần trong chương trình ",
+      "weight": 3.0
+    },
+    {
+      "source": "Phương pháp tịnh tiến",
+      "target": "Trung tâm đào tạo xây dựng VIETCONS",
+      "label": "Trung tâm đào tạo xây dựng VIETCONS sử dụng phương pháp tịnh tiến để xác định kh",
+      "weight": 1.0
+    },
+    {
+      "source": "Ban chỉ huy",
+      "target": "Quy trình kiểm soát thi công",
+      "label": "Ban chỉ huy thiết lập Quy trình kiểm soát thi công để giám sát việc thực hiện hợ",
+      "weight": 1.0
+    },
+    {
+      "source": "Các quy trình trong doanh nghiệp Xây dựng Ebook Free",
+      "target": "Quy trình kiểm soát thi công",
+      "label": "Ebook bao gồm Quy trình kiểm soát thi công như một phần nội dung chính.",
+      "weight": 1.0
+    },
+    {
+      "source": "Chỉ số mùa vụ",
+      "target": "Dự báo 2012",
+      "label": "Chỉ số mùa vụ được sử dụng để phân bổ dự báo 2.280 đơn vị sản phẩm cho các quý c",
+      "weight": 1.0
+    },
+    {
+      "source": "Thong s6 s6m",
+      "target": "X1",
+      "label": "X1 có thông số sớm là 0 và 2.",
+      "weight": 1.0
+    },
+    {
+      "source": "Thong s6 s6m",
+      "target": "X2",
+      "label": "X2 có thông số sớm là 0 và 1.",
+      "weight": 1.0
+    },
+    {
+      "source": "Thong s6 s6m",
+      "target": "X3",
+      "label": "X3 có thông số sớm là 2 và 6.",
+      "weight": 1.0
+    },
+    {
+      "source": "Thong s6 s6m",
+      "target": "X6",
+      "label": "X6 có thông số sớm là 6 và 14.",
+      "weight": 1.0
+    },
+    {
+      "source": "Thong s6 s6m",
+      "target": "X7",
+      "label": "X7 có thông số sớm là 7 và 11.",
+      "weight": 1.0
+    },
+    {
+      "source": "Phòng nhận phát thư",
+      "target": "Văn phòng thư ký",
+      "label": "Có 10 lần di chuyển hàng tuần giữa Phòng nhận phát thư và Văn phòng thư ký.",
+      "weight": 1.0
+    },
+    {
+      "source": "Phòng tiếp khách",
+      "target": "Văn phòng thư ký",
+      "label": "Có 20 lần di chuyển hàng tuần giữa Văn phòng thư ký và Phòng tiếp khách.<SEP>Có ",
+      "weight": 2.0
+    },
+    {
+      "source": "Phòng điều hành",
+      "target": "Văn phòng thư ký",
+      "label": "Có 12 lần di chuyển hàng tuần giữa Văn phòng thư ký và Phòng điều hành.<SEP>Có 1",
+      "weight": 2.0
+    },
+    {
+      "source": "Phòng họp",
+      "target": "Văn phòng thư ký",
+      "label": "Có 14 lần di chuyển hàng tuần giữa Văn phòng thư ký và Phòng họp.<SEP>Có 10 lần ",
+      "weight": 2.0
+    },
+    {
+      "source": "Cot 4",
+      "target": "Cot 5",
+      "label": "Gia tri cua Cot 5 duoc tinh bang cach cong gia tri cua Cot 4 voi Cot 3.<SEP>Giá ",
+      "weight": 3.0
+    },
+    {
+      "source": "Yên tĩnh",
+      "target": "Địa điểm C",
+      "label": "Địa điểm C đạt điểm cao nhất (9) ở yếu tố \"Yên tĩnh\".",
+      "weight": 1.0
+    },
+    {
+      "source": "A",
+      "target": "Yên tĩnh",
+      "label": "Địa điểm A đạt điểm số 80 cho nhân tố \"Yên tĩnh\" trong phương pháp đánh giá.",
+      "weight": 1.0
+    },
+    {
+      "source": "B",
+      "target": "Yên tĩnh",
+      "label": "Địa điểm B đạt điểm số 85 cho nhân tố \"Yên tĩnh\" trong phương pháp đánh giá.",
+      "weight": 1.0
+    },
+    {
+      "source": "C",
+      "target": "Yên tĩnh",
+      "label": "Địa điểm C đạt điểm số 90 cho nhân tố \"Yên tĩnh\" trong phương pháp đánh giá.",
+      "weight": 1.0
+    },
+    {
+      "source": "Biểu đồ nhân lực",
+      "target": "Tiến độ thi công",
+      "label": "Biểu đồ nhân lực được sử dụng để đánh giá và tối ưu hóa tiến độ thi công thông q",
+      "weight": 1.0
+    },
+    {
+      "source": "T",
+      "target": "Tiến độ thi công",
+      "label": "T là thời hạn thi công công trình, cần được điều chỉnh để phù hợp với tiến độ th",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty Cổ phần Du lịch Kon Tum",
+      "target": "Kon Tum",
+      "label": "Công ty Cổ phần Du lịch Kon Tum có trụ sở tại tỉnh Kon Tum.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty Cổ phần Du lịch Kon Tum",
+      "target": "Thông tư số 96/2020/TT-BTC ngày 16 tháng 11 năm 2020",
+      "label": "Công ty Cổ phần Du lịch Kon Tum tuân thủ quy định công bố thông tin theo Thông t",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty Cổ phần Du lịch Kon Tum",
+      "target": "Quý I niên độ 2024-2025",
+      "label": "Công ty Cổ phần Du lịch Kon Tum công bố lợi nhuận sau thuế 1.166.599.148 trong Q",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty Cổ phần Du lịch Kon Tum",
+      "target": "Quý I niên độ 2025-2026",
+      "label": "Công ty Cổ phần Du lịch Kon Tum công bố lợi nhuận sau thuế 2.492.452.702 trong Q",
+      "weight": 1.0
+    },
+    {
+      "source": "Báo cáo tài chính năm 2024",
+      "target": "Công ty Cổ phần Du lịch Kon Tum",
+      "label": "Công ty Cổ phần Du lịch Kon Tum công bố báo cáo tài chính năm 2024 theo quy định",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty Cổ phần Du lịch Kon Tum",
+      "target": "Kết quả kinh doanh Quý I niên độ 2025-2026",
+      "label": "Công ty Cổ phần Du lịch Kon Tum công bố kết quả kinh doanh Quý I niên độ 2025-20",
+      "weight": 1.0
+    },
+    {
+      "source": "Maximin",
+      "target": "Nhỏ",
+      "label": "Tiêu chí Maximin chọn phương án công suất nhỏ với giá trị 10 triệu đồng.",
+      "weight": 1.0
+    },
+    {
+      "source": "Tài Nguyên",
+      "target": "Tổ Chức Xây Dựng",
+      "label": "Tổ Chức Xây Dựng cần tập trung và điều hòa Tài Nguyên trong quá trình thi công.",
+      "weight": 1.0
+    },
+    {
+      "source": "Tiến Độ",
+      "target": "Tài Nguyên",
+      "label": "Tiến Độ phụ thuộc vào phân bổ và điều hòa Tài Nguyên trong quá trình thi công.",
+      "weight": 1.0
+    },
+    {
+      "source": "Trung Tâm Đào Tạo Xây Dựng VIETCONS",
+      "target": "Tài Nguyên",
+      "label": "Trung Tâm Đào Tạo Xây Dựng VIETCONS quản lý và phân bổ tài nguyên trong xây dựng",
+      "weight": 1.0
+    },
+    {
+      "source": "Tài Nguyên",
+      "target": "Vật Tư",
+      "label": "Sử dụng vật tư tỷ lệ thuận với cường độ sử dụng nhân lực trong xây dựng.",
+      "weight": 1.0
+    },
+    {
+      "source": "SDM",
+      "target": "Tài Nguyên",
+      "label": "SDM là công cụ để tối ưu hóa việc sử dụng tài nguyên trong kế hoạch sản xuất xây",
+      "weight": 1.0
+    },
+    {
+      "source": "E",
+      "target": "Tài Nguyên",
+      "label": "Độ sai phương trung bình E là chỉ tiêu đánh giá mức độ điều hòa trong phân bổ tà",
+      "weight": 1.0
+    },
+    {
+      "source": "Lập tiến độ ban đầu",
+      "target": "SDM",
+      "label": "SDM được sử dụng để mô hình hóa logic công nghệ và tổ chức trong lập tiến độ ban",
+      "weight": 1.0
+    },
+    {
+      "source": "Nguyên giá TSCD HH",
+      "target": "Phương tiện vận tải",
+      "label": "Phương tiện vận tải có nguyên giá là một phần của tổng nguyên giá TSCD HH.",
+      "weight": 1.0
+    },
+    {
+      "source": "Khấu hao đều",
+      "target": "Phương tiện vận tải",
+      "label": "Phương tiện vận tải được áp dụng phương pháp khấu hao đều với thời gian 10 năm.",
+      "weight": 1.0
+    },
+    {
+      "source": "Phương tiện vận tải",
+      "target": "Tổng thời gian khấu hao 625 năm",
+      "label": "Tổng thời gian khấu hao 625 năm bao gồm thời gian khấu hao của phương tiện vận t",
+      "weight": 1.0
+    },
+    {
+      "source": "Preferred Shares",
+      "target": "Total Capital Sources",
+      "label": "Preferred Shares contribute to the Total Capital Sources exceeding 556 billion V",
+      "weight": 1.0
+    },
+    {
+      "source": "Chu dau tu",
+      "target": "Du an tien kha thi",
+      "label": "Chu dau tu trực tiếp thực hiện và quyết định dự án có khả thi dựa trên du an tie",
+      "weight": 1.0
+    },
+    {
+      "source": "BHTN",
+      "target": "Chi phí sản xuất",
+      "label": "BHTN là khoản chi phí liên quan đến bảo hiểm thất nghiệp được tính vào chi phí s",
+      "weight": 1.0
+    },
+    {
+      "source": "BHTN",
+      "target": "Các khoản chi phí khác",
+      "label": "BHTN là khoản chi phí bắt buộc thuộc danh mục các khoản chi phí khác theo quy đị",
+      "weight": 1.0
+    },
+    {
+      "source": "BHTN",
+      "target": "Bảo hiểm",
+      "label": "BHTN là một loại hình bảo hiểm được nêu trong tài liệu.",
+      "weight": 1.0
+    },
+    {
+      "source": "30/06/2025",
+      "target": "Công ty CP Edu tư và Phát triển nông nghiệp Tiên Nông",
+      "label": "Ngày 30/06/2025 là mốc thời gian cho Công ty CP Edu tư và Phát triển nông nghiệp",
+      "weight": 1.0
+    },
+    {
+      "source": "30/06/2025",
+      "target": "Công ty TNHH Kim Huy Việt",
+      "label": "Ngày 30/06/2025 là mốc thời gian cho Công ty TNHH Kim Huy Việt.",
+      "weight": 1.0
+    },
+    {
+      "source": "30/06/2025",
+      "target": "Chi phí dịch vụ mua ngoài",
+      "label": "Chi phí dịch vụ mua ngoài cho giai đoạn kết thúc ngày 30/06/2025 là 99,818,121.",
+      "weight": 1.0
+    },
+    {
+      "source": "30/06/2025",
+      "target": "Chi phí khác",
+      "label": "Chi phí khác tại 30/06/2025 là 144.480.387.",
+      "weight": 1.0
+    },
+    {
+      "source": "30/06/2025",
+      "target": "450.000 000",
+      "label": "Giá trị 450.000 000 được ghi nhận vào ngày 30/06/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "30/06/2025",
+      "target": "Công ty CP XD GT Thrly lgiKCn Giang",
+      "label": "Giá trị 450.000 000 của Công ty CP XD GT Thrly lgiKCn Giang được ghi nhận vào ng",
+      "weight": 1.0
+    },
+    {
+      "source": "18.156.000.000",
+      "target": "30/06/2025",
+      "label": "Giá trị 18.156.000.000 cũng được ghi nhận vào ngày 30/06/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "30/06/2025",
+      "target": "Phiri t.d honc CNV",
+      "label": "Phiri t.d honc CNV có giá trị 42.325.000 vào ngày 30/06/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "NCC",
+      "target": "Tiến hành nhận hàng",
+      "label": "NCC gửi hàng hóa và phối hợp với phòng vật tư trong việc nhận hàng.",
+      "weight": 1.0
+    },
+    {
+      "source": "Quý 3",
+      "target": "Tổng nhu cầu 4 năm",
+      "label": "Tổng nhu cầu Quý 3 (2660) là thành phần của tổng nhu cầu 4 năm (9.120).",
+      "weight": 1.0
+    },
+    {
+      "source": "E",
+      "target": "SDM",
+      "label": "SDM được sử dụng để tính toán khởi sự và khởi muộn cho công việc E.",
+      "weight": 1.0
+    },
+    {
+      "source": "Du tru toan phan",
+      "target": "E",
+      "label": "Công việc E có du tru toan phan được xác định theo công thức (5.7).",
+      "weight": 1.0
+    },
+    {
+      "source": "18.156.000.000",
+      "target": "30/09/2025",
+      "label": "Giá trị 18.156.000.000 được ghi nhận vào ngày 30/09/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công suất hiệu quả",
+      "target": "Công suất thiết kế",
+      "label": "Công suất hiệu quả là mục tiêu thực tế thấp hơn công suất thiết kế lý thuyết.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công việc E",
+      "target": "Công việc G",
+      "label": "Công việc G phụ thuộc vào Công việc E.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công việc E",
+      "target": "SDM nut",
+      "label": "Công việc E được thể hiện trong sơ đồ mạng SDM với mối liên kết tại điểm kết thú",
+      "weight": 1.0
+    },
+    {
+      "source": "San bằng số mũ có điều chỉnh xu hướng",
+      "target": "Tháng 7",
+      "label": "Phương pháp San bằng số mũ có điều chỉnh xu hướng được áp dụng để dự báo nhu cầu",
+      "weight": 1.0
+    },
+    {
+      "source": "San bằng số mũ có điều chỉnh xu hướng",
+      "target": "San bằng số mũ giản đơn",
+      "label": "Phương pháp San bằng số mũ có điều chỉnh xu hướng được phát triển dựa trên phươn",
+      "weight": 1.0
+    },
+    {
+      "source": "Bảng thể hiện tỷ lệ luân chuyển giữa các giai đoạn sản xuất",
+      "target": "In ấn (2)",
+      "label": "Bảng thể hiện tỷ lệ luân chuyển giữa các giai đoạn sản xuất chứa dữ liệu về In ấ",
+      "weight": 1.0
+    },
+    {
+      "source": "Duong Gang",
+      "target": "SDM",
+      "label": "SDM xác định Duong Gang thông qua việc nối các sự kiện có T\" = Tm.",
+      "weight": 1.0
+    },
+    {
+      "source": "SDM",
+      "target": "Trung Tâm Đào Tạo Xây Dựng VIETCONS",
+      "label": "Trung Tâm Đào Tạo Xây Dựng VIETCONS tham gia vào quá trình tính toán các thông s",
+      "weight": 1.0
+    },
+    {
+      "source": "Bang 4.3",
+      "target": "SDM",
+      "label": "Phương pháp SDM sử dụng Bang 4.3 để lưu trữ và tính toán các thông số công việc.",
+      "weight": 1.0
+    },
+    {
+      "source": "SDM",
+      "target": "X1",
+      "label": "X1 là một công việc trong phương pháp SDM.",
+      "weight": 1.0
+    },
+    {
+      "source": "SDM",
+      "target": "X2",
+      "label": "X2 là một công việc trong phương pháp SDM.",
+      "weight": 1.0
+    },
+    {
+      "source": "SDM",
+      "target": "X3",
+      "label": "X3 là một công việc trong phương pháp SDM.",
+      "weight": 1.0
+    },
+    {
+      "source": "SDM",
+      "target": "X6",
+      "label": "X6 là một công việc trong phương pháp SDM.",
+      "weight": 1.0
+    },
+    {
+      "source": "SDM",
+      "target": "X7",
+      "label": "X7 là một công việc trong phương pháp SDM.",
+      "weight": 1.0
+    },
+    {
+      "source": "SDM",
+      "target": "Đường găng",
+      "label": "SDM bao gồm đường găng để xác định các công việc quan trọng trong dự án.",
+      "weight": 1.0
+    },
+    {
+      "source": "PERT",
+      "target": "SDM",
+      "label": "PERT là kỹ thuật được tích hợp vào SDM để xử lý các yếu tố không xác định trong ",
+      "weight": 1.0
+    },
+    {
+      "source": "SDM",
+      "target": "Thời gian thi công",
+      "label": "Phương pháp SDM điều chỉnh thời gian thi công để giảm thiểu chi phí.",
+      "weight": 1.0
+    },
+    {
+      "source": "Buoc 6",
+      "target": "SDM",
+      "label": "Buoc 6 áp dụng phương pháp SDM để tính toán và rút ngắn thời gian công việc.",
+      "weight": 1.0
+    },
+    {
+      "source": "Buoc 8",
+      "target": "SDM",
+      "label": "Buoc 8 áp dụng phương pháp SDM để tính toán và rút ngắn đồng thời công việc 3-4 ",
+      "weight": 1.0
+    },
+    {
+      "source": "A",
+      "target": "SDM",
+      "label": "SDM được sử dụng để tính toán khởi sự và khởi muộn cho công việc A.",
+      "weight": 1.0
+    },
+    {
+      "source": "C",
+      "target": "SDM",
+      "label": "SDM được sử dụng để tính toán khởi sự và khởi muộn cho công việc C.",
+      "weight": 1.0
+    },
+    {
+      "source": "D",
+      "target": "SDM",
+      "label": "SDM được sử dụng để tính toán khởi sự và khởi muộn cho công việc D.",
+      "weight": 1.0
+    },
+    {
+      "source": "B",
+      "target": "SDM",
+      "label": "SDM được sử dụng để tính toán khởi sự và khởi muộn cho công việc B.",
+      "weight": 1.0
+    },
+    {
+      "source": "Chi phí",
+      "target": "Định vị doanh nghiệp hợp lý",
+      "label": "Định vị doanh nghiệp hợp lý ảnh hưởng đến chi phí hoạt động và hiệu quả sản xuất",
+      "weight": 1.0
+    },
+    {
+      "source": "Gần thị trường tiêu thụ",
+      "target": "Định vị doanh nghiệp hợp lý",
+      "label": "Gần thị trường tiêu thụ là một trong những yếu tố chiến lược của định vị doanh n",
+      "weight": 1.0
+    },
+    {
+      "source": "01/07/2024–30/09/2025",
+      "target": "Chi phí nguyên vật liệu",
+      "label": "Chi phí nguyên vật liệu được ghi nhận trong giai đoạn 01/07/2024–30/09/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "01/07/2024–30/09/2025",
+      "target": "Chi phí quản lý doanh nghiệp",
+      "label": "Chi phí quản lý doanh nghiệp được ghi nhận trong giai đoạn 01/07/2024–30/09/2025",
+      "weight": 1.0
+    },
+    {
+      "source": "01/07/2024–30/09/2025",
+      "target": "Lợi nhuận sau thuế",
+      "label": "Lợi nhuận sau thuế được ghi nhận trong giai đoạn 01/07/2024–30/09/2025.<SEP>Lợi ",
+      "weight": 2.0
+    },
+    {
+      "source": "01/07/2024–30/09/2025",
+      "target": "Thù lao HDQT, BKS không trực tiếp điều hành",
+      "label": "Thù lao HDQT, BKS không trực tiếp điều hành được ghi nhận trong giai đoạn 01/07/",
+      "weight": 1.0
+    },
+    {
+      "source": "01/07/2024–30/09/2025",
+      "target": "Chi phí thu hồi nợ",
+      "label": "Chi phí thu hồi nợ được ghi nhận trong giai đoạn 01/07/2024–30/09/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "01/07/2024–30/09/2025",
+      "target": "Các khoản điều chỉnh tăng - Điều chỉnh giá sổ sách: phiếu phong bì",
+      "label": "Các khoản điều chỉnh tăng - Điều chỉnh giá sổ sách: phiếu phong bì được ghi nhận",
+      "weight": 1.0
+    },
+    {
+      "source": "01/07/2024–30/09/2025",
+      "target": "Các khoản khác",
+      "label": "Các khoản khác được ghi nhận trong giai đoạn 01/07/2024–30/09/2025.<SEP>Các khoả",
+      "weight": 2.0
+    },
+    {
+      "source": "01/07/2024–30/09/2025",
+      "target": "Chi phí nguyên liệu, vật liệu",
+      "label": "Chi phí nguyên liệu, vật liệu giảm xuống 42.157 tỷ trong giai đoạn 01/07/2024–30",
+      "weight": 1.0
+    },
+    {
+      "source": "Công việc D",
+      "target": "Công việc G",
+      "label": "Công việc G phụ thuộc vào Công việc D.",
+      "weight": 1.0
+    },
+    {
+      "source": "Nhip cua day chuyen",
+      "target": "Thong so thoi gian",
+      "label": "Thong so thoi gian bao gồm Nhip cua day chuyen như một tham số quan trọng trong ",
+      "weight": 1.0
+    },
+    {
+      "source": "Các khoản khác",
+      "target": "Doanh nghiệp",
+      "label": "Doanh nghiệp ghi nhận các khoản khác trong báo cáo tài chính.",
+      "weight": 1.0
+    },
+    {
+      "source": "01/07/2025–30/09/2025",
+      "target": "Các khoản khác",
+      "label": "Các khoản khác được ghi nhận trong giai đoạn 01/07/2025–30/09/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "01/01/2021–30/09/2025",
+      "target": "Các khoản khác",
+      "label": "Các khoản khác là 751.392.105 trong giai đoạn 01/01/2021–30/09/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "Bố Trí Mặt Bằng Sản Xuất Theo Vị Trí Cố Định",
+      "target": "Công Trình Xây Dựng",
+      "label": "Bố trí mặt bằng sản xuất theo vị trí cố định áp dụng cho sản phẩm như công trình",
+      "weight": 1.0
+    },
+    {
+      "source": "Bố Trí Mặt Bằng Hỗn Hợp",
+      "target": "Bố Trí Mặt Bằng Sản Xuất Theo Vị Trí Cố Định",
+      "label": "Bố trí mặt bằng hỗn hợp kết hợp với bố trí theo vị trí cố định.",
+      "weight": 1.0
+    },
+    {
+      "source": "Bang 4.3",
+      "target": "X1",
+      "label": "X1 được ghi vào Bang 4.3 với các thông số cụ thể.",
+      "weight": 1.0
+    },
+    {
+      "source": "Thong sd muon",
+      "target": "X1",
+      "label": "X1 có thông số muộn là 0 và 2.",
+      "weight": 1.0
+    },
+    {
+      "source": "X1",
+      "target": "X2",
+      "label": "X1 và X2 là các công việc bắt đầu từ sự kiện 1.",
+      "weight": 1.0
+    },
+    {
+      "source": "X1",
+      "target": "X3",
+      "label": "X1 là công việc trước của X3 (2-4).",
+      "weight": 1.0
+    },
+    {
+      "source": "Quý I niên độ 2024-2025",
+      "target": "Quý I niên độ 2025-2026",
+      "label": "Lợi nhuận sau thuế của Công ty Cổ phần Du lịch Kon Tum tăng 1.974.516.716% từ Qu",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty Cổ phần Đường Kontum",
+      "target": "Quý I niên độ 2024-2025",
+      "label": "Lợi nhuận của Công ty Cổ phần Đường Kontum trong Quý I niên độ 2024-2025 là 1.16",
+      "weight": 1.0
+    },
+    {
+      "source": "450.000 000",
+      "target": "Công ty CP XD GT Thrly lgiKCn Giang",
+      "label": "Công ty CP XD GT Thrly lgiKCn Giang tăng giá trị lên 450.000 000.",
+      "weight": 1.0
+    },
+    {
+      "source": "2.000.000.000",
+      "target": "Cong",
+      "label": "Cong sở hữu hoặc quản lý khoản tài chính 2.000.000.000.",
+      "weight": 1.0
+    },
+    {
+      "source": "Buoc 6",
+      "target": "Day chuyen",
+      "label": "Buoc 6 thực hiện việc liên kết các dây chuyền đơn thành dây chuyền sản xuất hoàn",
+      "weight": 1.0
+    },
+    {
+      "source": "4-6",
+      "target": "Buoc 6",
+      "label": "Buoc 6 trong bảng 4.6 liên quan đến việc rút ngắn công việc 4-6.",
+      "weight": 1.0
+    },
+    {
+      "source": "5-6",
+      "target": "Buoc 6",
+      "label": "Buoc 6 trong bảng 4.6 liên quan đến việc rút ngắn công việc 5-6.",
+      "weight": 1.0
+    },
+    {
+      "source": "C",
+      "target": "Mức độ ùn tắc giao thông",
+      "label": "Địa điểm C đạt điểm số 90 cho nhân tố \"Mức độ ùn tắc giao thông\" trong phương ph",
+      "weight": 1.0
+    },
+    {
+      "source": "Cong ty Co phan Duong Kon Tum",
+      "target": "Kon Tum",
+      "label": "Công ty Cổ phần Duong Kon Tum hoạt động tại tỉnh Kon Tum.",
+      "weight": 1.0
+    },
+    {
+      "source": "01/01/2021–30/09/2025",
+      "target": "Lợi nhuận sau thuế",
+      "label": "Lợi nhuận sau thuế đạt 2.192 tỷ trong giai đoạn 01/01/2021–30/09/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "01/01/2021–30/09/2025",
+      "target": "Chi phí nguyên liệu, vật liệu",
+      "label": "Chi phí nguyên liệu, vật liệu là 25.949 tỷ trong giai đoạn 01/01/2021–30/09/2025",
+      "weight": 1.0
+    },
+    {
+      "source": "Mức độ ùn tắc giao thông",
+      "target": "Địa điểm A",
+      "label": "Địa điểm A có điểm thấp nhất ở yếu tố \"Mức độ ùn tắc giao thông\".",
+      "weight": 1.0
+    },
+    {
+      "source": "A",
+      "target": "Mức độ ùn tắc giao thông",
+      "label": "Địa điểm A đạt điểm số 85 cho nhân tố \"Mức độ ùn tắc giao thông\" trong phương ph",
+      "weight": 1.0
+    },
+    {
+      "source": "B",
+      "target": "Mức độ ùn tắc giao thông",
+      "label": "Địa điểm B đạt điểm số 85 cho nhân tố \"Mức độ ùn tắc giao thông\" trong phương ph",
+      "weight": 1.0
+    },
+    {
+      "source": "SpeedMaint",
+      "target": "SpeedMaint CMMS",
+      "label": "SpeedMaint phát triển và cung cấp phần mềm SpeedMaint CMMS như một công cụ hỗ tr",
+      "weight": 1.0
+    },
+    {
+      "source": "Bảng tổng hợp dữ liệu tài chính",
+      "target": "Vốn Đầu Tư",
+      "label": "Bảng tổng hợp dữ liệu tài chính ghi nhận vốn đầu tư với giá trị âm lớn (-r.]q4S,",
+      "weight": 1.0
+    },
+    {
+      "source": "Doanh Nghiệp",
+      "target": "Vốn Đầu Tư",
+      "label": "Doanh nghiệp cần vốn đầu tư để xây dựng công suất.",
+      "weight": 1.0
+    },
+    {
+      "source": "Phương Án Công Suất",
+      "target": "Vốn Đầu Tư",
+      "label": "Phương án công suất liên quan đến chi phí đầu tư và thu hồi vốn.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công Trình Xây Dựng",
+      "target": "Vốn Đầu Tư",
+      "label": "Công trình xây dựng thường yêu cầu vốn đầu tư lớn, chiếm tỷ trọng cao trong ngân",
+      "weight": 1.0
+    },
+    {
+      "source": "Công Trình B",
+      "target": "Tổ (Đội) 3",
+      "label": "Tổ (Đội) 3 thực hiện công việc tại Công Trình B theo phương pháp dây chuyền.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công Trình C",
+      "target": "Tổ (Đội) 3",
+      "label": "Tổ (Đội) 3 thực hiện công việc tại Công Trình C theo phương pháp dây chuyền.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công Trình D",
+      "target": "Tổ (Đội) 3",
+      "label": "Tổ (Đội) 3 thực hiện công việc tại Công Trình D theo phương pháp dây chuyền.",
+      "weight": 1.0
+    },
+    {
+      "source": "Maximin",
+      "target": "Định vị doanh nghiệp",
+      "label": "Định vị doanh nghiệp sử dụng phương pháp Maximin để lựa chọn địa điểm.",
+      "weight": 1.0
+    },
+    {
+      "source": "May rủi ngang nhau",
+      "target": "Định vị doanh nghiệp",
+      "label": "Định vị doanh nghiệp áp dụng phương pháp May rủi ngang nhau để cân nhắc rủi ro.",
+      "weight": 1.0
+    },
+    {
+      "source": "Bố trí mặt bằng sản xuất",
+      "target": "Định vị doanh nghiệp",
+      "label": "Định vị doanh nghiệp và bố trí mặt bằng sản xuất đều là các yếu tố chiến lược ản",
+      "weight": 1.0
+    },
+    {
+      "source": "Các nhân tố ảnh hưởng đến chọn vùng",
+      "target": "Định vị doanh nghiệp",
+      "label": "Các nhân tố ảnh hưởng đến chọn vùng là một phần quan trọng trong định vị doanh n",
+      "weight": 1.0
+    },
+    {
+      "source": "2.000.000.000",
+      "target": "30/09/2025",
+      "label": "Giá trị 2.000.000.000 được ghi nhận vào ngày 30/09/2025 trong bảng tài chính.",
+      "weight": 1.0
+    },
+    {
+      "source": "30/09/2025",
+      "target": "Chi phí dịch vụ mua ngoài",
+      "label": "Chi phí dịch vụ mua ngoài đạt 92,581,400 vào ngày 30/09/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "30/09/2025",
+      "target": "Tài khoản 36",
+      "label": "Ngày 30/09/2025 ghi nhận số dư của tài khoản 36 liên quan đến tiền mặt và tiền g",
+      "weight": 1.0
+    },
+    {
+      "source": "30/09/2025",
+      "target": "Phiri t.d honc CNV",
+      "label": "Phiri t.d honc CNV có giá trị 1.081.028.912 vào ngày 30/09/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "30/09/2025",
+      "target": "Quý I niên độ 2025-2026",
+      "label": "Quý I niên độ 2025-2026 kết thúc vào ngày 30/09/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "Buoc 8",
+      "target": "Day chuyen",
+      "label": "Buoc 8 đánh giá các chỉ số của Day chuyen dựa trên tiêu chí đặt ra.",
+      "weight": 1.0
+    },
+    {
+      "source": "Day chuyen",
+      "target": "Tien do phap lenh",
+      "label": "Tien do phap lenh được tạo ra khi Day chuyen đáp ứng tiêu chí và được A va B phê",
+      "weight": 1.0
+    },
+    {
+      "source": "Chu dau tu",
+      "target": "Day chuyen",
+      "label": "Chu dau tu đặt ra yêu cầu và tiêu chí cho Day chuyen trong quá trình xây dựng.",
+      "weight": 1.0
+    },
+    {
+      "source": "Day chuyen",
+      "target": "Gian doan",
+      "label": "Khoảng gian đoạn giữa hai dây chuyền được xác định thông qua các công thức và qu",
+      "weight": 1.0
+    },
+    {
+      "source": "Công Ty Nsuldn Trr D?",
+      "target": "Lợi Nhuận",
+      "label": "Công Ty Nsuldn Trr D? có Lợi Nhuận là 2194.982.7A2.",
+      "weight": 1.0
+    },
+    {
+      "source": "Ban Kiểm Tra Quản Lý Dự Án",
+      "target": "Lợi Nhuận",
+      "label": "Ban Kiểm Tra Quản Lý Dự Án kiểm tra lợi nhuận của vật tư để đánh giá hiệu quả ki",
+      "weight": 1.0
+    },
+    {
+      "source": "Bảng tổng hợp dữ liệu tài chính",
+      "target": "Lợi Nhuận",
+      "label": "Bảng tổng hợp dữ liệu tài chính ghi nhận lợi nhuận với giá trị âm lớn (-r.]q4S,!",
+      "weight": 1.0
+    },
+    {
+      "source": "Công Ty Cổ Phần Duong",
+      "target": "Lợi Nhuận",
+      "label": "Công Ty Cổ Phần Duong có các chỉ tiêu lợi nhuận được ghi nhận trong bảng.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công việc D",
+      "target": "Công việc I",
+      "label": "Công việc I phụ thuộc vào Công việc D.",
+      "weight": 1.0
+    },
+    {
+      "source": "To chuc xay dung",
+      "target": "VIETCONS",
+      "label": "VIETCONS đào tạo và hỗ trợ các phương pháp tổ chức xây dựng hiệu quả.",
+      "weight": 1.0
+    },
+    {
+      "source": "Cong viec",
+      "target": "Du tru",
+      "label": "Du tru là thuộc tính của Cong viec, thể hiện khoảng thời gian linh hoạt trong lị",
+      "weight": 1.0
+    },
+    {
+      "source": "Cong viec",
+      "target": "Duong gang",
+      "label": "Duong gang bao gồm các Cong viec có du tru bằng không, ảnh hưởng trực tiếp đến t",
+      "weight": 1.0
+    },
+    {
+      "source": "Bieu do the hien tien do thi cong",
+      "target": "Tien do thi cong",
+      "label": "Biểu đồ tiến độ thi công là công cụ trực quan hóa quá trình tien do thi cong.",
+      "weight": 1.0
+    },
+    {
+      "source": "Bố Trí Mặt Bằng Hỗn Hợp",
+      "target": "Bố Trí Mặt Bằng Sản Xuất Theo Quá Trình",
+      "label": "Bố trí mặt bằng hỗn hợp kết hợp với bố trí theo quá trình.",
+      "weight": 1.0
+    },
+    {
+      "source": "X3",
+      "target": "X6",
+      "label": "Công việc X6 phụ thuộc vào công việc X3, phải hoàn thành sau X3.<SEP>X3 là công ",
+      "weight": 2.0
+    },
+    {
+      "source": "Bang 4.3",
+      "target": "X3",
+      "label": "X3 được ghi vào Bang 4.3 với các thông số cụ thể.",
+      "weight": 1.0
+    },
+    {
+      "source": "Thong sd muon",
+      "target": "X3",
+      "label": "X3 có thông số muộn là 2 và 6.",
+      "weight": 1.0
+    },
+    {
+      "source": "X2",
+      "target": "X3",
+      "label": "X2 là công việc trước của X3 (2-4).",
+      "weight": 1.0
+    },
+    {
+      "source": "Doanh nghiệp",
+      "target": "Quản trị sản xuất và tác nghiệp",
+      "label": "Quản trị sản xuất và tác nghiệp là chức năng đảm bảo cung cấp đầu ra cho doanh n",
+      "weight": 1.0
+    },
+    {
+      "source": "Chi phí sản xuất",
+      "target": "Quản trị sản xuất và tác nghiệp",
+      "label": "Quản trị sản xuất và tác nghiệp tập trung vào việc giảm chi phí sản xuất đến mức",
+      "weight": 1.0
+    },
+    {
+      "source": "Maximax",
+      "target": "Điều kiện không chắc chắn",
+      "label": "Maximax là tiêu chí được áp dụng trong điều kiện không chắc chắn.",
+      "weight": 1.0
+    },
+    {
+      "source": "Maximin",
+      "target": "Điều kiện không chắc chắn",
+      "label": "Maximin là tiêu chí được áp dụng trong điều kiện không chắc chắn.",
+      "weight": 1.0
+    },
+    {
+      "source": "May rủi ngang nhau",
+      "target": "Điều kiện không chắc chắn",
+      "label": "May rủi ngang nhau là tiêu chí được áp dụng trong điều kiện không chắc chắn.",
+      "weight": 1.0
+    },
+    {
+      "source": "Lý thuyết quyết định",
+      "target": "Điều kiện không chắc chắn",
+      "label": "Lý thuyết quyết định bao gồm mô hình phân tích cho điều kiện không chắc chắn.",
+      "weight": 1.0
+    },
+    {
+      "source": "635.080.000",
+      "target": "MINH BÁO CÁO TÀI CHÍNH (idp rheo)",
+      "label": "Báo cáo tài chính bao gồm chỉ số doanh thu 635.080.000.",
+      "weight": 1.0
+    },
+    {
+      "source": "Dây chuyền nhip boi",
+      "target": "Z",
+      "label": "Dây chuyền nhip boi gây ra khoảng thời gian Z do có các dây chuyền khác nhịp, là",
+      "weight": 1.0
+    },
+    {
+      "source": "B",
+      "target": "D",
+      "label": "Công việc D có công việc liên trước là B, ảnh hưởng đến khởi sự của D.",
+      "weight": 1.0
+    },
+    {
+      "source": "B",
+      "target": "Du tru toan phan",
+      "label": "Công việc B có du tru toan phan được xác định theo công thức (5.7).",
+      "weight": 1.0
+    },
+    {
+      "source": "Day chuyen da lap",
+      "target": "Tien do phap lenh",
+      "label": "Day chuyen da lap có thể chuyển sang Tien do phap lenh khi đạt đủ tiêu chí và đư",
+      "weight": 1.0
+    },
+    {
+      "source": "Công Trình C",
+      "target": "Tổ Chức Sản Xuất Theo Dây Chuyền",
+      "label": "Tổ chức sản xuất theo dây chuyền được áp dụng để xây dựng Công Trình C.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công Trình C",
+      "target": "Tổ (Đội) 2",
+      "label": "Tổ (Đội) 2 thực hiện công việc tại Công Trình C theo phương pháp dây chuyền.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công Trình C",
+      "target": "Tổ (Đội) 4",
+      "label": "Tổ (Đội) 4 thực hiện công việc tại Công Trình C theo phương pháp dây chuyền.",
+      "weight": 1.0
+    },
+    {
+      "source": "Doanh nghiệp",
+      "target": "Nghiên cứu thị trường người tiêu dùng",
+      "label": "Doanh nghiệp sử dụng phương pháp nghiên cứu thị trường người tiêu dùng để dự báo",
+      "weight": 1.0
+    },
+    {
+      "source": "Nghiên cứu thị trường người tiêu dùng",
+      "target": "phương pháp định tính",
+      "label": "Nghiên cứu thị trường người tiêu dùng thuộc nhóm phương pháp định tính.",
+      "weight": 1.0
+    },
+    {
+      "source": "Phòng nhận phát thư",
+      "target": "Phòng điều hành",
+      "label": "Có 10 lần di chuyển hàng tuần giữa Phòng điều hành và Phòng nhận phát thư.<SEP>C",
+      "weight": 2.0
+    },
+    {
+      "source": "Phòng họp",
+      "target": "Phòng điều hành",
+      "label": "Có 10 lần di chuyển hàng tuần giữa Phòng họp và Phòng điều hành.",
+      "weight": 1.0
+    },
+    {
+      "source": "Phòng tiếp khách",
+      "target": "Phòng điều hành",
+      "label": "Có 6 lần di chuyển hàng tuần giữa Phòng tiếp khách và Phòng điều hành.",
+      "weight": 1.0
+    },
+    {
+      "source": "Doanh nghiệp",
+      "target": "Vốn hóa chi phí vay",
+      "label": "Doanh nghiệp áp dụng chế độ kế toán để vốn hóa chi phí vay vào tài sản.",
+      "weight": 1.0
+    },
+    {
+      "source": "Lớn",
+      "target": "Maximax",
+      "label": "Tiêu chí Maximax được áp dụng để chọn phương án công suất lớn với giá trị 16 tri",
+      "weight": 1.0
+    },
+    {
+      "source": "Công Ty Kirn Lla Viir",
+      "target": "Vốn Chủ Sở Hữu",
+      "label": "Công Ty Kirn Lla Viir có khoản mục Vốn Chủ Sở Hữu với giá trị 50.700.000.000.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công Ty Nsuldn Trr D?",
+      "target": "Vốn Chủ Sở Hữu",
+      "label": "Công Ty Nsuldn Trr D? có khoản mục Vốn Chủ Sở Hữu với giá trị 50.700.000.000.",
+      "weight": 1.0
+    },
+    {
+      "source": "Doanh nghiệp",
+      "target": "Thù lao HDQT, BKS không trực tiếp điều hành",
+      "label": "Doanh nghiệp chi trả thù lao cho HDQT và BKS không trực tiếp điều hành trong hai",
+      "weight": 1.0
+    },
+    {
+      "source": "01/07/2025–30/09/2025",
+      "target": "Thù lao HDQT, BKS không trực tiếp điều hành",
+      "label": "Thù lao HDQT, BKS không trực tiếp điều hành được ghi nhận trong giai đoạn 01/07/",
+      "weight": 1.0
+    },
+    {
+      "source": "Công Nhân",
+      "target": "Doanh Nghiệp",
+      "label": "Doanh nghiệp huấn luyện và giám sát công nhân thực hiện quy trình sản xuất.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công Nhân",
+      "target": "Công Trình",
+      "label": "Công nhân là lực lượng lao động trực tiếp thực hiện các công việc tại công trình",
+      "weight": 1.0
+    },
+    {
+      "source": "Bảng so sánh ba phương án (A, B, C)",
+      "target": "Địa điểm C",
+      "label": "Bảng so sánh chứa dữ liệu về địa điểm C với tổng điểm 82.",
+      "weight": 1.0
+    },
+    {
+      "source": "Preferred Shares",
+      "target": "Quang N.",
+      "label": "Quang N. kiểm tra và xác nhận số liệu Preferred Shares 50,7 tỷ VNĐ.",
+      "weight": 1.0
+    },
+    {
+      "source": "2-3",
+      "target": "Bình thường (100 nghìn đồng)",
+      "label": "Công việc 2-3 có chi phí bình thường 18 (100 nghìn đồng).",
+      "weight": 1.0
+    },
+    {
+      "source": "2-3",
+      "target": "Khẩn trương (100 nghìn đồng)",
+      "label": "Công việc 2-3 có chi phí khẩn trương 6 (100 nghìn đồng).",
+      "weight": 1.0
+    },
+    {
+      "source": "2-3",
+      "target": "eij (100 nghìn đồng)",
+      "label": "Công việc 2-3 có giá trị eij là 0.125.",
+      "weight": 1.0
+    },
+    {
+      "source": "Phương pháp bố trí theo quá trình",
+      "target": "Phương trình chi phí vận chuyển nguyên vật liệu",
+      "label": "Phương pháp bố trí theo quá trình sử dụng phương trình chi phí vận chuyển nguyên",
+      "weight": 1.0
+    },
+    {
+      "source": "Giá trị gia tăng",
+      "target": "Sản xuất",
+      "label": "Sản xuất là khâu trực tiếp tạo ra giá trị gia tăng cho doanh nghiệp.",
+      "weight": 1.0
+    },
+    {
+      "source": "Giá trị gia tăng",
+      "target": "Quản trị sản xuất",
+      "label": "Quản trị sản xuất tạo ra giá trị gia tăng cho doanh nghiệp và xã hội.",
+      "weight": 1.0
+    },
+    {
+      "source": "Toyota",
+      "target": "Toyota Production System (TPS)",
+      "label": "Toyota là tổ chức phát triển hệ thống sản xuất TPS, nền tảng của sản xuất tinh g",
+      "weight": 1.0
+    },
+    {
+      "source": "Cong viec a",
+      "target": "Duong gang",
+      "label": "Cong viec a là một phần của đường găng trong tiến độ thi công.",
+      "weight": 1.0
+    },
+    {
+      "source": "Du tru",
+      "target": "Kh?i muon",
+      "label": "Dự trữ cũng được tính bằng hiệu số giữa khởi muôn và khởi sớm của công việc.",
+      "weight": 1.0
+    },
+    {
+      "source": "Phuong phap day chuyen",
+      "target": "Xay Dung",
+      "label": "Xay Dung áp dụng phương pháp dây chuyền để tổ chức sản xuất.",
+      "weight": 1.0
+    },
+    {
+      "source": "Tien do thi cong",
+      "target": "VIETCONS",
+      "label": "Trung tâm đào tạo xây dựng VIETCONS cung cấp tài liệu và hướng dẫn liên quan đến",
+      "weight": 1.0
+    },
+    {
+      "source": "30/09/2021",
+      "target": "Chi phí dịch vụ mua ngoài",
+      "label": "Chi phí dịch vụ mua ngoài đạt 99,818,121 vào ngày 30/09/2021.",
+      "weight": 1.0
+    },
+    {
+      "source": "Doanh nghiệp",
+      "target": "Tài sản ngắn hạn",
+      "label": "Doanh nghiệp sở hữu tài sản ngắn hạn với tổng giá trị 347 tỷ.",
+      "weight": 1.0
+    },
+    {
+      "source": "Tài sản ngắn hạn",
+      "target": "Tổng cộng tài sản",
+      "label": "Tổng cộng tài sản bao gồm tài sản ngắn hạn và dài hạn.",
+      "weight": 1.0
+    },
+    {
+      "source": "Cân bằng dây chuyền",
+      "target": "Thời gian chu kỳ (TCK)",
+      "label": "Cân bằng dây chuyền yêu cầu xác định thời gian chu kỳ (TCK) để phân bổ công việc",
+      "weight": 1.0
+    },
+    {
+      "source": "Doanh nghiệp",
+      "target": "Lấy ý kiến của lực lượng bán hàng",
+      "label": "Doanh nghiệp sử dụng phương pháp lấy ý kiến của lực lượng bán hàng để dự báo.",
+      "weight": 1.0
+    },
+    {
+      "source": "Lấy ý kiến của lực lượng bán hàng",
+      "target": "phương pháp định tính",
+      "label": "Lấy ý kiến của lực lượng bán hàng thuộc nhóm phương pháp định tính.",
+      "weight": 1.0
+    },
+    {
+      "source": "Chi phí",
+      "target": "Chi phí sản xuất kinh doanh",
+      "label": "Chi phí được ghi nhận vào chi phí sản xuất kinh doanh trong kỳ.",
+      "weight": 1.0
+    },
+    {
+      "source": "1-3",
+      "target": "Khẩn trương (100 nghìn đồng)",
+      "label": "Công việc 1-3 có chi phí khẩn trương 10 (100 nghìn đồng).",
+      "weight": 1.0
+    },
+    {
+      "source": "3-5",
+      "target": "Khẩn trương (100 nghìn đồng)",
+      "label": "Công việc 3-5 có chi phí khẩn trương 8,5 (100 nghìn đồng).",
+      "weight": 1.0
+    },
+    {
+      "source": "4-6",
+      "target": "Khẩn trương (100 nghìn đồng)",
+      "label": "Công việc 4-6 có chi phí khẩn trương 9,5 (100 nghìn đồng).",
+      "weight": 1.0
+    },
+    {
+      "source": "5-6",
+      "target": "Khẩn trương (100 nghìn đồng)",
+      "label": "Công việc 5-6 có chi phí khẩn trương 4,5 (100 nghìn đồng).",
+      "weight": 1.0
+    },
+    {
+      "source": "1-3",
+      "target": "eij (100 nghìn đồng)",
+      "label": "Công việc 1-3 có giá trị eij là 0.1.",
+      "weight": 1.0
+    },
+    {
+      "source": "3-5",
+      "target": "eij (100 nghìn đồng)",
+      "label": "Công việc 3-5 có giá trị eij cao nhất là 0.58.",
+      "weight": 1.0
+    },
+    {
+      "source": "4-6",
+      "target": "eij (100 nghìn đồng)",
+      "label": "Công việc 4-6 có giá trị eij thấp nhất là 0.057.",
+      "weight": 1.0
+    },
+    {
+      "source": "5-6",
+      "target": "eij (100 nghìn đồng)",
+      "label": "Công việc 5-6 có giá trị eij là 0.062.",
+      "weight": 1.0
+    },
+    {
+      "source": "eij (100 nghìn đồng)",
+      "target": "Đường gang 1-3-4-6",
+      "label": "Đường gang 1-3-4-6 có công việc 4-6 với eij thấp nhất là 0,057 (100 nghìn đồng).",
+      "weight": 1.0
+    },
+    {
+      "source": "Bố Trí Mặt Bằng Sản Xuất Dạng Tế Bào",
+      "target": "Bố Trí Theo Sản Phẩm",
+      "label": "Bố trí tế bào kết hợp yếu tố của bố trí theo sản phẩm để tạo ra dây chuyền lắp r",
+      "weight": 1.0
+    },
+    {
+      "source": "Doanh nghiệp",
+      "target": "Lợi nhuận sau thuế",
+      "label": "Doanh nghiệp đạt lợi nhuận sau thuế tăng từ 2.192.052.142 lên 4.466.599.418 giữa",
+      "weight": 1.0
+    },
+    {
+      "source": "01/07/2025–30/09/2025",
+      "target": "Lợi nhuận sau thuế",
+      "label": "Lợi nhuận sau thuế được ghi nhận trong giai đoạn 01/07/2025–30/09/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "Lợi nhuận sau thuế",
+      "target": "Thông tư số 96/2020/TT-BTC ngày 16 tháng 11 năm 2020",
+      "label": "Thông tư số 96/2020/TT-BTC yêu cầu công bố thông tin về lợi nhuận sau thuế trên ",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty Cổ phần Đường Kon Tum",
+      "target": "Lợi nhuận sau thuế",
+      "label": "Lợi nhuận sau thuế là một chỉ tiêu tài chính trong báo cáo kết quả kinh doanh củ",
+      "weight": 1.0
+    },
+    {
+      "source": "Kết quả kinh doanh Quý I niên độ 2025-2026",
+      "target": "Lợi nhuận sau thuế",
+      "label": "Kết quả kinh doanh Quý I niên độ 2025-2026 bao gồm chỉ tiêu lợi nhuận sau thuế t",
+      "weight": 1.0
+    },
+    {
+      "source": "D",
+      "target": "Du tru toan phan",
+      "label": "Công việc D có du tru toan phan được xác định theo công thức (5.7).",
+      "weight": 1.0
+    },
+    {
+      "source": "Chuẩn Hóa Quy Trình",
+      "target": "Sản Xuất Tinh Gọn",
+      "label": "Chuẩn hóa quy trình là nguyên tắc quan trọng trong sản xuất tinh gọn.",
+      "weight": 1.0
+    },
+    {
+      "source": "Chế Biến Gỗ",
+      "target": "Khu Dân Cư",
+      "label": "Chế Biến Gỗ đặt gần khu dân cư để sử dụng lao động phổ thông.",
+      "weight": 1.0
+    },
+    {
+      "source": "Các quy trình trong doanh nghiệp Xây dựng Ebook Free",
+      "target": "FastCons",
+      "label": "Ebook giới thiệu giải pháp FastCons như một phần của tài liệu hướng dẫn.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công Trình Xây Dựng",
+      "target": "Sản Xuất Xây Dựng",
+      "label": "Sản xuất xây dựng tạo ra các công trình xây dựng thông qua quy trình phức tạp.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công Trình B",
+      "target": "Tổ Chức Sản Xuất Theo Dây Chuyền",
+      "label": "Tổ chức sản xuất theo dây chuyền được áp dụng để xây dựng Công Trình B.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công Trình D",
+      "target": "Tổ Chức Sản Xuất Theo Dây Chuyền",
+      "label": "Tổ chức sản xuất theo dây chuyền được áp dụng để xây dựng Công Trình D.",
+      "weight": 1.0
+    },
+    {
+      "source": "Chỉ số mùa vụ",
+      "target": "Siêu thị điện máy",
+      "label": "Siêu thị điện máy sử dụng chỉ số mùa vụ để điều chỉnh dự báo nhu cầu máy điều hò",
+      "weight": 1.0
+    },
+    {
+      "source": "Operation Management",
+      "target": "Walt Disney",
+      "label": "Walt Disney được trích dẫn trong cuốn Operation Management như một ví dụ về quản",
+      "weight": 1.0
+    },
+    {
+      "source": "Chi phí nguyên vật liệu",
+      "target": "Doanh nghiệp",
+      "label": "Doanh nghiệp ghi nhận sự giảm mạnh chi phí nguyên vật liệu giữa hai giai đoạn.",
+      "weight": 1.0
+    },
+    {
+      "source": "Chi phí quản lý doanh nghiệp",
+      "target": "Doanh nghiệp",
+      "label": "Doanh nghiệp ghi nhận sự tăng chi phí quản lý doanh nghiệp giữa hai giai đoạn.",
+      "weight": 1.0
+    },
+    {
+      "source": "Chi phí thu hồi nợ",
+      "target": "Doanh nghiệp",
+      "label": "Doanh nghiệp ghi nhận chi phí thu hồi nợ trong hai giai đoạn.",
+      "weight": 1.0
+    },
+    {
+      "source": "Các khoản điều chỉnh tăng - Điều chỉnh giá sổ sách: phiếu phong bì",
+      "target": "Doanh nghiệp",
+      "label": "Doanh nghiệp ghi nhận các khoản điều chỉnh tăng và điều chỉnh giá sổ sách qua ph",
+      "weight": 1.0
+    },
+    {
+      "source": "Doanh nghiệp",
+      "target": "Tổng cộng tài sản",
+      "label": "Tổng cộng tài sản là tổng giá trị toàn bộ tài sản ngắn hạn và dài hạn của doanh ",
+      "weight": 1.0
+    },
+    {
+      "source": "Doanh nghiệp",
+      "target": "Khoản vay",
+      "label": "Doanh nghiệp thực hiện huy động vốn qua khoản vay có thời hạn trên 12 tháng.",
+      "weight": 1.0
+    },
+    {
+      "source": "Doanh nghiệp",
+      "target": "Quản trị sản xuất",
+      "label": "Doanh nghiệp thực hiện quản trị sản xuất để thiết kế và tổ chức hệ thống sản xuấ",
+      "weight": 1.0
+    },
+    {
+      "source": "Chức năng sản xuất",
+      "target": "Doanh nghiệp",
+      "label": "Doanh nghiệp cần phối hợp chức năng sản xuất với các chức năng khác để đạt mục t",
+      "weight": 1.0
+    },
+    {
+      "source": "Doanh nghiệp",
+      "target": "Phân tích Delphi",
+      "label": "Doanh nghiệp sử dụng phương pháp phân tích Delphi để dự báo.",
+      "weight": 1.0
+    },
+    {
+      "source": "Bình quân di động giản đơn",
+      "target": "Doanh nghiệp",
+      "label": "Doanh nghiệp sử dụng phương pháp bình quân di động giản đơn để dự báo.",
+      "weight": 1.0
+    },
+    {
+      "source": "Biểu đồ nhân lực",
+      "target": "Trung tâm Đào tạo Xây dựng VIETCONS",
+      "label": "Trung tâm Đào tạo Xây dựng VIETCONS thực hiện tối ưu hóa biểu đồ nhân lực để đáp",
+      "weight": 1.0
+    },
+    {
+      "source": "Trung tâm Đào tạo Xây dựng VIETCONS",
+      "target": "http://www.vietcons.org",
+      "label": "Website http://www.vietcons.org là nguồn thông tin chính thức của Trung tâm Đào ",
+      "weight": 2.0
+    },
+    {
+      "source": "SDM nut",
+      "target": "Trung tâm Đào tạo Xây dựng VIETCONS",
+      "label": "Trung tâm Đào tạo Xây dựng VIETCONS sử dụng SDM nut để trình bày ví dụ về tính t",
+      "weight": 1.0
+    },
+    {
+      "source": "Quý 2",
+      "target": "Tổng nhu cầu 4 năm",
+      "label": "Tổng nhu cầu Quý 2 (3440) là thành phần của tổng nhu cầu 4 năm (9.120).",
+      "weight": 1.0
+    },
+    {
+      "source": "2 năm",
+      "target": "Chi phí khác",
+      "label": "2 năm là thời hạn phân bổ cho các khoản chi phí khác.",
+      "weight": 1.0
+    },
+    {
+      "source": "2 năm",
+      "target": "Luật các khoản phải trả",
+      "label": "Luật các khoản phải trả quy định thời gian thanh toán tối đa 2 năm cho một số kh",
+      "weight": 1.0
+    },
+    {
+      "source": "BHYT",
+      "target": "Bảo hiểm",
+      "label": "BHYT là một loại hình bảo hiểm được liệt kê trong tài liệu.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty Cổ phần",
+      "target": "Nghị định số 200/2014/TT-BTC",
+      "label": "Công ty Cổ phần tuân thủ quy định kế toán theo Nghị định số 200/2014/TT-BTC.",
+      "weight": 1.0
+    },
+    {
+      "source": "5-6",
+      "target": "Bình thường (100 nghìn đồng)",
+      "label": "Công việc 5-6 có chi phí bình thường 18 (100 nghìn đồng).",
+      "weight": 1.0
+    },
+    {
+      "source": "Phòng nhận phát thư",
+      "target": "Phòng tiếp khách",
+      "label": "Có 16 lần di chuyển hàng tuần giữa Phòng nhận phát thư và Phòng tiếp khách.<SEP>",
+      "weight": 2.0
+    },
+    {
+      "source": "Phòng họp",
+      "target": "Phòng tiếp khách",
+      "label": "Có 8 lần di chuyển hàng tuần giữa Phòng họp và Phòng tiếp khách.",
+      "weight": 1.0
+    },
+    {
+      "source": "Phòng họp",
+      "target": "Phòng nhận phát thư",
+      "label": "Có 12 lần di chuyển hàng tuần giữa Phòng nhận phát thư và Phòng họp.<SEP>Có 15 l",
+      "weight": 2.0
+    },
+    {
+      "source": "01/07/2025–30/09/2025",
+      "target": "Chi phí thu hồi nợ",
+      "label": "Chi phí thu hồi nợ được ghi nhận trong giai đoạn 01/07/2025–30/09/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "Thiết bị quản lý",
+      "target": "Tổng thời gian khấu hao 625 năm",
+      "label": "Tổng thời gian khấu hao 625 năm bao gồm thời gian khấu hao của thiết bị quản lý.",
+      "weight": 1.0
+    },
+    {
+      "source": "1-3",
+      "target": "Bình thường (100 nghìn đồng)",
+      "label": "Công việc 1-3 có chi phí bình thường 30 (100 nghìn đồng).",
+      "weight": 1.0
+    },
+    {
+      "source": "3-5",
+      "target": "Bình thường (100 nghìn đồng)",
+      "label": "Công việc 3-5 có chi phí bình thường 30 (100 nghìn đồng).",
+      "weight": 1.0
+    },
+    {
+      "source": "4-6",
+      "target": "Bình thường (100 nghìn đồng)",
+      "label": "Công việc 4-6 có chi phí bình thường 30 (100 nghìn đồng).",
+      "weight": 1.0
+    },
+    {
+      "source": "Chi phí sản xuất",
+      "target": "Thủ tục môn báo cáo tài chính",
+      "label": "Thủ tục môn báo cáo tài chính yêu cầu phân loại chi phí sản xuất vào báo cáo tài",
+      "weight": 1.0
+    },
+    {
+      "source": "Cot 4",
+      "target": "Cot 6",
+      "label": "Cot 6 duoc xac dinh bang cach lay gia tri max cua Cot 4 tu cac cong viec lien tr",
+      "weight": 1.0
+    },
+    {
+      "source": "Bang 4.3",
+      "target": "X2",
+      "label": "X2 được ghi vào Bang 4.3 với các thông số cụ thể.",
+      "weight": 1.0
+    },
+    {
+      "source": "Bang 4.3",
+      "target": "X6",
+      "label": "X6 được ghi vào Bang 4.3 với các thông số cụ thể.",
+      "weight": 1.0
+    },
+    {
+      "source": "Bang 4.3",
+      "target": "X7",
+      "label": "X7 được ghi vào Bang 4.3 với các thông số cụ thể.",
+      "weight": 1.0
+    },
+    {
+      "source": "INHH Kirn Ha v jct",
+      "target": "Sự Kiện Phát Sinh Sau Ngày Kết Thúc Kỳ Kế Toán",
+      "label": "Sự kiện phát sinh sau ngày kết thúc kỳ kế toán liên quan đến nghĩa vụ tài chính ",
+      "weight": 1.0
+    },
+    {
+      "source": "Các khoản chi phí khác",
+      "target": "Tài sản định điểm",
+      "label": "Các khoản chi phí khác có thể được ghi nhận vào tài sản định điểm tùy theo quy đ",
+      "weight": 1.0
+    },
+    {
+      "source": "Thủ tục môn báo cáo tài chính",
+      "target": "Tài sản định điểm",
+      "label": "Thủ tục môn báo cáo tài chính bao gồm việc ghi nhận và trình bày tài sản định đi",
+      "weight": 1.0
+    },
+    {
+      "source": "Công Trình",
+      "target": "Vật Tư",
+      "label": "Vật Tư được cung cấp để phục vụ thi công công trình theo kế hoạch.",
+      "weight": 1.0
+    },
+    {
+      "source": "Sản Xuất Xây Dựng",
+      "target": "VIETCONS",
+      "label": "VIETCONS là trung tâm đào tạo cung cấp kiến thức chuyên môn cho sản xuất xây dựn",
+      "weight": 1.0
+    },
+    {
+      "source": "Sản Xuất Xây Dựng",
+      "target": "Trung Tâm Đào Tạo Xây Dựng VIETCONS",
+      "label": "Trung Tâm Đào Tạo Xây Dựng VIETCONS cung cấp kiến thức chuyên môn cho lĩnh vực s",
+      "weight": 1.0
+    },
+    {
+      "source": "Gian doan",
+      "target": "Thong so thoi gian",
+      "label": "Thong so thoi gian bao gồm Gian doan như một tham số quan trọng trong dây chuyền",
+      "weight": 1.0
+    },
+    {
+      "source": "BHYT",
+      "target": "Các khoản chi phí khác",
+      "label": "BHYT là một khoản chi phí bắt buộc thuộc danh mục các khoản chi phí khác trong k",
+      "weight": 1.0
+    },
+    {
+      "source": "Nguyên giá TSCD HH",
+      "target": "Thiết bị quản lý",
+      "label": "Thiết bị quản lý có nguyên giá là một phần của tổng nguyên giá TSCD HH.",
+      "weight": 1.0
+    },
+    {
+      "source": "Khấu hao đều",
+      "target": "Thiết bị quản lý",
+      "label": "Thiết bị quản lý được áp dụng phương pháp khấu hao đều với thời gian 58 năm.",
+      "weight": 1.0
+    },
+    {
+      "source": "7.021.100.000",
+      "target": "Công ty CP Edu tư và Phát triển nông nghiệp Tiên Nông",
+      "label": "Công ty CP Edu tư và Phát triển nông nghiệp Tiên Nông có giá trị 7.021.100.000.",
+      "weight": 1.0
+    },
+    {
+      "source": "Báo cáo kinh tế kỹ thuật",
+      "target": "Hồ sơ dự án khả thi",
+      "label": "Hồ sơ dự án khả thi được xây dựng dựa trên báo cáo kinh tế kỹ thuật.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công việc A",
+      "target": "SDM nut",
+      "label": "Công việc A được thể hiện trong sơ đồ mạng SDM với mối liên kết tại điểm bắt đầu",
+      "weight": 1.0
+    },
+    {
+      "source": "Công việc B",
+      "target": "SDM nut",
+      "label": "Công việc B được thể hiện trong sơ đồ mạng SDM với mối liên kết tại điểm bắt đầu",
+      "weight": 1.0
+    },
+    {
+      "source": "Công việc D",
+      "target": "SDM nut",
+      "label": "Công việc D được thể hiện trong sơ đồ mạng SDM với mối liên kết tại cả hai điểm ",
+      "weight": 1.0
+    },
+    {
+      "source": "PERT",
+      "target": "SDM nut",
+      "label": "Sơ đồ mạng SDM có mối liên hệ với kỹ thuật PERT trong việc biểu diễn và phân tíc",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty Cổ phần Kon Tum",
+      "target": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam - CN Kon Tum",
+      "label": "Công ty Cổ phần Kon Tum và ngân hàng có quan hệ hợp đồng thế chấp bất động sản.",
+      "weight": 1.0
+    },
+    {
+      "source": "Kết quả kinh doanh Quý I niên độ 2025-2026",
+      "target": "Thông tư số 96/2020/TT-BTC ngày 16 tháng 11 năm 2020",
+      "label": "Kết quả kinh doanh Quý I niên độ 2025-2026 được thực hiện theo quy định của Thôn",
+      "weight": 1.0
+    },
+    {
+      "source": "Quý 4",
+      "target": "Tổng nhu cầu 4 năm",
+      "label": "Tổng nhu cầu Quý 4 (2140) là thành phần của tổng nhu cầu 4 năm (9.120).",
+      "weight": 1.0
+    },
+    {
+      "source": "12 tháng",
+      "target": "Luật các khoản phải trả",
+      "label": "Luật các khoản phải trả yêu cầu thanh toán các khoản nợ ngắn hạn trong vòng 12 t",
+      "weight": 1.0
+    },
+    {
+      "source": "3-5",
+      "target": "Buoc 8",
+      "label": "Buoc 8 trong bảng 4.6 liên quan đến việc rút ngắn công việc 3-5.",
+      "weight": 1.0
+    },
+    {
+      "source": "MPM",
+      "target": "Sơ đồ Mạng",
+      "label": "Sơ đồ mạng bao gồm phương pháp MPM như một thành phần quan trọng.",
+      "weight": 1.0
+    },
+    {
+      "source": "PERT",
+      "target": "Sơ đồ Mạng",
+      "label": "Sơ đồ mạng bao gồm phương pháp PERT như một thành phần quan trọng.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty Cổ phần Du lịch Kontum",
+      "target": "Kon Tum",
+      "label": "Công ty Cổ phần Du lịch Kontum được thành lập và hoạt động tại tỉnh Kon Tum.",
+      "weight": 1.0
+    },
+    {
+      "source": "Chỉ số mùa vụ",
+      "target": "Tổng nhu cầu 4 năm",
+      "label": "Tổng nhu cầu 4 năm (9.120) được dùng để tính chỉ số mùa vụ cho từng quý.",
+      "weight": 1.0
+    },
+    {
+      "source": "Thong sd muon",
+      "target": "X6",
+      "label": "X6 có thông số muộn là 6 và 14.",
+      "weight": 1.0
+    },
+    {
+      "source": "X6",
+      "target": "X7",
+      "label": "X6 là công việc trước của X7 (5-6).",
+      "weight": 1.0
+    },
+    {
+      "source": "Công Trình D",
+      "target": "Tổ (Đội) 2",
+      "label": "Tổ (Đội) 2 thực hiện công việc tại Công Trình D theo phương pháp dây chuyền.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công Trình D",
+      "target": "Tổ (Đội) 4",
+      "label": "Tổ (Đội) 4 thực hiện công việc tại Công Trình D theo phương pháp dây chuyền.",
+      "weight": 1.0
+    },
+    {
+      "source": "Báo cáo tài chính năm 2024",
+      "target": "Thông tư số 96/2020/TT-BTC ngày 16 tháng 11 năm 2020",
+      "label": "Báo cáo tài chính năm 2024 được thực hiện theo quy định của Thông tư số 96/2020/",
+      "weight": 1.0
+    },
+    {
+      "source": "Các khoản chi phí khác",
+      "target": "Thủ tục môn báo cáo tài chính",
+      "label": "Thủ tục môn báo cáo tài chính yêu cầu ghi nhận các khoản chi phí khác vào báo cá",
+      "weight": 1.0
+    },
+    {
+      "source": "Ban quản lý",
+      "target": "Chủ đầu tư",
+      "label": "Ban quản lý bàn giao công trình cho Chủ đầu tư khi dự án hoàn thành.",
+      "weight": 1.0
+    },
+    {
+      "source": "Chủ đầu tư",
+      "target": "Quản lý thiết kế kỹ thuật",
+      "label": "Quản lý thiết kế kỹ thuật gửi phương án thiết kế để Chủ đầu tư phê duyệt.",
+      "weight": 1.0
+    },
+    {
+      "source": "Chủ nhiệm kế toán Việt Nam",
+      "target": "Khoản phải thu",
+      "label": "Khoản phải thu được phân loại theo nguyên tắc quy định trong Chủ nhiệm kế toán V",
+      "weight": 1.0
+    },
+    {
+      "source": "Bảng tổng hợp dữ liệu tài chính",
+      "target": "Khoản phải thu",
+      "label": "Bảng tổng hợp dữ liệu tài chính bao gồm khoản mục \"Khoản phải thu\".",
+      "weight": 1.0
+    },
+    {
+      "source": "Phương Pháp Đường Tích Phân",
+      "target": "Tiến Độ",
+      "label": "Phương pháp đường tích phân được sử dụng để theo dõi tiến độ hàng ngày của công ",
+      "weight": 1.0
+    },
+    {
+      "source": "Tiến Độ",
+      "target": "Tổ Chức Xây Dựng",
+      "label": "Tổ Chức Xây Dựng xác định và điều phối Tiến Độ để đảm bảo hiệu quả thi công.",
+      "weight": 1.0
+    },
+    {
+      "source": "01/07/2025–30/09/2025",
+      "target": "Chi phí quản lý doanh nghiệp",
+      "label": "Chi phí quản lý doanh nghiệp được ghi nhận trong giai đoạn 01/07/2025–30/09/2025",
+      "weight": 1.0
+    },
+    {
+      "source": "Công Trình B",
+      "target": "Tổ (Đội) 2",
+      "label": "Tổ (Đội) 2 thực hiện công việc tại Công Trình B theo phương pháp dây chuyền.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công Ty CP XNK",
+      "target": "Sự Kiện Phát Sinh Sau Ngày Kết Thúc Kỳ Kế Toán",
+      "label": "Sự kiện phát sinh sau ngày kết thúc kỳ kế toán liên quan đến nghĩa vụ tài chính ",
+      "weight": 1.0
+    },
+    {
+      "source": "4-6",
+      "target": "Đường gang 1-3-4-6",
+      "label": "Công việc 4-6 là một phần của đường gang 1-3-4-6.",
+      "weight": 1.0
+    },
+    {
+      "source": "Lantech",
+      "target": "Lean Manufacturing",
+      "label": "Lantech triển khai Lean Manufacturing vào năm 1995, đạt được nhiều cải tiến về h",
+      "weight": 1.0
+    },
+    {
+      "source": "Phân tích Delphi",
+      "target": "phương pháp định tính",
+      "label": "Phân tích Delphi thuộc nhóm phương pháp định tính.",
+      "weight": 1.0
+    },
+    {
+      "source": "Thong sd muon",
+      "target": "X2",
+      "label": "X2 có thông số muộn là 1 và 2.",
+      "weight": 1.0
+    },
+    {
+      "source": "Thong sd muon",
+      "target": "X7",
+      "label": "X7 có thông số muộn là 10 và 14.",
+      "weight": 1.0
+    },
+    {
+      "source": "Day chuyen nhip nhang",
+      "target": "Số công nhân tối đa (N max)",
+      "label": "Số công nhân tối đa (N max) được xác định khi day chuyen nhip nhang hoạt động hế",
+      "weight": 1.0
+    },
+    {
+      "source": "Công việc A",
+      "target": "Công việc D",
+      "label": "Công việc D phụ thuộc vào Công việc A.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công việc A",
+      "target": "Công việc B",
+      "label": "Công việc A là điều kiện tiên quyết để thực hiện Công việc B.",
+      "weight": 1.0
+    },
+    {
+      "source": "Bố Trí Theo Nhóm",
+      "target": "Bố Trí Theo Sản Phẩm",
+      "label": "Bố trí theo nhóm kết hợp yếu tố của bố trí theo sản phẩm để sản xuất các sản phẩ",
+      "weight": 2.0
+    },
+    {
+      "source": "Ban quản lý",
+      "target": "FastCons",
+      "label": "FastCons là công cụ giúp Ban quản lý điều phối và giám sát các quy trình dự án.",
+      "weight": 1.0
+    },
+    {
+      "source": "01/07/2025–30/09/2025",
+      "target": "Chi phí nguyên vật liệu",
+      "label": "Chi phí nguyên vật liệu được ghi nhận trong giai đoạn 01/07/2025–30/09/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "01/07/2025–30/09/2025",
+      "target": "Các khoản điều chỉnh tăng - Điều chỉnh giá sổ sách: phiếu phong bì",
+      "label": "Các khoản điều chỉnh tăng - Điều chỉnh giá sổ sách: phiếu phong bì được ghi nhận",
+      "weight": 1.0
+    },
+    {
+      "source": "Quản lý bảo trì dựa trên rủi ro",
+      "target": "SpeedMaint CMMS",
+      "label": "SpeedMaint CMMS được sử dụng để thực hiện quản lý bảo trì dựa trên rủi ro, cung ",
+      "weight": 1.0
+    },
+    {
+      "source": "Doanh Nghiệp",
+      "target": "Dự Báo Cầu",
+      "label": "Dự báo cầu giúp doanh nghiệp xác định quy mô sản xuất và kế hoạch tài chính.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công việc B",
+      "target": "Công việc D",
+      "label": "Công việc B là điều kiện tiên quyết để thực hiện Công việc D.<SEP>Công việc D ph",
+      "weight": 2.0
+    },
+    {
+      "source": "Công việc D",
+      "target": "Nơi làm việc 3",
+      "label": "Công việc D được bố trí tại Nơi làm việc 3.",
+      "weight": 1.0
+    },
+    {
+      "source": "Doanh Nghiệp",
+      "target": "Sơ Đồ Chuỗi Giá Trị",
+      "label": "Doanh nghiệp sử dụng sơ đồ chuỗi giá trị để phân tích và cải tiến quy trình sản ",
+      "weight": 1.0
+    },
+    {
+      "source": "Công Nghiệp Hóa Ngành Xây Dựng",
+      "target": "Cơ Giới Hóa",
+      "label": "Cơ Giới Hóa là một phần quan trọng của quá trình công nghiệp hóa ngành xây dựng.",
+      "weight": 1.0
+    },
+    {
+      "source": "150.000.000",
+      "target": "Cnng ir CP Bic-rrufs B0",
+      "label": "Cnng ir CP Bic-rrufs B0 có giá trị ban đầu là 150.000.000.",
+      "weight": 1.0
+    },
+    {
+      "source": "150.000.000",
+      "target": "Công ty CP XD GT Thrly lgiKCn Giang",
+      "label": "Công ty CP XD GT Thrly lgiKCn Giang có giá trị ban đầu là 150.000.000.",
+      "weight": 1.0
+    },
+    {
+      "source": "30/09/2015",
+      "target": "NHTMCPD fu&PhdI tiin - CN Ka, T hl)",
+      "label": "Chi nhánh ngân hàng NHTMCPD fu&PhdI tiin - CN Ka, T hl) có số liệu tài chính đến",
+      "weight": 1.0
+    },
+    {
+      "source": "1-3",
+      "target": "Đường gang 1-3-4-6",
+      "label": "Công việc 1-3 là một phần của đường gang 1-3-4-6.",
+      "weight": 1.0
+    },
+    {
+      "source": "01/07/2025",
+      "target": "Quý I niên độ 2025-2026",
+      "label": "Quý I niên độ 2025-2026 bắt đầu từ ngày 01/07/2025.",
+      "weight": 1.0
+    },
+    {
+      "source": "Day Chuyen",
+      "target": "Phan Doan",
+      "label": "Phân đoạn là phần không gian của dây chuyền sản xuất.",
+      "weight": 1.0
+    },
+    {
+      "source": "Tổ Chức Xây Dựng",
+      "target": "Xây Dựng Chính",
+      "label": "Tổ Chức Xây Dựng chịu trách nhiệm lập kế hoạch và điều phối các công tác trong X",
+      "weight": 1.0
+    },
+    {
+      "source": "Công Trình",
+      "target": "Xây Dựng",
+      "label": "Xây dựng tạo ra các công trình phục vụ xã hội như nhà cửa và công trình công cộn",
+      "weight": 1.0
+    },
+    {
+      "source": "Bảng so sánh ba phương án (A, B, C)",
+      "target": "Địa điểm A",
+      "label": "Bảng so sánh chứa dữ liệu về địa điểm A với tổng điểm 77.",
+      "weight": 1.0
+    },
+    {
+      "source": "Công Trình B",
+      "target": "Tổ (Đội) 4",
+      "label": "Tổ (Đội) 4 thực hiện công việc tại Công Trình B theo phương pháp dây chuyền.",
+      "weight": 1.0
+    },
+    {
+      "source": "Nơi làm việc 2",
+      "target": "Nơi làm việc 3",
+      "label": "Nơi làm việc 2 được bố trí trước Nơi làm việc 3 trong dây chuyền.",
+      "weight": 1.0
+    },
+    {
+      "source": "MPM",
+      "target": "To chuc san xuat theo day chuyen",
+      "label": "Tổ chức sản xuất theo dây chuyền có thể được thể hiện hiệu quả bằng phương pháp ",
+      "weight": 1.0
+    },
+    {
+      "source": "Công Trình",
+      "target": "Thiết Kế Tổ Chức Xây Dựng",
+      "label": "Thiết kế tổ chức xây dựng là yêu cầu bắt buộc trong quá trình lập kế hoạch và tr",
+      "weight": 1.0
+    },
+    {
+      "source": "Công Trình",
+      "target": "Xây Dựng Chính",
+      "label": "Xây Dựng Chính tập trung vào việc xây dựng và đưa Công Trình vào hoạt động.",
+      "weight": 1.0
+    },
+    {
+      "source": "Kế Hoạch Xây Dựng",
+      "target": "Phương Pháp Đường Tích Phân",
+      "label": "Phương pháp đường tích phân được áp dụng để kiểm tra và đánh giá tiến độ thực hi",
+      "weight": 1.0
+    },
+    {
+      "source": "Công ty Cổ phần Đường Kontum",
+      "target": "Quý I niên độ 2025-2026",
+      "label": "Công ty Cổ phần Đường Kontum ghi nhận lợi nhuận giảm 14.21% trong Quý I niên độ ",
+      "weight": 1.0
+    },
+    {
+      "source": "150",
+      "target": "200",
+      "label": "Khoản mục 150 thuộc nhóm tài sản ngắn hạn (200).",
+      "weight": 1.0
+    }
+  ],
+  "is_truncated": true
+}

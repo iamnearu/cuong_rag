@@ -1,0 +1,242 @@
+{
+  "doc-69782b8ca766cc1928404f95b81dc85b": {
+    "relation_pairs": [
+      [
+        "Bảo Trì Dựa Trên Rủi Ro",
+        "Doanh Nghiệp"
+      ],
+      [
+        "Công ty TNHH MTV phần mềm SpeedMaint",
+        "ebook-bao-tri-dua-tren-rui-ro"
+      ],
+      [
+        "Bảo Trì Dựa Trên Rủi Ro",
+        "Bảo Trì Dựa Trên Điều Kiện"
+      ],
+      [
+        "1% đến 10% giá trị rủi ro tối đa",
+        "Rủi ro chấp nhận được"
+      ],
+      [
+        "Chỉ số mức độ nghiêm trọng",
+        "Marginal (5-6)"
+      ],
+      [
+        "Phần mềm bảo trì",
+        "SpeedMaint CMMS"
+      ],
+      [
+        "Dữ liệu",
+        "SpeedMaint CMMS"
+      ],
+      [
+        "Chỉ số mức độ nghiêm trọng",
+        "Critical"
+      ],
+      [
+        "Công ty TNHH MTV phần mềm SpeedMaint",
+        "TP. Hồ Chí Minh"
+      ],
+      [
+        "Bảo Trì Dựa Trên Rủi Ro",
+        "Chính Sách Bảo Trì Sửa Chữa"
+      ],
+      [
+        "Bảo Trì Dựa Trên Rủi Ro",
+        "Chế Độ Hỏng Hóc"
+      ],
+      [
+        "100 mức giá trị rủi ro khác nhau",
+        "Rủi ro không thể chấp nhận được"
+      ],
+      [
+        "Global Tech Index",
+        "Market Selloff"
+      ],
+      [
+        "Chỉ số mức độ xảy ra",
+        "Likely"
+      ],
+      [
+        "Chỉ số mức độ nghiêm trọng",
+        "Rủi ro hỏng hóc"
+      ],
+      [
+        "Ban quản lý",
+        "SpeedMaint CMMS"
+      ],
+      [
+        "Công ty TNHH MTV phần mềm SpeedMaint",
+        "Dịch Vụ Bảo Trì"
+      ],
+      [
+        "Chỉ số mức độ nghiêm trọng",
+        "Marginal (3-4)"
+      ],
+      [
+        "Bảo Trì Dựa Trên Rủi Ro",
+        "Rủi Ro Hỏng Hóc"
+      ],
+      [
+        "Rủi ro hỏng hóc",
+        "Trên 30% giá trị rủi ro tối đa"
+      ],
+      [
+        "10% đến 30% giá trị rủi ro tối đa",
+        "Rủi ro có thể chấp nhận được"
+      ],
+      [
+        "Bảo trì dựa trên tình trạng",
+        "Chỉ số tần suất hỏng hóc"
+      ],
+      [
+        "Dịch Vọng Hậu, Q. Cầu Giấy, TP. Hà Nội",
+        "SpeedMaint"
+      ],
+      [
+        "Ban quản lý",
+        "Thiết bị"
+      ],
+      [
+        "Rủi Ro Hỏng Hóc",
+        "Xe Đầu Kéo Cỡ Lớn"
+      ],
+      [
+        "Chỉ số mức độ xảy ra",
+        "Phần mềm bảo trì"
+      ],
+      [
+        "SpeedMaint",
+        "SpeedMaint Cloud CMMS"
+      ],
+      [
+        "Chỉ Số Xuất Hiện",
+        "Mức Độ Nghiêm Trọng Rủi Ro"
+      ],
+      [
+        "Chỉ số mức độ xảy ra",
+        "Frequent"
+      ],
+      [
+        "Chỉ số mức độ xảy ra",
+        "Occasional"
+      ],
+      [
+        "Chỉ số mức độ nghiêm trọng",
+        "Chỉ số mức độ xảy ra"
+      ],
+      [
+        "Rủi ro không thể chấp nhận được",
+        "Trên 30% giá trị rủi ro tối đa"
+      ],
+      [
+        "Chỉ số tần suất hỏng hóc",
+        "Rủi ro hỏng hóc"
+      ],
+      [
+        "1% đến 10% giá trị rủi ro tối đa",
+        "Rủi ro hỏng hóc"
+      ],
+      [
+        "Công ty TNHH MTV phần mềm SpeedMaint",
+        "speedmaint.com"
+      ],
+      [
+        "100 mức giá trị rủi ro khác nhau",
+        "Rủi ro có thể chấp nhận được"
+      ],
+      [
+        "Dịch Vụ Bảo Trì",
+        "Trải Nghiệm Miễn Phí"
+      ],
+      [
+        "100 mức giá trị rủi ro khác nhau",
+        "Rủi ro chấp nhận được"
+      ],
+      [
+        "Công ty TNHH MTV phần mềm SpeedMaint",
+        "Hà Nội"
+      ],
+      [
+        "Công ty TNHH MTV phần mềm SpeedMaint",
+        "SpeedMaint Cloud CMMS"
+      ],
+      [
+        "Bảo Trì Dựa Trên Rủi Ro",
+        "Chỉ Số Sự Cố Xảy Ra"
+      ],
+      [
+        "Nhà Máy",
+        "Thiết Bị Máy Móc"
+      ],
+      [
+        "Ban quản lý",
+        "Rủi ro hỏng hóc"
+      ],
+      [
+        "Chỉ Số Xuất Hiện 10",
+        "Mức Độ Nghiêm Trọng Rủi Ro 10"
+      ],
+      [
+        "Người dùng",
+        "SpeedMaint CMMS"
+      ],
+      [
+        "P7, Q. Tân Bình, TP. Hồ Chí Minh",
+        "SpeedMaint"
+      ],
+      [
+        "Công ty TNHH MTV phần mềm SpeedMaint",
+        "ManWinWin"
+      ],
+      [
+        "Bảo Trì Dựa Trên Rủi Ro",
+        "Bảo Trì Khắc Phục"
+      ],
+      [
+        "Catastrophic",
+        "Chỉ số mức độ nghiêm trọng"
+      ],
+      [
+        "Chỉ số mức độ nghiêm trọng",
+        "Quy trình kỹ thuật"
+      ],
+      [
+        "10% đến 30% giá trị rủi ro tối đa",
+        "Rủi ro hỏng hóc"
+      ],
+      [
+        "Chỉ số mức độ xảy ra",
+        "Highly unlikely"
+      ],
+      [
+        "SpeedMaint CMMS",
+        "Tính hiệu quả về chi phí"
+      ],
+      [
+        "Bảo Trì Dựa Trên Rủi Ro",
+        "Tài Sản"
+      ],
+      [
+        "Chỉ số mức độ xảy ra",
+        "Unlikely"
+      ],
+      [
+        "Chỉ số tần suất hỏng hóc",
+        "Tăng tần suất bảo trì phòng ngừa"
+      ],
+      [
+        "Chỉ số mức độ nghiêm trọng",
+        "Minor"
+      ],
+      [
+        "Phương pháp tính toán",
+        "Phần mềm bảo trì"
+      ]
+    ],
+    "count": 58,
+    "create_time": 1778758197,
+    "update_time": 1778758197,
+    "_id": "doc-69782b8ca766cc1928404f95b81dc85b"
+  }
+}

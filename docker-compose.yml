@@ -1,5 +1,11 @@
 # CuongRAG — Microservices (Local Development, no API gateway)
 # Usage: cp .env.example .env → docker compose up -d
+#
+# Local data directories (.data/):
+#   .data/uploads/     — PDF/DOCX gốc sau khi upload
+#   .data/docling/     — Ảnh page sau khi Docling OCR (kb_<id>/images/)
+#   .data/lightrag/    — Knowledge Graph data (entities, relationships, graphml)
+#   .data/output/      — JSON tổng hợp sau khi index (markdown + chunks + images)
 
 services:
 
@@ -42,8 +48,10 @@ services:
       CORS_ORIGINS: '["http://localhost:3001","http://localhost"]'
     volumes:
       - ./rag-service:/app
-      - cuongrag_uploads:/app/uploads
-      - cuongrag_data:/app/data
+      - ./.data/uploads:/app/uploads
+      - ./.data/docling:/app/data/docling
+      - ./.data/lightrag:/app/data/lightrag
+      - ./.data/output:/app/output
     ports:
       - "8081:8081"
     healthcheck:
@@ -59,6 +67,13 @@ services:
       context: ./ingestion-service
       dockerfile: Dockerfile
     container_name: cuongrag-ingestion-service
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
     env_file: .env
     depends_on:
       postgres:
@@ -72,8 +87,10 @@ services:
       CORS_ORIGINS: '["http://localhost:3001","http://localhost"]'
     volumes:
       - ./ingestion-service:/app
-      - cuongrag_uploads:/app/uploads
-      - cuongrag_data:/app/data
+      - ./.data/uploads:/app/uploads
+      - ./.data/docling:/app/data/docling
+      - ./.data/lightrag:/app/data/lightrag
+      - ./.data/output:/app/output
     ports:
       - "8082:8082"
     healthcheck:
@@ -101,8 +118,9 @@ services:
       AUTO_CREATE_TABLES: "true"
       CORS_ORIGINS: '["http://localhost:3001","http://localhost"]'
     volumes:
-      - cuongrag_uploads:/app/uploads
-      - cuongrag_data:/app/data
+      - ./.data/uploads:/app/uploads
+      - ./.data/docling:/app/data/docling
+      - ./.data/lightrag:/app/data/lightrag
     ports:
       - "8083:8083"
     healthcheck:
@@ -138,5 +156,4 @@ services:
 
 volumes:
   cuongrag_postgres_data:
-  cuongrag_uploads:
-  cuongrag_data:
+
